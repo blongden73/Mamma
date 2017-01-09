@@ -1,0 +1,606 @@
+@import "mq";
+@import "fonts";
+
+// Uncomment for embeds
+//@import "embed";
+
+// Uncomment for full screen (including immersive article main media)
+//@import "fullscreen";
+
+.element-atom,
+.interactive-atom {
+    margin: 0 !important;
+}
+
+body{
+  overflow: hidden;
+}
+
+img[data-lazy-img]{
+
+  &.inView{
+    animation-delay: 0.5s;
+    animation: fadeIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.interactive-blocks {
+  background-color: #f6f6f6;
+}
+
+.ad--wrapper--desktop{
+    display: none;
+
+    @include mq($from: desktop){
+      display: block;
+      position: absolute;
+      width: 300px;
+      position: absolute;
+      top: 0px;
+      right: 40px;
+      top: 10px;
+    }
+}
+
+.ad--wrapper--mobile{
+  display: block;
+  width: 100%;
+  background-color: #212121;
+
+  @include mq($from: tablet) {
+    display: none;
+  }
+
+  .ad-slot{
+    margin-top: 14px;
+  }
+}
+
+.caption {
+  @include mq($from: tablet){
+    width: 600px;
+  }
+  .pre{
+    font-weight: 900;
+  }
+  p.caption-text{
+    padding: 0px;
+  }
+}
+
+h1{
+  font-size: 36px;
+  line-height: 20px;
+  margin-top: 12px;
+  font-family: $f-serif-headline;
+
+  &.heading{
+    border-top: 1px dashed rgba(51, 51, 51, 0.5);
+    padding-top: 6px;
+    margin-top: 24px;
+
+    &:first-child{
+      border: none;
+      margin-top: auto;
+      padding-top: auto;
+    }
+  }
+}
+
+.image--overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  background-color: black;
+  opacity: 0.2;
+  z-index: 10;
+}
+//header
+
+.where-to-go-header {
+  &--image{
+    min-height: 480px;
+    // background-image: url('http://media.guim.co.uk/a9a42e7d97307819e617dca449e70cc219178562/6612_0_3976_7109/1119.jpg');
+    width: 100%;
+    background-size: 100%;
+    background-position:center;
+    position: relative;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    @include mq($from: mobileLandscape) {
+      height: 74vh;
+      background-size: cover;
+      // background-image: url('https://uploads.guim.co.uk/2017/01/05/namibia_cover_image.png');
+      background-position: center center;
+    }
+
+    .video{
+      position: absolute;;
+      top: 40%;
+      left: 50%;
+      // min-width: 100%;
+      // min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: 0;
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+
+      video {
+        object-fit: cover;
+      }
+    }
+
+    .video-image {
+      position: absolute;;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  &--standfirst {
+    color: white;
+    right: 8px;
+    line-height: 18px;
+    background-color: #1b1b1b;
+    padding: 6px 8px 24px 8px;
+
+    h1{
+      line-height: 36px;
+      letter-spacing: -0.5px;
+      margin: 6px 0px 12px 0px;
+
+      @include mq($from: tablet) {
+        width: 600px;
+      }
+    }
+
+    p{
+      margin: 0px;
+      font-size: 18px;
+      line-height: 22px;
+
+      @include mq($from: desktop) {
+        width: 600px;
+      }
+    }
+
+    .standfirst--wrapper {
+      width: 100%;
+
+      @include mq($from: desktop) {
+        width: 980px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      @include mq($from: leftCol) {
+        width: 1140px;
+      }
+
+      @include mq($from: wide) {
+        width: 1300px;
+      }
+
+    }
+  }
+
+  &--title{
+    height: 300px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 90px;
+    z-index: 30;
+
+    @include mq($from: tablet){
+      top: 150px;
+    }
+  }
+}
+//menu
+.where-to-go--menu{
+  margin-top: 18px;
+  padding-top: 6px;
+
+  ul{
+    border-top: 1px solid rgba(251, 251, 251, 0.5);
+    padding-top: 6px;
+  }
+
+  &.sticky {
+    position: fixed;
+    z-index: 20000;
+    top: 0px;
+    background-color: #333;
+    margin: 0px;
+    width: 94%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 12px;
+    left: 0px;
+
+    ul {
+      border: none;
+      @include mq($from: desktop) {
+        width: 590px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 420px;
+      }
+      @include mq($from: leftCol) {
+        padding-right: 342px;
+      }
+      @include mq($from: wide) {
+        padding-right: 306px;
+      }
+    }
+  }
+
+  a{
+    color: inherit;
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  li{
+    list-style: none;
+    font-family: $f-sans-serif-text;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 6px;
+    line-height: 22px;
+
+    @include mq($from: desktop) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &.jump {
+      opacity: 0.5;
+    }
+
+    &:after{
+      content: '/';
+      margin-left: 6px;
+      opacity: 0.5;
+    }
+
+    &:last-child{
+      &:after{
+        content: '';
+      }
+    }
+  }
+}
+
+.header{
+  &[data-open="true"]{
+    .section-header--button{
+      svg{
+        transform: rotate(315deg);
+      }
+      .button{
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.section-strap-line{
+  position: absolute;
+  bottom: 60px;
+  color: white;
+  font-family: Guardian Egyptian Web;
+  font-weight: 900;
+  z-index: 30;
+  font-size: 20px;
+  line-height: 21px;
+  width: 90%;
+  margin-left: 2%;
+
+  @include mq($from: tablet) {
+    bottom: 20px;
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .strapline-wrapper{
+    @include mq($from: desktop){
+      margin-left: auto;
+      margin-right: auto;
+      width: 980px;
+    }
+    @include mq($from: leftCol){
+      margin-left: auto;
+      margin-right: auto;
+      width: 1140px;
+    }
+    @include mq($from: wide){
+      margin-left: auto;
+      margin-right: auto;
+      width: 1300px;
+    }
+    .strapline{
+      display: block;
+
+      @include mq($from: tablet) {
+          width: 600px;
+      }
+    }
+  }
+}
+
+.section-header{
+  &--image {
+    overflow: hidden;
+    min-height: 600px;
+    background-color: #333;
+    position: relative;
+
+    @include mq($from: desktop) {
+      min-width: 500px;
+    }
+
+    @include mq($from: leftCol) {
+      min-height: 650px;
+    }
+
+    @include mq($from: wide){
+      min-height: 750px;
+    };
+
+    img{
+      position: absolute;
+      transform: translateX(-25%);
+
+
+      @include mq($from: phablet) {
+        width: auto;
+        height: 100%;
+        margin-left: 0px;
+        display: block;
+        transform: translateX(0%);
+      }
+
+      @include mq($from: tablet) {
+        width: 1000px;
+        height: auto;
+      }
+
+      @include mq($from: desktop) {
+      width: 100%;
+      height: auto;
+      }
+
+      &.bottom {
+        @include mq($from:leftCol){
+          bottom: -50px;
+        }
+      }
+
+      &.top {
+        @include mq($from:leftCol){
+          top: -50px;
+        }
+      }
+    }
+  }
+
+  &--title {
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    width: 200px;
+    z-index: 1000;
+    position: relative;
+    top: 150px;
+
+    @include mq($from: desktop) {
+      top:150px;
+    }
+
+    @include mq($from: leftCol) {
+      top: 200px;
+    }
+
+    @include mq($from: wide) {
+      top:250px;
+    }
+
+    svg{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &--button {
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    z-index: 40;
+
+    @include mq($from: tablet) {
+      display: none;
+    };
+
+    p.button{
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: "Guardian Sans Web", "Guardian Agate Sans 1 Web", sans-serif;
+      background-color: rgba(51,51,51, 0.4);
+      border: none;
+      margin-top: 10px;
+      padding: 1px 16px;
+      -webkit-transition: all 1s ease-in-out;
+      -moz-transition: all 1s ease-in-out;
+      -o-transition: all 1s ease-in-out;
+      transition: all 1s ease-in-out;
+    }
+
+    svg{
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}
+
+.section {
+  h1 {
+    &.heading {
+      padding: 0px;
+      margin-top: 6px;
+      line-height: 36px;
+
+      @include mq($from: tablet) {
+        padding-left: 0px;
+      }
+    }
+    &.subheading {
+      padding: 0px;
+      font-weight: 200;
+      border-bottom: 1px solid rgba(51, 51, 51, 0.5);
+      padding-bottom: 12px;
+      padding-top: 0px;
+
+      @include mq($from: tablet) {
+        padding-left: 0px;
+      }
+    }
+  }
+
+  p, h1 {
+      padding: 8px;
+  }
+
+  &.copy {
+    display: none;
+    width:96%;
+    background-color: white;
+    position: relative;
+    padding-top: 6px;
+    padding-bottom: 24px;
+    margin-bottom: -16px;
+    padding-left: 2%;
+    padding-right: 2%;
+
+    @include mq($from: tablet) {
+      display: block;
+      padding-left: 20px
+    }
+
+    @include mq($from: desktop) {
+      width: 980px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 0px;
+      padding-left: 2%;
+    }
+
+    @include mq($from: leftCol) {
+      width: 1140px;
+    }
+
+    @include mq($from: wide) {
+      width: 1300px;
+    }
+
+    &[data-open="true"] {
+      display: block;
+    }
+
+    h1{
+      width: 100%;
+
+      @include mq($from: tablet){
+        width: 600px;
+      }
+    }
+
+    pre.copy{
+      width: 100%;
+      font-family:$f-serif-text;
+      white-space: pre-wrap;       /* css-3 */
+      white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+      white-space: -pre-wrap;      /* Opera 4-6 */
+      white-space: -o-pre-wrap;    /* Opera 7 */
+      word-wrap: break-word;       /* Internet Explorer 5.5+ */
+
+      @include mq($from: tablet) {
+        width: 600px;
+      }
+    }
+  }
+}
+
+//APPS fixes
+
+.ios, .andriod {
+  .copy {
+    a {
+      color: #005689;
+    }
+  }
+  .where-to-go--menu {
+    ul {
+      padding: 0px;
+    }
+
+    &.sticky{
+      position: relative;
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+      padding-top: 6px;
+      margin-top: 12px;
+    }
+  }
+
+  .section-header--button {
+    svg{
+      float: left;
+    }
+
+    .button {
+      float: left;
+      border-radius: 24px;
+      margin-left: 12px;
+    }
+  }
+
+  .ad--wrapper--mobile {
+    display: none;
+  }
+}

@@ -1,0 +1,53 @@
+<div class="section">
+  {{#Full}}
+    <div id="{{section}}" data-id="{{id}}" class="header {{id}}">
+      <div class="section-header--image">
+        <div class="image--overlay"></div>
+        <img class="{{imageclass}} place-image" data-lazy-img alt="{{id}}" data-src="{{imageURL}}" src="" height="600" width="900" />
+        <div class="section-header--title">
+          {{{svg}}}
+        </div>
+        <div class="section-strap-line">
+          <div class="strapline-wrapper">
+            <div class="content__main-column">
+              <span class="strapline">{{strapline}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="section-header--button">
+          <svg width="46px" height="46px" viewBox="10 1951 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs></defs>
+              <g id="Group" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(11.000000, 1952.000000)">
+                  <polygon id="" fill="#FFFFFF" points="20.9090909 22.9090909 12 22.5 12 21.1136364 20.9090909 20.7272727 21.2954545 11.8181818 22.6818182 11.8181818 23.0909091 20.7272727 32 21.1136364 32 22.5 23.0909091 22.9090909 22.6818182 31.8181818 21.2954545 31.8181818"></polygon>
+                  <circle id="Oval" stroke="#FFFFFF" cx="22" cy="22" r="22"></circle>
+              </g>
+          </svg>
+          <p class="button">Read more</p>
+        </div>
+      </div>
+    </div>
+    <div class="section copy {{id}}">
+      <div class="content__main-column">
+      <h1 class="heading" id="{{section}}">{{{Name}}}</h1>
+      <h1 class="subheading">{{Country}}</h1>
+      <pre class="copy">{{{Description}}}</pre>
+      <div class="caption">
+        <p class="caption-text">
+            <svg width="13px" height="10px" viewBox="419 355 13 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path d="M431.714076,357.781915 L430.909531,356.963733 L428.168622,356.963733 L426.804985,355.600097 L424.609531,355.600097 L423.245894,356.963733 L420.532258,356.963733 L419.714076,357.781915 L419.714076,363.809188 L420.532258,364.613733 L430.909531,364.613733 L431.714076,363.768279 L431.714076,357.781915 Z M425.714076,363.100097 C424.35044,363.100097 423.259531,362.009188 423.259531,360.659188 C423.259531,359.295551 424.35044,358.204642 425.714076,358.204642 C427.077713,358.204642 428.182258,359.295551 428.182258,360.659188 C428.182258,362.009188 427.077713,363.100097 425.714076,363.100097 Z" id="" stroke="none" fill="#767676" fill-rule="evenodd"></path>
+            </svg>
+          <span class="pre">Above</span> {{imageCaption}}
+        </p>
+      </div>
+      </div>
+      <div class="ad--wrapper--desktop">
+        <div id="{{adID}}" class="js-ad-slot ad-slot ad-slot--mpu-banner-ad ad-slot--right" data-link-name="ad slot {{adDataName}}" data-test-id="{{adTestId}}" data-name="{{adName}}" data-mobile="1,1|2,2|300,250|fluid" data-desktop="1,1|2,2|300,250|fluid"></div>
+      </div>
+      </div>
+      <div class="ad--wrapper--mobile" {{#adIDMobile}} style="padding:20px 0px;" {{/adIDMobile}}>
+        {{#adIDMobile}}
+        <div id="{{adIDMobile}}" class="js-ad-slot ad-slot ad-slot--inline {{adTestIdMobile}}" data-link-name="ad slot {{adDataNameMobile}}" data-test-id="{{adTestIdMobile}}" data-name="{{adNameMobile}}" data-mobile="1,1|2,2|300,250|fluid" data-desktop="1,1|2,2|300,250|fluid"></div>
+        {{/adIDMobile}}
+      </div>
+  {{/Full}}
+</div>
