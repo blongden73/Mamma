@@ -1046,6 +1046,11 @@ p {
     color: $m-blue;
     background-color: transparent;
     border :1px solid $m-blue;
+    &:hover {
+      background-color: $m-blue;
+      color:$m-cream;
+      transition:0.5s ease;
+    }
   }
   .top {
     button {
@@ -1058,7 +1063,7 @@ p {
   .top__main {
     display: flex;
     flex-direction:column;
-    min-height: 90vh;
+    min-height: 80vh;
     align-items: center;
     justify-content: center;margin-left: 30px;
     @include media-query($medium-up){
@@ -1078,12 +1083,12 @@ p {
       img {
         width: 260px;
         height: auto;
-        .carmella {
-          margin-top: -60px;
-        }
-        .annabel {
-          margin-top: 60px;
-        }
+      }
+      .carmella {
+        margin-top: -60px;
+      }
+      .annabel {
+        margin-top: 60px;
       }
     }
 }
