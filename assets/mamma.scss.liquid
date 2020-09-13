@@ -1115,11 +1115,28 @@ p {
       }
       .bottom {
         margin-top: 50px;
+        &::before {
+          content: '';
+          width: 1px;
+          height: 125px;
+          background-color: $m-blue;
+          position: absolute;
+          transform: translateX(58px);
+          margin-top: -30px;
+        }
+        &::after {
+          content:'';
+          width: 8px;
+          height:8px;
+          background-color: $m-blue;
+          position:absolute;
+          margin-left: -70px;
+          margin-top: 20px;
+        }
       }
     }
     .annabel {
       margin-top: 60px;
-      border-bottom: 1px solid $m-blue;
       @include media-query($medium-up){
         margin-top: 0;
       }
@@ -1128,13 +1145,24 @@ p {
         padding:0;
       }
       .caption {
-        &::after {
+        // border-bottom: 1px solid $m-blue;
+        &::before {
           content:'';
-          width: 1px;
-          height: 40px;
+          width: 8px;
+          height:8px;
           background-color: $m-blue;
-
           position:absolute;
+          margin-left: 70px;
+          margin-top: -20px;
+        }
+        &::after {
+          content: '';
+          width: 1px;
+          height: 125px;
+          background-color: $m-blue;
+          position: absolute;
+          transform: translateX(-58px);
+          margin-top: 30px;
         }
       }
     }
