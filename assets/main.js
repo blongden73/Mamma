@@ -36,8 +36,7 @@ if(peopleWrapper) {
     //   var name = people[i].full_name;
     //   var practice = people[i].practice;
     //   var profile_picture = people[i].profile_picture;
-      
-    }
+    //}
   }, function(xhr) {
     console.log("error");
   });
