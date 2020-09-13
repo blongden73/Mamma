@@ -36,7 +36,10 @@
         {% assign practice = events.metafields.airf.practice %}
         {{events.title}}
         {{practition}}
-        {{pregnancy_}}
+        {% if pregnancy_  == "true" %}
+          Pregnancy
+        {else}
+        {% endif %}
         {{speed}}
         {{space}}
         {{type}}
