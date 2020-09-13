@@ -100,9 +100,13 @@
     <div class="m-practice-list-header">
       <h1>Our People, <span class="handwritten">Our Power</span></h1>
     </div>
+    <!-- this section uses vue js using ${} to reference the data -->
     <div id="app" class="m-people-placeholder">
       <ul class="m-people-group">
-          <li class="m-person" v-for="practioner in practioners">${practioner.full_name}</li>
+          <li class="m-person" v-for="practioner in practioners">
+            <span class="m-people-name">${practioner.full_name}</span>
+            <img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/annabel-james.png?v=1600011449">
+          </li>
       </ul>
     </div>
   </div>
