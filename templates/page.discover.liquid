@@ -27,7 +27,20 @@
         </ul>
       </div>
       {% for events in collections.all.products %}
+        {% assign practition = product.metafields.airf.practition %}
+        {% assign level = product.metafields.airf.level %}
+        {% assign pregnancy_ = product.metafields.airf.pregnancy_ %}
+        {% assign speed = product.metafields.airf.speed %}
+        {% assign space = product.metafields.airf.space %}
+        {% assign type = product.metafields.airf.type %}
+        {% assign practice = product.metafields.airf.practice %}
         {{events.title}}
+        {{practition}}
+        {{pregnancy_}}
+        {{speed}}
+        {{space}}
+        {{type}}
+        {{practice}}
       {% endfor %}
     </div>
   </div>
