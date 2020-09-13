@@ -38,9 +38,14 @@ if(peopleWrapper) {
       $.get('https://mamma-join.neuer.uk/wp-json/mamma/v1/get-members/', function(data) {
           app.practioners = data;
       })
+    },
+    methods: {
+      log: function() {
+        console.log(this, 'vue data');
+      }
     }
   })
-  
+
   // loadJSON("https://mamma-join.neuer.uk/wp-json/mamma/v1/get-members/", function(data) {
   //   console.log(data);
   //   var people = data;
