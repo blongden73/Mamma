@@ -29,19 +29,32 @@ function loadJSON(path, success, error){
 //call this funtion on where people exsist
 var peopleWrapper = document.querySelector('.m-people-placeholder');
 if(peopleWrapper) {
-  loadJSON("https://mamma-join.neuer.uk/wp-json/mamma/v1/get-members/", function(data) {
-    // console.log(data);
-    // var people = data;
-    // for(i=0; i < people.length; i++) {
-    //   var name = people[i].full_name;
-    //   var practice = people[i].practice;
-    //   var profile_picture = people[i].profile_picture;
-    //}
-    var app = new Vue({
+  var app = new Vue({
     el: '#app',
-    data: data
+    data: {
+        practioners: []
+    },
+    mounted: function() {
+      $.get('https://mamma-join.neuer.uk/wp-json/mamma/v1/get-members/', function(data) {
+          app.practioners = data;
+      })
+    }
   })
-  }, function(xhr) {
-    console.log("error");
-  });
+  
+  // loadJSON("https://mamma-join.neuer.uk/wp-json/mamma/v1/get-members/", function(data) {
+  //   console.log(data);
+  //   var people = data;
+  //   for(i=0; i < people.length; i++) {
+  //     var name = people[i].full_name;
+  //     var practice = people[i].practice;
+  //     var profile_picture = people[i].profile_picture;
+  //   }
+  //   console.log(data);
+  //   var app = new Vue({
+  //   el: '#app',
+  //   data: data
+  //   })
+  // }, function(xhr) {
+  //   console.log("error");
+  // });
 }
