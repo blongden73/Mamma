@@ -1036,6 +1036,10 @@ p {
 }
 
 .about-page {
+  button {
+    background-color: transparent;
+    border :1px solid $color-text;
+  }
   .top {
     button {
       position: relative;
@@ -1046,12 +1050,19 @@ p {
 
   .top__main {
     display: flex;
+    flex-direction:column;
     min-height: 90vh;
     align-items: center;
     justify-content: center;
+    @include media-query($medium-up){
+      flex-direction:row;
+    }
       h1 {
-        font-size: 90px;
+        font-size: 6vw;
         margin-right: 20px;
+        &:nth-child-last(1){
+          margin-right:0;
+        }
         &:nth-child(2){
           margin-left: -20px;
         }
