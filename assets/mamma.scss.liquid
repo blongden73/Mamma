@@ -1421,6 +1421,17 @@ p {
 }
 
 .m-practice-list {
+
+  &:before {
+    position: absolute;
+    right: 0;
+    left: 40%;
+    background-color: $m-cream;
+    bottom: 0;
+    top: 0;
+    z-index: -1;
+  }
+
   .flex {
     justify-content: space-between;
   }
