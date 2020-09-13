@@ -63,22 +63,28 @@
       {% assign body = linklists.body %}
       {% assign spirit = linklists.spirit %}
       <div class="m-practice-box">
-        <h1>{{mind.title}}</h1>
-        {% for link in mind.links %}
-          <a href="{{ link.url }}">{{ link.title }}</a>
-        {% endfor %}
+        <div class="m-practice-box-inner">
+          <h1>{{mind.title}}</h1>
+          {% for link in mind.links %}
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          {% endfor %}
+        </div>
       </div>
       <div class="m-practice-box">
-        <h1>{{body.title}}</h1>
-        {% for link in body.links %}
-          <a href="{{ link.url }}">{{ link.title }}</a>
-        {% endfor %}
+        <div class="m-practice-box-inner">
+          <h1>{{body.title}}</h1>
+          {% for link in body.links %}
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          {% endfor %}
+        </div>
       </div>
       <div class="m-practice-box">
-        <h1>{{spirit.title}}</h1>
-        {% for link in spirit.links %}
-          <a href="{{ link.url }}">{{ link.title }}</a>
-        {% endfor %}
+        <div class="m-practice-box-inner">
+          <h1>{{spirit.title}}</h1>
+          {% for link in spirit.links %}
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>
