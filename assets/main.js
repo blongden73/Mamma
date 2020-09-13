@@ -37,6 +37,10 @@ if(peopleWrapper) {
     //   var practice = people[i].practice;
     //   var profile_picture = people[i].profile_picture;
     //}
+    var app = new Vue({
+    el: '#app',
+    data: data
+  })
   }, function(xhr) {
     console.log("error");
   });
