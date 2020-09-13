@@ -1106,12 +1106,6 @@ p {
         text-align: center;
       }
     }
-    .top {
-      margin-bottom: 75px;
-    }
-    .bottom {
-      margin-top: 50px;
-    }
     .carmella {
       text-align: right;
       margin-right: 50px;
@@ -1119,9 +1113,13 @@ p {
         text-align: unset;
         margin-right: unset;
       }
+      .bottom {
+        margin-top: 50px;
+      }
     }
     .annabel {
       margin-top: 60px;
+      border-bottom: 1px solid $m-blue;
       @include media-query($medium-up){
         margin-top: 0;
       }
@@ -1133,7 +1131,11 @@ p {
 
         position:absolute;
       }
+      .top {
+        margin-bottom: 75px;
+      }
     }
+
   }
 
   .intro {
