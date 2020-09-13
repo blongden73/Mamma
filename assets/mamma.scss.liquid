@@ -1046,11 +1046,14 @@ p {
 .about-page {
   button {
     font-family:'Noe Text';
-    font-size:19px;
+    font-size:16px;
     padding: 6px 14px 2px 14px;
     color: $m-blue;
     background-color: transparent;
     border :1px solid $m-blue;
+    @include media-query ($medium-up){
+      font-size:19px;
+    }
     &:hover {
       background-color: $m-blue;
       color:$m-cream;
@@ -1077,25 +1080,43 @@ p {
     @include media-query($medium-up){
       flex-direction:row;
       margin-left: 0;
-      padding:20px;
     }
     .we, .are, .mamma {
-      font-size: 50px;
+      line-height: 1;
+      font-size: 70px;
       z-index: 20;
       @include media-query($medium-up){
-      font-size: 6vw;
-      margin-right: 20px;
+        font-size: 50px;
+        font-size: 6vw;
+        margin-right: 20px;
+      }
+    }
+    .we {
+      margin-top: 20px;
+      margin-left: 10px;
+      @include media-query($medium-up){
+        margin-top: 0;
+        margin-left: 0;
       }
     }
     .are {
-      margin-left: -20px;
+      margin-left: -128px;
+      text-align: center;
+      margin-top: -40px;
+      @include media-query($medium-up){
+        margin-left: -20px;
+      }
     }
     .mamma {
+      text-align:right;
       margin-left: -20px;
       margin-right: 0;
+      @include media-query($medium-up){
+        text-align: unset;
+      }
     }
     img {
-      width: 200px;
+      width: 160px;
       height: auto;
       @include media-query($medium-up){
         width: 260px;
@@ -1118,6 +1139,13 @@ p {
         text-align: unset;
         margin-right: unset;
       }
+      img {
+
+        width: 160px;
+        height: auto;
+        margin-top: -100px;
+        margin-right:40px;
+      }
       .bottom {
         margin-top: 50px;
         &::before {
@@ -1126,8 +1154,8 @@ p {
           height: 125px;
           background-color: $m-blue;
           position: absolute;
-          transform: translateX(58px);
-          margin-top: -30px;
+          transform: translateX(80px);
+          margin-top: -132px;
         }
         &::after {
           content:'';
@@ -1135,8 +1163,9 @@ p {
           height:8px;
           background-color: $m-blue;
           position:absolute;
-          margin-left: -70px;
-          margin-top: 20px;
+          margin-left: -93px;
+          margin-top: 30px;
+          border-radius: 50%;
         }
       }
     }
@@ -1144,6 +1173,13 @@ p {
       margin-top: 60px;
       @include media-query($medium-up){
         margin-top: 0;
+      }
+      img {
+
+        width: 160px;
+        height: auto;
+        margin-top: -76px;
+        margin-left:40px;
       }
       .top {
         margin-bottom: 75px;
@@ -1157,8 +1193,9 @@ p {
           height:8px;
           background-color: $m-blue;
           position:absolute;
-          margin-left: 70px;
-          margin-top: -20px;
+          margin-left: 67px;
+          margin-top: -16px;
+          border-radius: 50%;
         }
         &::after {
           content: '';
@@ -1179,22 +1216,28 @@ p {
     padding:60px 20px;
     h2 {
       font-family:'Noe Display';
-      font-size: 40px;
+      font-size:29px;
       line-height: 1.15;
       text-align: center;
       text-transform: none;
-      width: 82%;
       margin: auto;
-      margin-top: 60px;
+      @include media-query($medium-up){
+        font-size: 60px;
+        width: 82%;
+        margin-top: 70px;
+      }
     }
     p {
       font-family:'Noe Text';
-      font-size:19px;
+      font-size: 18px;
       color: $m-blue;
       margin: auto;
       width: 80%;
       text-align: center;
       margin-top: 20px;
+      @include media-query($medium-up){
+        font-size: 27px;
+      }
     }
     a {
       text-decoration: underline;
@@ -1203,7 +1246,13 @@ p {
     .buttons {
       text-align: center;
       margin: auto;
-      margin-top: 120px;
+      margin-top: 60px;
+      @include media-query ($medium-up){
+        margin-top: 120px;
+      }
+      button {
+        margin-bottom: 14px;
+      }
     }
   }
   .team-wrapper {
@@ -1212,8 +1261,8 @@ p {
     justify-content: center;
     padding: 60px 20px;
     .team-item {
-      width: 26%;
-      margin-right: 60px;
+      width: 23%;
+      margin-right: 80px;
       &:nth-child(3n){
         margin-right:0;
       }
@@ -1223,10 +1272,16 @@ p {
         font-weight: bold;
         text-align: center;
         text-transform: none;
-
+        margin-bottom: 0;
+        margin-top: 20px;
+        border-top: 1px solid $m-blue;
       }
       p {
+        font-family:'Noe Text';
+        line-height:1;
+        color:$m-blue;
         text-align: center;
+        margin-bottom: 40px;
       }
     }
   }
