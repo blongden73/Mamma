@@ -101,7 +101,9 @@
       <h1>Our People, <span class="handwritten">Our Power</span></h1>
     </div>
     <div id="app" class="m-people-placeholder">
-
+      <ul class="list-group">
+          <li v-for="practioner in practioners.data">{{ practioner.full_name }}</li>
+      </ul>
     </div>
   </div>
 </div>
