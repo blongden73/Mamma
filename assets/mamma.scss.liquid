@@ -1359,6 +1359,15 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
+
+    @include media-query($medium-up){
+      width: 980px;
+    }
+
+    @include media-query($widescreen){
+      width: 1300px;
+    }
 
     h1 {
       color: #fff;
