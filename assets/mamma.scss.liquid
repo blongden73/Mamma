@@ -1100,14 +1100,14 @@ p {
         font-family:'Noe Display';
         font-size: 40px;
         line-height: 1.15;
-        text-align: center
-        text-transform:none;
+        text-align: center;
+        text-transform: none;
         width: 82%;
         margin: auto;
       }
       p {
         font-family:'Noe Text';
-        font-size:27px;
+        font-size:19px;
         color: $m-blue;
         margin: auto;
         width: 80%;
@@ -1116,11 +1116,36 @@ p {
       }
       a {
         text-decoration: underline;
+        color: $m-blue;
       }
       .buttons {
         text-align: center;
         margin: auto;
         margin-top: 120px;
+      }
+    }
+    .team-wrapper {
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 60px 20px;
+      .team-item {
+        width: 26%;
+        margin-right: 60px;
+        &:nth-child(3n){
+          margin-right:0;
+        }
+        h2 {
+          font-size: 19px;
+          font-family:'Noe Display';
+          font-weight: bold;
+          text-align: center;
+          text-transform: none;
+
+        }
+        p {
+          text-align: center;
+        }
       }
     }
 }
