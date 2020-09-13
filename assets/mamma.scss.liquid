@@ -1041,7 +1041,9 @@ p {
 .about-page {
   button {
     padding:4px 12px;
+    font-family:'Noe Text';
     font-size:19px;
+    color: $m-blue;
     background-color: transparent;
     border :1px solid $m-blue;
   }
@@ -1058,17 +1060,17 @@ p {
     flex-direction:column;
     min-height: 90vh;
     align-items: center;
-    justify-content: center;
+    justify-content: center;margin-left: 30px;
     @include media-query($medium-up){
       flex-direction:row;
     }
       h1 {
         font-size: 6vw;
         margin-right: 20px;
-        &:nth-child(2){
+        .are {
           margin-left: -20px;
         }
-        &:nth-child(3){
+        .mamma {
           margin-left: -20px;
           margin-right: 0;
         }
@@ -1076,10 +1078,10 @@ p {
       img {
         width: 260px;
         height: auto;
-        &:nth-child(1){
+        .carmella {
           margin-top: -60px;
         }
-        &:nth-child(2){
+        .annabel {
           margin-top: 60px;
         }
       }
