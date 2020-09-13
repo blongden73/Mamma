@@ -1050,7 +1050,6 @@ body.discover {
     color: $m-blue;
     background-color: transparent;
     border :1px solid $m-blue;
-    margin-bottom: 60px;
     &:hover {
       background-color: $m-blue;
       color:$m-cream;
@@ -1058,10 +1057,12 @@ body.discover {
     }
   }
   .top {
+    padding: 60px 20px;
     button {
       position: relative;
       left: 50%;
       transform: translateX(-50%);
+      margin-top: 30px;
     }
   }
 
@@ -1072,6 +1073,7 @@ body.discover {
     align-items: center;
     justify-content: center;
     margin-left: 30px;
+    padding:70px 0;
     @include media-query($medium-up){
       flex-direction:row;
       margin-left: 0;
@@ -1110,23 +1112,32 @@ body.discover {
       }
     }
     .top {
-      margin-bottom: 16px;
+      margin-bottom: 75px;
     }
     .bottom {
-      margin-bottom: 20px;
+      margin-top: 50px;
     }
     .carmella {
-      margin-top: -50px;
       text-align: right;
       margin-right: 50px;
       @include media-query($medium-up){
-      margin-top: -60px;
-      text-align: unset;
-      margin-right: unset;
+        text-align: unset;
+        margin-right: unset;
       }
     }
     .annabel {
       margin-top: 60px;
+      @include media-query($medium-up){
+        margin-top: 0;
+      }
+      &::after {
+        content:'';
+        width: 1px;
+        height: 40px;
+        background-color: $m-blue;
+        
+        position:absolute;
+      }
     }
   }
 
