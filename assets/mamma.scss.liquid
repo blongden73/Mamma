@@ -1124,17 +1124,19 @@ p {
       @include media-query($medium-up){
         margin-top: 0;
       }
-      &::after {
-        content:'';
-        width: 1px;
-        height: 40px;
-        background-color: $m-blue;
-
-        position:absolute;
-      }
       .top {
         margin-bottom: 75px;
         padding:0;
+      }
+      .caption {
+        &::after {
+          content:'';
+          width: 1px;
+          height: 40px;
+          background-color: $m-blue;
+
+          position:absolute;
+        }
       }
     }
 
