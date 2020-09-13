@@ -1066,13 +1066,21 @@ p {
     flex-direction:column;
     min-height: 80vh;
     align-items: center;
-    justify-content: center;margin-left: 30px;
+    justify-content: center;
+    margin-left: 30px;
     @include media-query($medium-up){
       flex-direction:row;
+      margin-left: 0;
+      padding:20px;
     }
       .we, .are, .mamma {
-        font-size: 6vw;
-        margin-right: 20px;
+
+        font-size: 50px;
+    z-index: 20;
+    @include media-query($medium-up){
+      font-size: 6vw;
+      margin-right: 20px;
+    }
       }
       .are {
         margin-left: -20px;
@@ -1082,11 +1090,21 @@ p {
         margin-right: 0;
       }
       img {
-        width: 260px;
+        width: 200px;
         height: auto;
+        @include media-query($medium-up){
+          width: 260px;
+        }
       }
       .carmella {
+        margin-top: -50px;
+        text-align: right;
+        margin-right: 50px;
+        @include media-query($medium-up){
         margin-top: -60px;
+        text-align: unset;
+        margin-right: unset;
+        }
       }
       .annabel {
         margin-top: 60px;
