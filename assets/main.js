@@ -41,7 +41,7 @@ if(peopleWrapper) {
     },
     methods: {
       log: function() {
-        console.log(this.practioners, 'vue data');
+        console.log(this.data, 'vue data');
       }
     }
   })
