@@ -45,6 +45,7 @@ if(peopleWrapper) {
       }
     }
   })
+  app.log();
 
   // loadJSON("https://mamma-join.neuer.uk/wp-json/mamma/v1/get-members/", function(data) {
   //   console.log(data);
