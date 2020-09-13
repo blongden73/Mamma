@@ -25,8 +25,20 @@ function loadJSON(path, success, error){
   xhr.open("GET", path, true);
   xhr.send();
 }
-loadJSON("https://mamma-join.neuer.uk/wp-json/mamma/v1/get-members/", function(data) {
-  console.log(data);
-}, function(xhr) {
-  console.log("error");
-});
+
+//call this funtion on where people exsist
+var peopleWrapper = document.querySelector('.m-people-placeholder');
+if(peopleWrapper) {
+  loadJSON("https://mamma-join.neuer.uk/wp-json/mamma/v1/get-members/", function(data) {
+    // console.log(data);
+    // var people = data;
+    // for(i=0; i < people.length; i++) {
+    //   var name = people[i].full_name;
+    //   var practice = people[i].practice;
+    //   var profile_picture = people[i].profile_picture;
+      
+    }
+  }, function(xhr) {
+    console.log("error");
+  });
+}
