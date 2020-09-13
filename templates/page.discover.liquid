@@ -26,8 +26,8 @@
 
         </ul>
       </div>
-      {% for events in collection.products %}
-        {{events.title}}
+      {% for events in collection.products.all %}
+        {{events}}
       {% endfor %}
     </div>
   </div>
