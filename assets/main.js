@@ -29,6 +29,8 @@ function loadJSON(path, success, error){
 //call this funtion on where people exsist
 var peopleWrapper = document.querySelector('.m-people-placeholder');
 if(peopleWrapper) {
+  Vue.mixin({ delimiters: ['${','}'] });
+
   var app = new Vue({
     el: '#app',
     data: {
