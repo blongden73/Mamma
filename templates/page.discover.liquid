@@ -27,13 +27,13 @@
         </ul>
       </div>
       {% for events in collections.all.products %}
-        {% assign practition = product.metafields.airf.practition %}
-        {% assign level = product.metafields.airf.level %}
-        {% assign pregnancy_ = product.metafields.airf.pregnancy_ %}
-        {% assign speed = product.metafields.airf.speed %}
-        {% assign space = product.metafields.airf.space %}
-        {% assign type = product.metafields.airf.type %}
-        {% assign practice = product.metafields.airf.practice %}
+        {% assign practition = events.metafields.airf.practition %}
+        {% assign level = events.metafields.airf.level %}
+        {% assign pregnancy_ = events.metafields.airf.pregnancy_ %}
+        {% assign speed = events.metafields.airf.speed %}
+        {% assign space = events.metafields.airf.space %}
+        {% assign type = events.metafields.airf.type %}
+        {% assign practice = events.metafields.airf.practice %}
         {{events.title}}
         {{practition}}
         {{pregnancy_}}
