@@ -1035,10 +1035,15 @@ p {
   background-color: blue;
 }
 
+
+
+
 .about-page {
   button {
+    padding:4px 12px;
+    font-size:19px;
     background-color: transparent;
-    border :1px solid $color-text;
+    border :1px solid $m-blue;
   }
   .top {
     button {
@@ -1060,16 +1065,23 @@ p {
       h1 {
         font-size: 6vw;
         margin-right: 20px;
-        &:nth-child-last(1){
-          margin-right:0;
-        }
         &:nth-child(2){
           margin-left: -20px;
+        }
+        &:nth-child(3){
+          margin-left: -20px;
+          margin-right: 0;
         }
       }
       img {
         width: 260px;
         height: auto;
+        &:nth-child(1){
+          margin-top: -60px;
+        }
+        &:nth-child(2){
+          margin-top: 60px;
+        }
       }
     }
 }
