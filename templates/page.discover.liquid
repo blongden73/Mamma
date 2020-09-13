@@ -56,3 +56,22 @@
   </div>
   <img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/the_space_low.jpg?v=1600020411">
 </div>
+<div class="m-practice-list">
+  <div class="flex">
+    {% assign mind = linklists.mind %}
+    {% assign body = linklists.body %}
+    {% assign spirit = linklists.spirit %}
+    <div class="m-practice-box">
+      <h1>{{mind.title}}</h1>
+      {{mind}}
+    </div>
+    <div class="m-practice-box">
+      <h1>{{body.title}}</h1>
+      {{body}}
+    </div>
+    <div class="m-practice-box">
+      <h1>{{spirit.title}}</h1>
+      {{spirit}}
+    </div>
+  </div>
+</div>
