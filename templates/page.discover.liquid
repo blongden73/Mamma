@@ -57,27 +57,29 @@
   <img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/the_space_low.jpg?v=1600020411">
 </div>
 <div class="m-practice-list">
-  <div class="flex">
-    {% assign mind = linklists.mind %}
-    {% assign body = linklists.body %}
-    {% assign spirit = linklists.spirit %}
-    <div class="m-practice-box">
-      <h1>{{mind.title}}</h1>
-      {% for link in mind %}
-        <a href="{{ link.url }}">{{ link.title }}</a>
-      {% endfor %}
-    </div>
-    <div class="m-practice-box">
-      <h1>{{body.title}}</h1>
-      {% for link in body %}
-        <a href="{{ link.url }}">{{ link.title }}</a>
-      {% endfor %}
-    </div>
-    <div class="m-practice-box">
-      <h1>{{spirit.title}}</h1>
-      {% for link in spirit %}
-        <a href="{{ link.url }}">{{ link.title }}</a>
-      {% endfor %}
+  <div class="page-width">
+    <div class="flex">
+      {% assign mind = linklists.mind %}
+      {% assign body = linklists.body %}
+      {% assign spirit = linklists.spirit %}
+      <div class="m-practice-box">
+        <h1>{{mind.title}}</h1>
+        {% for link in mind.links %}
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        {% endfor %}
+      </div>
+      <div class="m-practice-box">
+        <h1>{{body.title}}</h1>
+        {% for link in body.links %}
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        {% endfor %}
+      </div>
+      <div class="m-practice-box">
+        <h1>{{spirit.title}}</h1>
+        {% for link in spirit.links %}
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
