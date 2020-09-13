@@ -783,7 +783,7 @@ $grid-breakpoints: (
 }
 
 //colours
-$m-cream: #eae0d6;
+$m-cream: #F6EEEE;
 $m-blue: #272D7A;
 
 @font-face {
@@ -834,7 +834,6 @@ $m-blue: #272D7A;
 body {
   background-color: #eae0d6 !important;
   color: $m-blue !important;
-  font-family:'Noe Text';
 }
 
 h1, h2, h3, h4 {
@@ -1036,11 +1035,7 @@ p {
   background-color: blue;
 }
 
-//body Classes
 
-body.discover {
-  background-color: #fff !important;
-}
 
 
 .about-page {
@@ -1066,7 +1061,6 @@ body.discover {
       margin-top: 30px;
     }
   }
-
   .top__main {
     display: flex;
     flex-direction:column;
@@ -1112,12 +1106,6 @@ body.discover {
         text-align: center;
       }
     }
-    .top {
-      margin-bottom: 75px;
-    }
-    .bottom {
-      margin-top: 50px;
-    }
     .carmella {
       text-align: right;
       margin-right: 50px;
@@ -1125,9 +1113,13 @@ body.discover {
         text-align: unset;
         margin-right: unset;
       }
+      .bottom {
+        margin-top: 50px;
+      }
     }
     .annabel {
       margin-top: 60px;
+      border-bottom: 1px solid $m-blue;
       @include media-query($medium-up){
         margin-top: 0;
       }
@@ -1139,7 +1131,12 @@ body.discover {
 
         position:absolute;
       }
+      .top {
+        margin-bottom: 75px;
+        padding:0;
+      }
     }
+
   }
 
   .intro {
@@ -1228,12 +1225,7 @@ body.discover {
       font-size: 130px;
     }
   }
-
-  .page-width {
-    background-color: $m-cream;
-  }
 }
-
 
 .m-filters {
   ul {
@@ -1248,13 +1240,7 @@ body.discover {
   font-family:'Noe Display';
 }
 
-.m-event-meta {
-  font-family:'Noe Text';
-}
-
 .m-calendar-wrapper {
-  background-color: $m-cream;
-
   ul {
     li {
       border-top: 1px solid $m-blue;
