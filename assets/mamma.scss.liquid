@@ -1099,9 +1099,10 @@ p {
       h2 {
         font-family:'Noe Display';
         font-size: 40px;
-        line-height: 1.2;
-        text-align: center;
-        width: 80%;
+        line-height: 1.15;
+        text-align: center
+        text-transform:none;
+        width: 82%;
         margin: auto;
       }
       p {
@@ -1109,16 +1110,20 @@ p {
         font-size:27px;
         color: $m-blue;
         margin: auto;
-    width: 80%;
-    text-align: center;
+        width: 80%;
+        text-align: center;
+        margin-top: 20px;
       }
       a {
         text-decoration: underline;
-        font-size:27px;
-        color: $m-blue;
       }
       .buttons {
-
+        text-align: center;
+        margin: auto;
+        margin-top: 120px;
+        button:nth-child-first(1) {
+          margin-right:10px;
+        }
       }
     }
 }
