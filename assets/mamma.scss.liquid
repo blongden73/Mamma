@@ -783,7 +783,7 @@ $grid-breakpoints: (
 }
 
 //colours
-$m-cream: #F6EEEE;
+$m-cream: #eae0d6;
 $m-blue: #272D7A;
 
 @font-face {
@@ -834,6 +834,11 @@ $m-blue: #272D7A;
 body {
   background-color: #eae0d6 !important;
   color: $m-blue !important;
+  font-family: 'Noe Text';
+
+  &.discover {
+    background-color: #fff !important;
+  }
 }
 
 h1, h2, h3, h4 {
@@ -1255,6 +1260,10 @@ p {
       font-size: 130px;
     }
   }
+
+  .page-width {
+    background-color: $m-cream;
+  }
 }
 
 .m-filters {
@@ -1271,6 +1280,8 @@ p {
 }
 
 .m-calendar-wrapper {
+  background-color: $m-cream;
+
   ul {
     li {
       border-top: 1px solid $m-blue;
