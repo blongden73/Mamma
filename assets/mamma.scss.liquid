@@ -783,7 +783,7 @@ $grid-breakpoints: (
 }
 
 //colours
-$m-cream: #eae0d6;
+$m-cream: #F6EEEE;
 $m-blue: #272D7A;
 
 @font-face {
@@ -834,7 +834,6 @@ $m-blue: #272D7A;
 body {
   background-color: #eae0d6 !important;
   color: $m-blue !important;
-  font-family:'Noe Text';
 }
 
 h1, h2, h3, h4 {
@@ -1036,11 +1035,7 @@ p {
   background-color: blue;
 }
 
-//body Classes
 
-body.discover {
-  background-color: #fff !important;
-}
 
 
 .about-page {
@@ -1065,82 +1060,81 @@ body.discover {
       transform: translateX(-50%);
       margin-top: 30px;
     }
-    &__main {
-      display: flex;
-      flex-direction:column;
-      min-height: 80vh;
-      align-items: center;
-      justify-content: center;
-      margin-left: 30px;
-      padding:70px 0;
+  }
+  .top__main {
+    display: flex;
+    flex-direction:column;
+    min-height: 80vh;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    padding:70px 0;
+    @include media-query($medium-up){
+      flex-direction:row;
+      margin-left: 0;
+      padding:20px;
+    }
+    .we, .are, .mamma {
+      font-size: 50px;
+      z-index: 20;
       @include media-query($medium-up){
-        flex-direction:row;
-        margin-left: 0;
-        padding:20px;
+      font-size: 6vw;
+      margin-right: 20px;
       }
-      .we, .are, .mamma {
-        font-size: 50px;
-        z-index: 20;
-        @include media-query($medium-up){
-        font-size: 6vw;
-        margin-right: 20px;
-        }
+    }
+    .are {
+      margin-left: -20px;
+    }
+    .mamma {
+      margin-left: -20px;
+      margin-right: 0;
+    }
+    img {
+      width: 200px;
+      height: auto;
+      @include media-query($medium-up){
+        width: 260px;
       }
-      .are {
-        margin-left: -20px;
+    }
+    .caption {
+      display:none;
+      @include media-query($medium-up){
+        display:block;
+        font-family:'Noe Text';
+        font-size:19px;
+        color:$m-blue;
+        text-align: center;
       }
-      .mamma {
-        margin-left: -20px;
-        margin-right: 0;
+    }
+    .top {
+      margin-bottom: 75px;
+    }
+    .bottom {
+      margin-top: 50px;
+    }
+    .carmella {
+      text-align: right;
+      margin-right: 50px;
+      @include media-query($medium-up){
+        text-align: unset;
+        margin-right: unset;
       }
-      img {
-        width: 200px;
-        height: auto;
-        @include media-query($medium-up){
-          width: 260px;
-        }
+    }
+    .annabel {
+      margin-top: 60px;
+      @include media-query($medium-up){
+        margin-top: 0;
       }
-      .caption {
-        display:none;
-        @include media-query($medium-up){
-          display:block;
-          font-family:'Noe Text';
-          font-size:19px;
-          color:$m-blue;
-          text-align: center;
-        }
-      }
-      .top {
-        margin-bottom: 75px;
-      }
-      .bottom {
-        margin-top: 50px;
-      }
-      .carmella {
-        text-align: right;
-        margin-right: 50px;
-        @include media-query($medium-up){
-          text-align: unset;
-          margin-right: unset;
-        }
-      }
-      .annabel {
-        margin-top: 60px;
-        @include media-query($medium-up){
-          margin-top: 0;
-        }
-        &::after {
-          content:'';
-          width: 1px;
-          height: 40px;
-          background-color: $m-blue;
+      &::after {
+        content:'';
+        width: 1px;
+        height: 40px;
+        background-color: $m-blue;
 
-          position:absolute;
-        }
+        position:absolute;
       }
     }
   }
-
 
   .intro {
     background-color: white;
@@ -1225,12 +1219,7 @@ body.discover {
   h1 {
     font-family:'Noe Display';
   }
-
-  .page-width {
-    background-color: $m-cream;
-  }
 }
-
 
 .m-filters {
   ul {
@@ -1245,13 +1234,7 @@ body.discover {
   font-family:'Noe Display';
 }
 
-.m-event-meta {
-  font-family:'Noe Text';
-}
-
 .m-calendar-wrapper {
-  background-color: $m-cream;
-
   ul {
     li {
       border-top: 1px solid $m-blue;
