@@ -1140,11 +1140,15 @@ p {
         margin-right: unset;
       }
       img {
-
         width: 160px;
         height: auto;
         margin-top: -100px;
-        margin-right:40px;
+        margin-right: -3vw;
+        @include media-query($medium-up){
+          width: 260px;
+          margin-top: 0;
+          margin-right: 0;
+        }
       }
       .bottom {
         margin-top: 50px;
@@ -1175,11 +1179,15 @@ p {
         margin-top: 0;
       }
       img {
-
         width: 160px;
         height: auto;
         margin-top: -76px;
-        margin-left:40px;
+        margin-left: 6vw;
+        @include media-query($medium-up){
+          width: 260px;
+          margin-top: 0;
+          margin-right: 0;
+        }
       }
       .top {
         margin-bottom: 75px;
