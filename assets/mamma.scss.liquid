@@ -1195,6 +1195,18 @@ p {
   }
 }
 
+.m-button {
+  border: 1px solid $m-blue;
+  padding: 10px;
+  width: max-content;
+
+  .m-calendar-wrapper & {
+    float: right;
+    width: max-content;
+    margin-top: -23px;
+  }
+}
+
 .flex {
   display: flex;
   flex-direction: row;
@@ -1204,21 +1216,31 @@ p {
   }
 }
 
+.m-calendar-header {
+  h1 {
+    font-family:'Noe Display';
+  }
+}
+
 .m-filters {
   ul {
     display: flex;
     flex-direction: row;
+    font-family:'Noe Text';
   }
 }
 
 .m-event-title {
   display: block;
+  font-family:'Noe Display';
 }
 
 .m-calendar-wrapper {
   ul {
     li {
       border-top: 1px solid $m-blue;
+      padding: 10px;
+      padding-bottom: 10px;
     }
   }
 }
