@@ -1077,7 +1077,6 @@ p {
     @include media-query($medium-up){
       flex-direction:row;
       margin-left: 0;
-      padding:20px;
     }
     .we, .are, .mamma {
       font-size: 50px;
@@ -1126,8 +1125,8 @@ p {
           height: 125px;
           background-color: $m-blue;
           position: absolute;
-          transform: translateX(58px);
-          margin-top: -30px;
+          transform: translateX(80px);
+          margin-top: -132px;
         }
         &::after {
           content:'';
@@ -1135,8 +1134,9 @@ p {
           height:8px;
           background-color: $m-blue;
           position:absolute;
-          margin-left: -70px;
-          margin-top: 20px;
+          margin-left: -93px;
+          margin-top: 30px;
+          border-radius: 50%;
         }
       }
     }
@@ -1157,8 +1157,9 @@ p {
           height:8px;
           background-color: $m-blue;
           position:absolute;
-          margin-left: 70px;
-          margin-top: -20px;
+          margin-left: 67px;
+          margin-top: -16px;
+          border-radius: 50%;
         }
         &::after {
           content: '';
@@ -1179,17 +1180,17 @@ p {
     padding:60px 20px;
     h2 {
       font-family:'Noe Display';
-      font-size: 40px;
+      font-size: 60px;
       line-height: 1.15;
       text-align: center;
       text-transform: none;
       width: 82%;
       margin: auto;
-      margin-top: 60px;
+      margin-top: 70px;
     }
     p {
       font-family:'Noe Text';
-      font-size:19px;
+      font-size: 27px;
       color: $m-blue;
       margin: auto;
       width: 80%;
@@ -1212,8 +1213,8 @@ p {
     justify-content: center;
     padding: 60px 20px;
     .team-item {
-      width: 26%;
-      margin-right: 60px;
+      width: 23%;
+      margin-right: 80px;
       &:nth-child(3n){
         margin-right:0;
       }
@@ -1223,10 +1224,16 @@ p {
         font-weight: bold;
         text-align: center;
         text-transform: none;
-
+        margin-bottom: 0;
+        margin-top: 20px;
+        border-top: 1px solid $m-blue;
       }
       p {
+        font-family:'Noe Text';
+        line-height:1;
+        color:$m-blue;
         text-align: center;
+        margin-bottom: 40px;
       }
     }
   }
