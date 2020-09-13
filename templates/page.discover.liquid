@@ -63,15 +63,21 @@
     {% assign spirit = linklists.spirit %}
     <div class="m-practice-box">
       <h1>{{mind.title}}</h1>
-      {{mind}}
+      {% for link in mind %}
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      {% endfor %}
     </div>
     <div class="m-practice-box">
       <h1>{{body.title}}</h1>
-      {{body}}
+      {% for link in body %}
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      {% endfor %}
     </div>
     <div class="m-practice-box">
       <h1>{{spirit.title}}</h1>
-      {{spirit}}
+      {% for link in spirit %}
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      {% endfor %}
     </div>
   </div>
 </div>
