@@ -1073,99 +1073,115 @@ p {
       margin-left: 0;
       padding:20px;
     }
-      .we, .are, .mamma {
-
-        font-size: 50px;
-    z-index: 20;
-    @include media-query($medium-up){
+    .we, .are, .mamma {
+      font-size: 50px;
+      z-index: 20;
+      @include media-query($medium-up){
       font-size: 6vw;
       margin-right: 20px;
-    }
-      }
-      .are {
-        margin-left: -20px;
-      }
-      .mamma {
-        margin-left: -20px;
-        margin-right: 0;
-      }
-      img {
-        width: 200px;
-        height: auto;
-        @include media-query($medium-up){
-          width: 260px;
-        }
-      }
-      .carmella {
-        margin-top: -50px;
-        text-align: right;
-        margin-right: 50px;
-        @include media-query($medium-up){
-        margin-top: -60px;
-        text-align: unset;
-        margin-right: unset;
-        }
-      }
-      .annabel {
-        margin-top: 60px;
       }
     }
+    .are {
+      margin-left: -20px;
+    }
+    .mamma {
+      margin-left: -20px;
+      margin-right: 0;
+    }
+    img {
+      width: 200px;
+      height: auto;
+      @include media-query($medium-up){
+        width: 260px;
+      }
+    }
+    .caption {
+      display:none;
+      @include media-query($medium-up){
+        display:block;
+        font-family:'Noe Text'
+        font-size:19px;
+        color:$m-blue;
+        text-align: center;
+      }
+    }
+    .top {
+      margin-bottom: 16px;
+    }
+    .bottom {
+      margin-bottom: 20px;
+    }
+    .carmella {
+      margin-top: -50px;
+      text-align: right;
+      margin-right: 50px;
+      @include media-query($medium-up){
+      margin-top: -60px;
+      text-align: unset;
+      margin-right: unset;
+      }
+    }
+    .annabel {
+      margin-top: 60px;
+    }
+  }
 
-    .intro {
-      background-color: white;
-      padding:60px 20px;
+  .intro {
+    background-color: white;
+    padding:60px 20px;
+    h2 {
+      font-family:'Noe Display';
+      font-size: 40px;
+      line-height: 1.15;
+      text-align: center;
+      text-transform: none;
+      width: 82%;
+      margin: auto;
+      margin-top: 60px;
+    }
+    p {
+      font-family:'Noe Text';
+      font-size:19px;
+      color: $m-blue;
+      margin: auto;
+      width: 80%;
+      text-align: center;
+      margin-top: 20px;
+    }
+    a {
+      text-decoration: underline;
+      color: $m-blue;
+    }
+    .buttons {
+      text-align: center;
+      margin: auto;
+      margin-top: 120px;
+    }
+  }
+  .team-wrapper {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 60px 20px;
+    .team-item {
+      width: 26%;
+      margin-right: 60px;
+      &:nth-child(3n){
+        margin-right:0;
+      }
       h2 {
+        font-size: 19px;
         font-family:'Noe Display';
-        font-size: 40px;
-        line-height: 1.15;
+        font-weight: bold;
         text-align: center;
         text-transform: none;
-        width: 82%;
-        margin: auto;
+
       }
       p {
-        font-family:'Noe Text';
-        font-size:19px;
-        color: $m-blue;
-        margin: auto;
-        width: 80%;
         text-align: center;
-        margin-top: 20px;
-      }
-      a {
-        text-decoration: underline;
-        color: $m-blue;
-      }
-      .buttons {
-        text-align: center;
-        margin: auto;
-        margin-top: 120px;
       }
     }
-    .team-wrapper {
-      display:flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 60px 20px;
-      .team-item {
-        width: 26%;
-        margin-right: 60px;
-        &:nth-child(3n){
-          margin-right:0;
-        }
-        h2 {
-          font-size: 19px;
-          font-family:'Noe Display';
-          font-weight: bold;
-          text-align: center;
-          text-transform: none;
-
-        }
-        p {
-          text-align: center;
-        }
-      }
-    }
+  }
 }
 
 .flex {
