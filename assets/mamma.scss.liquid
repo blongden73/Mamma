@@ -1394,7 +1394,7 @@ p {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          height: 60vh;
+          min-height: 90vh;
           padding: 40px 20px;
           @include media-query ($medium-up){
             height: 70vh;
@@ -1480,10 +1480,10 @@ p {
       background-position: center;
       background-repeat: no-repeat;
       width: 100%;
-    height: 60vh;
+      height: 60vh;
       @include media-query ($medium-up){
-        width: 100%;
-    height: 60vh;
+        width: 60%;
+        height: unset;
       }
     }
     .header-right {
