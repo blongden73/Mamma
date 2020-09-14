@@ -1404,10 +1404,10 @@ p {
         .be, .here, .now {
           font-family:'Noe Display';
           font-weight: bold;
-          font-size:5vw;
+          font-size:12vw;
           color:$m-darkorange;
           @include media-query ($medium-up){
-            font-size:12vw;
+            font-size:5vw;
           }
         }
         .be {
@@ -1487,8 +1487,11 @@ p {
       }
     }
     .header-right {
-      width: 55%;
+      width: 100%;
       height: unset;
+      @include media-query ($medium-up){
+        width: 55%;
+      }
       h2 {
         font-family:'Noe Display';
         font-size: 32px;
