@@ -1076,7 +1076,7 @@ p {
   .top__main {
     display: flex;
     flex-direction:column;
-    min-height: 80vh;
+    min-height: 70vh;
 
     @include media-query($medium-up){
       flex-direction:row;
@@ -1110,6 +1110,7 @@ p {
       margin-top: -40px;
       @include media-query($medium-up){
         margin-left: -20px;
+        margin-top: 0;
       }
     }
     .mamma {
@@ -1135,6 +1136,9 @@ p {
         font-size:19px;
         color:$m-blue;
         text-align: center;
+        width: max-content;
+        margin-right:auto;
+        margin-left:auto;
       }
     }
     .carmella {
@@ -1157,10 +1161,11 @@ p {
       }
       .bottom {
         margin-top: 50px;
+        border-top: 1px solid $m-blue;
         &::before {
           content: '';
           width: 1px;
-          height: 125px;
+          height: 132px;
           background-color: $m-blue;
           position: absolute;
           transform: translateX(80px);
@@ -1192,11 +1197,13 @@ p {
           width: 260px;
           margin-top: 0;
           margin-right: 0;
+          margin-left: 0;
         }
       }
       .top {
         margin-bottom: 75px;
         padding:0;
+        border-bottom: 1px solid $m-blue;
       }
       .caption {
         // border-bottom: 1px solid $m-blue;
@@ -1217,7 +1224,7 @@ p {
           background-color: $m-blue;
           position: absolute;
           transform: translateX(-58px);
-          margin-top: 30px;
+          margin-top: 28px;
         }
       }
     }
@@ -1231,6 +1238,7 @@ p {
       font-family:'Noe Display';
       font-size:29px;
       line-height: 1.15;
+      letter-spacing: none;
       text-align: center;
       text-transform: none;
       margin: auto;
@@ -1307,6 +1315,15 @@ p {
         text-align: center;
         margin-bottom: 40px;
       }
+    }
+  }
+  .job-openings {
+    display:flex;
+    .left {
+      width: 50%;
+    }
+    .right {
+      width: 50%;
     }
   }
 }
