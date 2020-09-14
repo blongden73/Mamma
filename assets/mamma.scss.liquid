@@ -1636,15 +1636,30 @@ p {
       transform: translate(-50%, -50%);
       width: 100%;
 
+      h1 {
+        text-align: center;
+      }
+
       form {
         width: 100%;
 
+        label {
+          font-weight: 900;
+          font-family:'Noe Display';
+          margin-top: 20px;
+          margin-bottom: 10px;
+        }
+
         input {
           width: 100%;
+          border: none;
+          border-bottom: 1px solid $m-blue;
+          font-family:'Noe Text';
         }
 
         select {
           width: 100%;
+          font-family:'Noe Text';
         }
       }
     }
