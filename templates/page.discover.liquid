@@ -1,13 +1,28 @@
 <div class="m-page-header flex">
   <div class="header-left">
-    <div class="header-inner"></div>
+    <div class="header-inner">
+      <h1>Explore <span class="underline">Mamma</span></h1>
+    </div>
     {% assign page_image = page.metafields.airf.page_image %}
     {% if page_image and page_image != '&nbsp' %}
         <img src="{{ page_image }}" />
     {% endif %}
   </div>
   <div class="header-right">
-    <div class="header-inner"></div>
+    <div class="header-inner">
+      <h1>What are you looking for?</h1>
+      <form>
+        <label>Search here</label>
+        <input></input>
+        <label>Mamma Offerings</label>
+        <selection></selection>
+        <label>How you would like your wellness?</label>
+        <selection></selection>
+        <label>How are you felling?</label>
+        <selection></selection>
+        <button>Search</button>
+      </form>
+    </div>
   </div>
 </div>
 <div class="m-calendar-header">
