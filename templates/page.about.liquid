@@ -68,23 +68,40 @@
         </div>
     </div>
 
-    <div class="job-openings">
-        <div class="left">
-            <p>Be</p>
-            <p>Here</p>
-            <p>Now</p>
+    <div class="m-page-header flex job-openings">
+      <div class="header-left">
+        <div class="header-inner">
+          <div class="left">
+              <p>Be</p>
+              <p>Here</p>
+              <p>Now</p>
+          </div>
         </div>
-        <div class="right">
-            <h3>We are currently looking for</h3>
-            <p>Join our family of wellness worldwide practitioners. Be part of a community that helps you thrive and
+      </div>
+      <div class="header-right">
+        <div class="header-inner">
+          <div class="header-inner-content">
+            <h1>We are currently looking for</h1>
+            <p class="join-para">Join our family of wellness worldwide practitioners. Be part of a community that helps you thrive and
                 supports you in your work.</p>
-            <p>Send us your cv/application! mamma@wellbeing.com</p>
+            <p class="send-cv">Send us your cv/application! mamma@wellbeing.com</p>
+          </div>
         </div>
+      </div>
     </div>
 
-    <div>
-        <img src="" alt="">
-        <div>
+
+
+    <div class="m-page-header flex about-mamma">
+      <div class="header-left">
+        {% assign page_image = page.metafields.airf.page_image %}
+        {% if page_image and page_image != '&nbsp' %}
+            <img src="{{ page_image }}" />
+        {% endif %}
+      </div>
+      <div class="header-right">
+        <div class="header-inner">
+          <div class="header-inner-content">
             <p><span>Bali was founded by Carmella Sternberg and Annabel James in 2018.</span>
                 After creating an award winning events company, working 7 day weeks, Carmella upped and left for Asia in
                 search of peace and healing. In Thailand she met Annabel who had left her job as a traditional therapist
@@ -94,6 +111,17 @@
                 their life’s work to help people find the healing therapies that they found to be so beneficial on their
                 journey toward health and happiness.
             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div>
+        <img src="" alt="">
+        <div>
+
         </div>
     </div>
 
