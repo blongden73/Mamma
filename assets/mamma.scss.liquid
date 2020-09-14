@@ -1414,15 +1414,22 @@ p {
   .about-mamma {
     min-height: 80vh;
     .image {
-      width: 50%;
+      width: 55%;
       background-image: url("https://cdn.shopify.com/s/files/1/0459/1697/9349/files/mamma-about-pic.png?v=1600109248");
-      height:100%
+      background-size:cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
     .header-right {
       height: 100%;
       width: 50%;
       .header-inner {
         .header-inner-content {
+          background-color: $m-darkorange;
+          width: 90%;
+          padding: 60px;
+          margin-top: 15vh;
+          height: 65vh;
           p {
             font-family:"Noe Text";
             font-size:19px;
@@ -1430,7 +1437,7 @@ p {
             color:$m-cream;
             text-align:center;
             .span {
-              font-weight:bold;
+              font-weight: bold;
               margin-bottom: 16px;
             }
           }
