@@ -1,4 +1,6 @@
 <!-- Vue -->
+{% assign slug = collection.handle %}
+{{slug}}
 <div id="app" class="m-people-placeholder">
   <div class="m-page-header flex" v-for="practioner in practioners" v-if="practioner.slug === 'ben-longden'">
     <template>
