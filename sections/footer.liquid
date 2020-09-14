@@ -149,10 +149,6 @@
              {{ block.shopify_attributes }}>
           <div class="site-footer__item-inner site-footer__item-inner--{{ block.type }}">
 
-            {%- if block.settings.title -%}
-              <p class="h4">{{ block.settings.title | escape }}</p>
-            {%- endif -%}
-
             {%- case block.type -%}
               {%- when 'newsletter' -%}
                 <div class="site-footer__newsletter
@@ -196,6 +192,9 @@
                       </span>
                     {% endif %}
                   {% endform %}
+                  <div class="footer-logo">
+                    <img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/footer_logo.png?v=1600073284">
+                  </div>
                 </div>
 
               {%- when 'text' -%}
@@ -205,10 +204,6 @@
                       {{ block.settings.text }}
                   </div>
                 {%- endif -%}
-
-              <div class="footer-logo">
-                <img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/footer_logo.png?v=1600073284">
-              </div>
 
               {%- when 'link_list' -%}
                 {%- assign footer_linklist = block.settings.menu -%}
