@@ -1392,6 +1392,23 @@ p {
 
     .header-right {
       width: 50%;
+      h2 {
+        font-family:'Noe Display';
+        font-size: 32px;
+        color:$m-darkorange;
+        position: absolute;
+        margin-top: -120px;
+        margin-left: 19%;
+        &::after {
+          content: '';
+          width: 1px;
+          height: 125px;
+          background-color: $m-darkorange;
+          position: absolute;
+          transform: translateX(-58px);
+          margin-top: 28px;
+        }
+      }
       .header-inner {
         height: 100%;
         padding: 60px 20px;
@@ -1405,23 +1422,7 @@ p {
             margin-bottom: 100px;
             margin-top: 20px;
           }
-          h2 {
-            font-family:'Noe Display';
-            font-size: 32px;
-            color:$m-darkorange;
-            position: absolute;
-            margin-top: -120px;
-            margin-left: 19%;
-            &::after {
-              content: '';
-              width: 1px;
-              height: 125px;
-              background-color: $m-darkorange;
-              position: absolute;
-              transform: translateX(-58px);
-              margin-top: 28px;
-            }
-          }
+
           .join-para {
             font-family:'Noe Display';
             font-size: 32px;
