@@ -1052,6 +1052,7 @@ p {
 .about-page {
   h2{
     letter-spacing: 0;
+    text-transform: capitalize;
   }
   button {
     font-family:'Noe Text';
@@ -1283,11 +1284,11 @@ p {
   }
 
   .our-team-wrapper {
+    padding-top: 60px;
     .our-team {
       h2 {
         font-size:60px;
         color:$m-blue;
-        margin-bottom: 60px;
         span {
           font-family:'Run Wild';
         }
@@ -1403,6 +1404,23 @@ p {
             color: $m-darkorange;
             margin-bottom: 100px;
             margin-top: 20px;
+          }
+          h2 {
+            font-family:'Noe Display';
+            font-size: 32px;
+            color:$m-darkorange;
+            position: absolute;
+            margin-top: -120px;
+            margin-left: 19%;
+            &::after {
+              content: '';
+              width: 1px;
+              height: 125px;
+              background-color: $m-darkorange;
+              position: absolute;
+              transform: translateX(-58px);
+              margin-top: 28px;
+            }
           }
           .join-para {
             font-family:'Noe Display';
