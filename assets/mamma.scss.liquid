@@ -1281,11 +1281,7 @@ p {
       }
     }
   }
-  .team-wrapper {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 60px 20px;
+  .our-team-wrapper {
     .our-team {
       h2 {
         font-size:60px;
@@ -1296,57 +1292,65 @@ p {
         }
       }
     }
-    .team-item {
-      width: calc(33% - -32px);
-      margin-right: 15px;
-      &:nth-child(2n){
-        margin-right:0;
-      }
-      @include media-query ($medium-up){
-        width: 23%;
-        margin-right: 80px;
+    .team-wrapper {
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 60px 20px;
+
+      .team-item {
+        width: calc(33% - -32px);
+        margin-right: 15px;
         &:nth-child(2n){
-          margin-right:80px;
-        }
-        &:nth-child(3n) {
           margin-right:0;
         }
-      }
-
-      h2 {
-        font-size: 19px;
-        font-family:'Noe Display';
-        font-weight: bold;
-        text-align: center;
-        text-transform: none;
-        margin-bottom: 0;
-        margin-top: 30px;
-        border-top: 1px solid $m-blue;
-        width: max-content;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 6px;
-        &::before {
-          content: '';
-          width: 1px;
-          height: 132px;
-          background-color: $m-blue;
-          display: block;
-          margin: auto;
-          margin-top: -133px;
-          position: relative;
-          margin-bottom: 6px;
+        @include media-query ($medium-up){
+          width: 23%;
+          margin-right: 80px;
+          &:nth-child(2n){
+            margin-right:80px;
+          }
+          &:nth-child(3n) {
+            margin-right:0;
+          }
         }
-      }
-      p {
-        font-family:'Noe Text';
-        line-height:1;
-        color:$m-blue;
-        text-align: center;
-        margin-bottom: 40px;
+
+        h2 {
+          font-size: 19px;
+          font-family:'Noe Display';
+          font-weight: bold;
+          text-align: center;
+          text-transform: none;
+          margin-bottom: 0;
+          margin-top: 30px;
+          border-top: 1px solid $m-blue;
+          width: max-content;
+          margin-left: auto;
+          margin-right: auto;
+          padding-top: 6px;
+          &::before {
+            content: '';
+            width: 1px;
+            height: 132px;
+            background-color: $m-blue;
+            display: block;
+            margin: auto;
+            margin-top: -133px;
+            position: relative;
+            margin-bottom: 6px;
+          }
+        }
+        p {
+          font-family:'Noe Text';
+          line-height:1;
+          color:$m-blue;
+          text-align: center;
+          margin-bottom: 40px;
+        }
       }
     }
   }
+
   .job-openings {
     margin-bottom: 60px;
     .header-inner {
