@@ -1336,7 +1336,9 @@ p {
     }
   }
   .job-openings {
-    min-height: 80vh;
+    .header-inner {
+
+    }
     .header-left {
       background-color:$m-lightorange;
       width: 50%;
@@ -1349,10 +1351,12 @@ p {
           flex-direction: column;
           justify-content: space-between;
           height: 70vh;
+          padding: 60px 50px;
         }
         .be, .here, .now {
-          font-family:'NoeDisplay-Bold';
-          font-size:4vw;
+          font-family:'Noe Display';
+          font-weight: bold;
+          font-size:5.5vw;
           color:$m-darkorange;
         }
         .be {
@@ -1363,6 +1367,41 @@ p {
         }
         .now {
           text-align: right;
+        }
+      }
+    }
+
+    .header-right {
+      width: 50%;
+      .header-inner {
+        height: 100%;
+        padding: 60px 20px;
+        .header-inner-content {
+          text-align: center;
+          h1{
+            font-family:'Noe Display';
+            font-weight: bold;
+            font-size: 40px;
+            color: $m-darkorange;
+            margin-bottom: 180px;
+          }
+          .join-para {
+            font-family:'Noe Display';
+            font-size: 30px;
+            line-height: 38px;
+            color: $m-darkorange;
+            max-width: 35%;
+            margin:auto;
+            margin-bottom: 80px;
+          }
+          .send-cv {
+            font-family:'Noe Display';
+            font-size: 16px;
+            line-height: 20px;
+            color: $m-darkorange;
+            max-width: 200px;
+            margin:auto;
+          }
         }
       }
     }
