@@ -1489,18 +1489,25 @@ p {
   }
 
   .what-others-say {
-    padding:20px;
+    padding:60px 20px;
+    h2 {
+      font-size: 30px;
+    }
     .quotes {
       display:flex;
+      min-height: 50vh;
       .quote {
         border:1px solid $m-blue;
         width: calc(50% - 10px);
         padding:10px;
+        display: flex;
+        flex-direction: column-reverse;
         &:nth-child(1){
           margin-right:20px;
         }
-        h1 {
-
+        h2 {
+          font-size: 30px;
+          margin-bottom
         }
       }
     }
