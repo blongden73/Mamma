@@ -1,7 +1,7 @@
 <!-- Vue -->
 {% assign slug = collection.handle %}
 <div id="app" class="m-people-placeholder">
-  <div class="m-page-header flex" v-for="practioner in practioners" v-if="practioner.slug === '{{slug}}'">
+  <div class="m-page-header flex practitioner" v-for="practioner in practioners" v-if="practioner.slug === '{{slug}}'">
     <template>
       <div class="header-left">
         <div class="header-inner">
@@ -12,8 +12,12 @@
       <div class="header-right">
         <div class="header-inner">
           <div class="header-inner-content">
+            <div class="practitioner-pager-header">
+              <img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/meet_practioners.png?v=1600117844">
+            </div>
             <h1>${practioner.full_name}</h1>
             <h2>${practioner.practice}</h2>
+            <p>${practioner.practice}</p>
           </div>
         </div>
       </div>
