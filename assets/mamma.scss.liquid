@@ -1543,7 +1543,8 @@ p {
     font-family:'Noe Display';
     font-size: 18px;
     font-weight: 900;
-    padding-right: 8px;
+    padding-right: 5px;
+    color: $m-blue;
   }
 }
 
@@ -1567,13 +1568,28 @@ p {
   margin-right: auto;
 }
 
-.newsletter__input {
-  margin-right: 20px;
-}
-
 .newsletter__submit {
   border: 1px solid $m-blue;
   background-color: transparent;
   font-family:'Noe Text';
-  text-transform: uppercase;
+  text-transform: capitalize;
+  letter-spacing: 0;
+  color: $m-blue;
+}
+
+.site-footer__item-inner--newsletter {
+  .newsletter__input {
+    margin-right: 20px;
+  }
+
+  h4 {
+    float: left;
+    font-size: 30px;
+    margin-top: 10px;
+  }
+
+  form {
+    float: right;
+    width: 80%;
+  }
 }
