@@ -785,6 +785,8 @@ $grid-breakpoints: (
 //colours
 $m-cream: #eae0d6;
 $m-blue: #272D7A;
+$m-lightorange: #EAC3B3;
+$m-darkorange: #DC5831;
 
 @font-face {
     font-family: 'Noe Display';
@@ -1334,7 +1336,37 @@ p {
     }
   }
   .job-openings {
-    
+    min-height: 80vh;
+    .header-left {
+      background-color:$m-lightorange;
+      width: 50%;
+      height: 100%;
+      padding:20px;
+      .header-inner{
+        border:1px solid $m-darkorange;
+        .left {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 70vh;
+        }
+        .be, .here, .now {
+          font-family:'NoeDisplay-Bold';
+          font-size:4vw;
+          color:$m-darkorange;
+        }
+        .be {
+          text-align:left;
+        }
+        .here {
+          text-align:center;
+        }
+        .now {
+          text-align: right;
+        }
+      }
+    }
+
   }
 }
 
