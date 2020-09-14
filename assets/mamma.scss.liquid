@@ -1052,7 +1052,7 @@ p {
 .about-page {
   h2{
     letter-spacing: 0;
-    text-transform: capitalize;
+    text-transform: none;
   }
   button {
     font-family:'Noe Text';
@@ -1286,11 +1286,17 @@ p {
   .our-team-wrapper {
     padding-top: 60px;
     .our-team {
+      margin: auto;
+      width: max-content;
       h2 {
         font-size:60px;
         color:$m-blue;
+        padding-bottom: 4px;
+        border-bottom: 1px solid $m-blue;
+        margin-bottom: 0;
         span {
           font-family:'Run Wild';
+          font-size: 66px;
         }
       }
     }
@@ -1392,23 +1398,7 @@ p {
 
     .header-right {
       width: 50%;
-      h2 {
-        font-family:'Noe Display';
-        font-size: 32px;
-        color:$m-darkorange;
-        position: absolute;
-        margin-top: -120px;
-        margin-left: 19%;
-        &::after {
-          content: '';
-          width: 1px;
-          height: 125px;
-          background-color: $m-darkorange;
-          position: absolute;
-          transform: translateX(-58px);
-          margin-top: 28px;
-        }
-      }
+
       .header-inner {
         height: 100%;
         padding: 60px 20px;
@@ -1458,6 +1448,23 @@ p {
     .header-right {
       height: 100%;
       width: 50%;
+      h2 {
+        font-family:'Noe Display';
+        font-size: 32px;
+        color:$m-darkorange;
+        position: absolute;
+        margin-top: -120px;
+        margin-left: 19%;
+        &::after {
+          content: '';
+          width: 1px;
+          height: 125px;
+          background-color: $m-darkorange;
+          position: absolute;
+          transform: translateX(-58px);
+          margin-top: 28px;
+        }
+      }
       .header-inner {
         .header-inner-content {
           background-color: $m-darkorange;
@@ -1477,6 +1484,21 @@ p {
             }
           }
         }
+      }
+    }
+  }
+
+  .what-others-say {
+    padding:20px;
+    display:flex;
+    .quote {
+      border:1px solid $m-blue;
+      width: calc(50% - 10px);
+      &:nth-child(1){
+        margin-right:20px;
+      }
+      h1 {
+
       }
     }
   }
