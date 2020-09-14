@@ -836,7 +836,7 @@ body {
   color: $m-blue !important;
   font-family: 'Noe Text';
 
-  &.discover {
+  &.discover, &.template-collection {
     background-color: #fff !important;
   }
 }
@@ -1014,7 +1014,7 @@ p {
   left: 0;
   width: 100%;
 
-  .discover & {
+  .discover &, .template-collection & {
     top: 0;
   }
 
@@ -1543,24 +1543,159 @@ p {
 
 //general spacing
 .m-practice-list-header, .m-calendar-header {
-  margin-top: 20px;
+  margin-top: 40px;
+}
+
+.m-practice-list-header {
+  h1 {
+    padding-bottom: 40px;
+  }
 }
 
 .m-calendar {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 
 //footer styling
 
 .site-footer {
-  background-color: $m-cream;
+  background-color: $m-cream !important;
+
+  .site-footer__linklist-item {
+    font-family:'Noe Display';
+    font-size: 18px;
+    font-weight: 900;
+    padding-right: 5px;
+    color: $m-blue;
+  }
 }
 
 .site-footer__content {
   flex-direction: column-reverse;
+  text-align: center;
 
   .site-footer__item {
     padding: 0;
+  }
+}
+
+.site-footer__item-inner--link_list {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-logo {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.newsletter__submit {
+  border: 1px solid $m-blue;
+  background-color: transparent;
+  font-family:'Noe Text';
+  text-transform: capitalize;
+  letter-spacing: 0;
+  color: $m-blue;
+}
+
+.site-footer__item-inner--newsletter {
+  .newsletter__input {
+    margin-right: 20px;
+  }
+
+  h4 {
+    float: left;
+    font-size: 30px;
+    margin-top: 10px;
+  }
+
+  form {
+    float: right;
+    width: 80%;
+  }
+}
+
+.m-page-header {
+  height: 100vh;
+  width: 100%;
+
+  .header-left {
+    width: 50%;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .header-inner {
+      h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $m-cream;
+      }
+    }
+  }
+
+  .header-right {
+    width: 50%;
+    position: relative;
+
+    .header-inner-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+
+      h1 {
+        text-align: center;
+      }
+
+      form {
+        width: 100%;
+
+        label {
+          font-weight: 900;
+          font-family:'Noe Display';
+          margin-top: 20px;
+          margin-bottom: 10px;
+        }
+
+        input {
+          width: 100%;
+          border: none;
+          border-bottom: 1px solid $m-blue;
+          font-family:'Noe Text';
+        }
+
+        select {
+          width: 100%;
+          font-family:'Noe Text';
+        }
+
+        button {
+          background-color: $m-blue;
+          border: none;
+          color: $m-cream;
+          font-family:'Noe Text';
+        }
+      }
+    }
+  }
+
+  .header-inner {
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    height: 90%;
+    transform: translate(-50%, -50%);
   }
 }

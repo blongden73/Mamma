@@ -149,14 +149,11 @@
              {{ block.shopify_attributes }}>
           <div class="site-footer__item-inner site-footer__item-inner--{{ block.type }}">
 
-            {%- if block.settings.title -%}
-              <p class="h4">{{ block.settings.title | escape }}</p>
-            {%- endif -%}
-
             {%- case block.type -%}
               {%- when 'newsletter' -%}
                 <div class="site-footer__newsletter
                           {% if section.blocks.size == 1 %} site-footer__single-block--centered{% endif %}">
+                  <h4>Let's stay in touch</h4>        
                   {%- assign formId = 'ContactFooter' -%}
                   {% form 'customer', id: formId, novalidate: 'novalidate' %}
                     {%- if form.posted_successfully? -%}
@@ -217,12 +214,14 @@
                         >
                           {{ link.title | escape }}
                         </a>
+                        •
                       </li>
                     {%- endfor -%}
                   </ul>
-
+                  <div class="footer-logo">
+                    <img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/footer_logo.png?v=1600073284">
+                  </div>
             {%- endcase -%}
-
           </div>
         </div>
       {%- endfor -%}
