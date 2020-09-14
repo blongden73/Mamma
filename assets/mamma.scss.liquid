@@ -1291,7 +1291,6 @@ p {
       h2 {
         font-size:60px;
         color:$m-blue;
-        padding-bottom: 4px;
         border-bottom: 1px solid $m-blue;
         margin-bottom: 0;
         span {
@@ -1335,7 +1334,6 @@ p {
           width: max-content;
           margin-left: auto;
           margin-right: auto;
-          padding-top: 6px;
           &::before {
             content: '';
             width: 1px;
@@ -1454,15 +1452,15 @@ p {
         color:$m-darkorange;
         position: absolute;
         margin-top: -120px;
-        margin-left: 19%;
+        margin-left: 16%;
         &::after {
           content: '';
           width: 1px;
-          height: 125px;
+          height: 215px;
           background-color: $m-darkorange;
           position: absolute;
           transform: translateX(-58px);
-          margin-top: 28px;
+          margin-top: 48px;
         }
       }
       .header-inner {
@@ -1508,6 +1506,7 @@ p {
         h2 {
           font-size: 30px;
           margin-bottom:0;
+          max-width: 560px;
         }
       }
     }
@@ -1529,7 +1528,11 @@ p {
 
 .flex {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+
+  @include media-query($medium-up){
+    flex-direction: row;
+  }
 
   .m-calendar-header & {
     justify-content: space-between;
