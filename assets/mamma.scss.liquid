@@ -788,6 +788,26 @@ $m-blue: #272D7A;
 $m-lightorange: #EAC3B3;
 $m-darkorange: #DC5831;
 
+//typescale
+$font-scale: (
+    12: 120px,
+    11: 110px,
+    10: 100px,
+    9: 80px,
+    8: 66px,
+    7: 58px,
+    6: 50px,
+    5: 44px,
+    4: 36px,
+    3: 30px,
+    2: 24px,
+    1: 20px,
+    0: 17px,
+);
+
+//use it like this
+// font-size: map-get($font-scale, 4);
+
 @font-face {
     font-family: 'Noe Display';
     src: url('NoeDisplay-Regular.woff2') format('woff2'),
@@ -846,6 +866,7 @@ body {
 h1, h2, h3, h4 {
   font-family: 'Noe Display' !important;
   font-weight: normal;
+  line-height: 1.1;
 }
 
 h2 {
@@ -854,6 +875,7 @@ h2 {
 
 p {
   font-family: 'Noe Text';
+  line-height: 1.4;
 }
 
 //holding page
@@ -1016,7 +1038,7 @@ p {
   left: 0;
   width: 100%;
 
-  .discover &, .template-collection & {
+  .discover &, .template-collection &, .about &{
     top: 0;
   }
 
