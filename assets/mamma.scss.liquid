@@ -1614,11 +1614,40 @@ p {
       object-fit: cover;
       object-position: center;
     }
+
+    .header-inner {
+      h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
   }
 
   .header-right {
     width: 50%;
     position: relative;
+
+    .header-inner-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+
+      form {
+        width: 100%;
+
+        input {
+          width: 100%;
+        }
+
+        select {
+          width: 100%;
+        }
+      }
+    }
   }
 
   .header-inner {
@@ -1628,12 +1657,5 @@ p {
     left: 50%;
     height: 90%;
     transform: translate(-50%, -50%);
-
-    h1 {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
   }
 }
