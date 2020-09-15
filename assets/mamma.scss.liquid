@@ -1579,7 +1579,7 @@ p {
       font-size: 24px;
     }
     .quotes {
-      min-height: 50vh;
+      min-height: 70vh;
       .quote {
         border:1px solid $m-blue;
         width: 100%;
@@ -1613,8 +1613,10 @@ p {
         text-align: center;
         font-family:'Noe Display';
         font-size: 66px;
+        line-height: 1;
         span{
-          font-family:"Run Wild"
+          font-family:"Run Wild";
+          font-size: 72px;
         }
       }
       .video-wrapper {
@@ -1634,8 +1636,10 @@ p {
         color: $m-darkorange;
         font-family:'Noe Diplay';
         font-size: 60px;
+        margin-bottom: -8px;
         span {
           font-family: 'Run Wild';
+          font-size: 66px;
         }
       }
       h2 {
@@ -2073,7 +2077,11 @@ p {
   h1, h2 {
     color:$m-cream;
   }
-  .cr-border {
-    border: 1px solid $m-cream;
-  }
 }
+
+.practitioner-page {
+  .orange-bg {
+    .cr-border {
+      border: 1px solid $m-cream!important;
+    }
+  }
