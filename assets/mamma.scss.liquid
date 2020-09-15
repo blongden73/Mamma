@@ -1682,9 +1682,6 @@ p {
   }
   .job-openings {
     margin-bottom:0;
-    @include media-query ($medium-up){
-      margin-bottom: 60px;
-    }
     .header-right {
       min-height:90vh;
       .header-inner {
@@ -1719,6 +1716,7 @@ p {
               border:1px solid $m-darkorange;
               &:hover {
                 background-color:$m-darkorange;
+                color:$m-cream;
               }
             }
           }
@@ -1727,6 +1725,7 @@ p {
             margin-bottom: 0;
             width: 100%;
             max-width: max-content;
+            margin-top: 6px;
           }
         }
       }
