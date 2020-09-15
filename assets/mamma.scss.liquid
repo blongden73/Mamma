@@ -788,22 +788,22 @@ $m-blue: #272D7A;
 $m-lightorange: #EAC3B3;
 $m-darkorange: #DC5831;
 
-// typescale
-$font-scale: (
-    12: 120px,
-    11: 110px,
-    10: 100px,
-    9: 80px,
-    8: 66px,
-    7: 58px,
-    6: 50px,
-    5: 44px,
-    4: 36px,
-    3: 30px,
-    2: 24px,
-    1: 20px,
-    0: 17px
-    );
+//typescale
+// $font-scale: (
+//     12: 120px,
+//     11: 110px,
+//     10: 100px,
+//     9: 80px,
+//     8: 66px,
+//     7: 58px,
+//     6: 50px,
+//     5: 44px,
+//     4: 36px,
+//     3: 30px,
+//     2: 24px,
+//     1: 20px,
+//     0: 17px
+//     );
 
 //use it like this
 // font-size: map-get($font-scale, 4);
@@ -1078,7 +1078,7 @@ p {
   }
   button {
     font-family:'Noe Text';
-    font-size: $font-scale(0);
+    font-size:16px;
     padding: 6px 14px 2px 14px;
     color: $m-blue;
     background-color: transparent;
@@ -1161,7 +1161,7 @@ p {
       @include media-query($medium-up){
         display:block;
         font-family:'Noe Text';
-        font-size: $font-scale(1);
+        font-size:19px;
         color:$m-blue;
         text-align: center;
         width: max-content;
@@ -1263,7 +1263,8 @@ p {
     padding:60px 20px;
     h2 {
       font-family:'Noe Display';
-      font-size: $font-scale(3);
+      font-size:29px;
+      line-height: 1.15;
       letter-spacing: 0;
       text-align: center;
       text-transform: none;
@@ -1273,21 +1274,21 @@ p {
         margin-bottom: 20px;
       }
       @include media-query($medium-up){
-        font-size: $font-scale(7);
+        font-size: 60px;
         width: 82%;
         margin-top: 70px;
       }
     }
     p {
       font-family:'Noe Text';
-      font-size: $font-scale(0);
+      font-size: 18px;
       color: $m-blue;
       margin: auto;
       width: 80%;
       text-align: center;
       margin-top: 20px;
       @include media-query($medium-up){
-        font-size: $font-scale(2);
+        font-size: 27px;
       }
     }
     a {
@@ -1319,18 +1320,18 @@ p {
       max-width: none;
     }
       h2 {
-        font-size: $font-scale(6);
+        font-size:50px;
         line-height:0.9;
         color:$m-blue;
         border-bottom: 1px solid $m-blue;
         margin-bottom: 0;
         @include media-query ($medium-up){
-          font-size: $font-scale(7);
+          font-size:60px;
           line-height:1;
         }
         span {
           font-family:'Run Wild';
-          font-size: $font-scale(8);
+          font-size: 66px;
         }
       }
     }
@@ -1358,7 +1359,7 @@ p {
         }
 
         h2 {
-          font-size: $font-scale(1);
+          font-size: 19px;
           font-family:'Noe Display';
           font-weight: bold;
           text-align: center;
@@ -1460,7 +1461,7 @@ p {
           h1{
             font-family:'Noe Display';
             font-weight: bold;
-            font-size: $font-scale(3);
+            font-size: 32px;
             color: $m-darkorange;
             margin-bottom: 60px;
             @include media-query ($medium-up){
@@ -1471,7 +1472,8 @@ p {
 
           .join-para {
             font-family:'Noe Display';
-            font-size: $font-scale(3);
+            font-size: 32px;
+            line-height: 38px;
             color: $m-darkorange;
 
             margin: auto;
@@ -1482,7 +1484,8 @@ p {
           }
           .send-cv {
             font-family:'Noe Display';
-            font-size: $font-scale(0);
+            font-size: 16px;
+            line-height: 20px;
             color: $m-darkorange;
             max-width: 200px;
             margin:auto;
@@ -1516,7 +1519,7 @@ p {
       }
       h2 {
         font-family:'Noe Display';
-        font-size: $font-scale(3);
+        font-size: 32px;
         color:$m-darkorange;
         position: absolute;
         margin-top: 20px;
@@ -1555,7 +1558,8 @@ p {
           }
           p {
             font-family:"Noe Text";
-            font-size: $font-scale(1);
+            font-size:19px;
+            line-height:27px;
             color:$m-cream;
             text-align:center;
             span {
@@ -1571,7 +1575,7 @@ p {
   .what-others-say {
     padding:60px 20px;
     h2 {
-      font-size: $font-scale(3);
+      font-size: 30px;
     }
     .quotes {
       min-height: 50vh;
@@ -1591,7 +1595,7 @@ p {
         }
 
         h2 {
-          font-size: $font-scale(3);
+          font-size: 30px;
           margin-bottom:0;
           max-width: 560px;
         }
