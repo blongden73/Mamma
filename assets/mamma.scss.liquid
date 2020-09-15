@@ -1269,9 +1269,10 @@ p {
       text-align: center;
       text-transform: none;
       margin: auto;
+              margin-bottom: 20px;
       span{
         font-weight: bold;
-        margin-bottom: 20px;
+
       }
       @include media-query($medium-up){
         font-size: 60px;
@@ -1603,6 +1604,11 @@ p {
     }
 
   }
+}
+
+
+.practitioner-page {
+  
 }
 
 .m-button {
@@ -2016,4 +2022,14 @@ p {
 
 .white-bg {
     background-color: white;
+}
+
+.orange-bg {
+  background-color:$m-darkorange;
+  h1, h2 {
+    color:$m-cream;
+  }
+  .quote {
+    border-color: $m-cream;
+  }
 }
