@@ -788,22 +788,22 @@ $m-blue: #272D7A;
 $m-lightorange: #EAC3B3;
 $m-darkorange: #DC5831;
 
-//typescale
-// $font-scale: (
-//     12: 120px,
-//     11: 110px,
-//     10: 100px,
-//     9: 80px,
-//     8: 66px,
-//     7: 58px,
-//     6: 50px,
-//     5: 44px,
-//     4: 36px,
-//     3: 30px,
-//     2: 24px,
-//     1: 20px,
-//     0: 17px
-//     );
+typescale
+$font-scale: (
+    12: 120px,
+    11: 110px,
+    10: 100px,
+    9: 80px,
+    8: 66px,
+    7: 58px,
+    6: 50px,
+    5: 44px,
+    4: 36px,
+    3: 30px,
+    2: 24px,
+    1: 20px,
+    0: 17px
+    );
 
 //use it like this
 // font-size: map-get($font-scale, 4);
@@ -1078,7 +1078,7 @@ p {
   }
   button {
     font-family:'Noe Text';
-    font-size:16px;
+    font-size: map-get($font-scale, 0);
     padding: 6px 14px 2px 14px;
     color: $m-blue;
     background-color: transparent;
@@ -1161,7 +1161,7 @@ p {
       @include media-query($medium-up){
         display:block;
         font-family:'Noe Text';
-        font-size:19px;
+        font-size: map-get($font-scale, 1);
         color:$m-blue;
         text-align: center;
         width: max-content;
@@ -1260,32 +1260,34 @@ p {
   }
 
   .intro {
-    background-color: white;
     padding:60px 20px;
     h2 {
       font-family:'Noe Display';
-      font-size:29px;
-      line-height: 1.15;
+      font-size: map-get($font-scale, 3);
       letter-spacing: 0;
       text-align: center;
       text-transform: none;
       margin: auto;
+      span{
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
       @include media-query($medium-up){
-        font-size: 60px;
+        font-size: map-get($font-scale, 7);
         width: 82%;
         margin-top: 70px;
       }
     }
     p {
       font-family:'Noe Text';
-      font-size: 18px;
+      font-size: map-get($font-scale, 0);
       color: $m-blue;
       margin: auto;
       width: 80%;
       text-align: center;
       margin-top: 20px;
       @include media-query($medium-up){
-        font-size: 27px;
+        font-size: map-get($font-scale, 2);
       }
     }
     a {
@@ -1317,18 +1319,18 @@ p {
       max-width: none;
     }
       h2 {
-        font-size:50px;
+        font-size: map-get($font-scale, 6);
         line-height:0.9;
         color:$m-blue;
         border-bottom: 1px solid $m-blue;
         margin-bottom: 0;
         @include media-query ($medium-up){
-          font-size:60px;
+          font-size: map-get($font-scale, 7);
           line-height:1;
         }
         span {
           font-family:'Run Wild';
-          font-size: 66px;
+          font-size: map-get($font-scale, 8);
         }
       }
     }
@@ -1356,7 +1358,7 @@ p {
         }
 
         h2 {
-          font-size: 19px;
+          font-size: map-get($font-scale, 1);
           font-family:'Noe Display';
           font-weight: bold;
           text-align: center;
@@ -1458,7 +1460,7 @@ p {
           h1{
             font-family:'Noe Display';
             font-weight: bold;
-            font-size: 32px;
+            font-size: map-get($font-scale, 3);
             color: $m-darkorange;
             margin-bottom: 60px;
             @include media-query ($medium-up){
@@ -1469,8 +1471,7 @@ p {
 
           .join-para {
             font-family:'Noe Display';
-            font-size: 32px;
-            line-height: 38px;
+            font-size: map-get($font-scale, 3);
             color: $m-darkorange;
 
             margin: auto;
@@ -1481,8 +1482,7 @@ p {
           }
           .send-cv {
             font-family:'Noe Display';
-            font-size: 16px;
-            line-height: 20px;
+            font-size: map-get($font-scale, 0);
             color: $m-darkorange;
             max-width: 200px;
             margin:auto;
@@ -1516,7 +1516,7 @@ p {
       }
       h2 {
         font-family:'Noe Display';
-        font-size: 32px;
+        font-size: map-get($font-scale, 3);
         color:$m-darkorange;
         position: absolute;
         margin-top: 20px;
@@ -1555,8 +1555,7 @@ p {
           }
           p {
             font-family:"Noe Text";
-            font-size:19px;
-            line-height:27px;
+            font-size: map-get($font-scale, 1);
             color:$m-cream;
             text-align:center;
             span {
@@ -1572,7 +1571,7 @@ p {
   .what-others-say {
     padding:60px 20px;
     h2 {
-      font-size: 30px;
+      font-size: map-get($font-scale, 3);
     }
     .quotes {
       min-height: 50vh;
@@ -1592,7 +1591,7 @@ p {
         }
 
         h2 {
-          font-size: 30px;
+          font-size: map-get($font-scale, 3);
           margin-bottom:0;
           max-width: 560px;
         }
@@ -2008,4 +2007,9 @@ p {
       }
     }
   }
+}
+
+
+.white-bg {
+    background-color: white;
 }
