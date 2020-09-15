@@ -1630,7 +1630,7 @@ p {
     flex-direction: column;
     justify-content: space-between;
     .intro-wrapper {
-      min-height: 80vh;
+      // min-height: 80vh;
       margin: auto;
       max-width: 1000px;
     }
@@ -1660,6 +1660,9 @@ p {
     .big-para {
       font-size: 24px;
       color: $m-darkorange;
+      margin:unset;
+      margin-left: auto;
+      margin-right: auto;
       @include media-query($medium-up){
         font-size:36px;
       }
@@ -1685,6 +1688,7 @@ p {
     .header-right {
       min-height:90vh;
       .header-inner {
+        height: 90vh;
         .header-inner-content {
           justify-content: space-between;
           display: flex;
@@ -1722,7 +1726,7 @@ p {
             border-top: 1px solid $m-darkorange;
             margin-bottom: 0;
             width: 100%;
-            max-width: none;
+            max-width: max-content;
           }
         }
       }
