@@ -1625,27 +1625,44 @@ p {
       }
   }
   .intro {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     .intro-wrapper {
       min-height: 80vh;
       margin: auto;
       max-width: 1000px;
     }
     .pract-needed {
+      margin-bottom: 50px;
+      @include media-query($medium-up){
+        margin-bottom: 0;
+      }
       h1{
         text-align:center;
         color: $m-darkorange;
         font-family:'Noe Diplay';
-        font-size: 60px;
+        font-size: 36px;
         margin-bottom: -8px;
+        @include media-query($medium-up){
+          font-size: 60px;
+        }
         span {
           font-family: 'Run Wild';
-          font-size: 66px;
+          font-size: 40px;
+          @include media-query($medium-up){
+            font-size: 66px;
+          }
         }
       }
     }
     .big-para {
-      font-size:36px;
+      font-size: 24px;
       color: $m-darkorange;
+      @include media-query($medium-up){
+        font-size:36px;
+      }
     }
     .orange-text {
       font-size: 17px;
@@ -1654,10 +1671,19 @@ p {
       margin-right: auto;
       border-bottom:1px solid $m-darkorange;
       color: $m-darkorange;
+      margin-bottom: 0;
+      @include media-query($medium-up){
+
+      }
     }
   }
   .job-openings {
+    margin-bottom:0;
+    @include media-query ($medium-up){
+      margin-bottom: 60px;
+    }
     .header-right {
+      min-height:90vh;
       .header-inner {
         .header-inner-content {
           justify-content: space-between;
@@ -1696,6 +1722,7 @@ p {
             border-top: 1px solid $m-darkorange;
             margin-bottom: 0;
             width: 100%;
+            max-width: none;
           }
         }
       }
