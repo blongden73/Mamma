@@ -2165,6 +2165,22 @@ p {
 
   .m-people-info-left {
     max-width: 35%;
+
+    ul {
+      li {
+        font-weight: 900;
+        font-family:'Noe Display';
+        font-size: 25px;
+
+        &:before {
+          width: 25px;
+          height: 25px;
+          border-radius: 25%;
+          background-color: $m-blue;
+          margin-right: 10px;
+        }
+      }
+    }
   }
   .m-people-info-right {
     width: 50%;
@@ -2173,6 +2189,7 @@ p {
   .m-people-info-center {
     width: 15%;
     border-top: 1px solid $m-blue;
+    margin-right: 10px;
   }
 
   .m-people-info-gallery-inner {
