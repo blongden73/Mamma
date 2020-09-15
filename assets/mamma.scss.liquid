@@ -1642,15 +1642,59 @@ p {
           font-size: 66px;
         }
       }
-      h2 {
-        font-size:36px;
-      }
-      p {
-        font-size: 17px;
-        width: max-content;
-        margin-left: auto;
-        margin-right: auto;
-        border-bottom:1px solid $m-darkorange;
+    }
+    h2 {
+      font-size:36px;
+    }
+    p {
+      font-size: 17px;
+      width: max-content;
+      margin-left: auto;
+      margin-right: auto;
+      border-bottom:1px solid $m-darkorange;
+    }
+  }
+  .job-openings {
+    .header-right {
+      .header-inner {
+        &-content {
+          justify-content: space-between;
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          h1 {
+            margin-bottom: 17.5px;
+          }
+          ul {
+            li {
+              h3 {
+                color: $m-darkorange;
+                font-family: 'Noe Display';
+                font-weight:bold;
+                margin-bottom: 4px;
+              }
+              p {
+                color:$m-darkorange;
+                font-size:20px;
+                margin-bottom: 20px;
+              }
+            }
+          }
+          .buttons {
+            margin-bottom: 10px;
+            .button {
+              color: $m-darkorange;
+              border:1px solid $m-darkorange;
+              &:hover {
+                background-color:$m-darkorange;
+              }
+            }
+          }
+          .send-cv {
+            border-top: 1px solid $m-darkorange;
+            margin-bottom: 0;
+          }
+        }
       }
     }
   }
