@@ -52,6 +52,8 @@ if(peopleWrapper || practitionerWrapper) {
 
 //header menu
 var hamburger = document.querySelector('.m-hamburger');
+var menu = document.querySelector('.m-menu');
 hamburger.addEventListener('click', function(){
-  this.classList.add('active');
+  this.classList.toggle('active');
+  menu.classList.toggle('display');
 });
