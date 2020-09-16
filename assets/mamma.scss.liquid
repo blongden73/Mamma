@@ -2358,6 +2358,18 @@ span.handwritten {
   &.active {
     span {
       background-color: #fff;
+
+      &.m-hamburger-top {
+        transform: rotate(45deg) translateY(18px) translateX(4px);
+      }
+
+      &.m-hamburger-center {
+        display: none;
+      }
+
+      &.m-hamburger-bottom {
+        transform: rotate(-45deg) translateX(-14px);
+      }
     }
   }
 }
