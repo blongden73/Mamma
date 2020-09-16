@@ -2322,12 +2322,23 @@ span.handwritten {
       .m-button {
         padding: 10px;
         border: 1px solid $m-blue;
+        background-color: #fff;
 
         &:first-child {
           background-color: $m-blue;
+          color: #fff;
         }
       }
     }
+  }
+}
+
+.m-button {
+  background-color: $m-blue;
+
+  &:hover {
+    background-color: darken($m-blue, 10%);
+    color: $m-blue;
   }
 }
 
