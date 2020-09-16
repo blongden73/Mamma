@@ -22,11 +22,57 @@
           </div>
         </div>
       </div>
-      <div class="m-people-info-gallery">
+    </template>
+  </div>
+  <div class="m-people-info-gallery" v-for="practioner in practioners" v-if="practioner.slug === '{{slug}}'">
+    <template>
+      <div class="page-width">
         <div class="flex">
-
+          <div class="m-people-info-left">
+            <ul>
+              <li>${practioner.bullet_1}</li>
+              <li>${practioner.bullet_2}</li>
+              <li>${practioner.bullet_3}</li>
+            </ul>
+            <p>${practioner.description}</p>
+          </div>
+          <div class="m-people-info-center">
+            <p class="bold">${practioner.location}</p>
+            <p class="bold">${practioner.how}</p>
+            <p>${practioner.social_ig}</p>
+            <p>${practioner.social_tw}</p>
+            <p>${practioner.social_fb}</p>
+          </div>
+          <div class="m-people-info-right">
+            <div class="m-people-info-gallery-inner">
+              <div><img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/annabel-james.png?v=1600011449"></div>
+              <div><img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/annabel-james.png?v=1600011449"></div>
+              <div><img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/annabel-james.png?v=1600011449"></div>
+              <div><img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/annabel-james.png?v=1600011449"></div>
+            </div>
+          </div>
         </div>
       </div>
+    </template>
+  </div>
+  <div class="m-people-testimonial" v-for="practioner in practioners" v-if="practioner.slug === '{{slug}}'">
+    <template>
+    <div class="page-width">
+      <div class="flex">
+        <div class="testimonial-image">
+          <div class="testimonial-image-one">
+            <img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/annabel-james.png?v=1600011449">
+          </div>
+          <div class="testimonial-image-two">
+            <img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/annabel-james.png?v=1600011449">
+          </div>
+        </div>
+        <div class="testimonial-text">
+          <blockquote>${practioner.testimonial}</blockquote>
+          <cite>Testimonial Name</cite>
+        </div>
+      </div>
+    </div>
     </template>
   </div>
 </div>
