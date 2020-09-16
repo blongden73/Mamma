@@ -107,9 +107,15 @@
     <div class="header-right">
       <div class="header-inner">
         <div class="header-inner-content">
+          <h1>Session <span class="handwritten">Details</span></h1>
           {% for product in collection.products %}
             <div class="collections-product">
-              {{product.title}}
+              <h1>{{product.title}}</h1>
+              <h2>{{product.price}}</h2>
+              <div class="m-button-wrapper">
+                <div class="m-buttom">Book now</div>
+                <div class="m-buttom">Book a discovery call</div>
+              </div>
             </div>
           {% endfor %}
         </div>
