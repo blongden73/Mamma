@@ -580,11 +580,11 @@ $grid-breakpoints: (
 
 .grid__item {
   float: left;
-  padding-left: $grid-gutter;
+  padding-left: 0;
   width: 100%;
 
   @include media-query($small) {
-    padding-left: $grid-gutter-mobile;
+    padding-left: 0;
   }
 
   &[class*="--push"] {
