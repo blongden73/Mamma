@@ -111,7 +111,7 @@
           {% for product in collection.products %}
             <div class="collections-product">
               <h1>{{product.title}}</h1>
-              <h2>{{product.price}}</h2>
+              <h2>{{product.price | money }}</h2>
               <div class="m-button-wrapper">
                 <div class="m-buttom">Book now</div>
                 <div class="m-buttom">Book a discovery call</div>
