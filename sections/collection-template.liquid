@@ -5,7 +5,7 @@
     <template>
       <div class="header-left">
         <div class="header-inner"></div>
-        <img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/annabel-james.png?v=1600011449">
+        <img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/madison-lavern-4gcqRf3-f2I-unsplash_1.jpg?v=1600357575">
       </div>
       <div class="header-right">
         <div class="header-inner">
@@ -45,10 +45,10 @@
           </div>
           <div class="m-people-info-right">
             <div class="m-people-info-gallery-inner">
-              <div><img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/annabel-james.png?v=1600011449"></div>
-              <div><img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/annabel-james.png?v=1600011449"></div>
-              <div><img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/annabel-james.png?v=1600011449"></div>
-              <div><img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/annabel-james.png?v=1600011449"></div>
+              <div><img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/madison-lavern-4gcqRf3-f2I-unsplash_1.jpg?v=1600357575"></div>
+              <div><img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/jade-stephens-N21356amsyw-unsplash.jpg?v=1600357576"></div>
+              <div><img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/dane-wetton-t1NEMSm1rgI-unsplash.jpg?v=1600357575"></div>
+              <div><img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/the_space_low.jpg?v=1600020411"></div>
             </div>
           </div>
         </div>
@@ -61,10 +61,10 @@
       <div class="flex">
         <div class="testimonial-image">
           <div class="testimonial-image-one">
-            <img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/annabel-james.png?v=1600011449">
+            <img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/jade-stephens-N21356amsyw-unsplash.jpg?v=1600357576">
           </div>
           <div class="testimonial-image-two">
-            <img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/annabel-james.png?v=1600011449">
+            <img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/madison-lavern-4gcqRf3-f2I-unsplash_1.jpg?v=1600357575">
           </div>
         </div>
         <div class="testimonial-text">
@@ -113,8 +113,8 @@
               <h1>{{product.title}}</h1>
               <h2>{{product.price | money }}</h2>
               <div class="m-button-wrapper">
-                <div class="m-button">Book now</div>
-                <div class="m-button">Book a discovery call</div>
+                <a href="{{ product.url }}"><div class="m-button">Book now</div></a>
+                <a href=""><div class="m-button">Book a discovery call</div></a>
               </div>
             </div>
           {% endfor %}
