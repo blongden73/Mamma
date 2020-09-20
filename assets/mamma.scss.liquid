@@ -1098,6 +1098,9 @@ p {
 
 .about-page {
   .video-wrapper {
+    @include media-query($medium-up) {
+      padding-bottom: 45.25%;
+    }
     iframe {
       @include media-query ($medium-up){
         height: 43vw;
