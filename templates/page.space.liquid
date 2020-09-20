@@ -26,9 +26,9 @@
 
 <div class="watch">
   {% for video in blog.video %}
-    {% assign video = video.metafields.airf.video %}
-    {% if video and video != '&nbsp' %}
-        {{ video }}
+    {% assign videoField = video.metafields.airf.video %}
+    {% if videoField and videoField != '&nbsp' %}
+        {{ videoField }}
     {% endif %}
   {% endfor %}
 </div>
