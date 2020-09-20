@@ -25,16 +25,9 @@
 </div>
 
 <div class="watch">
-  {% for video in blog.articles %}
-    <!-- {% assign videoField = video.metafields.airf.video %}
-    {% if videoField and videoField != '&nbsp' %}
-        {{ videoField }}
-    {% endif %}
-    {{video.title}} -->
-    {% for tag in video.tags %}
-      {{ tag }}
-    {% endfor %}
-  {% endfor %}
+  {% for article in blog.articles %}
+    <h2>{{ article.title }}</h2>
+{% endfor %}
 </div>
 
 
