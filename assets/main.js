@@ -71,4 +71,4 @@ setInterval(function(){
   } else {
     carouselImages[0].classList.add('display');
   }
-}, 500);
+}, 1000);
