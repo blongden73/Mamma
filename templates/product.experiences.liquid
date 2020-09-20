@@ -75,9 +75,6 @@
           {% endcomment %}
           {% if metadata.description != blank or product.description != blank %}
             <div class="product__display-grid__detailsbox" tabindex="0">
-              <h3 class="product__display-grid__header bottom-spacer-small exp__header-label">
-                About this experience
-              </h3>
               <p class="product__display-grid__text">
                 {% if metadata.description != blank %}
                   {{ metadata.description  | newline_to_br  }}
