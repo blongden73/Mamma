@@ -1097,6 +1097,17 @@ p {
 
 
 .about-page {
+  .video-wrapper {
+    @include media-query($medium-up) {
+      padding-bottom: 45.25%;
+    }
+    iframe {
+      @include media-query ($medium-up){
+        height: 43vw;
+        width:100%;
+      }
+    }
+  }
   h2{
     letter-spacing: 0;
     text-transform: none;
@@ -1846,6 +1857,14 @@ p {
 .video-section {
   margin-top: 60px;
   margin-bottom: 60px;
+  padding-left: 10%;
+  padding-right: 10%;
+  video-wrapper {
+    iframe {
+      height:43vw;
+      width:100%;
+    }
+  }
 }
 .blog-content-wrapper {
   padding:60px 20px;
@@ -1886,6 +1905,9 @@ p {
         width: 100%;
         height: auto;
         border-bottom: 1px solid $m-blue;
+        @include media-query ($medium-up) {
+              height: 13vw;
+        }
       }
       h2 {
         text-transform: none;
@@ -1920,8 +1942,11 @@ p {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid $m-blue;
+    font-size:36px;
     h1 {
-      max-width: 40%;
+      @include media-query ($medium-up){
+        max-width: 40%;
+      }
       span {
         font-family:"Run Wild";
       }
@@ -1932,8 +1957,10 @@ p {
     font-size:24px;
     line-height: 1.35;
     color:$m-blue;
-    width: 35%;
     margin-top: 20px;
+    @include media-query ($medium-up){
+      width: 35%;
+    }
   }
   .para {
     font-size:17px;
@@ -1953,7 +1980,6 @@ p {
       top: 30vh;
       h1 {
         color:$m-cream;
-        font-size: 36px;
       }
       p {
         margin-top: 110px;
