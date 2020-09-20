@@ -3086,9 +3086,10 @@ span.handwritten {
   background-color: $m-blue;
   padding-top: 25vh;
   padding-bottom: 25vh;
+  position: relative;
 
   .home-text-wrapper {
-    max-width: 600px;
+    max-width: 500px;
     color: #fff;
     margin-left: auto;
     margin-right: auto;
@@ -3104,9 +3105,22 @@ span.handwritten {
 
     h2 {
       text-transform: none;
-      font-size: 24px;
+      font-size: 28px;
       line-height: 1.4;
       letter-spacing: 0;
+    }
+  }
+
+  .home-about-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateY(-50%);
+    display: flex;
+
+    button {
+      padding: 10px 15px;
+      border: 1px solid #fff;
     }
   }
 }
