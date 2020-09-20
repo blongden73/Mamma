@@ -1038,8 +1038,8 @@ p {
   left: 0;
   width: 100%;
 
-  .discover &, .template-collection &, .about &, .experiences &, .practitioner &{
-    top: 0;
+  .discover &, .template-collection &, .about &, .experiences &, .practitioner &, .practice &{
+    top: 0 !important;
   }
 
   .site-header__logo {
@@ -2421,6 +2421,10 @@ span.handwritten {
         margin-top: 50px;
         padding-left: 0%;
 
+        h1 {
+          font-size: 60px;
+        }
+
         img {
           width: 50%;
         }
@@ -2545,6 +2549,19 @@ span.handwritten {
       font-weight: 200;
       font-style: normal;
       margin-left: 30px;
+    }
+  }
+}
+
+.experiences {
+  .m-page-header {
+    .header-right {
+      .header-inner-content {
+        top: 55px;
+        left: 0;
+        bottom: auto;
+        transform: translate(0,0);
+      }
     }
   }
 }
@@ -2802,7 +2819,7 @@ span.handwritten {
 
 .exp__dd-quantity {
   width: 39% !important;
-  left: 40%;
+  left: 40% !important;
 }
 
 .exp__tslots-timeslot-btn {
@@ -2815,4 +2832,17 @@ span.handwritten {
 
 .exp__cal footer {
       margin-top: 20px !important;
+}
+
+.exp__tslots-timeslot-info {
+  padding-left: 6px;
+}
+
+.exp__quant-plus-btn, .exp__quant-minus-btn {
+  height: 23px !important;
+  border-radius: 50% !important;
+}
+
+.exp__tslots-timeslot-btn, .exp__quant-btn {
+  height: 38px !important;
 }

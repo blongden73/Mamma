@@ -126,7 +126,9 @@
     {% if template.suffix == 'experiences' %}
       {{ content_for_layout }}
     {% elsif template == 'index' %}
-
+    <main class="main-content js-focus-hidden" id="MainContent" role="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
     {% else %}
     <main class="main-content js-focus-hidden" id="MainContent" role="main" tabindex="-1">
       {{ content_for_layout }}
