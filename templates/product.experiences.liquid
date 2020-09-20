@@ -15,6 +15,7 @@
   </div>
 </div>
 
+
 {%- assign current_variant = product.selected_or_first_available_variant -%}
 {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
 {%- assign metadata = product.metafields.experiences -%}
@@ -47,7 +48,6 @@
   }
 </style>
 <link href="//prod-v2.experiencesapp.services/storefront/embedded.css" rel="stylesheet" />
-
 <div
   class="product__section-container"
   data-section-id="{{ section.id }}"
@@ -179,6 +179,7 @@
 
     </div>
   </div>
+</div>
 </div>
 
 <script src="//prod-v2.experiencesapp.services/storefront/embedded.js"></script>
