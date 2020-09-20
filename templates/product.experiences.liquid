@@ -62,6 +62,23 @@
             {%- endunless -%}
 
           </div>
+          {% comment %}
+            NOTE: metadata.description is deprecated; please use product.description instead.
+          {% endcomment %}
+          {% if metadata.description != blank or product.description != blank %}
+            <div class="product__display-grid__detailsbox" tabindex="0">
+              <h3 class="product__display-grid__header bottom-spacer-small exp__header-label">
+                About this experience
+              </h3>
+              <p class="product__display-grid__text">
+                {% if metadata.description != blank %}
+                  {{ metadata.description  | newline_to_br  }}
+                {% elsif product.description != blank %}
+                  {{ product.description  | newline_to_br  }}
+                {% endif %}
+              </p>
+            </div>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -133,24 +150,6 @@
 
       {% if featured_image != blank %}
         <div id="exp__carousel" class="product__carousel-container"></div>
-      {% endif %}
-
-      {% comment %}
-        NOTE: metadata.description is deprecated; please use product.description instead.
-      {% endcomment %}
-      {% if metadata.description != blank or product.description != blank %}
-        <div class="product__display-grid__detailsbox" tabindex="0">
-          <h3 class="product__display-grid__header bottom-spacer-small exp__header-label">
-            About this experience
-          </h3>
-          <p class="product__display-grid__text">
-            {% if metadata.description != blank %}
-              {{ metadata.description  | newline_to_br  }}
-            {% elsif product.description != blank %}
-              {{ product.description  | newline_to_br  }}
-            {% endif %}
-          </p>
-        </div>
       {% endif %}
 
       {% if metadata.hostImage != blank or metadata.hostDescription != blank %}
