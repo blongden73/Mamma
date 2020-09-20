@@ -1,0 +1,20 @@
+<div class="m-page-header flex practitioner" v-for="practioner in practioners" v-if="practioner.slug === '{{slug}}'">
+  <template>
+    <div class="header-left">
+      <div class="header-inner"></div>
+      <h1>{{page.title}}</h1>
+    </div>
+    <div class="header-right">
+      <div class="header-inner">
+        <div class="header-inner-content">
+          <div class="practitioner-pager-header">
+            <img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/meet_practioners.png?v=1600117844">
+          </div>
+          <div class="m-practioner-info">
+            <p>{{page.content}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+</div>
