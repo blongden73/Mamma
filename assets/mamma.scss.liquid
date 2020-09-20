@@ -1657,7 +1657,37 @@ p {
         }
       }
     }
+  }
+}
 
+.what-others-say {
+  padding:60px 20px;
+  h2 {
+    font-size: 24px;
+  }
+  .quotes {
+    .quote {
+      border:1px solid $m-blue;
+      width: 100%;
+      padding:10px;
+      display: flex;
+      flex-direction: column-reverse;
+      margin-bottom: 20px;
+      @include media-query ($medium-up){
+        width: calc(50% - 10px);
+        margin-bottom: 0;
+        &:nth-child(1){
+            margin-right:20px;
+        }
+      }
+
+      h2 {
+        font-size: 36px;
+        margin-bottom:0;
+        max-width: 560px;
+        margin-top: 60px;
+      }
+    }
   }
 }
 
