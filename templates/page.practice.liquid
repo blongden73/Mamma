@@ -1,4 +1,4 @@
-<div class="m-page-header flex practitioner" v-for="practioner in practioners" v-if="practioner.slug === '{{slug}}'">
+<div class="m-page-header flex practitioner">
     <div class="header-left">
       <div class="header-inner"></div>
       {% assign page_image = page.metafields.airf.page_image %}
@@ -13,7 +13,7 @@
             <h1>{{page.title}}</h1>
           </div>
           <div class="m-practioner-info">
-            <p>{{page.content}}</p>
+            {{page.content}}
           </div>
         </div>
       </div>
