@@ -68,10 +68,6 @@
 
             <div class="product__dropdown-group" id="exp__booking-embed"></div>
 
-            {%- capture snippet_content -%}
-              {%- include 'social-sharing' -%}
-            {%- endcapture -%}
-
             {%- unless snippet_content contains "Liquid error" -%}
               {{ snippet_content }}
             {%- endunless -%}
@@ -120,6 +116,9 @@
             </div>
           {% endif %}
         </div>
+        {%- capture snippet_content -%}
+          {%- include 'social-sharing' -%}
+        {%- endcapture -%}
       </div>
     </div>
   </div>
