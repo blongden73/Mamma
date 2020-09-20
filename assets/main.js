@@ -52,7 +52,7 @@ if(peopleWrapper || practitionerWrapper) {
 
 //header menu
 var hamburger = document.querySelector('.m-hamburger');
-var menu = document.querySelector('.m-menu');
+var menu = document.querySelector('.m-menu-wrapper');
 hamburger.addEventListener('click', function(){
   this.classList.toggle('active');
   menu.classList.toggle('display');
