@@ -63,11 +63,11 @@ var carouselImages = document.querySelectorAll('.car_img');
 var current = document.querySelector('.car_img.display');
 var next = document.querySelector('.display + .car_img');
 
-setTimeout(function(){
+setInterval(function(){
   current.classList.remove('display');
   if(next) {
     next.classList.add('display');
   } else {
     carouselImages[0].classList.add('display');
   }
-}, 500)
+}, 500);
