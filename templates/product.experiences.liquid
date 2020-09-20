@@ -28,7 +28,6 @@
           <div class="product__display-grid__col1">
             {% if metadata.location != blank %}
               <div class="product__display-grid__infobox">
-                <h3 class="product__display-grid__header">Location:</h3>
                 <span class="product__display-grid__text">
                   <a href="https://www.google.com/maps/place/{{ metadata.location }}"
                     target="_blank"
@@ -40,7 +39,6 @@
               </div>
             {% endif %}
             <div class="product__display-grid__infobox" tabindex="0">
-              <h3 class="product__display-grid__header">Cost:</h3>
               <span class="product__display-grid__text">
                 {% assign price_min = product.price_min | money %}
                 {% if product.price == 0 %}
@@ -55,7 +53,6 @@
               </span>
             </div>
             <div class="product__display-grid__infobox" tabindex="0" >
-              <h3 class="product__display-grid__header">Duration:</h3>
               <span class="product__display-grid__text">
                 {% if durationHours != 0 %}
                   {{ durationHours }}h
@@ -92,7 +89,6 @@
           {% endif %}
           {% if metadata.hostImage != blank or metadata.hostDescription != blank %}
             <div id="hostDetails" tabindex="0">
-              <h3 class="exp__header-label">Your Host</h3>
               <div class="exp__host-details-container">
                 {% if metadata.hostImage != blank %}
                   <div class="exp__host-image-container exp__host-details__container">
