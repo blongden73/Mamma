@@ -26,6 +26,7 @@
 
 <div class="watch">
   something here
+  {% assign blog = blogs.Video %}
   {% for article in blog.articles %}
     <h2>{{ article.title }}</h2>
   {% endfor %}
