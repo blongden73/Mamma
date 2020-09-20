@@ -64,6 +64,7 @@ var current = document.querySelector('.car_img.display');
 var next = document.querySelector('.display + .car_img');
 
 setInterval(function(){
+  console.log('rolling');
   current.classList.remove('display');
   if(next) {
     next.classList.add('display');
