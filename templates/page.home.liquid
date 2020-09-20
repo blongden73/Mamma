@@ -1,22 +1,32 @@
-<div class="m-page-header flex">
-  <div class="header-left">
-    <div class="header-inner">
-      <h1>Explore <span class="underline">Mamma</span></h1>
+<div class="m-page-carousel">
+  <div class="m-page-header flex">
+    <div class="header-left">
+      <div class="header-inner">
+        <h1>Explore <span class="underline">Mamma</span></h1>
+      </div>
+      {% assign page_image = page.metafields.airf.page_image %}
+      {% if page_image and page_image != '&nbsp' %}
+          <img class="car_img display" src="{{ page_image }}" />
+      {% endif %}
+      {% assign page_ima_2 = page.metafields.airf.page_ima_2 %}
+      {% if page_ima_2 and page_ima_2 != '&nbsp' %}
+          <img class="car_img" src="{{ page_ima_2 }}" />
+      {% endif %}
+      {% assign page_im_th = page.metafields.airf.page_im_th %}
+      {% if page_im_th and page_im_th != '&nbsp' %}
+          <img class="car_img" src="{{ page_im_th }}" />
+      {% endif %}
     </div>
-    {% assign page_image = page.metafields.airf.page_image %}
-    {% if page_image and page_image != '&nbsp' %}
-        <img src="{{ page_image }}" />
-    {% endif %}
-  </div>
-  <div class="header-right">
-    <div class="header-inner">
-      <div class="header-inner-content">
-        <h1>What are you looking for?</h1>
-        <form>
-          <label>Search here</label>
-          <input></input>
-          <button>Search</button>
-        </form>
+    <div class="header-right">
+      <div class="header-inner">
+        <div class="header-inner-content">
+          <h1>What are you looking for?</h1>
+          <form>
+            <label>Search here</label>
+            <input></input>
+            <button>Search</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
