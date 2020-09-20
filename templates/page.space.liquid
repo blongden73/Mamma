@@ -11,8 +11,8 @@
   <div class="header-right">
     <div class="header-inner">
       <div class="header-inner-content">
-        <h1>A place to relect,</h1>
-        <h1><span>enjoy & relax</span></h1>
+        <h1><span>A place to relect,</span></h1>
+        <h1>enjoy & relax</h1>
       </div>
     </div>
   </div>
@@ -24,53 +24,57 @@
   </div>
 </div>
 
-<div class="watch">
-  <div class="top-bar">
-    <h1>Watch</h1>
-    <h1><span>Your Wellness Journey</span></h1>
-  </div>
-  <div class="item-wrapper">
-    {% assign blog = blogs.Video %}
-    {% for article in blog.articles %}
-      <div class="watch-item blog-item">
-        {% assign video = article.metafields.airf.video %}
-        {% if video and video != '&nbsp' %}
-            {{ video }}
-        {% endif %}
-        <h2><span>{{ article.title }}</span></h2>
-        <h2 class="excerpt">{{ article.excerpt }}</h2>
+<div class="white-bg">
+  <div class="page-width">
+    <div class="watch">
+      <div class="top-bar">
+        <h1>Watch</h1>
+        <h1 class="hide-mob"><span>Your Wellness Journey</span></h1>
       </div>
-    {% endfor %}
-  </div>
-</div>
-<div class="read">
-  <div class="top-bar">
-    <h1>Read</h1>
-    <h1><span>Your Wellness Journey</span></h1>
-  </div>
-  {% assign blog = blogs.Article %}
-  {% for article in blog.articles %}
-    <div class="read-item blog-item">
-      <img src="{{ article.image.src | img_url: 'medium' }}">
-      <h2>{{ article.title }}</h2>
-      <h2>{{ article.excerpt }}</h2>
+      <div class="item-wrapper">
+        {% assign blog = blogs.Video %}
+        {% for article in blog.articles %}
+          <div class="watch-item blog-item">
+            {% assign video = article.metafields.airf.video %}
+            {% if video and video != '&nbsp' %}
+                {{ video }}
+            {% endif %}
+            <h2><span>{{ article.title }}</span></h2>
+            <h2 class="excerpt">{{ article.excerpt }}</h2>
+          </div>
+        {% endfor %}
+      </div>
     </div>
-  {% endfor %}
-</div>
-<div class="listen">
-  <div class="top-bar">
-    <h1>Listen</h1>
-    <h1><span>Your Wellness Journey</span></h1>
-  </div>
-  {% assign blog = blogs.Audio %}
-  {% for article in blog.articles %}
-    <div class="listen-item blog-item">
-      <img src="{{ article.image.src | img_url: 'medium' }}">
-      <h2>{{ article.title }}</h2>
-      <h2>{{ article.excerpt }}</h2>
+    <div class="read">
+      <div class="top-bar">
+        <h1>Read</h1>
+        <h1 class="hide-mob"><span>Your Wellness Journey</span></h1>
+      </div>
+      {% assign blog = blogs.Article %}
+      {% for article in blog.articles %}
+        <div class="read-item blog-item">
+          <img src="{{ article.image.src | img_url: 'medium' }}">
+          <h2>{{ article.title }}</h2>
+          <h2>{{ article.excerpt }}</h2>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="listen">
+      <div class="top-bar">
+        <h1>Listen</h1>
+        <h1 class="hide-mob"><span>Your Wellness Journey</span></h1>
+      </div>
+      {% assign blog = blogs.Audio %}
+      {% for article in blog.articles %}
+        <div class="listen-item blog-item">
+          <img src="{{ article.image.src | img_url: 'medium' }}">
+          <h2>{{ article.title }}</h2>
+          <h2>{{ article.excerpt }}</h2>
 
+        </div>
+      {% endfor %}
     </div>
-  {% endfor %}
+  </div>
 </div>
 
 
@@ -83,10 +87,12 @@
   </div>
 </div>
 
-<div class="share-story white-bg">
-  <div class="top-bar">
-    <h1>Do you want to share a story?</h1>
-    <h1><span>Your Wellness Journey</span></h1>
+<div class="white-bg">
+  <div class="share-story  page-width">
+    <div class="top-bar">
+      <h1>Do you want to share a story?</h1>
+      <h1 class="hide-mob"><span>Your Wellness Journey</span></h1>
+    </div>
+    <p>We are here to support you in your journey to becoming the best version of yourself, by providing carefully selected alternative therapist, events, retreats & resources.</p>
   </div>
-  <p>We are here to support you in your journey to becoming the best version of yourself, by providing carefully selected alternative therapist, events, retreats & resources.</p>
 </div>

@@ -1783,8 +1783,21 @@ p {
 
 
 .space {
+  .header-inner-content {
+    h1 {
+      margin-bottom: 0;
+      span {
+        font-weight:bold;
+      }
+    }
+  }
+  .video-section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
   .watch, .read, .listen {
     padding:60px 20px;
+    background-color: white;
     .top-bar {
       display: flex;
       justify-content: space-between;
@@ -1801,8 +1814,12 @@ p {
       flex-direction:row;
       margin-top: 20px;
       .blog-item {
-        width:25%;
-        margin-right: 10px;
+        width: 100%;
+        margin-bottom: 30px;
+        @include media-query($medium-up){
+          width:25%;
+          margin-right: 10px;
+        }
         iframe {
           width: 100%;
           height: auto;
@@ -1853,21 +1870,35 @@ p {
     background-position:center;
     background-size:cover;
     background-repeat:no-repeat;
-    .inner {
-      h1 {
-        color:$m-cream;
-        font-size: 36px;
-      }
-      p {
-        margin-top: 200px;
-        color:$m-cream;
-        font-size:20px;
+    .wrapper {
+      position: relative;
+      .inner {
+        position: absolute;
+        top: 30vh;
+        h1 {
+          color:$m-cream;
+          font-size: 36px;
+        }
+        p {
+          margin-top: 110px;
+          width: 45%;
+          color:$m-cream;
+          font-size:17px;
+          @include media-query($medium-up){
+            margin-top: 200px;
+          }
+        }
       }
     }
   }
 }
 
-
+.hide-mob {
+  display:none;
+  @include media-query($medium-up){
+    display:block;
+  }
+}
 
 
 .m-button {
@@ -2178,8 +2209,11 @@ span.handwritten {
   width: 100%;
 
   .header-left {
-    width: 50%;
+    width: 100%;
     position: relative;
+    @include media-query($medium-up){
+      width: 50%;
+    }
 
     img {
       width: 100%;
@@ -2200,8 +2234,12 @@ span.handwritten {
   }
 
   .header-right {
-    width: 50%;
+    width: 100%;
     position: relative;
+
+    @include media-query($medium-up){
+      width: 50%;
+    }
 
     .header-inner-content {
       position: absolute;
