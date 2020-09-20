@@ -1,57 +1,66 @@
-<div class="m-page-header flex">
+<div class="m-page-header flex space-page white-bg">
   <div class="header-left">
     <div class="header-inner">
-      <h1>Explore <span class="underline">Mamma</span></h1>
+      <h1><span class="underline">The Space</span></h1>
     </div>
-    {% assign video = article.metafields.airf.video %}
-      {% if video and video != '&nbsp' %}
-        <img src="{{ page_image }}" />
+    {% assign page_image = page.metafields.airf.page_image %}
+    {% if page_image and page_image != '&nbsp' %}
+    <img src="{{ page_image }}" />
     {% endif %}
   </div>
   <div class="header-right">
     <div class="header-inner">
       <div class="header-inner-content">
-        <h1>What are you looking for?</h1>
-        <form>
-          <label>Search here</label>
-          <input></input>
-          <label>Mamma Offerings</label>
-          <select>
-            <option value="option 1">option 1</option>
-            <option value="option 2">option 2</option>
-            <option value="option 3">option 3</option>
-            <option value="option 4">option 4</option>
-          </select>
-          <label>How you would like your wellness?</label>
-          <select>
-            <option value="option 1">option 1</option>
-            <option value="option 2">option 2</option>
-            <option value="option 3">option 3</option>
-            <option value="option 4">option 4</option>
-          </select>
-          <label>How are you felling?</label>
-          <select>
-            <option value="option 1">option 1</option>
-            <option value="option 2">option 2</option>
-            <option value="option 3">option 3</option>
-            <option value="option 4">option 4</option>
-          </select>
-          <button>Search</button>
-        </form>
+        <h1>A place to relect,</h1>
+        <h1><span>enjoy & relax</span></h1>
       </div>
     </div>
   </div>
 </div>
-
-<div class="">
-  <h1>test</h1>
+<div class="video-section page-width">
+  <h1>Online wellness</h1>
+  <div class="video-wrapper ">
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/inpok4MKVLM?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
 </div>
 
-{% for video in blog.video %}
+<div class="watch">
+  {% for video in blog.video %}
+    {% assign video = video.metafields.airf.video %}
+    {% if video and video != '&nbsp' %}
+        {{ video }}
+    {% endif %}
+  {% endfor %}
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- {% for video in blog.video %}
+    {{ forloop.index }}
+    <img src="{{ video.image.src | img_url: 'medium' }}">
+{% else %}
+    // no products in your frontpage collection
+{% endfor %} -->
+
+<!-- {% assign video = video.metafields.airf.video %}
+  {% if video and video != '&nbsp' %}
+      {{ video }}
+      <h1>{{ video.title }}</h1>
+{% endif %} -->
+
+
+<!-- {% for video in blog.video %}
   {% assign video = video.metafields.airf.video %}
     {% if video and video != '&nbsp' %}
         {{ video }}
         <h1>{{ video.title }}</h1>
         <img src="{{ video.image.src | img_url: 'medium' }}">
   {% endif %}
-{% endfor %}
+{% endfor %} -->
