@@ -8,7 +8,77 @@
     <div class="header-right">
       <div class="header-inner">
         <div class="header-inner-content">
+          <div class="product__display-grid__col1">
+            {% if metadata.location != blank %}
+              <div class="product__display-grid__infobox">
+                <h3 class="product__display-grid__header">Location:</h3>
+                <span class="product__display-grid__text">
+                  <a href="https://www.google.com/maps/place/{{ metadata.location }}"
+                    target="_blank"
+                    aria-label="Location:  {{ metadata.location }}"
+                  >
+                    {{ metadata.location }}
+                  </a>
+                </span>
+              </div>
+            {% endif %}
+            <div class="product__display-grid__infobox" tabindex="0">
+              <h3 class="product__display-grid__header">Cost:</h3>
+              <span class="product__display-grid__text">
+                {% assign price_min = product.price_min | money %}
+                {% if product.price == 0 %}
+                    {% assign price_min = "FREE" %}
+                {% endif %}
 
+                {% if product.price_varies %}
+                    {{ price_min }}-{{ product.price_max | money }} per person
+                {% else %}
+                    {{ price_min }} per person
+                {% endif %}
+              </span>
+            </div>
+            <div class="product__display-grid__infobox" tabindex="0" >
+              <h3 class="product__display-grid__header">Duration:</h3>
+              <span class="product__display-grid__text">
+                {% if durationHours != 0 %}
+                  {{ durationHours }}h
+                {% endif %}
+                {% if durationMinutes != 0 %}
+                  {{ durationMinutes }}min
+                {% endif %}
+              </span>
+            </div>
+
+            <div class="product__display-grid__divider"></div>
+
+            <div class="product__dropdown-group" id="exp__booking-embed"></div>
+
+            {%- capture snippet_content -%}
+              {%- include 'social-sharing' -%}
+            {%- endcapture -%}
+
+            {%- unless snippet_content contains "Liquid error" -%}
+              {{ snippet_content }}
+            {%- endunless -%}
+
+          </div>
+          {% comment %}
+            NOTE: metadata.description is deprecated; please use product.description instead.
+          {% endcomment %}
+          {% if metadata.description != blank or product.description != blank %}
+            <div class="product__display-grid__detailsbox" tabindex="0">
+              <h3 class="product__display-grid__header bottom-spacer-small exp__header-label">
+                About this experience
+              </h3>
+              <p class="product__display-grid__text">
+                {% if metadata.description != blank %}
+                  {{ metadata.description  | newline_to_br  }}
+                {% elsif product.description != blank %}
+                  {{ product.description  | newline_to_br  }}
+                {% endif %}
+              </p>
+            </div>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -74,83 +144,12 @@
   </div>
 
   <div class="product__display-grid">
-    <div class="product__display-grid__col1">
-      {% if metadata.location != blank %}
-        <div class="product__display-grid__infobox">
-          <h3 class="product__display-grid__header">Location:</h3>
-          <span class="product__display-grid__text">
-            <a href="https://www.google.com/maps/place/{{ metadata.location }}"
-              target="_blank"
-              aria-label="Location:  {{ metadata.location }}"
-            >
-              {{ metadata.location }}
-            </a>
-          </span>
-        </div>
-      {% endif %}
-      <div class="product__display-grid__infobox" tabindex="0">
-        <h3 class="product__display-grid__header">Cost:</h3>
-        <span class="product__display-grid__text">
-          {% assign price_min = product.price_min | money %}
-          {% if product.price == 0 %}
-              {% assign price_min = "FREE" %}
-          {% endif %}
 
-          {% if product.price_varies %}
-              {{ price_min }}-{{ product.price_max | money }} per person
-          {% else %}
-              {{ price_min }} per person
-          {% endif %}
-        </span>
-      </div>
-      <div class="product__display-grid__infobox" tabindex="0" >
-        <h3 class="product__display-grid__header">Duration:</h3>
-        <span class="product__display-grid__text">
-          {% if durationHours != 0 %}
-            {{ durationHours }}h
-          {% endif %}
-          {% if durationMinutes != 0 %}
-            {{ durationMinutes }}min
-          {% endif %}
-        </span>
-      </div>
-
-      <div class="product__display-grid__divider"></div>
-
-      <div class="product__dropdown-group" id="exp__booking-embed"></div>
-
-      {%- capture snippet_content -%}
-      	{%- include 'social-sharing' -%}
-      {%- endcapture -%}
-
-      {%- unless snippet_content contains "Liquid error" -%}
-        {{ snippet_content }}
-      {%- endunless -%}
-
-    </div>
 
     <div class="product__display-grid__col2">
 
       {% if featured_image != blank %}
         <div id="exp__carousel" class="product__carousel-container"></div>
-      {% endif %}
-
-      {% comment %}
-        NOTE: metadata.description is deprecated; please use product.description instead.
-      {% endcomment %}
-      {% if metadata.description != blank or product.description != blank %}
-        <div class="product__display-grid__detailsbox" tabindex="0">
-          <h3 class="product__display-grid__header bottom-spacer-small exp__header-label">
-            About this experience
-          </h3>
-          <p class="product__display-grid__text">
-            {% if metadata.description != blank %}
-              {{ metadata.description  | newline_to_br  }}
-            {% elsif product.description != blank %}
-              {{ product.description  | newline_to_br  }}
-            {% endif %}
-          </p>
-        </div>
       {% endif %}
 
       {% if metadata.hostImage != blank or metadata.hostDescription != blank %}
