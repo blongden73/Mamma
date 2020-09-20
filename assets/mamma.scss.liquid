@@ -1530,6 +1530,12 @@ p {
             max-width: 200px;
             margin:auto;
           }
+
+          .experiences & {
+            h1 {
+              text-align: left;
+            }
+          }
         }
       }
     }
@@ -2530,4 +2536,39 @@ span.handwritten {
 .collection-description {
   max-width: 80%;
   margin-top: 10px;
+}
+
+//product page
+
+.product__title-container__title {
+  text-align: left !important;
+}
+
+.product__dropdown-group {
+
+  .booking-form__wrapper {
+    display: flex !important;
+
+    & > div {
+      width: 40%;
+
+      button {
+        border-radius: 0;
+        border: 1px solid #121212;
+      }
+    }
+
+    .exp__book-btn {
+      width: 20%;
+      border-radius: 0;
+      background-color: $m-blue;
+      font-family:'Noe Display';
+      font-size: 25px;
+      color: #fff;
+    }
+
+    .exp__dd-quantity {
+      left: 0;
+    }
+  }
 }
