@@ -1819,6 +1819,9 @@ p {
         @include media-query($medium-up){
           width:25%;
           margin-right: 10px;
+          &:nth-child(4n){
+            margin-right: 0px;
+          }
         }
         iframe {
           width: 100%;
