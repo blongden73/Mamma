@@ -1782,13 +1782,49 @@ p {
 
 
 
-.space-page {
+.space {
   .watch, .read, .listen {
-    display:flex;
-    flex-direction:row;
+    padding:60px 20px;
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $m-blue;
+      h1 {
+        span {
+          font-family:"Run Wild";
+        }
+      }
+    }
+    .item-wrapper {
+      display:flex;
+      flex-wrap: wrap;
+      flex-direction:row;
+      margin-top: 20px;
+      .blog-item {
+        width:25%;
+        margin-right: 10px;
+        iframe {
+          width: 100%;
+          height: auto;
+        }
+        h2 {
+          text-align:center;
+          text-transform: none;
+          margin-top: 5px;
+          margin-bottom: 0;
+          span {
+            font-weight:bold;
+          }
+        }
+        .excerpt {
+          margin-top: 0;
+        }
+      }
+    }
   }
 
-  .book-practice {
+  .book-practice,.share-story {
+    min-height: 80vh;
     padding:60px 20px;
   }
 
