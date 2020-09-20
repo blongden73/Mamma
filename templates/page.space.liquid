@@ -27,12 +27,17 @@
 <div class="watch">
   {% assign blog = blogs.Video %}
   {% for article in blog.articles %}
-    {% assign video = video.metafields.airf.video %}
+    <!-- {% assign video = video.metafields.airf.video %}
       {% if video and video != '&nbsp' %}
           {{ video }}
-          <h1>{{ video.title }}</h1>
-          <img src="{{ video.image.src | img_url: 'medium' }}">
-    {% endif %}
+          <!-- <h1>{{ video.title }}</h1>
+          <img src="{{ video.image.src | img_url: 'medium' }}"> -->
+    {% endif %} -->
+
+{% assign video = article.metafields.airf.video %}
+{% if video and video != '&nbsp' %}
+    {{ video }}
+{% endif %}
     <img src="{{ article.image.src | img_url: 'medium' }}">
     <h2>{{ article.title }}</h2>
     <h2>{{ article.excerpt }}</h2>
