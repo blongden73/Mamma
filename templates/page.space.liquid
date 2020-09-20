@@ -1,16 +1,57 @@
-
+<div class="m-page-header flex">
+  <div class="header-left">
+    <div class="header-inner">
+      <h1>Explore <span class="underline">Mamma</span></h1>
+    </div>
+    {% assign video = article.metafields.airf.video %}
+      {% if video and video != '&nbsp' %}
+        <img src="{{ page_image }}" />
+    {% endif %}
+  </div>
+  <div class="header-right">
+    <div class="header-inner">
+      <div class="header-inner-content">
+        <h1>What are you looking for?</h1>
+        <form>
+          <label>Search here</label>
+          <input></input>
+          <label>Mamma Offerings</label>
+          <select>
+            <option value="option 1">option 1</option>
+            <option value="option 2">option 2</option>
+            <option value="option 3">option 3</option>
+            <option value="option 4">option 4</option>
+          </select>
+          <label>How you would like your wellness?</label>
+          <select>
+            <option value="option 1">option 1</option>
+            <option value="option 2">option 2</option>
+            <option value="option 3">option 3</option>
+            <option value="option 4">option 4</option>
+          </select>
+          <label>How are you felling?</label>
+          <select>
+            <option value="option 1">option 1</option>
+            <option value="option 2">option 2</option>
+            <option value="option 3">option 3</option>
+            <option value="option 4">option 4</option>
+          </select>
+          <button>Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="">
-
+  <h1>test</h1>
 </div>
 
 {% for video in blog.video %}
   {% assign video = video.metafields.airf.video %}
     {% if video and video != '&nbsp' %}
         {{ video }}
+        <h1>{{ video.title }}</h1>
+        <img src="{{ video.image.src | img_url: 'medium' }}">
   {% endif %}
-
-  {{ video.title }}
-  <img src="{{ video.image.src | img_url: 'medium' }}">
-
 {% endfor %}
