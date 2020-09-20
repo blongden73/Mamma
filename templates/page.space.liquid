@@ -25,7 +25,6 @@
 </div>
 
 <div class="watch">
-  something here
   {% assign blog = blogs.Video %}
   {% for article in blog.articles %}
     {% assign video = video.metafields.airf.video %}
@@ -33,11 +32,10 @@
           {{ video }}
           <h1>{{ video.title }}</h1>
           <img src="{{ video.image.src | img_url: 'medium' }}">
+          <img src="{{ article.image.src | img_url: 'medium' }}">
     {% endif %}
     <h2>{{ article.title }}</h2>
   {% endfor %}
-
-  something else here?
 </div>
 
 
