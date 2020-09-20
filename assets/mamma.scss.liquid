@@ -1905,6 +1905,9 @@ p {
         width: 100%;
         height: auto;
         border-bottom: 1px solid $m-blue;
+        @include media-query ($medium-up) {
+              height: 13vw;
+        }
       }
       h2 {
         text-transform: none;
@@ -1977,7 +1980,6 @@ p {
       top: 30vh;
       h1 {
         color:$m-cream;
-        font-size: 36px;
       }
       p {
         margin-top: 110px;
