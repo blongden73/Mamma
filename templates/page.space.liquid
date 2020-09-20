@@ -32,9 +32,10 @@
           {{ video }}
           <h1>{{ video.title }}</h1>
           <img src="{{ video.image.src | img_url: 'medium' }}">
-          <img src="{{ article.image.src | img_url: 'medium' }}">
     {% endif %}
+    <img src="{{ article.image.src | img_url: 'medium' }}">
     <h2>{{ article.title }}</h2>
+    <h2>{{ article.excerpt }}</h2>
   {% endfor %}
 </div>
 
