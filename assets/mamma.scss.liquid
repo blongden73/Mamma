@@ -1814,8 +1814,11 @@ p {
       flex-direction:row;
       margin-top: 20px;
       .blog-item {
-        width:25%;
-        margin-right: 10px;
+        width: 100%
+        @include media-query($medium-up){
+          width:25%;
+          margin-right: 10px;
+        }
         iframe {
           width: 100%;
           height: auto;
@@ -1876,17 +1879,25 @@ p {
           font-size: 36px;
         }
         p {
-          margin-top: 200px;
+          margin-top: 110px;
           width: 45%;
           color:$m-cream;
           font-size:17px;
+          @include media-query($medium-up){
+            margin-top: 200px;
+          }
         }
       }
     }
   }
 }
 
-
+.hide-mob {
+  display:none;
+  @include media-query($medium-up){
+    display:block;
+  }
+}
 
 
 .m-button {

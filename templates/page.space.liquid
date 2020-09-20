@@ -27,7 +27,7 @@
 <div class="watch page-width">
   <div class="top-bar">
     <h1>Watch</h1>
-    <h1><span>Your Wellness Journey</span></h1>
+    <h1 class="hide-mob"><span>Your Wellness Journey</span></h1>
   </div>
   <div class="item-wrapper">
     {% assign blog = blogs.Video %}
@@ -46,7 +46,7 @@
 <div class="read page-width">
   <div class="top-bar">
     <h1>Read</h1>
-    <h1><span>Your Wellness Journey</span></h1>
+    <h1 class="hide-mob"><span>Your Wellness Journey</span></h1>
   </div>
   {% assign blog = blogs.Article %}
   {% for article in blog.articles %}
@@ -60,7 +60,7 @@
 <div class="listen page-width">
   <div class="top-bar">
     <h1>Listen</h1>
-    <h1><span>Your Wellness Journey</span></h1>
+    <h1 class="hide-mob"><span>Your Wellness Journey</span></h1>
   </div>
   {% assign blog = blogs.Audio %}
   {% for article in blog.articles %}
@@ -83,10 +83,12 @@
   </div>
 </div>
 
-<div class="share-story white-bg page-width">
-  <div class="top-bar">
-    <h1>Do you want to share a story?</h1>
-    <h1><span>Your Wellness Journey</span></h1>
+<div class="white-bg">
+  <div class="share-story  page-width">
+    <div class="top-bar">
+      <h1>Do you want to share a story?</h1>
+      <h1 class="hide-mob"><span>Your Wellness Journey</span></h1>
+    </div>
+    <p>We are here to support you in your journey to becoming the best version of yourself, by providing carefully selected alternative therapist, events, retreats & resources.</p>
   </div>
-  <p>We are here to support you in your journey to becoming the best version of yourself, by providing carefully selected alternative therapist, events, retreats & resources.</p>
 </div>
