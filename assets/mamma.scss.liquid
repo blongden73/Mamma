@@ -1809,7 +1809,8 @@ p {
     padding:60px 20px;
   }
   .watch, .read, .listen {
-    padding:20px 20px;
+    padding-top:20px;
+    padding-bottom:20px;
     background-color: white;
     .top-bar {
       display: flex;
@@ -1849,12 +1850,20 @@ p {
           margin-top: 5px;
           margin-bottom: 0;
           font-size: 17px;
+          color:$m-blue;
           span {
             font-weight:bold;
           }
         }
         .excerpt {
           margin-top: 0;
+          color:$m-blue;
+        }
+      }
+      .read-item {
+        color: $m-blue;
+        &:hover {
+          cursor: pointer;
         }
       }
     }
