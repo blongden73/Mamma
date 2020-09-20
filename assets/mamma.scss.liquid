@@ -1453,6 +1453,7 @@ p {
       .header-inner{
         border:1px solid $m-darkorange;
         .left {
+          position:relative;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -1480,6 +1481,13 @@ p {
         }
         .now {
           text-align: right;
+        }
+        svg {
+          position:absolute;
+          top:20px;
+          right:20px;
+          width: 20%;
+          height:auto;
         }
       }
     }
@@ -1983,6 +1991,77 @@ p {
       margin:auto;
       width: 70%;
       margin-bottom: 10px;
+    }
+  }
+
+
+  .contact-form-wrapper {
+    display:flex;
+    width: 100%;
+    margin-top: 60px;
+    background-color: $m-cream;
+    @include media-query ($medium-up){
+      max-width: 1300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    font-size:17px;
+    .grid-item {
+      border-bottom: 1px solid $m-blue;
+    }
+    svg {
+      position: absolute;
+      top: -50px;
+      right: 10px;
+      z-index: 200;
+      width: 20%;
+      height: auto;
+    }
+    textarea, input {
+      background-color: $m-cream;
+      margin-bottom: 0;
+    }
+    .contact-form-left {
+      width: 100%;
+      h1 {
+        font-family:"Run Wild"!important;
+        font-size:40px;
+        border-bottom: 1px solid $m-blue;
+        margin-bottom: 0;
+        padding-left: 10px;
+      }
+      textarea, input {
+        border:none;
+        // border-right:1px solid $m-blue;
+        border-bottom: 1px solid $m-blue;
+      }
+      label {
+        padding-left: 10px;
+      }
+    }
+    .contact-form-right {
+      width: 100%;
+      position: relative;
+      padding-right: 10px;
+      .btn {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: $m-blue;
+        font-family:'Noe Text';
+        font-weight:bold;
+        font-size:17px;
+        color:$m-cream;
+      }
+      label {
+        position: absolute;
+        top: 10px;
+        left:10px;
+      }
+      textarea, input {
+        border:none;
+        border-left:1px solid $m-blue;
+      }
     }
   }
 }
