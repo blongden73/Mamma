@@ -1783,6 +1783,10 @@ p {
 
 
 .space {
+  .video-section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
   .watch, .read, .listen {
     padding:60px 20px;
     .top-bar {
@@ -1853,15 +1857,21 @@ p {
     background-position:center;
     background-size:cover;
     background-repeat:no-repeat;
-    .inner {
-      h1 {
-        color:$m-cream;
-        font-size: 36px;
-      }
-      p {
-        margin-top: 200px;
-        color:$m-cream;
-        font-size:20px;
+    .wrapper {
+      position: relative;
+      .inner {
+        position: absolute;
+        top: 30vh;
+        h1 {
+          color:$m-cream;
+          font-size: 36px;
+        }
+        p {
+          margin-top: 200px;
+          width: 35%;
+          color:$m-cream;
+          font-size:20px;
+        }
       }
     }
   }
