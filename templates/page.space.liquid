@@ -48,8 +48,8 @@
     <h1>Read</h1>
     <h1><span>Your Wellness Journey</span></h1>
   </div>
-  {% assign read = blogs.Article %}
-  {% for article in read.articles %}
+  {% assign blog = blogs.Article %}
+  {% for article in blog.articles %}
     <div class="read-item blog-item">
       <img src="{{ article.image.src | img_url: 'medium' }}">
       <h2>{{ article.title }}</h2>
@@ -80,7 +80,9 @@
 </div>
 
 <div class="share-story white-bg">
-  <h1>Do you want to share a story?</h1>
-  <h1><span>Your Wellness Journey</span></h1>
+  <div class="top-bar">
+    <h1>Do you want to share a story?</h1>
+    <h1><span>Your Wellness Journey</span></h1>
+  </div>
   <p>We are here to support you in your journey to becoming the best version of yourself, by providing carefully selected alternative therapist, events, retreats & resources.</p>
 </div>
