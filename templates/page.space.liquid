@@ -25,22 +25,44 @@
 </div>
 
 <div class="watch">
+  <h1>Watch</h1>
   {% assign blog = blogs.Video %}
   {% for article in blog.articles %}
-    <!-- {% assign video = video.metafields.airf.video %}
-      {% if video and video != '&nbsp' %}
-          {{ video }}
-          <!-- <h1>{{ video.title }}</h1>
-          <img src="{{ video.image.src | img_url: 'medium' }}"> -->
-    {% endif %} -->
-
-{% assign video = article.metafields.airf.video %}
-{% if video and video != '&nbsp' %}
-    {{ video }}
-{% endif %}
-    <img src="{{ article.image.src | img_url: 'medium' }}">
+    {% assign video = article.metafields.airf.video %}
+    {% if video and video != '&nbsp' %}
+        {{ video }}
+    {% endif %}
+    <!-- <img src="{{ article.image.src | img_url: 'medium' }}"> -->
     <h2>{{ article.title }}</h2>
     <h2>{{ article.excerpt }}</h2>
+  {% endfor %}
+</div>
+<div class="read">
+  <h1>Read</h1>
+  {% assign blog = blogs.Video %}
+  {% for article in blog.articles %}
+    {% assign video = article.metafields.airf.video %}
+    {% if video and video != '&nbsp' %}
+        {{ video }}
+    {% endif %}
+    <!-- <img src="{{ article.image.src | img_url: 'medium' }}"> -->
+    <h2>{{ article.title }}</h2>
+    <h2>{{ article.excerpt }}</h2>
+  {% endfor %}
+</div>
+<div class="listen">
+  <h1>Listen</h1>
+  {% assign blog = blogs.Video %}
+  {% for article in blog.articles %}
+    <div class="">
+      {% assign video = article.metafields.airf.video %}
+      {% if video and video != '&nbsp' %}
+          {{ video }}
+      {% endif %}
+      <!-- <img src="{{ article.image.src | img_url: 'medium' }}"> -->
+      <h2>{{ article.title }}</h2>
+      <h2>{{ article.excerpt }}</h2>
+    </div>
   {% endfor %}
 </div>
 
