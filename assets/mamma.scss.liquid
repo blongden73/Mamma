@@ -1038,8 +1038,25 @@ p {
   left: 0;
   width: 100%;
 
-  .discover &, .template-collection &, .about &, .experiences &{
+  .discover &, .template-collection &, .about &, .experiences &, .practitioner &{
     top: 0;
+  }
+
+  .site-header__logo {
+    svg {
+      width: 180px;
+      height: auto;
+    }
+  }
+
+  .discover & {
+    .site-header__logo {
+      svg {
+        path {
+          fill: $m-cream;
+        }
+      }
+    }
   }
 
   .site-header__mobile-nav {
