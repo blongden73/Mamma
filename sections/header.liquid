@@ -55,6 +55,7 @@
   {% endif %}
 
   <header class="site-header{% if section.settings.align_logo == 'left' %} border-bottom logo--left{% else %} logo--center{% endif %}" role="banner">
+    <div class="page-width">
     <div class="grid grid--no-gutters grid--table site-header__mobile-nav">
       {% if section.settings.align_logo == 'center' %}
         {%- assign logo_classes = 'medium-up--one-third medium-up--push-one-third logo-align--center' -%}
@@ -146,9 +147,14 @@
             </button>
           {% endunless %}
         </div>
-
+        <div class="m-hamburger">
+          <span class="m-hamburger-top"></span>
+          <span class="m-hamburger-center"></span>
+          <span class="m-hamburger-bottom"></span>
+        </div>
       </div>
     </div>
+  </div>
 
     <nav class="mobile-nav-wrapper medium-up--hide" role="navigation">
       <ul id="MobileNav" class="mobile-nav">
@@ -245,6 +251,32 @@
       </ul>
     </nav>
   </header>
+  <div class="m-menu">
+    <div class="m-menu-inner flex">
+      <div class="m-menu-left">
+        <div class="m-menu-one">
+          <h1>Explore</h1>
+        </div>
+        <div class="m-menu-two">
+          <h1>Book</h1>
+        </div>
+        <div class="m-menu-three">
+          <h1>About us</h1>
+        </div>
+      </div>
+      <div class="m-menu-right">
+        <div class="m-menu-four">
+          <h1>Shop</h1>
+        </div>
+        <div class="m-menu-five">
+          <h1>The Space</h1>
+        </div>
+        <div class="m-menu-six">
+          <h1>Contact us</h1>
+        </div>
+      </div>
+    </div>
+  </div>
 
   {% if section.settings.align_logo == 'center' %}
   <nav class="small--hide border-bottom" id="AccessibleNav" role="navigation">

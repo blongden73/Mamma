@@ -48,21 +48,12 @@ if(peopleWrapper || practitionerWrapper) {
     }
   })
   app.log();
-
-  // loadJSON("https://mamma-join.neuer.uk/wp-json/mamma/v1/get-members/", function(data) {
-  //   console.log(data);
-  //   var people = data;
-  //   for(i=0; i < people.length; i++) {
-  //     var name = people[i].full_name;
-  //     var practice = people[i].practice;
-  //     var profile_picture = people[i].profile_picture;
-  //   }
-  //   console.log(data);
-  //   var app = new Vue({
-  //   el: '#app',
-  //   data: data
-  //   })
-  // }, function(xhr) {
-  //   console.log("error");
-  // });
 }
+
+//header menu
+var hamburger = document.querySelector('.m-hamburger');
+var menu = document.querySelector('.m-menu');
+hamburger.addEventListener('click', function(){
+  this.classList.toggle('active');
+  menu.classList.toggle('display');
+});
