@@ -8,6 +8,13 @@
     <div class="header-right">
       <div class="header-inner">
         <div class="header-inner-content">
+          <h1 class="product__title-container__title" tabindex="0" aria-label="{{ product.title }}">
+            {{ product.title }}
+          </h1>
+          <span class="product__title-container__tagline" tabindex="0">
+            {{ metadata.summary }}
+          </span>
+        </div>
           <div class="product__display-grid__col1">
             {% if metadata.location != blank %}
               <div class="product__display-grid__infobox">
@@ -80,6 +87,31 @@
             </div>
           {% endif %}
         </div>
+        {% if metadata.hostImage != blank or metadata.hostDescription != blank %}
+          <div id="hostDetails" tabindex="0">
+            <h3 class="exp__header-label">Your Host</h3>
+            <div class="exp__host-details-container">
+              {% if metadata.hostImage != blank %}
+                <div class="exp__host-image-container exp__host-details__container">
+                  <img
+                    alt="Host image"
+                    class="product__display-grid__host-image isShowing exp__host-image"
+                    src="{{ metadata.hostImage }}"
+                  />
+                </div>
+              {% endif %}
+              {% if metadata.hostDescription != blank %}
+                {% if metadata.hostImage == empty %}
+                  <div class="exp__host-desc-container exp__host-details__container exp__as-without-padding">
+                {% elsif metadata.hostImage != blank %}
+                  <div class="exp__host-desc-container exp__host-details__container">
+                {% endif %}
+                  <p>{{ metadata.hostDescription  | newline_to_br }}</p>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -135,13 +167,7 @@
   <meta itemprop="description" content="{{ product.description | strip_html | escape }}">
 
   <div class="product__title-container">
-    <h1 class="product__title-container__title" tabindex="0" aria-label="{{ product.title }}">
-      {{ product.title }}
-    </h1>
-    <span class="product__title-container__tagline" tabindex="0">
-      {{ metadata.summary }}
-    </span>
-  </div>
+
 
   <div class="product__display-grid">
 
@@ -152,31 +178,7 @@
         <div id="exp__carousel" class="product__carousel-container"></div>
       {% endif %}
 
-      {% if metadata.hostImage != blank or metadata.hostDescription != blank %}
-        <div id="hostDetails" tabindex="0">
-          <h3 class="exp__header-label">Your Host</h3>
-          <div class="exp__host-details-container">
-            {% if metadata.hostImage != blank %}
-              <div class="exp__host-image-container exp__host-details__container">
-                <img
-                  alt="Host image"
-                  class="product__display-grid__host-image isShowing exp__host-image"
-                  src="{{ metadata.hostImage }}"
-                />
-              </div>
-            {% endif %}
-            {% if metadata.hostDescription != blank %}
-              {% if metadata.hostImage == empty %}
-                <div class="exp__host-desc-container exp__host-details__container exp__as-without-padding">
-              {% elsif metadata.hostImage != blank %}
-                <div class="exp__host-desc-container exp__host-details__container">
-              {% endif %}
-                <p>{{ metadata.hostDescription  | newline_to_br }}</p>
-              </div>
-            {% endif %}
-          </div>
-        </div>
-      {% endif %}
+
 
     </div>
   </div>
