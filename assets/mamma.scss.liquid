@@ -3119,12 +3119,19 @@ span.handwritten {
     display: flex;
 
     button {
-      padding: 10px 15px;
-      border: 1px solid #fff;
-      margin-right: 10px;
-      color: #fff;
-      background-color: transparent;
       font-family:'Noe Text';
-    }
+      font-size:16px;
+      padding: 6px 14px 2px 14px;
+      color: $m-blue;
+      background-color: transparent;
+      border :1px solid $m-blue;
+      @include media-query ($medium-up){
+        font-size:19px;
+      }
+      &:hover {
+        background-color: $m-blue;
+        color:$m-cream;
+        transition:0.5s ease;
+      }
   }
 }
