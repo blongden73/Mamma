@@ -3046,6 +3046,7 @@ span.handwritten {
 
   p {
     font-weight: 900;
+    color: #fff;
   }
 
   .m-blob {
@@ -3055,10 +3056,15 @@ span.handwritten {
 
   .blob {
     border-radius: 50%;
-    background-color: #121212;
+    background-color: #fff;
     width: 10px;
     height: 10px;
     margin-right: 3px;
     margin-left: 3px;
+
+    &.display {
+      background-color: transparent;
+      border: 1px solid #fff;
+    }
   }
 }
