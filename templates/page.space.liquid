@@ -17,10 +17,12 @@
     </div>
   </div>
 </div>
-<div class="video-section page-width">
-  <h1>Online wellness</h1>
-  <div class="video-wrapper ">
-    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/inpok4MKVLM?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-section">
+  <div class="page-width">
+    <h1>Online wellness</h1>
+    <div class="video-wrapper ">
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/inpok4MKVLM?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
   </div>
 </div>
 
@@ -54,7 +56,7 @@
       <div class="item-wrapper">
         {% assign blog = blogs.Article %}
         {% for article in blog.articles %}
-          <a class="read-item blog-item" href-="'{{ article.content }}'">
+          <a class="read-item blog-item" href-="{{ article_content }}">
             <img src="{{ article.image.src | img_url: 'large' }}">
             <h2><span>{{ article.title }}</span></h2>
             <h2 class="excerpt">{{ article.excerpt }}</h2>
@@ -71,11 +73,11 @@
       <div class="item-wrapper">
         {% assign blog = blogs.Audio %}
         {% for article in blog.articles %}
-          <div class="listen-item blog-item">
+          <a class="listen-item blog-item" href-="{{ article_content }}">
             <img src="{{ article.image.src | img_url: 'large' }}">
             <h2><span>{{ article.title }}</span></h2>
             <h2 class="excerpt">{{ article.excerpt }}</h2>
-          </div>
+          </a>
         {% endfor %}
       </div>
     </div>
