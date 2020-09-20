@@ -26,13 +26,31 @@
 
 <div class="watch">
   something here
-  {% for article in blog.video %}
+  {% for article in blog.articles %}
     <h2>{{ article.title }}</h2>
-{% endfor %}
+  {% endfor %}
 </div>
 
 
-
+{% schema %}
+{
+  "name": "Blog pages",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "blog_show_author",
+      "label": "Show author",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "blog_show_date",
+      "label": "Show date",
+      "default": true
+    }
+  ]
+}
+{% endschema %}
 
 
 
