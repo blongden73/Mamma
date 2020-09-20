@@ -1,0 +1,16 @@
+
+
+<div class="">
+
+</div>
+
+{% for video in blog.video %}
+  {% assign video = video.metafields.airf.video %}
+    {% if video and video != '&nbsp' %}
+        {{ video }}
+  {% endif %}
+
+  {{ video.title }}
+  <img src="{{ video.image.src | img_url: 'medium' }}">
+
+{% endfor %}
