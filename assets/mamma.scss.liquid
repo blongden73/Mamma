@@ -1916,8 +1916,11 @@ p {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid $m-blue;
+    font-size:36px;
     h1 {
-      max-width: 40%;
+      @include media-query ($medium-up){
+        max-width: 40%;
+      }
       span {
         font-family:"Run Wild";
       }
@@ -1928,8 +1931,10 @@ p {
     font-size:24px;
     line-height: 1.35;
     color:$m-blue;
-    width: 35%;
     margin-top: 20px;
+    @include media-query ($medium-up){
+      width: 35%;
+    }
   }
   .para {
     font-size:17px;
