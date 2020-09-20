@@ -2199,6 +2199,9 @@ span.handwritten {
   .header-left {
     width: 50%;
     position: relative;
+    @include media-query($medium-up){
+      width: 100%;
+    }
 
     img {
       width: 100%;
@@ -2221,6 +2224,10 @@ span.handwritten {
   .header-right {
     width: 50%;
     position: relative;
+
+    @include media-query($medium-up){
+      width: 100%;
+    }
 
     .header-inner-content {
       position: absolute;
