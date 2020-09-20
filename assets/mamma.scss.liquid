@@ -1451,11 +1451,6 @@ p {
         width:50%;
       }
       .header-inner{
-        .header-inner-content {
-          @include media-query($medium-up){
-            height: 60vh;
-          }
-        }
         border:1px solid $m-darkorange;
         .left {
           display: flex;
@@ -1499,10 +1494,15 @@ p {
         height: 100%;
         padding: 60px 20px;
         .header-inner-content {
+          @include media-query($medium-up){
+            height: 60vh;
+          }
+        }
+        .header-inner-content {
           text-align: center;
           position: relative;
           top: 50%;
-          height: max-content;
+          // height: max-content;
           @include media-query ($medium-up){
             transform: translateY(-50%);
           }
