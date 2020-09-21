@@ -48,3 +48,14 @@
     <button>Book a Practice</button> <button>Find a Practioner</button> <button>About us</button>
   </div>
 </div>
+<div class="home-about">
+  <div class="home-text-wrapper">
+    <h1><span class="handwritten">How can</span> Mamma help you?</h1>
+  </div>
+  <div class="home-practice-list">
+    {% assign home = linklists.home %}
+    {% for link in home.links %}
+      <a href="{{ link.url }}">{{ link.title }}</a>
+    {% endfor %}
+  </div>
+</div>
