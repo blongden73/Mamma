@@ -55,6 +55,7 @@
   <div class="home-practice-list">
     {% assign home = linklists.home %}
     {% for link in home.links %}
+      {% include 'practice-svg' %}
       <a href="{{ link.url }}">{{ link.title }}</a>
     {% endfor %}
   </div>
