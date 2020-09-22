@@ -2381,9 +2381,14 @@ span.handwritten {
   }
 
   li {
-    width: 16vw;
-    height: 16vw;
-    background-color: $m-blue;
+    width: 100%;
+    height: 100%;
+
+    @include media-query ($medium-up) {
+      width: 16vw;
+      height: 16vw;
+      background-color: $m-blue;
+    }
   }
 
   .m-person {
@@ -2391,7 +2396,10 @@ span.handwritten {
 
     .m-people-details {
       position: absolute;
-      bottom: 0;
+      bottom: 8px;
+      @include media-query ($medium-up){
+        bottom: 0;
+      }
     }
     .m-people-name, .m-people-practice {
       background-color: $m-blue;
