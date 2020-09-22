@@ -2613,7 +2613,10 @@ span.handwritten {
   }
 
   &.practitioner {
-    flex-direction: row-reverse;
+    flex-direction: column;
+    @include media-query ($medium-up){
+      flex-direction: row-reverse;
+    }
 
     .header-inner-content {
       height: 100%;
