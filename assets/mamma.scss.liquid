@@ -2552,15 +2552,15 @@ span.handwritten {
     }
 
     .header-inner-content {
+      position: absolute;
       top: 50%;
       left: 50%;
       transform: translateX(-50%);
       margin-top: 40px;
       width: 100%;
       @include media-query ($medium-up){
-        position: absolute;
         margin-top: 0;
-        transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
       }
 
       h1 {
@@ -2603,16 +2603,13 @@ span.handwritten {
   }
 
   .header-inner {
-    position:relative;
+    position: absolute;
+    width: 93%;
+    top: 50%;
+    left: 50%;
+    height: 90%;
+    transform: translate(-50%, -50%);
     z-index: 1;
-    @include media-query ($medium-up) {
-      position: absolute;
-      width: 93%;
-      top: 50%;
-      left: 50%;
-      height: 90%;
-      transform: translate(-50%, -50%);
-    }
   }
 
   &.practitioner {
@@ -3233,24 +3230,24 @@ span.handwritten {
   margin-top: 40px;
 }
 
-@media screen and (max-width: 740px) {
-  .practitioner {
-    flex-direction:column;
-    .m-page-header {
-      .header-inner {
-        position:relative;
-        top:unset;
-        left:unset;
-        transform:none;
-        margin-left: 15px;
-        p {
-          width:100%;
-        }
-      }
-    }
-    .what-others-say {
-      margin-bottom:0;
-      padding: 40px 15px;
-    }
-  }
-}
+// @include media-query (max-width: 740px) {
+//   .practitioner {
+//     flex-direction:column;
+//     .m-page-header {
+//       .header-inner {
+//         position:relative;
+//         top:unset;
+//         left:unset;
+//         transform:none;
+//         margin-left: 15px;
+//         p {
+//           width:100%;
+//         }
+//       }
+//     }
+//     .what-others-say {
+//       margin-bottom:0;
+//       padding: 40px 15px;
+//     }
+//   }
+// }
