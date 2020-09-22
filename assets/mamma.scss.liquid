@@ -2626,9 +2626,12 @@ span.handwritten {
       }
 
       .m-practioner-info {
-        position: absolute;
+
         bottom: 10px;
         left: 0%;
+        @include media-query ($medium-up){
+            position: absolute;
+        }
 
         p {
           width: 80%;
@@ -2652,8 +2655,11 @@ span.handwritten {
       }
 
       .practitioner-pager-header {
-        margin-top: 50px;
+        margin-top: 20px;
         padding-left: 0%;
+        @include media-query ($medium-up){
+          margin-top: 50px;
+        }
 
         h1 {
           font-size: 60px;
@@ -3222,4 +3228,26 @@ span.handwritten {
 }
 .less-padding {
   margin-top: 40px;
+}
+
+@include media-query (max-width: 740px) {
+  .practitioner {
+    flex-direction:column;
+    .m-page-header {
+      .header-inner {
+        position:relative;
+        top:unset;
+        left:unset;
+        transform:none;
+        margin-left: 15px;
+        p {
+          width:100%;
+        }
+      }
+    }
+    .what-others-say {
+      margin-bottom:0;
+      padding: 40px 15px;
+    }
+  }
 }
