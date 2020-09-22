@@ -2224,6 +2224,17 @@ p {
   display: block;
   font-family:'Noe Display';
   font-weight: 900;
+  width: 80%;
+  @include media-query ($medium-up){
+    width: 100%;
+  }
+}
+
+.m-event-meta {
+  width: 80%;
+  @include media-query ($medium-up){
+    width: 100%;
+  }
 }
 
 .m-calendar-wrapper {
@@ -2314,7 +2325,7 @@ span.handwritten {
 
   .m-practice-list-header {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 40px!important;
 
     span.handwritten {
       font-family: 'Run Wild';
@@ -2322,6 +2333,10 @@ span.handwritten {
 
     h1 {
       padding-top: 20px;
+      padding-bottom: 10px!important;
+      @include media-query($medium-up){
+        padding-bottom: 40px!important;
+      }
     }
   }
 
