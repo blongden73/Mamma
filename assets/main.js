@@ -62,19 +62,21 @@ hamburger.addEventListener('click', function(){
 var carouselImages = document.querySelectorAll('.car_img');
 var blobList = document.querySelectorAll('.blob');
 
-setInterval(function(){
-  var current = document.querySelector('.car_img.display');
-  var next = document.querySelector('.display + .car_img');
-  var currentBlob = document.querySelector('.blob.display');
-  var nextBlob = document.querySelector('.display + .blob');
-  console.log('rolling');
-  current.classList.remove('display');
-  currentBlob.classList.remove('display');
-  if(next) {
-    next.classList.add('display');
-    nextBlob.classList.add('display');
-  } else {
-    carouselImages[0].classList.add('display');
-    blobList[0].classList.add('display');
-  }
-}, 1500);
+if(carouselImages){
+  setInterval(function(){
+    var current = document.querySelector('.car_img.display');
+    var next = document.querySelector('.display + .car_img');
+    var currentBlob = document.querySelector('.blob.display');
+    var nextBlob = document.querySelector('.display + .blob');
+    console.log('rolling');
+    current.classList.remove('display');
+    currentBlob.classList.remove('display');
+    if(next) {
+      next.classList.add('display');
+      nextBlob.classList.add('display');
+    } else {
+      carouselImages[0].classList.add('display');
+      blobList[0].classList.add('display');
+    }
+  }, 1500);
+}
