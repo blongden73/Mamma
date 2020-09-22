@@ -1667,8 +1667,11 @@ p {
   }
 
   .what-others-say {
-    padding:60px 20px;
     margin-bottom: 60px;
+    @include media-query ($medium-up){
+        padding:60px 20px;
+        margin:unset;
+    }
 
     h2 {
       font-size: 24px;
@@ -1701,7 +1704,15 @@ p {
 }
 
 .what-others-say {
-  padding:60px 20px;
+  @include media-query($medium-up){
+    padding:60px 20px;
+  }
+  h1 {
+    padding-top: 20px;
+    @include media-query($medium-up){
+      padding-top:0;
+    }
+  }
   h2 {
     font-size: 24px;
   }
@@ -2429,10 +2440,7 @@ span.handwritten {
 
 //general spacing
 .m-practice-list-header, .m-calendar-header {
-  margin-top: 410px;
-  @include media-query ($medium-up){
-      margin-top: 40px;
-  }
+  margin-top: 40px;
 }
 
 .m-practice-list-header {
@@ -2513,8 +2521,11 @@ span.handwritten {
 }
 
 .m-page-header {
-  height: 100vh;
+
   width: 100%;
+  @include media-query ($medium-up){
+      height: 100vh;
+  }
 
   .header-left {
     width: 100%;
@@ -2552,13 +2563,13 @@ span.handwritten {
     }
 
     .header-inner-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%);
       margin-top: 40px;
-      width: 100%;
+      width: 96%;
+      margin:0 auto;
       @include media-query ($medium-up){
+        position: absolute;
+        top: 50%;
+        left: 50%;
         margin-top: 0;
           transform: translate(-50%, -50%);
       }
@@ -2603,13 +2614,15 @@ span.handwritten {
   }
 
   .header-inner {
-    position: absolute;
-    width: 93%;
-    top: 50%;
-    left: 50%;
-    height: 90%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+    @include media-query ($medium-up){
+      position: absolute;
+      width: 93%;
+      top: 50%;
+      left: 50%;
+      height: 90%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
   }
 
   &.practitioner {
@@ -2629,12 +2642,17 @@ span.handwritten {
 
         bottom: 10px;
         left: 0%;
+        margin-bottom: 60px;
         @include media-query ($medium-up){
             position: absolute;
+            margin-bottom: 0;
         }
 
         p {
-          width: 80%;
+          width: 100%;
+          @include media-query ($medium-up){
+            width: 80%;
+          }
         }
 
         h1, h2 {
