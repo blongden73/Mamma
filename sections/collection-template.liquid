@@ -5,7 +5,7 @@
     <template>
       <div class="header-left">
         <div class="header-inner"></div>
-        <img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/madison-lavern-4gcqRf3-f2I-unsplash_1.jpg?v=1600357575">
+        <img v-bind:src="practioner.profile_picture">
       </div>
       <div class="header-right">
         <div class="header-inner">
@@ -45,10 +45,10 @@
           </div>
           <div class="m-people-info-right">
             <div class="m-people-info-gallery-inner">
-              <div><img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/madison-lavern-4gcqRf3-f2I-unsplash_1.jpg?v=1600357575"></div>
-              <div><img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/jade-stephens-N21356amsyw-unsplash.jpg?v=1600357576"></div>
-              <div><img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/dane-wetton-t1NEMSm1rgI-unsplash.jpg?v=1600357575"></div>
-              <div><img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/the_space_low.jpg?v=1600020411"></div>
+              <div><img v-bind:src="practioner.gallery_1"></div>
+              <div><img v-bind:src="practioner.gallery_2"></div>
+              <div><img v-bind:src="practioner.gallery_3"></div>
+              <div><img v-bind:src="practioner.gallery_4"></div>
             </div>
           </div>
         </div>
@@ -96,6 +96,9 @@
 {% endif %}
 
 {% paginate collection.products by limit %}
+{%- assign metadata = product.metafields.experiences -%}
+{%- assign durationHours = metadata.duration | divided_by: 60 -%}
+{%- assign durationMinutes = metadata.duration | modulo: 60 -%}
 
 <div id="{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="collection-template">
   <div class="m-page-header flex">
@@ -110,7 +113,18 @@
           <h1 class="section-title">Session <span class="handwritten">Details</span></h1>
           {% for product in collection.products %}
             <div class="collections-product">
-              <h1>{{product.title}}</h1>
+              <h1>
+                <span>
+                  {{metadata}}
+                  {% if durationHours != 0 %}
+                    {{ durationHours }}h
+                  {% endif %}
+                  {% if durationMinutes != 0 %}
+                    {{ durationMinutes }}min
+                  {% endif %}
+                </span>
+                {{product.title}}
+              </h1>
               <h2>{{product.price | money }}</h2>
               <div class="m-button-wrapper">
                 <a href="{{ product.url }}"><div class="m-button">Book now</div></a>
@@ -122,7 +136,6 @@
         </div>
       </div>
     </div>
-  </div>
   </div>
 </div>
 

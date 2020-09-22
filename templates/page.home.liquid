@@ -1,0 +1,61 @@
+<div class="m-page-carousel">
+  <div class="m-page-header flex">
+    <div class="header-left">
+      <div class="header-inner">
+        <h1>Your one stop platform for <span class="underline">wellbeing</span></h1>
+      </div>
+      {% assign page_image = page.metafields.airf.page_image %}
+      {% if page_image and page_image != '&nbsp' %}
+          <img class="car_img display" src="{{ page_image }}" />
+      {% endif %}
+      {% assign page_ima_2 = page.metafields.airf.page_ima_2 %}
+      {% if page_ima_2 and page_ima_2 != '&nbsp' %}
+          <img class="car_img" src="{{ page_ima_2 }}" />
+      {% endif %}
+      {% assign page_im_th = page.metafields.airf.page_im_th %}
+      {% if page_im_th and page_im_th != '&nbsp' %}
+          <img class="car_img" src="{{ page_im_th }}" />
+      {% endif %}
+      <div class="carousel-footer">
+        <p>Mind - Body - Spirit</p>
+        <div class="m-blob">
+          <div class="blob display"></div>
+          <div class="blob"></div>
+          <div class="blob"></div>
+        </div>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="header-inner">
+        <div class="header-inner-content">
+          <h1>What are you looking for?</h1>
+          <form>
+            <input placeholder="Wellness, Yoga, Mindfullness, Breathwork"></input>
+            <button>Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="home-about">
+  <div class="home-text-wrapper">
+    <h1><span class="handwritten">Why</span> Mamma</h1>
+    <h2>We are here to support you in your journey to becoming the best version of yourself, by providing carefully selected alternative therapists, events, retreats
+ & resources.</h2>
+  </div>
+  <div class="home-about-footer">
+    <button>Book a Practice</button> <button>Find a Practioner</button> <button>About us</button>
+  </div>
+</div>
+<div class="home-about practice-list">
+  <div class="home-text-wrapper">
+    <h1><span class="handwritten">How can</span> Mamma help you?</h1>
+  </div>
+  <div class="home-practice-list">
+    {% assign home = linklists.home %}
+    {% for link in home.links %}
+      <a href="{{ link.url }}">{% include 'practice-svg' %}{{ link.title }}</a>
+    {% endfor %}
+  </div>
+</div>

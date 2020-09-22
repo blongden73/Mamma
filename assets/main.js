@@ -37,7 +37,7 @@ if(peopleWrapper || practitionerWrapper) {
         practioners: []
     },
     mounted: function() {
-      $.get('https://mamma-join.neuer.uk/wp-json/mamma/v1/get-members/', function(data) {
+      $.get('https://joinmamma.com/wp-json/mamma/v1/get-members/', function(data) {
           app.practioners = data;
       })
     },
@@ -52,8 +52,29 @@ if(peopleWrapper || practitionerWrapper) {
 
 //header menu
 var hamburger = document.querySelector('.m-hamburger');
-var menu = document.querySelector('.m-menu');
+var menu = document.querySelector('.m-menu-wrapper');
 hamburger.addEventListener('click', function(){
   this.classList.toggle('active');
   menu.classList.toggle('display');
 });
+
+//carousel
+var carouselImages = document.querySelectorAll('.car_img');
+var blobList = document.querySelectorAll('.blob');
+
+setInterval(function(){
+  var current = document.querySelector('.car_img.display');
+  var next = document.querySelector('.display + .car_img');
+  var currentBlob = document.querySelector('.blob.display');
+  var nextBlob = document.querySelector('.display + .blob');
+  console.log('rolling');
+  current.classList.remove('display');
+  currentBlob.classList.remove('display');
+  if(next) {
+    next.classList.add('display');
+    nextBlob.classList.add('display');
+  } else {
+    carouselImages[0].classList.add('display');
+    blobList[0].classList.add('display');
+  }
+}, 1500);

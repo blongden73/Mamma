@@ -14,7 +14,7 @@
     <div class="header-left">
       <div class="header-inner">
       </div>
-      <img src="{{ product | img_url: 'medium' }}" />
+      <img src="{{ product | img_url: 'large' }}" />
     </div>
     <div class="header-right">
       <div class="header-inner">
@@ -23,6 +23,14 @@
             {{ product.title }}
           </h1>
           <span class="product__title-container__tagline" tabindex="0">
+            <span class="product__duration">
+              {% if durationHours != 0 %}
+                {{ durationHours }}h
+              {% endif %}
+              {% if durationMinutes != 0 %}
+                {{ durationMinutes }}min
+              {% endif %}
+            </span>
             {{ metadata.summary }}
           </span>
           <div class="product__display-grid__col1">
@@ -49,16 +57,6 @@
                     {{ price_min }}-{{ product.price_max | money }} per person
                 {% else %}
                     {{ price_min }} per person
-                {% endif %}
-              </span>
-            </div>
-            <div class="product__display-grid__infobox" tabindex="0" >
-              <span class="product__display-grid__text">
-                {% if durationHours != 0 %}
-                  {{ durationHours }}h
-                {% endif %}
-                {% if durationMinutes != 0 %}
-                  {{ durationMinutes }}min
                 {% endif %}
               </span>
             </div>
