@@ -1314,7 +1314,7 @@ p {
   }
 
   .intro {
-    padding:60px 20px 60px 0;
+    padding:60px 15px 60px 15px;
     h2 {
       font-family:'Noe Display';
       font-size:29px;
@@ -2703,7 +2703,10 @@ span.handwritten {
   background-color: $m-cream;
 
   .m-people-info-left {
-    max-width: 35%;
+    max-width:100%;
+    @include media-query ($medium-up){
+        max-width: 35%;
+    }
 
     ul {
       margin-bottom: 20px;
@@ -2727,7 +2730,10 @@ span.handwritten {
     }
   }
   .m-people-info-right {
-    width: 50%;
+    width: 100%;
+    @include media-query ($medium-up){
+      width:50%;
+    }
   }
 
   .m-people-info-center {
@@ -2752,11 +2758,20 @@ span.handwritten {
     flex-wrap: wrap;
 
     & > * {
-      width: 46%;
-      height: 18.7vw;
-      margin-right: 20px;
-      margin-bottom: 20px;
+      width: calc(50% - 5px);
+      height: auto;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      &:nth-child(2n){
+        margin-right:0;
+      }
       box-sizing: border-box;
+      @include media-query ($medium-up) {
+        width: 46%;
+        height: 18.7vw;
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
 
       img {
         width: 100%;
@@ -2837,7 +2852,9 @@ span.handwritten {
     .header-inner-content {
       top: 0;
       bottom: 0;
-      transform: translate(-50%, 0);
+      @include media-query ($medium-up){
+        transform: translate(-50%, 0);
+      }
 
       h1 {
         text-align: left;
@@ -3252,6 +3269,12 @@ span.handwritten {
     }
   }
 }
+
+.img-wrapper {
+  position: relative;
+  height:100vh;
+}
+
 .less-padding {
   margin-top: 40px;
 }
