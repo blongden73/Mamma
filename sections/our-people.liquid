@@ -1,0 +1,19 @@
+<div class="m-practioner-list">
+  <div class="page-width">
+    <div class="m-practice-list-header less-padding">
+      <h1>Our People, <span class="handwritten">Our Power</span></h1>
+    </div>
+    <!-- this section uses vue js using ${} to reference the data -->
+    <div id="app" class="m-people-placeholder">
+      <ul class="m-people-group">
+          <li class="m-person" v-for="practioner in practioners">
+            <div class="m-people-details">
+              <span class="m-people-practice">${practioner.practice}</span>
+              <span class="m-people-name">${practioner.full_name}</span>
+            </div>
+            <img v-bind:src="practioner.profile_picture">
+          </li>
+      </ul>
+    </div>
+  </div>
+</div>
