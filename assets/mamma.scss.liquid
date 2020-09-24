@@ -3447,6 +3447,20 @@ span.handwritten {
 
 .m-instagram {
   background-color: #fff;
+
+  h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+
+    @include media-query ($medium-up){
+      flex-direction: row;
+    }
+  }
 }
 
 // @include media-query (max-width: 740px) {
