@@ -3447,6 +3447,7 @@ span.handwritten {
 
 .m-instagram {
   background-color: #fff;
+  padding-top: 20px;
 
   h1 {
     font-size: 20px;
@@ -3458,6 +3459,9 @@ span.handwritten {
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
+    width: max-content;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
     @include media-query ($medium-up){
       flex-direction: row;
@@ -3465,7 +3469,7 @@ span.handwritten {
 
     li {
       display: flex;
-      
+
       &:after {
         content: '—';
         text-align: center;
