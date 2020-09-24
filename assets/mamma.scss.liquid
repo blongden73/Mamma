@@ -3460,6 +3460,15 @@ span.handwritten {
     @include media-query ($medium-up){
       flex-direction: row;
     }
+
+    li {
+      &:after {
+        content: '—';
+        text-align: center;
+        display: block;
+        margin-right: 10px;
+        margin-left: 10px;
+      }
   }
 }
 
