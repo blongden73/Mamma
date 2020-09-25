@@ -2267,7 +2267,9 @@ p {
 
 .m-discover-cta {
   position: relative;
-  height: 80vh;
+  @include media-query ($medium-up) {
+    height:80vh;
+  }
 
   img {
     width: 100%;
@@ -2466,7 +2468,10 @@ span.handwritten {
 }
 
 .m-calendar {
-  margin-bottom: 40px;
+  margin-bottom:0;
+  @include media-query($medium-up){
+    margin-bottom: 40px;
+  }
 
   &.home {
     .m-button {
@@ -2480,6 +2485,10 @@ span.handwritten {
 
     .m-calendar-wrapper {
       background-color: $m-blue;
+      margin-bottom: 50px;
+      @include media-query ($medium-up) {
+        margin-bottom: 20px;
+      }
 
       .m-button {
         border: 1px solid #fff;
@@ -2608,14 +2617,18 @@ span.handwritten {
     }
 
     .header-inner-content {
-      margin-top: 40px;
+
       width: 96%;
       margin:0 auto;
+
+      margin-top: 60%;
+    margin-bottom: 60%;
       @include media-query ($medium-up){
         position: absolute;
         top: 50%;
         left: 50%;
         margin-top: 0;
+        margin-bottom:0;
           transform: translate(-50%, -50%);
       }
 
@@ -3229,6 +3242,8 @@ span.handwritten {
   }
 }
 
+
+
 .home-about {
   background-color: $m-blue;
   padding-top: 25vh;
@@ -3254,8 +3269,16 @@ span.handwritten {
     justify-content: center;
 
     a {
-      width: 15%;
+      // width: 15%;
       text-align: center;
+      width: 26%;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.3;
+      margin-bottom: 20px;
+      @include media-query($medium-up){
+        width:15%;
+}
 
       svg {
         display: block;
@@ -3295,7 +3318,7 @@ span.handwritten {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-
+    line-height: 1.1;
     button {
       padding: 10px 15px;
       border: 1px solid #fff;
@@ -3328,6 +3351,15 @@ span.handwritten {
     background-color: #F1C1B0;
   }
 
+  .events, .home {
+    .page-width{
+      max-width:100%;
+      // @include media-query($medium-up){
+      //   max-width:96%;
+      // }
+    }
+  }
+
 }
 
 .m-discover-cta {
@@ -3349,6 +3381,10 @@ span.handwritten {
       left: 0;
       height: 75%;
       width: 83%;
+
+      @include media-query ($medium-up){
+        height:75%;
+      }
 
       &:before {
         position: absolute;
@@ -3458,14 +3494,16 @@ span.handwritten {
   ul {
     display: flex;
     flex-direction: column;
-    margin-left: auto;
+    margin-left: 20px;
     margin-right: auto;
     width: max-content;
-    margin-top: 40px;
-    margin-bottom: 20px;
-
+    margin-top: 130px;
+    margin-bottom: 0px;
     @include media-query ($medium-up){
       flex-direction: row;
+      margin-left: auto;
+      margin-top: 40px;
+      margin-bottom: 20px;
     }
 
     li {
@@ -3514,3 +3552,65 @@ span.handwritten {
 //     }
 //   }
 // }
+
+
+.home {
+  .m-calendar {
+    .page-width{
+      @include media-query($medium-down) {
+        max-width:100%;
+      }
+    }
+
+    .events {
+
+    }
+  }
+  .header-right {
+        margin-top: -88px;
+        @include media-query ($medium-up) {
+              margin-top: 0;
+        }
+  }
+  .header-right .header-inner .header-inner-content h1 {
+    padding-top: 40px;
+    @include media-query ($medium-up) {
+      padding-top:0;
+    }
+  }
+  .header-right .header-inner .header-inner-content button {
+    margin-bottom:40px;
+    @include media-query ($medium-up) {
+      padding-top:0;
+    }
+  }
+  .header-right .header-inner-content {
+    margin-bottom: 0;
+  }
+  .m-discover-cta .header-right .header-inner {
+    padding-bottom: 30px;
+    @include media-query ($medium-up) {
+      padding-bottom:0;
+    }
+  }
+}
+
+
+.instafeed-container {
+  width: 40% !important;
+  height: 40vw;
+  margin: 10px;
+  @include media-query ($medium-up) {
+    width:16.666667%!important;
+    height: unset;
+    margin:0;
+  }
+  // img {
+  //   width:50%;
+  //   height:50%;
+  // }
+  // div {
+  //   width:50%;
+  //   height:50%;
+  // }
+}
