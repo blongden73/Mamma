@@ -100,7 +100,7 @@
           {% include 'meditation-svg' %}
         {% elsif link.title == 'Relationships' %}
           {% include 'relationships-svg' %}
-        {% elsif link.title == 'I don't know' %}
+        {% elsif link.title == 'I dont know' %}
           {% include 'dont-know-svg' %}
         {% else %}
           {% include 'practice-svg' %}
@@ -109,9 +109,11 @@
     {% endfor %}
   </div>
 </div>
-<div class="m-calendar-outer-wrapper flex">
-  {% include 'our-calendar-home' %}
-  {% include 'our-events' %}
+<div class="page-width">
+  <div class="m-calendar-outer-wrapper flex">
+    {% include 'our-calendar-home' %}
+    {% include 'our-events' %}
+  </div>
 </div>
 {% include 'our-people' %}
 <div class="m-page-header flex m-discover-cta">
