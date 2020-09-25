@@ -82,8 +82,29 @@
       <a href="{{ link.url }}">
         {% if link.title == 'Self Care' %}
           {% include 'hand-svg' %}
+        {% elsif link.title == 'Spritual Growth' %}
+          {% include 'moon-svg' %}
+        {% elsif link.title == 'Fitness' %}
+          {% include 'fitness-svg' %}
+        {% elsif link.title == 'Yoga' %}
+          {% include 'yoga-svg' %}
+        {% elsif link.title == 'General Health' %}
+          {% include 'health-svg' %}
+        {% elsif link.title == 'Pain & Chronic Conditions' %}
+          {% include 'health-svg' %}
+        {% elsif link.title == 'Nutrition' %}
+          {% include 'nutrition-svg' %}
+        {% elsif link.title == 'Wellbeing' %}
+          {% include 'wellbeing-svg' %}
+        {% elsif link.title == 'Meditation' %}
+          {% include 'meditation-svg' %}
+        {% elsif link.title == 'Relationships' %}
+          {% include 'relationships-svg' %}
+        {% elsif link.title == 'I don't know' %}
+          {% include 'dont-know-svg' %}
+        {% else %}
+          {% include 'practice-svg' %}
         {% endif %}
-        {% include 'practice-svg' %}
         {{ link.title }}</a>
     {% endfor %}
   </div>
