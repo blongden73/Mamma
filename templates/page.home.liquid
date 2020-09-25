@@ -82,7 +82,7 @@
       <a href="{{ link.url }}">
         {% if link.title == 'Self Care' %}
           {% include 'hand-svg' %}
-        {% elsif link.title == 'Spritual Growth' %}
+        {% elsif link.title == 'Spiritual Growth' %}
           {% include 'moon-svg' %}
         {% elsif link.title == 'Fitness' %}
           {% include 'fitness-svg' %}
@@ -100,7 +100,7 @@
           {% include 'meditation-svg' %}
         {% elsif link.title == 'Relationships' %}
           {% include 'relationships-svg' %}
-        {% elsif link.title == 'I dont know' %}
+        {% elsif link.title == "I don't know" %}
           {% include 'dont-know-svg' %}
         {% else %}
           {% include 'practice-svg' %}
@@ -109,10 +109,12 @@
     {% endfor %}
   </div>
 </div>
-<div class="page-width">
-  <div class="m-calendar-outer-wrapper flex">
-    {% include 'our-calendar-home' %}
-    {% include 'our-events' %}
+<div class="m-calendar-home-wrapper">
+  <div class="page-width">
+    <div class="m-calendar-outer-wrapper flex">
+      {% include 'our-calendar-home' %}
+      {% include 'our-events' %}
+    </div>
   </div>
 </div>
 {% include 'our-people' %}
