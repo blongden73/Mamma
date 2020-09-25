@@ -80,7 +80,7 @@
     {% assign home = linklists.home %}
     {% for link in home.links %}
       <a href="{{ link.url }}">
-        {% if link.title = 'Self Care' %}
+        {% if link.title == 'Self Care' %}
           {% include 'hand-svg' %}
         {% endif %}
         {% include 'practice-svg' %}
