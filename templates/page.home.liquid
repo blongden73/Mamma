@@ -91,7 +91,7 @@
         {% elsif link.title == 'General Health' %}
           {% include 'health-svg' %}
         {% elsif link.title == 'Pain & Chronic Conditions' %}
-          {% include 'health-svg' %}
+          {% include 'pain-svg' %}
         {% elsif link.title == 'Nutrition' %}
           {% include 'nutrition-svg' %}
         {% elsif link.title == 'Wellbeing' %}
@@ -105,7 +105,7 @@
         {% else %}
           {% include 'practice-svg' %}
         {% endif %}
-        {{ link.title }}</a>
+        <span>{{ link.title }}</span></a>
     {% endfor %}
   </div>
 </div>
