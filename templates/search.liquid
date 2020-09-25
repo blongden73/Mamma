@@ -59,7 +59,7 @@
 {% if search.performed %}
   <h2 class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}</h2>
   <div class="page-width">
-    <div class="m-calendar-wrapper">
+    <div class="m-calendar-wrapper search-results">
       <ul class="list-view-items">
         {% for item in search.results %}
           <li class="list-view-item">
