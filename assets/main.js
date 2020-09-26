@@ -111,7 +111,10 @@ function onScrollElements(){
             loop: false,
             cursor: ''
         });
-        typewriter.typeString(content).start();
+        if(!typeOut[i].classList.contains('typed')){
+          typewriter.typeString(content).start();
+          typeOut[i].classList.add('typed');
+        }
       }
     }
   });
