@@ -29,9 +29,9 @@
         <div class="flex">
           <div class="m-people-info-left">
             <ul>
-              <li>${practioner.bullet_1}</li>
-              <li>${practioner.bullet_2}</li>
-              <li>${practioner.bullet_3}</li>
+              <li v-if="practioner.bullet_1">${practioner.bullet_1}</li>
+              <li v-if="practioner.bullet_2">${practioner.bullet_2}</li>
+              <li v-if="practioner.bullet_3">${practioner.bullet_3}</li>
             </ul>
             <pre>
               <p>${practioner.description}</p>
