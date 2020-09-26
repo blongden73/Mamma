@@ -2404,6 +2404,9 @@ span.handwritten {
         width: 500px;
         height: 300px;
         transform: translate(-50%, -50%);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity ease-in-out 0.5s;
 
         img {
           width: 100%;
@@ -2446,6 +2449,10 @@ span.handwritten {
 
       &:hover {
         text-decoration: none;
+
+        & > div {
+          opacity: 1;
+        }
 
         &:before {
           opacity: 1;
