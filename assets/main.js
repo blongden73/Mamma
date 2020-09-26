@@ -134,7 +134,7 @@ function filters(){
   for(i=0; i<filters.length; i++) {
     filters[i].addEventListener('click', function(){
       var search = this.dataset.find;
-      var results = document.querySelectorAll('.m-calendar-wrapper ul li');
+      var results = document.querySelectorAll('.m-cal-item');
       var noResults = document.querySelector('.no-results');
       console.log(search);
 
