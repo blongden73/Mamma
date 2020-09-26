@@ -141,10 +141,10 @@ function filters(){
 
       if(findthis.length <= 0) {
         noResults.classList.add('display');
-        console.log(findthis.length);
+        console.log(findthis.length, 'true');
       }else {
         noResults.classList.remove('display');
-        console.log(findthis.length);
+        console.log(findthis.length, 'false');
       }
 
       for(j=0; j< results.length; j++) {
