@@ -2563,7 +2563,7 @@ span.handwritten {
 
     .m-person__description {
       position: absolute;
-      background-color: yellow;
+      background-color: $m-cream;
       top: 0;
       bottom: 0%;
       left: 100%;
@@ -2571,6 +2571,16 @@ span.handwritten {
       width: 200%;
       opacity: 0;
       pointer-events: none;
+
+      p {
+        display: block;
+        display: -webkit-box;
+        max-width: 200px;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
 
     img {
