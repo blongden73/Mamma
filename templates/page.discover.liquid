@@ -107,10 +107,11 @@
           <h1>{{mind.title}}</h1>
           {% for link in mind.links %}
             {% assign handle = link.handle %}
-            <a href="{{ link.url }}">{{ link.title }}</a>
-            <div class="floating-image">
-              <img src="{{ pages[handle].metafields.airf.page_image }}">
-            </div>
+            <a href="{{ link.url }}">{{ link.title }}
+              <div class="floating-image">
+                <img src="{{ pages[handle].metafields.airf.page_image }}">
+              </div>
+            </a>
           {% endfor %}
         </div>
       </div>
