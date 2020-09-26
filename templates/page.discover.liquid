@@ -13,31 +13,48 @@
     <div class="header-inner">
       <div class="header-inner-content">
         <h1>What are you looking for?</h1>
-        <form>
+        <form class="search-form search-bar__form" action="{{ routes.search_url }}" method="get" role="search">
           <label>Search here</label>
-          <input></input>
+          <div class="search-form__input-wrapper">
+            <input
+              type="text"
+              name="q"
+              placeholder="Wellness, Yoga, Mindfullness, Breathwork"
+              role="combobox"
+              aria-autocomplete="list"
+              aria-owns="predictive-search-results"
+              aria-expanded="false"
+              aria-label="{{ 'general.search.placeholder' | t }}"
+              aria-haspopup="listbox"
+              class="search-form__input search-bar__input"
+              data-predictive-search-drawer-input
+            />
+            <input type="hidden" name="options[prefix]" value="last" aria-hidden="true" />
+            <div class="predictive-search-wrapper predictive-search-wrapper--drawer" data-predictive-search-mount="drawer"></div>
+          </div>
           <label>Mamma Offerings</label>
           <select>
-            <option value="option 1">option 1</option>
-            <option value="option 2">option 2</option>
-            <option value="option 3">option 3</option>
-            <option value="option 4">option 4</option>
+            <option value="option 1">1-1 session</option>
+            <option value="option 2">Classes</option>
+            <option value="option 3">Events</option>
+            <option value="option 4">Courses</option>
+            <option value="option 4">Retreats</option>
           </select>
           <label>How you would like your wellness?</label>
           <select>
-            <option value="option 1">option 1</option>
-            <option value="option 2">option 2</option>
-            <option value="option 3">option 3</option>
-            <option value="option 4">option 4</option>
+            <option value="option 1">Online practice</option>
+            <option value="option 2">Home visit</option>
           </select>
           <label>How are you felling?</label>
           <select>
-            <option value="option 1">option 1</option>
-            <option value="option 2">option 2</option>
-            <option value="option 3">option 3</option>
-            <option value="option 4">option 4</option>
+            <option value="option 1">Mind</option>
+            <option value="option 2">Body</option>
+            <option value="option 3">Spirit</option>
+            <option value="option 4">Motivational</option>
+            <option value="option 4">All</option>
           </select>
-          <button>Search</button>
+          <button type="submit"
+          data-search-form-submit>Search</button>
         </form>
       </div>
     </div>
