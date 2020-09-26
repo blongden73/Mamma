@@ -115,6 +115,8 @@ function onScrollElements(){
           typewriter.typeString(content).start();
           typeOuts[i].classList.add('typed');
         }
+      } else {
+        typeOuts[i].classList.remove('typed');
       }
     }
   });
