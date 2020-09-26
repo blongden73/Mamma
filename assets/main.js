@@ -135,6 +135,9 @@ function filters(){
     filters[i].addEventListener('click', function(){
       var search = this.dataset.find;
       var results = document.querySelectorAll('.m-calendar-wrapper ul li');
+      var noResults = document.querySelector('.no-results');
+      noResults.classList.remove('display');
+      
       results.forEach((item, i) => {
         item.classList.remove('found');
       });
@@ -142,8 +145,12 @@ function filters(){
       console.log(search);
       var findthis = document.querySelectorAll('.m-cal-item.'+search);
       console.log(findthis);
-      for(j=0; j < findthis.length; j++) {
-        findthis[j].classList.add('found');
+      if(findthis >= 1) {
+        for(j=0; j < findthis.length; j++) {
+          findthis[j].classList.add('found');
+        }
+      } else {
+        noResults.classList.add('display');
       }
     });
   }
