@@ -136,15 +136,18 @@ function filters(){
       var search = this.dataset.find;
       var results = document.querySelectorAll('.m-calendar-wrapper ul li');
       var noResults = document.querySelector('.no-results');
-      noResults.classList.remove('display');
-
       console.log(search);
 
       for(j=0; j< results.length; j++) {
+        results[j].classList.remove('hide');
+        results[j].classList.remove('found');
+        noResults.classList.remove('display');
+
         if(results[j].classList.contains(search)){
           results[j].classList.add('found');
         } else {
           results[j].classList.add('hide');
+          noResults.classList.add('display');
         }
       }
 
