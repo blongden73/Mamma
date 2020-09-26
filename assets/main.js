@@ -111,7 +111,7 @@ function onScrollElements(){
             loop: false,
             cursor: ''
         });
-        if(!typeOut[i].classList.contains('typed')){
+        if(!typeOuts[i].classList.contains('typed')){
           typewriter.typeString(content).start();
           typeOut[i].classList.add('typed');
         }
