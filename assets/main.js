@@ -135,6 +135,10 @@ function filters(){
     filters[i].addEventListener('click', function(){
       var search = this.dataset.find;
       var results = document.querySelectorAll('.m-calendar-wrapper ul li');
+      results.forEach((item, i) => {
+        item.classList.remove('found');
+      });
+
       console.log(search);
       var findthis = document.querySelectorAll('.m-cal-item.'+search);
       console.log(findthis);
