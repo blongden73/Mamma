@@ -2564,8 +2564,9 @@ span.handwritten {
     .m-person__description {
       position: absolute;
       background-color: yellow;
-      top: 100%;
-      bottom: -100%;
+      top: 0;
+      bottom: 0%;
+      left: 100%;
       z-index: 10;
       width: 200%;
       opacity: 0;
@@ -2581,7 +2582,8 @@ span.handwritten {
 
     &:nth-child(6), &:nth-child(12), &:nth-child(18) {
       .m-person__description {
-        right: 0;
+        right: 100%;
+        left: 0;
       }
     }
   }
