@@ -107,9 +107,8 @@
       <div class="header-inner">
       </div>
       {% for product in collection.products limit:1 %}
-
+        <img src="{{ product | img_url: '1024x' }}" />
       {% endfor %}
-      <img src="{{ product | img_url: '1024x' }}" />
     </div>
     <div class="header-right">
       <div class="header-inner">
