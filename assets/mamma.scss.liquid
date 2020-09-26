@@ -2569,6 +2569,7 @@ span.handwritten {
       z-index: 10;
       width: 200%;
       opacity: 0;
+      pointer-events: none;
     }
 
     img {
@@ -2577,6 +2578,10 @@ span.handwritten {
       object-fit: cover;
       object-position: center;
     }
+  }
+
+  .m-person:hover .m-person__description {
+    opacity: 1;
   }
 }
 .m-practioner-list {
