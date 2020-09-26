@@ -62,6 +62,8 @@ hamburger.addEventListener('click', function(){
 var carouselImages = document.querySelectorAll('.car_img');
 var blobList = document.querySelectorAll('.blob');
 
+console.log(carouselImages);
+
 if(carouselImages){
   setInterval(function(){
     var current = document.querySelector('.car_img.display');
