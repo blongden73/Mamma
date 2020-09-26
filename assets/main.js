@@ -107,11 +107,11 @@ function onScrollElements(){
     for(i=0; i<typeOuts.length; i++) {
       if(elementInViewport(typeOuts[i])) {
         var content = typeOuts[i].dataset.content;
-        var typewriter = new Typewriter(typeOuts[i], {
-            loop: false,
-            cursor: ''
-        });
         if(!typeOuts[i].classList.contains('typed')){
+          var typewriter = new Typewriter(typeOuts[i], {
+              loop: false,
+              cursor: ''
+          });
           typewriter.typeString(content).start();
           typeOut[i].classList.add('typed');
         }
