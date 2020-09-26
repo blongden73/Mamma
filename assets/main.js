@@ -64,7 +64,7 @@ var blobList = document.querySelectorAll('.blob');
 
 console.log(carouselImages);
 
-if(carouselImages){
+if(carouselImages.length >= 1){
   setInterval(function(){
     var current = document.querySelector('.car_img.display');
     var next = document.querySelector('.display + .car_img');
