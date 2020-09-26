@@ -2580,10 +2580,16 @@ span.handwritten {
       object-position: center;
     }
 
-    &:nth-child(5), &:nth-child(10), &:nth-child(15), &:nth-child(6), &:nth-child(12), &:nth-child(18) {
+    &:nth-child(5), &:nth-child(10), &:nth-child(15) {
       .m-person__description {
-        right: -200%;
-        left: 0;
+        right: 0;
+        left: auto;
+      }
+    }
+     &:nth-child(6), &:nth-child(12), &:nth-child(18) {
+      .m-person__description {
+        right: 100%;
+        left: auto;
       }
     }
   }
