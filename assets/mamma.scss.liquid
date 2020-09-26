@@ -2394,8 +2394,10 @@ span.handwritten {
 .m-people-group {
   display: flex;
   flex-direction: column;
+
   @include media-query($medium-up){
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   li {
@@ -2881,6 +2883,7 @@ span.handwritten {
       font-weight: 900;
       text-align: left;
       margin-top: 90px;
+      margin-left: 12%;
     }
 
     cite {
