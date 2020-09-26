@@ -138,26 +138,27 @@ function filters(){
       var noResults = document.querySelector('.no-results');
       noResults.classList.remove('display');
 
-      results.forEach((item, i) => {
-        item.classList.remove('found');
-        console.log('remove found')
-        item.classList.add('hide');
-        console.log('add hide')
-      });
-
-      console.log(search);
-      var findthis = document.querySelectorAll('.m-cal-item.'+search);
-      console.log(findthis);
-      if(findthis >= 1) {
-        for(j=0; j < findthis.length; j++) {
-          findthis[j].classList.remove('hide');
-          console.log('remove hide')
-          findthis[j].classList.add('found');
-          console.log('add found')
+      for(j=0; j< results.length; j++) {
+        if(results[i].classList.contains(search)){
+          results[i].classList.add('found');
+        } else {
+          results[i].classList.add('hide');
         }
-      } else {
-        noResults.classList.add('display');
       }
+
+      // console.log(search);
+      // var findthis = document.querySelectorAll('.m-cal-item.'+search);
+      // console.log(findthis);
+      // if(findthis >= 1) {
+      //   for(j=0; j < findthis.length; j++) {
+      //     findthis[j].classList.remove('hide');
+      //     console.log('remove hide')
+      //     findthis[j].classList.add('found');
+      //     console.log('add found')
+      //   }
+      // }else {
+      //   noResults.classList.add('display');
+      // }
     });
   }
  }
