@@ -134,8 +134,13 @@ function filters(){
   for(i=0; i<filters.length; i++) {
     filters[i].addEventListener('click', function(){
       var search = this.dataset.find;
-      var results = document.querySelector('.m-calendar-wrapper ul li');
-      
+      var results = document.querySelectorAll('.m-calendar-wrapper ul li');
+      console.log(search);
+      var findthis = document.querySelectorAll('.'+search);
+      console.log(findthis);
+      for(j=0; j < findthis.length; j++) {
+        findthis[j].classList.add('found');
+      }
     });
   }
  }
