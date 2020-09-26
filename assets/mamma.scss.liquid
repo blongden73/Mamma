@@ -2331,6 +2331,11 @@ span.handwritten {
   position: relative;
   margin-bottom: 40px;
 
+  .page-width {
+    z-index: 1;
+    position: relative;
+  }
+
   &:before {
     position: absolute;
     right: 0;
@@ -2338,7 +2343,7 @@ span.handwritten {
     background-color: $m-cream;
     bottom: 0;
     top: 0;
-    z-index: -1;
+    z-index: 0;
     content: '';
     display: block;
   }
@@ -2384,6 +2389,8 @@ span.handwritten {
       margin-left: auto;
       margin-right: auto;
       display: block;
+      margin-bottom: 20px;
+      margin-top: 10px;
     }
 
     h1 {
