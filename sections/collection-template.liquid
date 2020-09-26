@@ -56,8 +56,8 @@
       </div>
     </template>
   </div>
-  <div v-if="practioner.testimonial" class="m-people-testimonial" v-for="practioner in practioners" v-if="practioner.slug === '{{slug}}'">
-    <template>
+  <div class="m-people-testimonial" v-for="practioner in practioners" v-if="practioner.slug === '{{slug}}'">
+    <template v-if="practioner.testimonial">
     <div class="page-width">
       <div class="flex">
         <div class="testimonial-image">
