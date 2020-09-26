@@ -80,3 +80,12 @@ if(carouselImages){
     }
   }, 1500);
 }
+
+var why = document.querySelector('.typewriter-why');
+
+var typewriter = new Typewriter(why, {
+    loop: false
+});
+
+typewriter.typeString('Why Mamma');
+    .start();
