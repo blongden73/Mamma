@@ -141,8 +141,10 @@ function filters(){
 
       if(findthis.length <= 0) {
         noResults.classList.add('display');
+        console.log(findthis.length);
       }else {
         noResults.classList.remove('display');
+        console.log(findthis.length);
       }
 
       for(j=0; j< results.length; j++) {
