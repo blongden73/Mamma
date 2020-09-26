@@ -113,7 +113,7 @@ function onScrollElements(){
               cursor: ''
           });
           typewriter.typeString(content).start();
-          typeOut[i].classList.add('typed');
+          typeOuts[i].classList.add('typed');
         }
       }
     }
