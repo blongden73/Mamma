@@ -137,10 +137,12 @@ function filters(){
       var results = document.querySelectorAll('.m-cal-item');
       var noResults = document.querySelector('.no-results');
       var findthis = document.querySelectorAll('.m-cal-item.'+search);
+      var word = document.querySelector('.js-type');
       console.log(search);
 
       if(findthis.length <= 0) {
         noResults.classList.add('display');
+        word.innerHTML = search;
         console.log(findthis.length, 'true');
       }else {
         noResults.classList.remove('display');
