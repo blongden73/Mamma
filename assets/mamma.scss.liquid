@@ -3245,13 +3245,27 @@ span.handwritten {
   }
 
   .header-right-after-search {
-    top: 50%;
+    top: 58%;
     bottom: 0;
     left: 50%;
     position: absolute;
     transform: translateX(-50%);
     background: pink;
-    width: 1px;
+    width: 6px;
+
+    .dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .line {
+      width: 1px;
+      height: 100%;
+      background-color: $m-blue;
+    }
   }
 }
 
