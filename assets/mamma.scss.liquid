@@ -3244,13 +3244,50 @@ span.handwritten {
     text-align: center;
   }
 
+  @keyframes animatedot {
+    0% {
+      // opacity: 0;
+      transform: scale(0);
+    }
+
+    100% {
+      // opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes animateline {
+    0% {
+      // opacity: 0;
+      height: 0;
+    }
+
+    100% {
+      // opacity: 1;
+      height: 100%;
+    }
+  }
+
+  @keyframes animatehorizontal {
+    0% {
+      // opacity: 0;
+      width: 0;
+    }
+
+    100% {
+      // opacity: 1;
+      width: 100%;
+    }
+  }
+
+
+
   .header-right-after-search {
     top: 58%;
     bottom: 60px;
     left: 50%;
     position: absolute;
     transform: translateX(-50%);
-    background: pink;
     width: 70px;
 
     .dot {
@@ -3260,6 +3297,11 @@ span.handwritten {
       margin-left: auto;
       margin-right: auto;
       background-color: $m-blue;
+      transform: scale(0);
+      animation-name: animatedot;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
     }
 
     .line {
@@ -3268,12 +3310,22 @@ span.handwritten {
       margin-left: auto;
       margin-right: auto;
       background-color: $m-blue;
+      animation-name: animateline;
+      animation-delay: 0.75s;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
     }
 
     .horizontal-line {
       height: 1px;
       width: 100%;
       background-color: $m-blue;
+      animation-name: animatehorizontal;
+      animation-delay: 1.5s;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
     }
   }
 }
