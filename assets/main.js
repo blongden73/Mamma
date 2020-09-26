@@ -138,6 +138,10 @@ function filters(){
       var noResults = document.querySelector('.no-results');
       console.log(search);
 
+      if(results.length <= 0) {
+        noResults.classList.add('display');
+      }
+
       for(j=0; j< results.length; j++) {
         results[j].classList.remove('hide');
         results[j].classList.remove('found');
@@ -147,7 +151,6 @@ function filters(){
           results[j].classList.add('found');
         } else {
           results[j].classList.add('hide');
-          noResults.classList.add('display');
         }
       }
 
