@@ -140,7 +140,7 @@ function filters(){
 
       results.forEach((item, i) => {
         item.classList.remove('found');
-        console.log('add found')
+        console.log('remove found')
         item.classList.add('hide');
         console.log('add hide')
       });
