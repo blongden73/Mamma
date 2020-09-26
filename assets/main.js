@@ -81,13 +81,42 @@ if(carouselImages){
   }, 1500);
 }
 
-var why = document.querySelector('.typewriter-why');
+function elementInViewport(el) {
+  var top = el.offsetTop;
+  var left = el.offsetLeft;
+  var width = el.offsetWidth;
+  var height = el.offsetHeight;
 
-var typewriter = new Typewriter(why, {
-    loop: false,
-    cursor: ''
-});
+  while(el.offsetParent) {
+    el = el.offsetParent;
+    top += el.offsetTop;
+    left += el.offsetLeft;
+  }
 
+  return (
+    top >= window.pageYOffset &&
+    left >= window.pageXOffset &&
+    (top + height) <= (window.pageYOffset + window.innerHeight) &&
+    (left + width) <= (window.pageXOffset + window.innerWidth)
+  );
+}
 
+function onScrollElements(){
+  document.addEventListener('scroll', function(){
+    var typeOuts = document.querySelectorAll('.typeOut');
+    for(i=0; i<typeOuts.length; i++) {
+      if(elementInViewport(typeOuts[i])) {
+        var content = typeOuts[i].dataset.content;
+        var typewriter = new Typewriter(typeOuts[i], {
+            loop: false,
+            cursor: ''
+        });
+        typewriter.typeString(content).start();
+      }
+    }
+  });
+}
 
-typewriter.typeString('<span class="handwritten">Why</span> Mamma?').start();;
+if(document.querySelectorAll('.typeOut')) {
+  onScrollElements();
+}
