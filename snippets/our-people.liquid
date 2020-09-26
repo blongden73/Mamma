@@ -7,6 +7,7 @@
     <div id="app" class="m-people-placeholder">
       <ul class="m-people-group">
           <li class="m-person" v-for="practioner in practioners">
+            <div class="m-person__description"></div>
             <a v-bind:href="'/collections/' + practioner.slug">
               <div class="m-people-details">
                 <span class="m-people-practice">${practioner.practice}</span>
