@@ -87,4 +87,4 @@ var typewriter = new Typewriter(why, {
     loop: false
 });
 
-typewriter.typeString('Why Mamma').start();;
+typewriter.typeString('<span class="handwritten">Why</span> Mamma').start();;
