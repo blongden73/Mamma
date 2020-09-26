@@ -40,16 +40,16 @@
           <div class="m-people-info-center">
             <p class="bold">${practioner.location}</p>
             <p class="bold">${practioner.how}</p>
-            <p>${practioner.social_ig}</p>
-            <p>${practioner.social_tw}</p>
-            <p>${practioner.social_fb}</p>
+            <p v-if="practioner.social_ig">${practioner.social_ig}</p>
+            <p v-if="practioner.social_tw">${practioner.social_tw}</p>
+            <p v-if="practioner.social_fb">${practioner.social_fb}</p>
           </div>
           <div class="m-people-info-right">
             <div class="m-people-info-gallery-inner">
-              <div><img v-bind:src="practioner.gallery_1"></div>
-              <div><img v-bind:src="practioner.gallery_2"></div>
-              <div><img v-bind:src="practioner.gallery_3"></div>
-              <div><img v-bind:src="practioner.gallery_4"></div>
+              <div v-if="practioner.gallery_1"><img v-bind:src="practioner.gallery_1"></div>
+              <div v-if="practioner.gallery_2"><img v-bind:src="practioner.gallery_2"></div>
+              <div v-if="practioner.gallery_3"><img v-bind:src="practioner.gallery_3"></div>
+              <div v-if="practioner.gallery_4"><img v-bind:src="practioner.gallery_4"></div>
             </div>
           </div>
         </div>
