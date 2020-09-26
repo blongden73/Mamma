@@ -138,11 +138,13 @@ function filters(){
       var noResults = document.querySelector('.no-results');
       noResults.classList.remove('display');
 
+      console.log(search);
+
       for(j=0; j< results.length; j++) {
-        if(results[i].classList.contains(search)){
-          results[i].classList.add('found');
+        if(results[j].classList.contains(search)){
+          results[j].classList.add('found');
         } else {
-          results[i].classList.add('hide');
+          results[j].classList.add('hide');
         }
       }
 
