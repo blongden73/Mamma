@@ -136,10 +136,13 @@ function filters(){
       var search = this.dataset.find;
       var results = document.querySelectorAll('.m-cal-item');
       var noResults = document.querySelector('.no-results');
+      var findthis = document.querySelectorAll('.m-cal-item.'+search);
       console.log(search);
 
-      if(results.length <= 0) {
+      if(findthis.length <= 0) {
         noResults.classList.add('display');
+      }else {
+        noResults.classList.remove('display');
       }
 
       for(j=0; j< results.length; j++) {
@@ -155,7 +158,7 @@ function filters(){
       }
 
       // console.log(search);
-      // var findthis = document.querySelectorAll('.m-cal-item.'+search);
+      //
       // console.log(findthis);
       // if(findthis >= 1) {
       //   for(j=0; j < findthis.length; j++) {
