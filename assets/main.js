@@ -131,6 +131,13 @@ if(document.querySelectorAll('.typeOut')) {
 function filters(){
   var filters = document.querySelectorAll('.m-filters ul li');
   console.log(filters);
-}
+  for(i=0; i<filters.length; i++) {
+    filters[i].addEventListener('click', function(){
+      var search = this.dataset.find;
+      var results = document.querySelector('.m-calendar-wrapper ul li');
+      
+    });
+  }
+ }
 
 filters();
