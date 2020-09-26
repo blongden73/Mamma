@@ -136,7 +136,7 @@ function filters(){
       var search = this.dataset.find;
       var results = document.querySelectorAll('.m-calendar-wrapper ul li');
       console.log(search);
-      var findthis = document.querySelectorAll('.'+search);
+      var findthis = document.querySelectorAll('.m-cal-item.'+search);
       console.log(findthis);
       for(j=0; j < findthis.length; j++) {
         findthis[j].classList.add('found');
