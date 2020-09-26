@@ -84,7 +84,8 @@ if(carouselImages){
 var why = document.querySelector('.typewriter-why');
 
 var typewriter = new Typewriter(why, {
-    loop: false
+    loop: false,
+    cursor: ''
 });
 
 
