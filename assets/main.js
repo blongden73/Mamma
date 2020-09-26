@@ -140,7 +140,9 @@ function filters(){
 
       results.forEach((item, i) => {
         item.classList.remove('found');
+        console.log('add found')
         item.classList.add('hide');
+        console.log('add hide')
       });
 
       console.log(search);
@@ -149,7 +151,9 @@ function filters(){
       if(findthis >= 1) {
         for(j=0; j < findthis.length; j++) {
           findthis[j].classList.remove('hide');
+          console.log('remove hide')
           findthis[j].classList.add('found');
+          console.log('add found')
         }
       } else {
         noResults.classList.add('display');
