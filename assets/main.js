@@ -132,3 +132,5 @@ function filters(){
   var filters = document.querySelectorAll('.m-filters ul li');
   console.log(filters);
 }
+
+filters();
