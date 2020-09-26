@@ -108,7 +108,9 @@
           {% for link in mind.links %}
             {% assign handle = link.handle %}
             <a href="{{ link.url }}">{{ link.title }}</a>
-            {{ pages[handle].metafields.airf.page_image }}
+            <div class="floating-image">
+              <img src="{{ pages[handle].metafields.airf.page_image }}">
+            </div>
           {% endfor %}
         </div>
       </div>
