@@ -106,8 +106,10 @@
     <div class="header-left">
       <div class="header-inner">
       </div>
-      {{ product.collections[0].title }}
-      <img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/jade-stephens-N21356amsyw-unsplash.jpg?v=1600357576" />
+      {% for product in collection.products limit:1 %}
+        {{ product | img_url: '1024x' }}
+      {% endfor %}
+      <!-- <img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/jade-stephens-N21356amsyw-unsplash.jpg?v=1600357576" /> -->
     </div>
     <div class="header-right">
       <div class="header-inner">
