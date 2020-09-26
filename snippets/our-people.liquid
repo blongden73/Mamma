@@ -8,6 +8,8 @@
       <ul class="m-people-group">
           <li class="m-person" v-for="practioner in practioners">
             <div class="m-person__description">
+              <h1>${practioner.full_name}</h1>
+              <h2 class="handwritten">${practioner.practice}</h2>
               <p>${practioner.short_bio}</p>
             </div>
             <a v-bind:href="'/collections/' + practioner.slug">
