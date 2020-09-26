@@ -137,9 +137,10 @@ function filters(){
       var results = document.querySelectorAll('.m-calendar-wrapper ul li');
       var noResults = document.querySelector('.no-results');
       noResults.classList.remove('display');
-      
+
       results.forEach((item, i) => {
         item.classList.remove('found');
+        item.classList.add('hide');
       });
 
       console.log(search);
@@ -147,6 +148,7 @@ function filters(){
       console.log(findthis);
       if(findthis >= 1) {
         for(j=0; j < findthis.length; j++) {
+          findthis[j].classList.remove('hide');
           findthis[j].classList.add('found');
         }
       } else {
