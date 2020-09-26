@@ -127,3 +127,8 @@ function onScrollElements(){
 if(document.querySelectorAll('.typeOut')) {
   onScrollElements();
 }
+
+function filters(){
+  var filters = document.querySelectorAll('.m-filters ul li');
+  console.log(filters);
+}
