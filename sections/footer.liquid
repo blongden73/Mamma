@@ -153,7 +153,7 @@
               {%- when 'newsletter' -%}
                 <div class="site-footer__newsletter
                           {% if section.blocks.size == 1 %} site-footer__single-block--centered{% endif %}">
-                  <h4>Let's stay in touch</h4>        
+                  <h4>Let's stay in touch</h4>
                   {%- assign formId = 'ContactFooter' -%}
                   {% form 'customer', id: formId, novalidate: 'novalidate' %}
                     {%- if form.posted_successfully? -%}
@@ -181,7 +181,7 @@
                         {% endif %}>
                       <span class="input-group__btn">
                         <button type="submit" class="btn newsletter__submit" name="commit" >
-                          <span class="newsletter__submit-text--large">{{ 'general.newsletter_form.submit' | t }}</span>
+                          <span class="newsletter__submit-text--large">Sign up</span>
                         </button>
                       </span>
                     </div>
