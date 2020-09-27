@@ -9,7 +9,7 @@
     <div class="contact-form-left">
       <h1>Message <span>{{ practionerName }}</span></h1>
       <div class="grid__item">
-        <label for="{{ formId }}-name">{{ 'contact.form.name' | t }}</label>
+        <label for="{{ formId }}-name">Your {{ 'contact.form.name' | t }}</label>
         <input type="text" id="{{ formId }}-name" name="contact[{{ 'contact.form.name' | t }}]" value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
       </div>
       <div class="grid__item">
@@ -78,7 +78,7 @@
       <path d="M31.8 184.14C31.5566 184.339 31.2787 184.492 30.98 184.59C30.7094 184.679 30.4244 184.717 30.14 184.7C29.8607 184.677 29.5886 184.599 29.34 184.47C29.0777 184.323 28.8468 184.126 28.66 183.89C28.4767 183.666 28.3406 183.408 28.26 183.13C28.1807 182.864 28.1602 182.584 28.2 182.31C28.2418 182.025 28.3367 181.75 28.48 181.5C28.6401 181.229 28.8466 180.989 29.09 180.79C29.3398 180.585 29.6243 180.425 29.93 180.32C30.204 180.231 30.4923 180.194 30.78 180.21C31.0573 180.226 31.3273 180.305 31.57 180.44C31.8272 180.573 32.0524 180.761 32.23 180.99C32.4234 181.218 32.5665 181.483 32.65 181.77C32.7272 182.039 32.751 182.321 32.72 182.6C32.6729 182.885 32.5747 183.16 32.43 183.41C32.266 183.69 32.0526 183.937 31.8 184.14Z" fill="#272D7A"/>
       </svg>
 
-      <label for="{{ formId }}-message">{{ 'contact.form.message' | t }}</label>
+      <label for="{{ formId }}-message">Your {{ 'contact.form.message' | t }}</label>
       <textarea rows="10" id="{{ formId }}-message" name="contact[{{ 'contact.form.message' | t }}]">{% if form.body %}{{ form.body }}{% endif %}</textarea>
 
       <input type="submit" class="btn" value="{{ 'contact.form.submit' | t }}">
