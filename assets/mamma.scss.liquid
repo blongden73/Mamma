@@ -3115,7 +3115,7 @@ span.handwritten {
     width: 500px;
     top: -163px;
     left: 420px;
-    animation-name: rotateLineOne;
+    animation-name: rotateLinePrac;
     animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
@@ -3845,6 +3845,24 @@ span.handwritten {
 
   100% {
     transform: rotate(145deg) translateY(10px);
+  }
+}
+
+@keyframes rotateLinePrac {
+  0% {
+    transform: rotate(0) translateY(10px);
+  }
+
+  50% {
+    transform: rotate(10deg) translateY(-40px);
+  }
+
+  75% {
+    transform: rotate(-10deg) translateY(20px);
+  }
+
+  100% {
+    transform: rotate(0) translateY(10px);
   }
 }
 
