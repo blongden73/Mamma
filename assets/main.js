@@ -112,7 +112,8 @@ function onScrollElements(){
         if(!typeOuts[i].classList.contains('typed')){
           var typewriter = new Typewriter(typeOuts[i], {
               loop: false,
-              cursor: ''
+              cursor: '',
+              delay: 0.2
           });
           typewriter.typeString(content).start();
           typeOuts[i].classList.add('typed');
