@@ -113,7 +113,6 @@ function onScrollElements(){
           var typewriter = new Typewriter(typeOuts[i], {
               loop: false,
               cursor: '',
-              delay: 1.5
           });
           typewriter.typeString(content).start();
           typeOuts[i].classList.add('typed');
