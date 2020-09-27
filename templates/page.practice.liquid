@@ -36,3 +36,29 @@
     </div>
   </div>
 </div>
+<div class="m-practioner-list">
+  <div class="page-width">
+    <div class="m-practice-list-header less-padding">
+      <h1><span class="underline blue">Our <span class="typeOut handwritten" data-content="{{page.title}}"></span> People</span></h1>
+    </div>
+    <!-- this section uses vue js using ${} to reference the data -->
+    <div id="app" class="m-people-placeholder">
+      <ul class="m-people-group">
+          <li class="m-person" v-for="practioner in practioners">
+            <div class="m-person__description">
+              <h1>${practioner.full_name}</h1>
+              <h2 class="handwritten">${practioner.practice}</h2>
+              <p>${practioner.short_bio}</p>
+            </div>
+            <a v-bind:href="'/collections/' + practioner.slug">
+              <div class="m-people-details">
+                <span class="m-people-name">${practioner.full_name}</span>
+                <span class="m-people-practice">${practioner.practice}</span>
+              </div>
+              <img v-bind:src="practioner.profile_picture">
+            </a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</div>
