@@ -7,7 +7,7 @@
 
 
     <div class="contact-form-left">
-      <h1>Contact us</h1>
+      <h1>Message {% include.name %}</h1>
       <div class="grid__item">
         <label for="{{ formId }}-name">{{ 'contact.form.name' | t }}</label>
         <input type="text" id="{{ formId }}-name" name="contact[{{ 'contact.form.name' | t }}]" value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
