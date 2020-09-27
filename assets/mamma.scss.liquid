@@ -3329,10 +3329,16 @@ span.handwritten {
         margin-right: 10px;
         cursor: pointer;
 
-        &:first-child {
-          background-color: $m-blue !important;
-          color: #fff !important;
+        a {
+          &:first-child {
+            .m-button {
+            background-color: $m-blue !important;
+            color: #fff !important;
+            }
+          }
         }
+
+
       }
     }
   }
