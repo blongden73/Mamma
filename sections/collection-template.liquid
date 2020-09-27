@@ -163,7 +163,7 @@
 <div class="contact">
   {% assign practionerNameSplit = collection.handle | split: '-' %}
   {% assign practionerName = practionerNameSplit[0] %}
-  {% include 'contact-form-practice' name=practionerName %}
+  {% include 'contact-form-practice' %}
 </div>
 
 {% endpaginate %}
