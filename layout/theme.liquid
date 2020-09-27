@@ -128,6 +128,7 @@
   <div class="page-container drawer-page-content" id="PageContainer">
     {% if template.suffix == 'experiences' %}
       {{ content_for_layout }}
+      {% section 'footer' %}
     {% elsif template == 'index' %}
     <main class="main-content js-focus-hidden" id="MainContent" role="main" tabindex="-1">
       {{ content_for_layout }}
