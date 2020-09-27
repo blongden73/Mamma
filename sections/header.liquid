@@ -272,14 +272,14 @@
           <div class="m-menu-four">
             {% assign shopping = linklists.shopping %}
             <h1>Shop</h1>
-            <div class="explore">
+            <div class="shopping">
               {% for link in shopping.links %}
                 <a href="{{ link.url }}">{{ link.title }}</a>
               {% endfor %}
             </div>
           </div>
           <div class="m-menu-five">
-            {% assign space = linklists.space %}
+            {% assign space = linklists.the-space %}
             <h1>The Space</h1>
             <div class="space-menu">
               {% for link in space.links %}
