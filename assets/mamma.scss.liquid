@@ -4150,6 +4150,16 @@ span.handwritten {
 
 .m-calendar-home-wrapper {
   background-color: #fff !important;
+  position: relative;
+
+  .page-width {
+    position: relative;
+    z-index: 1;
+  }
+
+  .m-calendar-outer-wrapper {
+    background-color: transparent;
+  }
 
   &:before {
     position: absolute;
@@ -4159,6 +4169,7 @@ span.handwritten {
     display: block;
     width: 100%;
     content: '';
+    z-index: 0;
   }
 }
 
