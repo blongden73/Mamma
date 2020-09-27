@@ -2728,6 +2728,11 @@ span.handwritten {
       border: 1px solid $m-blue;
       background-color: transparent;
       color: $m-blue;
+
+      &:hover {
+        background-color: $m-blue !important;
+        color: $m-cream !important;
+      }
     }
   }
 
@@ -2741,9 +2746,13 @@ span.handwritten {
       }
 
       .m-button {
-        border: 1px solid #fff;
+        border: 1px solid $m-cream;
         background-color: transparent;
-        color: #fff;
+        color: $m-cream;
+
+        &:hover {
+          background-color: $m-blue !important;
+        }
       }
 
       li {
