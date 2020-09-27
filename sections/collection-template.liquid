@@ -25,14 +25,20 @@
   </div>
   <div class="m-people-info-gallery" v-for="practioner in practioners" v-if="practioner.slug === '{{slug}}'">
     <template>
-      <div class="page-width">
-        <div class="flex">
+      <div class="bullet-wrapper">
+        <div class="page-width">
           <div class="m-people-info-left">
             <ul>
               <li v-if="practioner.bullet_1">${practioner.bullet_1}</li>
               <li v-if="practioner.bullet_2">${practioner.bullet_2}</li>
               <li v-if="practioner.bullet_3">${practioner.bullet_3}</li>
             </ul>
+          </div>
+        </div>
+      </div>
+      <div class="page-width">
+        <div class="flex">
+          <div class="m-people-info-left">
             <pre>
               <p>${practioner.description}</p>
             <pre>
