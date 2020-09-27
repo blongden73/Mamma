@@ -247,24 +247,54 @@
               {% for link in explore.links %}
                 <a href="{{ link.url }}">{{ link.title }}</a>
               {% endfor %}
-          </div>
+            </div>
           </div>
           <div class="m-menu-two">
+            {% assign book = linklists.book %}
             <h1>Book</h1>
+            <div class="book-menu">
+              {% for link in book.links %}
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              {% endfor %}
+            </div>
           </div>
           <div class="m-menu-three">
+            {% assign about = linklists.about %}
             <h1>About us</h1>
+            <div class="about-menu">
+              {% for link in about.links %}
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              {% endfor %}
+            </div>
           </div>
         </div>
         <div class="m-menu-right">
           <div class="m-menu-four">
+            {% assign shopping = linklists.shopping %}
             <h1>Shop</h1>
+            <div class="explore">
+              {% for link in shopping.links %}
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              {% endfor %}
+            </div>
           </div>
           <div class="m-menu-five">
+            {% assign space = linklists.space %}
             <h1>The Space</h1>
+            <div class="space-menu">
+              {% for link in space.links %}
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              {% endfor %}
+            </div>
           </div>
           <div class="m-menu-six">
+            {% assign contact = linklists.contact %}
             <h1>Contact us</h1>
+            <div class="contact-menu">
+              {% for link in contact.links %}
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              {% endfor %}
+            </div>
           </div>
         </div>
       </div>
