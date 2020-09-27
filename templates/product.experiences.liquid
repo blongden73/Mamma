@@ -82,6 +82,7 @@
               </p>
             </div>
           {% endif %}
+          {%- include 'social-sharing' -%}
           {% if metadata.hostImage != blank or metadata.hostDescription != blank %}
             <div id="hostDetails" tabindex="0">
               <div class="exp__host-details-container">
@@ -107,7 +108,6 @@
             </div>
           {% endif %}
         </div>
-        {%- include 'social-sharing' -%}
       </div>
     </div>
   </div>
