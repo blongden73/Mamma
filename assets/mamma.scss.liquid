@@ -2627,7 +2627,7 @@ span.handwritten {
       }
 
       h1, h2 {
-        font-size: 20px;
+        font-size: 24px;
         line-height: 1;
         margin: 0;
         text-transform: none;
@@ -2639,11 +2639,16 @@ span.handwritten {
         }
       }
 
+      h2 {
+        font-size: 26px;
+      }
+
       p {
         display: block;
         display: -webkit-box;
         max-width: 90%;
-        -webkit-line-clamp: 6;
+        font-size: 18px;
+        -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -2687,6 +2692,7 @@ span.handwritten {
   .m-practice-list-header {
     text-align: center;
     margin-top: 0 !important;
+    padding-top: 40px;
 
     &.less-padding {
       margin: 0 !important;
