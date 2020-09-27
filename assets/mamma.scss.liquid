@@ -2271,6 +2271,7 @@ pre {
 
     .suprise {
       border-bottom: 1px solid $m-blue;
+      font-weight: 900;
     }
   }
 }
@@ -2718,8 +2719,12 @@ span.handwritten {
 
 .m-calendar {
   margin-bottom:0;
+  position: relative;
+  z-index: 10;
+  overflow: visible;
+  
   @include media-query($medium-up){
-    margin-bottom: 40px;
+    margin-bottom: -60px;
   }
 
   &.home {
