@@ -50,7 +50,7 @@
     <!-- this section uses vue js using ${} to reference the data -->
     <div id="app" class="m-people-placeholder">
       <ul class="m-people-group">
-          <li class="m-person" v-for="practioner in practioners">
+          <li class="m-person" v-for="practioner in practioners" v-if="practioner.practice.indexOf('{{page.title}}') > -1">
             <div class="m-person__description">
               <h1>${practioner.full_name}</h1>
               <h2 class="handwritten">${practioner.practice}</h2>

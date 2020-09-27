@@ -44,7 +44,10 @@ if(peopleWrapper || practitionerWrapper) {
     methods: {
       log: function() {
         console.log(this, 'vue data');
-      }
+      },
+      itemsContains(n) {
+      return this.items.indexOf(n) > -1
+    }
     }
   })
   app.log();
