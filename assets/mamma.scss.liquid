@@ -3674,6 +3674,23 @@ span.handwritten {
 }
 
 
+@keyframes rotateLineOne {
+  0% {
+    transform: rotate(145deg);
+  }
+
+  50% {
+    transform: rotate(100deg);
+  }
+
+  75% {
+    transform: rotate(165deg);
+  }
+
+  100% {
+    transform: rotate(145deg);
+  }
+}
 
 .home-about {
   background-color: $m-blue;
@@ -3695,6 +3712,10 @@ span.handwritten {
     position: absolute;
     width: 400px;
     transform: rotate(145deg);
+    animation-name: rotateLineOne;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
   }
 
   .home-about-line-two {

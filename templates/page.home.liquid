@@ -91,7 +91,7 @@
   <div class="home-text-wrapper">
     <h1 class="typeOut three-line" data-content="<span class='handwritten'>How can</span> Mamma help you?"></h1>
   </div>
-  <div class="home-practice-list" uk-scrollspy="target: > a; cls: uk-animation-fade; delay: 400">
+  <div class="home-practice-list">
     {% assign home = linklists.home %}
     {% for link in home.links %}
       <a href="{{ link.url }}">
