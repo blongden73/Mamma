@@ -3692,6 +3692,24 @@ span.handwritten {
   }
 }
 
+@keyframes rotateLineTwo {
+  0% {
+    transform: rotate(-75deg) translateY(-5px);
+  }
+
+  50% {
+    transform: rotate(-75deg) translateY(10px);
+  }
+
+  75% {
+    transform: rotate(-75deg) translateY(20px);
+  }
+
+  100% {
+    transform: rotate(-75deg) translateY(-5px);
+  }
+}
+
 .home-about {
   background-color: $m-blue;
   padding-top: 10vh;
@@ -3721,6 +3739,10 @@ span.handwritten {
   .home-about-line-two {
     right: 0;
     transform: rotate(-75deg);
+    animation-name: rotateLineTwo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
   }
 
   .home-practice-list {
