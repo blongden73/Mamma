@@ -159,22 +159,13 @@ function filters(){
           results[j].classList.add('hide');
         }
       }
-
-      // console.log(search);
-      //
-      // console.log(findthis);
-      // if(findthis >= 1) {
-      //   for(j=0; j < findthis.length; j++) {
-      //     findthis[j].classList.remove('hide');
-      //     console.log('remove hide')
-      //     findthis[j].classList.add('found');
-      //     console.log('add found')
-      //   }
-      // }else {
-      //   noResults.classList.add('display');
-      // }
     });
   }
+  //TO DO WRITE THE SUPRISE
+  var suprise = document.querySelector('suprise');
+  suprise.addEventListener('click', function(){
+
+  });
  }
 
 filters();
