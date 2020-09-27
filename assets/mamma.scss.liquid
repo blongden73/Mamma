@@ -3451,14 +3451,21 @@ span.handwritten {
   &.display {
     opacity: 1;
     pointer-events: all;
+
+    .m-menu, .m-menu-image {
+      transform: translateX(0);
+    }
   }
 
   .m-menu, .m-menu-image {
     width: 50%;
+    transition-delay: 0.2s;
+    transition: all ease-in-out 0.5s;
   }
 
   .m-menu-image {
     border-right: 10px solid #fff;
+    transform: translateX(-100%);
 
     img {
       object-fit: cover;
@@ -3475,6 +3482,7 @@ span.handwritten {
   height: 100vh;
   background-color: $m-blue;
   z-index: 1;
+  transform: translateX(100%);
 
   a {
     color: #fff;
