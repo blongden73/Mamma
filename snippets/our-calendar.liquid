@@ -16,10 +16,9 @@
               {% endcapture %}
               {% assign practiceOptions = optionsList %}
               {% assign uniqpracticeOptions = practiceOptions | split: ',' | uniq | join: ',' %}
-              {{uniqpracticeOptions}}
-              <!-- {% for practices in practiceOptions %}
-                <option value="all">{{practices}}</option>
-              {% endfor %} -->
+              {% for practices in uniqpracticeOptions | split: ',' %}
+                <option value="all">{{practices | strip | strip_newlines | replace: ' ', '' }}</option>
+              {% endfor %}
             </select>
           </li>
           <li>Filter by Location</li>
