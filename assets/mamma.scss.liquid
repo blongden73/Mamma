@@ -1837,10 +1837,23 @@ pre {
         }
       }
 
+      .home-about-line {
+        width: 300px;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        svg {
+          path {
+            fill: $m-darkorange;
+          }
+        }
+      }
+
       h2 {
         font-size: 30px !important;
       }
-      
+
       .video-wrapper {
         @include media-query ($medium-up){
           margin-left: 10%;
