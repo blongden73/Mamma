@@ -4268,12 +4268,10 @@ span.handwritten {
     transform: translateX(-50%);
     display: flex;
     line-height: 1.1;
-    flex-direction: column;
     text-align: center;
 
     @include media-query($medium-up) {
       bottom: 16%;
-      flex-direction: row;
     }
 
     button {
@@ -4285,6 +4283,7 @@ span.handwritten {
       font-family:'Noe Text';
       font-size: 14px;
       margin-bottom: 10px;
+      line-height: 1;
 
       @include media-query($medium-up) {
         font-size: 16px;
