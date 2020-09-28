@@ -4636,7 +4636,11 @@ span.handwritten {
 
 .home {
   .m-calendar {
-    max-width: 45%;
+    max-width: 100%;
+    @include media-query($medium-down) {
+      max-width: 45%;
+    }
+
 
     .page-width{
       @include media-query($medium-down) {
