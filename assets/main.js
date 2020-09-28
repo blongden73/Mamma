@@ -186,6 +186,10 @@ function calFilters() {
       console.log('loop');
       results[i].classList.add('hide');
     }
+    for(j = 0; j < selectedResults.length; j++){
+      selectedResults[j].classList.remove('hide');
+      selectedResults[j].classList.add('found');
+    }
   });
   // for(i = 0; i < options.length; i++) {
   //   options[i].addEventListener('click', function(){
