@@ -14,7 +14,8 @@
                 {{practice}},
               {% endfor %}
               {% endcapture %}
-              {% assign practiceOptions = optionsList | uniq | split: ',' %}
+              {% assign practiceOptions = optionsList | uniq %}
+              {{practiceOptions}}
               {% for practices in practiceOptions %}
                 <option value="all">{{practices}}</option>
               {% endfor %}
