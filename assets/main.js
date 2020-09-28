@@ -178,6 +178,9 @@ function calFilters() {
   console.log(options);
   filter.addEventListener('change', function(){
     console.log(this.value);
+    var selectedFilter = this.value;
+    var selectedResults = document.querySelectorAll('.m-cal-item.'+selectedFilter);
+    console.log(selectedResults);
 
     for(i = 0; i < results.length; i++) {
       console.log('loop');
