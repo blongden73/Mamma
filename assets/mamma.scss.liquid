@@ -4428,7 +4428,7 @@ span.handwritten {
       transform: none;
       left: 0;
       height: 75%;
-      width: 83%;
+      width: 100%;
 
       .header-inner-content {
         padding-top: 50px;
@@ -4436,17 +4436,25 @@ span.handwritten {
 
       @include media-query ($medium-up){
         height:85%;
+        width: 83%;
       }
 
       &:before {
         position: absolute;
         top: 60px;
-        bottom: 220px;
-        left: 110px;
-        right: 110px;
+        bottom: 200px;
+        left: 20px;
+        right: 20px;
         border: 1px solid $m-cream;
         content: '';
         display: block;
+
+        @include media-query($medium-up) {
+          top: 60px;
+          bottom: 220px;
+          left: 110px;
+          right: 110px;
+        }
       }
 
       h1, h2, ul, li, p {
