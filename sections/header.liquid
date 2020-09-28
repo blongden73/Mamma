@@ -129,6 +129,11 @@
             </button>
           {% endunless %}
         </div>
+        <div class="m-hamburger">
+          <span class="m-hamburger-top"></span>
+          <span class="m-hamburger-center"></span>
+          <span class="m-hamburger-bottom"></span>
+        </div>
         <a href="{{ routes.cart_url }}" class="site-header__icon site-header__cart">
           {% include 'icon-cart' %}
           <span class="icon__fallback-text">{{ 'layout.cart.title' | t }}</span>
@@ -137,11 +142,6 @@
             <span class="icon__fallback-text medium-up--hide">{{ 'layout.cart.items_count' | t: count: cart.item_count }}</span>
           </div>
         </a>
-        <div class="m-hamburger">
-          <span class="m-hamburger-top"></span>
-          <span class="m-hamburger-center"></span>
-          <span class="m-hamburger-bottom"></span>
-        </div>
       </div>
     </div>
   </div>
