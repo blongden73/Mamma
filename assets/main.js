@@ -175,28 +175,29 @@ function calFilters() {
   var options = filter.querySelectorAll('option');
   var results = document.querySelectorAll('.m-cal-item');
 
-  console.log(options);
   filter.addEventListener('change', function(){
     console.log(this.value);
     var selectedFilter = this.value;
     var selectedResults = document.querySelectorAll('.m-cal-item.'+selectedFilter);
     console.log(selectedResults);
 
-    for(i = 0; i < results.length; i++) {
-      console.log('loop');
-      results[i].classList.add('hide');
-    }
-    for(j = 0; j < selectedResults.length; j++){
-      selectedResults[j].classList.remove('hide');
-      selectedResults[j].classList.add('found');
+    if(this.value != all){
+      for(i = 0; i < results.length; i++) {
+        console.log('loop');
+        results[i].classList.remove('found');
+        results[i].classList.add('hide');
+      }
+      for(j = 0; j < selectedResults.length; j++){
+        selectedResults[j].classList.remove('hide');
+        selectedResults[j].classList.add('found');
+      }
+    }else {
+      for(i = 0; i < results.length; i++) {
+        console.log('loop');
+        results[i].classList.add('found');
+      }
     }
   });
-  // for(i = 0; i < options.length; i++) {
-  //   options[i].addEventListener('click', function(){
-  //     var selector = options[i].value;
-  //     console.log(selector);
-  //   });
-  // }
 }
 
 calFilters();
