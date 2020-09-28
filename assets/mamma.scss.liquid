@@ -4692,7 +4692,11 @@ span.handwritten {
 .m-calendar-home-wrapper {
   background-color: #fff !important;
   position: relative;
-  padding-bottom: 60px;
+  padding-bottom: 0;
+
+  @include media-query($medium-up) {
+    padding-bottom: 60px;
+  }
 
   .page-width {
     position: relative;
