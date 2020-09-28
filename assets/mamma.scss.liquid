@@ -1694,15 +1694,17 @@ pre {
         margin-left: 50%;
         transform: translateX(-50%);
         position: relative;
+        width: max-content;
 
         @include media-query ($medium-up){
           margin-top: -230px;
+          height: 230px;
           margin-left: 18.5%;
           transform: none;
         }
 
         .header-right-after-search {
-          transform: scaleY(-1);
+          transform: scaleY(-1) translateX(-50%);;
         }
       }
       .header-inner {
