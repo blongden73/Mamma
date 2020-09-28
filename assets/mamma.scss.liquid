@@ -4268,6 +4268,13 @@ span.handwritten {
     transform: translateX(-50%);
     display: flex;
     line-height: 1.1;
+    flex-direction: column;
+    text-align: center;
+
+    @include media-query($medium-up) {
+      flex-direction: row;
+    }
+
     button {
       padding: 10px 15px;
       border: 1px solid $m-cream;
