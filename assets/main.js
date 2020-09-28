@@ -174,6 +174,12 @@ function calFilters() {
   var filter = document.querySelector('.practices-filter');
   var options = filter.querySelectorAll('option');
   console.log(options);
+  for(i = 0; i < options.length; i++) {
+    options[i].addEventListener('click', function(){
+      var selector = options[i].value;
+      console.log(selector);
+    });
+  }
 }
 
 calFilters();
