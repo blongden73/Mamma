@@ -2395,9 +2395,13 @@ pre {
   width: max-content;
 
   .m-calendar-wrapper & {
-    float: right;
+    float: none;
     width: max-content;
     margin-top: -23px;
+
+    @include media-query($medium-up) {
+      float: right;
+    }
 
     &:hover {
       background-color: $m-lightorange;
