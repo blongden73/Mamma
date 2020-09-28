@@ -6,7 +6,7 @@
         <ul class="m-filters-calendar">
           <li>
             <select name="practices" id="practices" class="practices-filter">
-              <option value="coaching">Filter by Practices</option>
+              <option value="all">Filter by Practices</option>
               <option value="all">All</option>
               {% capture optionsList %}
               {% for events in collections.all.products %}
@@ -17,7 +17,7 @@
               {% assign uniqpracticeOptions = optionsList | split: ',' | uniq | join: ',' %}
               {% assign practiceOptions = uniqpracticeOptions | split: ',' %}
               {% for practices in practiceOptions %}
-                <option value="all">{{practices}}</option>
+                <option value="{{practices | downcase}}">{{practices}}</option>
               {% endfor %}
             </select>
           </li>
