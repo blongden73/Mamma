@@ -194,6 +194,7 @@ function calFilters() {
     }else {
       for(i = 0; i < results.length; i++) {
         console.log('loop');
+        results[i].classList.remove('hide');
         results[i].classList.add('found');
       }
     }
