@@ -4263,7 +4263,7 @@ span.handwritten {
 
   .home-about-footer {
     position: absolute;
-    bottom: 16%;
+    bottom: 6%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -4272,6 +4272,7 @@ span.handwritten {
     text-align: center;
 
     @include media-query($medium-up) {
+      bottom: 16%;
       flex-direction: row;
     }
 
@@ -4282,6 +4283,12 @@ span.handwritten {
       color: $m-cream;
       background-color: transparent;
       font-family:'Noe Text';
+      font-size: 14px;
+      margin-bottom: 10px;
+
+      @include media-query($medium-up) {
+        font-size: 16px;
+      }
 
       &:hover {
         background-color: $m-cream;
