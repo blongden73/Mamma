@@ -1350,6 +1350,8 @@ pre {
 
   .intro {
     padding:60px 15px 60px 15px;
+    position: relative;
+
     h2 {
       font-family:'Noe Display';
       font-size:29px;
@@ -1390,11 +1392,16 @@ pre {
       margin: auto;
       margin-top: 58px;
       @include media-query ($medium-up){
-        margin-top: 120px;
+        margin-top: 220px;
       }
       button {
         margin-bottom: 14px;
       }
+    }
+
+    .header-right-after-search {
+      top: 60%;
+      bottom: 168px;
     }
   }
 
