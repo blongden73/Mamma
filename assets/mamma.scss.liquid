@@ -1693,22 +1693,16 @@ pre {
         margin-top: 20px;
         margin-left: 50%;
         transform: translateX(-50%);
+        position: relative;
+
         @include media-query ($medium-up){
           margin-top: -230px;
           margin-left: 18.5%;
           transform: none;
         }
-        &::after {
-          content: '';
-          width: 1px;
-          height: 111px;
-          background-color: $m-darkorange;
-          position: absolute;
-          transform: translateX(-58px);
-          margin-top: 48px;
-          @include media-query ($medium-up){
-            height: 305px;
-          }
+
+        .header-right-after-search {
+          transform: scaleY(-1);
         }
       }
       .header-inner {
