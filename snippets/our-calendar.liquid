@@ -21,11 +21,74 @@
               {% endfor %}
             </select>
           </li>
-          <li>Filter by Location</li>
-          <li>Filter by Practitioner</li>
-          <li>Filter by Difficulty</li>
-          <li>Filter by Type</li>
-          <li>Filter by Price</li>
+          <li>
+            <select name="location" id="location" class="location-filter">
+              <option value="all">Filter by Location</option>
+              <option value="all">All</option>
+              {% capture optionsListLocation %}
+              {% for events in collections.all.products %}
+                {% assign practice = events.metafields.airf.practice %}
+                {{practice}},
+              {% endfor %}
+              {% endcapture %}
+              {% assign uniqlocationOptions = optionsListLocation | split: ',' | uniq | join: ',' %}
+              {% assign locationOptions = uniqlocationOptions | split: ',' %}
+              {% for locations in locationOptions %}
+                <option value="{{locations | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{{locations | strip | strip_html | strip_newlines }}</option>
+              {% endfor %}
+            </select>
+          </li>
+          <li>
+            <select name="location" id="location" class="location-filter">
+              <option value="all">Filter by Practitioner</option>
+              <option value="all">All</option>
+              {% capture optionsListPractitioner %}
+              {% for events in collections.all.products %}
+                {% assign practition = events.metafields.airf.practition %}
+                {{practition}},
+              {% endfor %}
+              {% endcapture %}
+              {% assign uniqpractiotionerOptions = optionsListPractitioner | split: ',' | uniq | join: ',' %}
+              {% assign practitionerOptions = uniqpractiotionerOptions | split: ',' %}
+              {% for practitioner in practitionerOptions %}
+                <option value="{{practitioner | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{{practitioner | strip | strip_html | strip_newlines }}</option>
+              {% endfor %}
+            </select>
+          </li>
+          <li>
+            <select name="location" id="location" class="location-filter">
+              <option value="all">Filter by Difficulty</option>
+              <option value="all">All</option>
+              {% capture optionsListDifficulty %}
+              {% for events in collections.all.products %}
+                {% assign level = events.metafields.airf.level %}
+                {{level}},
+              {% endfor %}
+              {% endcapture %}
+              {% assign uniqdifficultyOptions = optionsListDifficulty | split: ',' | uniq | join: ',' %}
+              {% assign difficultyOptions = uniqdifficultyOptions | split: ',' %}
+              {% for difficulty in difficultyOptions %}
+                <option value="{{difficulty | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{{difficulty | strip | strip_html | strip_newlines }}</option>
+              {% endfor %}
+            </select>
+          </li>
+          <li>
+            <select name="location" id="location" class="location-filter">
+              <option value="all">Filter by Type</option>
+              <option value="all">All</option>
+              {% capture optionsListType %}
+              {% for events in collections.all.products %}
+                {% assign type = events.metafields.airf.type %}
+                {{type}},
+              {% endfor %}
+              {% endcapture %}
+              {% assign uniqtypeOptions = optionsListType | split: ',' | uniq | join: ',' %}
+              {% assign typeOptions = uniqtypeOptions | split: ',' %}
+              {% for type in typeOptions %}
+                <option value="{{type | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{{type | strip | strip_html | strip_newlines }}</option>
+              {% endfor %}
+            </select>
+          </li>
         </ul>
       </div>
       <ul>
