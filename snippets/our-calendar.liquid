@@ -108,7 +108,7 @@
               <span class="m-event-meta">{% if practition %}{{practition}} • {% endif %}{% if speed %}{{speed}} • {% endif %}{% if space %}{{space}} • {% endif %}{% if type %}{{type}} • {% endif %}{% if practice %}{{practice}}{% endif %}{% if pregnancy_  == "true" %} • Pregnancy{% endif %} <a href="{{events.url}}">Read More</a></span>
               <a href="{{events.url}}"><div class="m-button">Book now</div></a>
             </li>
-          {$ endunless $}
+          {% endunless %}
         {% endfor %}
       </ul>
     </div>
