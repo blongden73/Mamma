@@ -181,7 +181,7 @@ function calFilters() {
     var selectedResults = document.querySelectorAll('.m-cal-item.'+selectedFilter);
     console.log(selectedResults);
 
-    if(this.value != all){
+    if(this.value != 'all'){
       for(i = 0; i < results.length; i++) {
         console.log('loop');
         results[i].classList.remove('found');
