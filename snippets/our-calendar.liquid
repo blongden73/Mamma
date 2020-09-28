@@ -95,6 +95,7 @@
         <li class="no-results"><span class="m-event-title"><span uk-icon="icon: warning"></span> Sorry there are no <span class="js-type"></span> at the moment</span></li>
         {% for events in collections.all.products %}
           {% unless events.tags contains 'shop' %}
+            {{events.tags}}
             {% assign practition = events.metafields.airf.practition %}
             {% assign level = events.metafields.airf.level %}
             {% assign pregnancy_ = events.metafields.airf.pregnancy_ %}
