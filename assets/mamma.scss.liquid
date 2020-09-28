@@ -1171,7 +1171,7 @@ p {
     .we, .are, .mamma {
       line-height: 1;
       font-size: 70px;
-      z-index: 20;
+      z-index: 5;
       @include media-query($medium-up){
         font-size: 50px;
         font-size: 6vw;
@@ -1330,6 +1330,7 @@ p {
       }
       @include media-query($medium-up){
         font-size: 58px;
+        font-size: 5vw;
         width: 82%;
         margin-top: 70px;
       }
@@ -1488,7 +1489,7 @@ p {
           flex-direction: column;
           justify-content: space-between;
           min-height: 90vh;
-          padding: 40px 20px;
+          padding: 30px 20px;
           @include media-query ($medium-up){
             height: 70vh;
             padding: 60px 50px;
@@ -1497,7 +1498,7 @@ p {
         .be, .here, .now {
           font-family:'Noe Display';
           font-weight: bold;
-          font-size:12vw;
+          font-size: 15vw;
           color:$m-darkorange;
           @include media-query ($medium-up){
             font-size:5vw;
@@ -1516,8 +1517,11 @@ p {
           position:absolute;
           top:20px;
           right:20px;
-          width: 20%;
+          width: 30%;
           height:auto;
+          @include media-query($medium-up){
+            width:20%;
+          }
         }
       }
     }
@@ -1530,10 +1534,15 @@ p {
 
       .header-inner {
         height: 100%;
-        padding: 60px 20px;
+        padding: 20vh 20px;
+        @include media-query ($medium-up) {
+          padding:0;
+          height: 70%;
+        }
         .header-inner-content {
           @include media-query($medium-up){
             height: 60vh!important;
+            padding: 60px 20px;
           }
         }
         .header-inner-content {
@@ -1836,7 +1845,9 @@ p {
     .header-right {
       min-height:90vh;
       .header-inner {
-        height: 90vh;
+        margin:auto;
+        // height: 90vh;
+        // @include media-query
         .header-inner-content {
           justify-content: space-between;
           display: flex;
@@ -2980,23 +2991,35 @@ span.handwritten {
 .m-menu-wrapper {
   position: fixed;
   display: flex;
-  z-index: 1;
+  z-index: 10;
   opacity: 0;
   pointer-events: none;
 
   &.display {
     opacity: 1;
     pointer-events: all;
+    .m-menu-left {
+      img {
+        display:none;
+        @include media-query ($medium-up) {
+          display:block;
+        }
+      }
+    }
   }
+
 }
 
 .m-menu {
   position: fixed;
   right: 0;
-  width: 50%;
+  width: 100%;
   height: 100vh;
   background-color: $m-blue;
   z-index: 1;
+  @include media-query ($medium-up){
+    width:50%;
+  }
 
   .m-menu-inner {
     position: absolute;
@@ -3006,6 +3029,8 @@ span.handwritten {
     transform: translate(-50%, -50%);
     justify-content: space-around;
   }
+
+
 
   .m-menu-left, .m-menu-right {
     .m-menu-one, .m-menu-two, .m-menu-three, .m-menu-four, .m-menu-five, .m-menu-six {
@@ -3558,28 +3583,28 @@ span.handwritten {
 
     }
   }
-  .header-right {
+  .m-margin-top {
         margin-top: -88px;
         @include media-query ($medium-up) {
               margin-top: 0;
         }
   }
-  .header-right .header-inner .header-inner-content h1 {
+  .m-margin-top .header-inner .header-inner-content h1 {
     padding-top: 40px;
     @include media-query ($medium-up) {
       padding-top:0;
     }
   }
-  .header-right .header-inner .header-inner-content button {
+  .m-margin-top .header-inner .header-inner-content button {
     margin-bottom:40px;
     @include media-query ($medium-up) {
       padding-top:0;
     }
   }
-  .header-right .header-inner-content {
+  .m-margin-top .header-inner-content {
     margin-bottom: 0;
   }
-  .m-discover-cta .header-right .header-inner {
+  .m-discover-cta .m-margin-top .header-inner {
     padding-bottom: 30px;
     @include media-query ($medium-up) {
       padding-bottom:0;
@@ -3605,4 +3630,14 @@ span.handwritten {
   //   width:50%;
   //   height:50%;
   // }
+}
+
+.experiences {
+  .m-page-header .header-right .header-inner-content {
+    margin-top: 0;
+    margin-bottom:200px;
+    @include media-query ($medium-up){
+      margin-bottom:0;
+    }
+  }
 }
