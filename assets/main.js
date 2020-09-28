@@ -169,3 +169,11 @@ function filters(){
  }
 
 filters();
+
+function calFilters() {
+  var filter = document.querySelector('practices-filter');
+  var options = filter.querySelectorAll('option');
+  console.log(options);
+}
+
+calFilters();
