@@ -4240,9 +4240,11 @@ span.handwritten {
         margin-right: auto;
         margin-bottom: 15px;
         height: 100px;
+        max-width: 100%;
 
         @include media-query($medium-up) {
           height: unset;
+          max-width: unset;
         }
       }
     }
