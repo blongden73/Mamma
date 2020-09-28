@@ -4012,6 +4012,11 @@ span.handwritten {
   transform: translateX(-50%);
   width: 70px;
 
+  @include media-query($medium-up) {
+    top: 51%;
+    bottom: 100px;
+  }
+
   .dot {
     width: 7px;
     height: 7px;
