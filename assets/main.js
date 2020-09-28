@@ -180,6 +180,7 @@ function calFilters() {
     console.log(this.value);
 
     for(i = 0; i < results.length; i++) {
+      console.log('loop');
       results[i].classList.remove('hide');
     }
   });
