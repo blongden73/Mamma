@@ -173,9 +173,15 @@ filters();
 function calFilters() {
   var filter = document.querySelector('.practices-filter');
   var options = filter.querySelectorAll('option');
+  var results = document.querySelectorAll('.m-cal-item');
+
   console.log(options);
   filter.addEventListener('change', function(){
     console.log(this.value);
+
+    for(i = 0; i < results.length; i++) {
+      results[i].classList.remove('hide');
+    }
   });
   // for(i = 0; i < options.length; i++) {
   //   options[i].addEventListener('click', function(){
