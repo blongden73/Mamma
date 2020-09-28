@@ -8,7 +8,13 @@
             <select name="practices" id="practices" class="practices-filter">
               <option value="coaching">Filter by Practices</option>
               <option value="all">All</option>
-              <option value="coaching">Coaching</option>
+              {% capture optionsList %}
+              {% for events in collections.all.products %}
+                {% assign practice = events.metafields.airf.practice %}
+                {{practice}},
+              {% endfor %}
+              {% endcapture %}
+              {{optionsList}}
             </select>
           </li>
           <li>Filter by Location</li>
