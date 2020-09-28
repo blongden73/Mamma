@@ -1089,8 +1089,11 @@ pre {
 
   .site-header__logo {
     svg {
-      width: 180px;
+      width: 150px;
       height: auto;
+      @include media-query($medium-up) {
+        width: 180px;
+      }
     }
   }
 
