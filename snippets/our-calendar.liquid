@@ -17,7 +17,7 @@
               {% assign uniqpracticeOptions = optionsList | split: ',' | uniq | join: ',' %}
               {% assign practiceOptions = uniqpracticeOptions | split: ',' %}
               {% for practices in practiceOptions %}
-                <option value="{{practices | downcase | strip | strip_html | strip_newlines}}">{{practices}}</option>
+                <option value="{{practices | downcase | strip | strip_html | strip_newlines }}">{{practices | strip | strip_html | strip_newlines }}</option>
               {% endfor %}
             </select>
           </li>
