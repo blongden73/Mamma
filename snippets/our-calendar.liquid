@@ -3,11 +3,96 @@
     <div class="m-calendar-wrapper">
       <div class="flex">
         <h1>All Practices</h1>
-        <ul>
-
+        <ul class="m-filters-calendar">
+          <li>
+            <select name="practices" id="practices" class="practices-filter">
+              <option value="all">Filter by Practices</option>
+              <option value="all">All</option>
+              {% capture optionsList %}
+              {% for events in collections.all.products %}
+                {% assign practice = events.metafields.airf.practice %}
+                {{practice}},
+              {% endfor %}
+              {% endcapture %}
+              {% assign uniqpracticeOptions = optionsList | split: ',' | uniq | join: ',' %}
+              {% assign practiceOptions = uniqpracticeOptions | split: ',' %}
+              {% for practices in practiceOptions %}
+                <option value="{{practices | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{{practices | strip | strip_html | strip_newlines }}</option>
+              {% endfor %}
+            </select>
+          </li>
+          <li>
+            <select name="location" id="location" class="location-filter">
+              <option value="all">Filter by Location</option>
+              <option value="all">All</option>
+              {% capture optionsListLocation %}
+              {% for events in collections.all.products %}
+                {% assign practice = events.metafields.airf.practice %}
+                {{practice}},
+              {% endfor %}
+              {% endcapture %}
+              {% assign uniqlocationOptions = optionsListLocation | split: ',' | uniq | join: ',' %}
+              {% assign locationOptions = uniqlocationOptions | split: ',' %}
+              {% for locations in locationOptions %}
+                <option value="{{locations | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{{locations | strip | strip_html | strip_newlines }}</option>
+              {% endfor %}
+            </select>
+          </li>
+          <li>
+            <select name="location" id="location" class="location-filter">
+              <option value="all">Filter by Practitioner</option>
+              <option value="all">All</option>
+              {% capture optionsListPractitioner %}
+              {% for events in collections.all.products %}
+                {% assign practition = events.metafields.airf.practition %}
+                {{practition}},
+              {% endfor %}
+              {% endcapture %}
+              {% assign uniqpractiotionerOptions = optionsListPractitioner | split: ',' | uniq | join: ',' %}
+              {% assign practitionerOptions = uniqpractiotionerOptions | split: ',' %}
+              {% for practitioner in practitionerOptions %}
+                <option value="{{practitioner | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{{practitioner | strip | strip_html | strip_newlines }}</option>
+              {% endfor %}
+            </select>
+          </li>
+          <li>
+            <select name="location" id="location" class="location-filter">
+              <option value="all">Filter by <span>Difficulty</span></option>
+              <option value="all">All</option>
+              {% capture optionsListDifficulty %}
+              {% for events in collections.all.products %}
+                {% assign level = events.metafields.airf.level %}
+                {{level}},
+              {% endfor %}
+              {% endcapture %}
+              {% assign uniqdifficultyOptions = optionsListDifficulty | split: ',' | uniq | join: ',' %}
+              {% assign difficultyOptions = uniqdifficultyOptions | split: ',' %}
+              {% for difficulty in difficultyOptions %}
+                <option value="{{difficulty | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{{difficulty | strip | strip_html | strip_newlines }}</option>
+              {% endfor %}
+            </select>
+          </li>
+          <li>
+            <select name="location" id="location" class="location-filter">
+              <option value="all">Filter by Type</option>
+              <option value="all">All</option>
+              {% capture optionsListType %}
+              {% for events in collections.all.products %}
+                {% assign type = events.metafields.airf.type %}
+                {{type}},
+              {% endfor %}
+              {% endcapture %}
+              {% assign uniqtypeOptions = optionsListType | split: ',' | uniq | join: ',' %}
+              {% assign typeOptions = uniqtypeOptions | split: ',' %}
+              {% for type in typeOptions %}
+                <option value="{{type | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{{type | strip | strip_html | strip_newlines }}</option>
+              {% endfor %}
+            </select>
+          </li>
         </ul>
       </div>
       <ul>
+        <li class="no-results"><span class="m-event-title"><span uk-icon="icon: warning"></span> Sorry there are no <span class="js-type"></span> at the moment</span></li>
         {% for events in collections.all.products %}
           {% assign practition = events.metafields.airf.practition %}
           {% assign level = events.metafields.airf.level %}
@@ -16,9 +101,9 @@
           {% assign space = events.metafields.airf.space %}
           {% assign type = events.metafields.airf.type %}
           {% assign practice = events.metafields.airf.practice %}
-          <li>
+          <li class="m-cal-item All {{type}} {{practice | strip | downcase | replace: ' ', '-'}}" data-type="{{type}}">
             <span class="m-event-title">{{events.title}}</span>
-            <span class="m-event-meta">{{practition}} • {{speed}} • {{space}} • {{type}} • {{practice}} • {% if pregnancy_  == "true" %}Pregnancy{% endif %}</span>
+            <span class="m-event-meta">{% if practition %}{{practition}} • {% endif %}{% if speed %}{{speed}} • {% endif %}{% if space %}{{space}} • {% endif %}{% if type %}{{type}} • {% endif %}{% if practice %}{{practice}}{% endif %}{% if pregnancy_  == "true" %} • Pregnancy{% endif %} <a href="{{events.url}}">Read More</a></span>
             <a href="{{events.url}}"><div class="m-button">Book now</div></a>
           </li>
         {% endfor %}

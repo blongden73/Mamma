@@ -38,7 +38,7 @@
   {%- endif -%}
 
   {% include 'social-meta-tags' %}
-
+  {{ 'uikit.css' | asset_url | stylesheet_tag }}
   {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
   {{ 'mamma.scss.css' | asset_url | stylesheet_tag }}
 
@@ -105,9 +105,12 @@
   {%- endif -%}
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.13.1/core.min.js" integrity="sha512-yfhC0kG8fvDDLG3xpuZ4fZ2zCoZKHzkoO/mCFdDiUzwKktWnYkXZwNjW1qyoMwnf1uRi8LelY5wDNIA30Xz7Dw==" crossorigin="anonymous"></script>
   <script src="{{ 'lazysizes.js' | asset_url }}" async="async"></script>
   <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'uikit.min.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'uikit-icons.min.js' | asset_url }}" defer="defer"></script>
 
   {{ content_for_header }}
 </head>
@@ -125,6 +128,7 @@
   <div class="page-container drawer-page-content" id="PageContainer">
     {% if template.suffix == 'experiences' %}
       {{ content_for_layout }}
+      {% section 'footer' %}
     {% elsif template == 'index' %}
     <main class="main-content js-focus-hidden" id="MainContent" role="main" tabindex="-1">
       {{ content_for_layout }}

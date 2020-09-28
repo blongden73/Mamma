@@ -1,4 +1,4 @@
-<div class="m-page-header flex practitioner">
+<div class="m-page-header flex practitioner practice-sticky">
     <div class="header-left">
       <div class="header-inner"></div>
       {% assign page_image = page.metafields.airf.page_image %}
@@ -26,13 +26,45 @@
           <h1>What others say</h1>
           <div class="quotes flex">
             <div class="quote cr-border">
+              <svg width="62" height="50" viewBox="0 0 62 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M61.62 0.47998L61.84 0.919975C57.88 3.11997 54.8 6.27331 52.6 10.38C50.4 14.34 49.3 18.3733 49.3 22.48C49.3 23.6533 50.0333 24.3133 51.5 24.46C54.2867 24.7533 56.6333 26.0733 58.54 28.42C60.5933 30.7666 61.62 33.6267 61.62 37C61.62 40.52 60.3733 43.5266 57.88 46.02C55.5333 48.5133 52.6 49.76 49.08 49.76C45.2667 49.76 42.04 48.44 39.4 45.8C36.9067 43.16 35.66 39.64 35.66 35.24C35.66 28.0533 38.08 21.0133 42.92 14.12C47.76 7.22664 53.9933 2.67998 61.62 0.47998ZM26.2 0.47998L26.42 0.919975C22.46 3.11997 19.38 6.27331 17.18 10.38C14.98 14.34 13.88 18.3733 13.88 22.48C13.88 23.6533 14.6133 24.3133 16.08 24.46C18.8667 24.7533 21.2133 26.0733 23.12 28.42C25.1733 30.7666 26.2 33.6267 26.2 37C26.2 40.52 24.9533 43.5266 22.46 46.02C20.1133 48.5133 17.18 49.76 13.66 49.76C9.84666 49.76 6.61999 48.44 3.97999 45.8C1.48666 43.16 0.23999 39.64 0.23999 35.24C0.23999 28.0533 2.65999 21.0133 7.49999 14.12C12.34 7.22664 18.5733 2.67998 26.2 0.47998Z" fill="#283177"/>
+              </svg>
               <h2>Mamma Bali is a wonderfully curated booking platform for holistic practitioners and all of the people I have booked have been amazing. Everything is done with the most amount of love and support. I couldn’t recommend using this wonderful site highly enough!</h2>
             </div>
             <div class="quote cr-border">
+              <svg width="62" height="50" viewBox="0 0 62 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M61.62 0.47998L61.84 0.919975C57.88 3.11997 54.8 6.27331 52.6 10.38C50.4 14.34 49.3 18.3733 49.3 22.48C49.3 23.6533 50.0333 24.3133 51.5 24.46C54.2867 24.7533 56.6333 26.0733 58.54 28.42C60.5933 30.7666 61.62 33.6267 61.62 37C61.62 40.52 60.3733 43.5266 57.88 46.02C55.5333 48.5133 52.6 49.76 49.08 49.76C45.2667 49.76 42.04 48.44 39.4 45.8C36.9067 43.16 35.66 39.64 35.66 35.24C35.66 28.0533 38.08 21.0133 42.92 14.12C47.76 7.22664 53.9933 2.67998 61.62 0.47998ZM26.2 0.47998L26.42 0.919975C22.46 3.11997 19.38 6.27331 17.18 10.38C14.98 14.34 13.88 18.3733 13.88 22.48C13.88 23.6533 14.6133 24.3133 16.08 24.46C18.8667 24.7533 21.2133 26.0733 23.12 28.42C25.1733 30.7666 26.2 33.6267 26.2 37C26.2 40.52 24.9533 43.5266 22.46 46.02C20.1133 48.5133 17.18 49.76 13.66 49.76C9.84666 49.76 6.61999 48.44 3.97999 45.8C1.48666 43.16 0.23999 39.64 0.23999 35.24C0.23999 28.0533 2.65999 21.0133 7.49999 14.12C12.34 7.22664 18.5733 2.67998 26.2 0.47998Z" fill="#283177"/>
+              </svg>
               <h2>Mamma Bali is a wonderfully curated booking platform for holistic practitioners and all of the people I have booked have been amazing. Everything is done with the most amount of love and support. I couldn’t recommend using this wonderful site highly enough!</h2>
             </div>
           </div>
         </div>
+    </div>
+  </div>
+</div>
+<div class="m-practioner-list">
+  <div class="page-width">
+    <div class="m-practice-list-header less-padding">
+      <h1><span class="underline blue">Our <span class="typeOut handwritten" data-content="{{page.title}}"></span> People</span></h1>
+    </div>
+    <!-- this section uses vue js using ${} to reference the data -->
+    <div id="app" class="m-people-placeholder">
+      <ul class="m-people-group">
+          <li class="m-person" v-for="practioner in practioners" v-if="practioner.practice.indexOf('{{page.title}}') > -1">
+            <div class="m-person__description">
+              <h1>${practioner.full_name}</h1>
+              <h2 class="handwritten">${practioner.practice}</h2>
+              <p>${practioner.short_bio}</p>
+            </div>
+            <a v-bind:href="'/collections/' + practioner.slug">
+              <div class="m-people-details">
+                <span class="m-people-name">${practioner.full_name}</span>
+                <span class="m-people-practice">${practioner.practice}</span>
+              </div>
+              <img v-bind:src="practioner.profile_picture">
+            </a>
+          </li>
+      </ul>
     </div>
   </div>
 </div>

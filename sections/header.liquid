@@ -234,31 +234,67 @@
     </nav>
   </header>
   <div class="m-menu-wrapper">
-    <div class="m-menu-left">
+    <div class="m-menu-image">
       <img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/DTS_Caldo_007_1_1.jpg?v=1600633309">
     </div>
     <div class="m-menu">
       <div class="m-menu-inner flex">
         <div class="m-menu-left">
           <div class="m-menu-one">
+            {% assign explore = linklists.explore %}
             <h1>Explore</h1>
+            <div class="explore">
+              {% for link in explore.links %}
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              {% endfor %}
+            </div>
           </div>
           <div class="m-menu-two">
+            {% assign book = linklists.book %}
             <h1>Book</h1>
+            <div class="book-menu">
+              {% for link in book.links %}
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              {% endfor %}
+            </div>
           </div>
           <div class="m-menu-three">
+            {% assign about = linklists.about %}
             <h1>About us</h1>
+            <div class="about-menu">
+              {% for link in about.links %}
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              {% endfor %}
+            </div>
           </div>
         </div>
         <div class="m-menu-right">
           <div class="m-menu-four">
+            {% assign shopping = linklists.shopping %}
             <h1>Shop</h1>
+            <div class="shopping">
+              {% for link in shopping.links %}
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              {% endfor %}
+            </div>
           </div>
           <div class="m-menu-five">
+            {% assign space = linklists.the-space %}
             <h1>The Space</h1>
+            <div class="space-menu">
+              {% for link in space.links %}
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              {% endfor %}
+            </div>
           </div>
           <div class="m-menu-six">
+            {% assign contact = linklists.contact %}
             <h1>Contact us</h1>
+            <div class="contact-menu">
+              {% for link in contact.links %}
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              {% endfor %}
+            </div>
           </div>
         </div>
       </div>

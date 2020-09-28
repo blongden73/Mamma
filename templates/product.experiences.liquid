@@ -33,19 +33,19 @@
             </span>
             {{ metadata.summary }}
           </span>
+          {% if metadata.location != blank %}
+            <div class="product__display-grid__infobox location">
+              <span class="product__display-grid__text">
+                <a href="https://www.google.com/maps/place/{{ metadata.location }}"
+                  target="_blank"
+                  aria-label="Location:  {{ metadata.location }}"
+                >
+                  {{ metadata.location }}
+                </a>
+              </span>
+            </div>
+          {% endif %}
           <div class="product__display-grid__col1">
-            {% if metadata.location != blank %}
-              <div class="product__display-grid__infobox">
-                <span class="product__display-grid__text">
-                  <a href="https://www.google.com/maps/place/{{ metadata.location }}"
-                    target="_blank"
-                    aria-label="Location:  {{ metadata.location }}"
-                  >
-                    {{ metadata.location }}
-                  </a>
-                </span>
-              </div>
-            {% endif %}
             <div class="product__display-grid__infobox" tabindex="0">
               <span class="product__display-grid__text">
                 {% assign price_min = product.price_min | money %}
@@ -82,6 +82,7 @@
               </p>
             </div>
           {% endif %}
+          {%- include 'social-sharing' -%}
           {% if metadata.hostImage != blank or metadata.hostDescription != blank %}
             <div id="hostDetails" tabindex="0">
               <div class="exp__host-details-container">
@@ -107,9 +108,6 @@
             </div>
           {% endif %}
         </div>
-        {%- capture snippet_content -%}
-          {%- include 'social-sharing' -%}
-        {%- endcapture -%}
       </div>
     </div>
   </div>
