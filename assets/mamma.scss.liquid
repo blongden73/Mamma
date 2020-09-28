@@ -3583,6 +3583,11 @@ span.handwritten {
   z-index: 100;
   padding-top: 3px;
   padding-left: 9px;
+  margin-top: 10px;
+
+  @include media-query($medium-up) {
+    margin-top: 0;
+  }
 
   span {
     height: 2px;
