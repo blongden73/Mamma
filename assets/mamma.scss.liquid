@@ -4185,6 +4185,12 @@ span.handwritten {
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
+    display: none;
+
+    @include media-query($medium-up) {
+      display: block;
+    }
+
   }
 
   .home-about-line-two {
