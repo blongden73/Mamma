@@ -2813,6 +2813,8 @@ span.handwritten {
     overflow: hidden;
     &:nth-child(2n) {
       margin-right:0;
+      margin-right: 0px;
+      margin-bottom: 0px;
     }
     @include media-query ($medium-up) {
       width: 16vw;
@@ -2988,6 +2990,7 @@ span.handwritten {
       background-color: $m-blue;
       margin-bottom: 50px;
       margin-top: 50px;
+          margin-top: 10px;
 
       @include media-query ($medium-up) {
         margin-bottom: 20px;
@@ -4720,7 +4723,10 @@ span.handwritten {
   }
 
   .m-discover-cta .header-right .mamma-badge {
-    top: -90px;
+    top: -81px;
+    @include media-query ($medium-up){
+
+    }
     svg path {
       fill:$m-cream;
       @include media-query ($medium-up){
@@ -4751,12 +4757,15 @@ span.handwritten {
   &:before {
     position: absolute;
     top: 0;
-    bottom: 55.3%;
+    bottom: 0px;
     background-color: $m-cream;
     display: block;
     width: 100%;
     content: '';
     z-index: 0;
+    @include media-query ($medium-up){
+      bottom: 55.3%;
+    }
   }
 }
 
