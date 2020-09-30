@@ -1874,7 +1874,7 @@ pre {
   }
 
   .no-padding {
-    padding-top: 0 !important;
+    margin-top: 0 !important;
   }
   .pract-needed-wrapper {
     padding-top: 0 !important;
@@ -1928,11 +1928,13 @@ pre {
     .home-about-line {
       width: 390px;
       position: absolute;
-      left: 0;
-      top: 52%;
+      left: -14px;
+      top: 4%;
       transform: translateY(-100%);
       @include media-query ($medium-up) {
+        left: 0;
         top:0;
+        top: 52%;
       }
 
       svg {
