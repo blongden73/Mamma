@@ -12,7 +12,7 @@
   <div class="header-right">
     <div class="header-inner">
       <div class="shop-header-container featured">
-        {% for product in collections.all.products Limit: 4 %}
+        {% for product in collections.all.products limit: 4 %}
         {% if product.tags contains 'shop' %}
           <div class="m-product-card">
             <h3>{{product.title}}</h3>
