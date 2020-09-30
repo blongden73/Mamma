@@ -3314,6 +3314,10 @@ span.handwritten {
     font-size: 30px;
     margin-top: 10px;
     color: $m-blue !important;
+    width: 100%;
+    @include media-query($medium-up) {
+      width: unset;
+    }
   }
 
   form {
