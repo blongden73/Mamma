@@ -1867,7 +1867,11 @@ pre {
 
 .practitioner-page {
   .intro {
-    padding-top: 0 !important;
+    padding-top: 60px !important;
+    @include media-query ($medium-up) {
+      padding-top: 0 !important;
+    }
+
   }
   .pract-needed-wrapper {
     padding-top: 60px !important;
@@ -2661,6 +2665,7 @@ pre {
 
 .m-discover-cta {
   position: relative;
+  height:80vh;
   @include media-query ($medium-up) {
     height:80vh;
   }
@@ -5083,4 +5088,15 @@ span.handwritten {
 
 .results-header {
   margin-top: 20px;
+}
+
+.space {
+  .share-story {
+    p {
+      margin-bottom:150px;
+      @include media-query ($medium-up) {
+        margin-bottom:40px;
+      }
+    }
+  }
 }
