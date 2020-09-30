@@ -33,7 +33,7 @@
       <div class="video-placeholder">
         <div class="play-button"><span uk-icon="icon: play"></span></div>
       </div>
-      <div class="iframe-placeholder" data-frame="<iframe width="560" height="315" src="https://www.youtube.com/embed/oT8_32yVxLc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>">
+      <div class="iframe-placeholder" data-frame='<iframe width="560" height="315" src="https://www.youtube.com/embed/oT8_32yVxLc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'>
       </div>
     </div>
   </div>
@@ -56,7 +56,7 @@
               <div class="play-button"><span uk-icon="icon: play"></span></div>
             </div>
             {% if video and video != '&nbsp' %}
-                <div class="iframe-placeholder" data-frame="{{ video }}"></div>
+                <div class="iframe-placeholder" data-frame='{{ video }}'></div>
             {% endif %}
             <h2><span>{{ article.title }}</span></h2>
             <h2 class="excerpt">{{ article.excerpt }}</h2>
