@@ -1403,8 +1403,12 @@ pre {
     }
 
     .header-right-after-search {
-      top: 60%;
-      bottom: 168px;
+      top: 91%;
+      bottom: -12px;
+      @include media-query ($medium-up){
+        top: 60%;
+        bottom: 168px;
+      }
     }
   }
 
@@ -1599,7 +1603,7 @@ pre {
           position:absolute;
           top:20px;
           right:20px;
-          width: 30%;
+          width: 35%;
           height:auto;
           @include media-query ($medium-up){
             width: 20%;
