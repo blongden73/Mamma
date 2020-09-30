@@ -2104,37 +2104,6 @@ pre {
     padding-left: 10%;
     padding-right: 10%;
   }
-  .video-placeholder {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    background-color: $m-blue;
-    z-index: 1;
-
-    .play-button {
-      width: 80px;
-      height: 80px;
-      background-color: #ed4d1c;
-      border-radius: 50%;
-      top: 50%;
-      left: 50%;
-      position: absolute;
-      transform: translate(-50%, -50%);
-
-      span {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        position: absolute;
-
-        svg {
-          width: 40px;
-          height: 40px;
-        }
-      }
-    }
-  }
   .video-wrapper {
     iframe {
       height:43vw;
@@ -2155,6 +2124,39 @@ pre {
     }
   }
 }
+
+.video-placeholder {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: $m-blue;
+  z-index: 1;
+
+  .play-button {
+    width: 80px;
+    height: 80px;
+    background-color: #ed4d1c;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    span {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
+
 .blog-content-wrapper {
   padding:60px 20px;
 }
