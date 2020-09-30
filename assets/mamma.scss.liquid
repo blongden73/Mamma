@@ -3856,9 +3856,13 @@ span.handwritten {
   }
 
   .m-menu, .m-menu-image {
-    width: 50%;
+    width: 100%;
     transition-delay: 0.2s;
     transition: transform ease-in-out 0.5s;
+
+    @include media-query($medium-up) {
+      width: 50%;
+    }
   }
 
   .m-menu-image {
