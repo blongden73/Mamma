@@ -4858,9 +4858,14 @@ span.handwritten {
   &.featured {
     .m-product-card {
       width: 50%;
-      min-height: 50%;
+      min-height: 49vh;
       border-right: 1px solid $m-blue;
       border-bottom: 1px solid $m-blue;
+      display: none;
+
+      &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+        display: block;
+      }
     }
   }
 
