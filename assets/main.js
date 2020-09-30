@@ -172,6 +172,7 @@ filters();
 
 function calFilters() {
   var filter = document.querySelector('.practices-filter');
+  if(filter){
   var options = filter.querySelectorAll('option');
   var results = document.querySelectorAll('.m-cal-item');
 
@@ -199,6 +200,7 @@ function calFilters() {
       }
     }
   });
+  }
 }
 
 calFilters();
