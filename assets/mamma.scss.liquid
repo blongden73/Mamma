@@ -1608,6 +1608,15 @@ pre {
           @include media-query ($medium-up){
             width: 20%;
           }
+          path {
+            &:nth-child(1) {
+              animation-name: rotate;
+              animation-duration: 12s;
+              animation-iteration-count: infinite;
+              animation-timing-function: linear;
+              transform-origin: center;
+            }
+          }
         }
       }
     }
@@ -4009,11 +4018,17 @@ span.handwritten {
 
 
 .the-space {
+  .header-inner-content {
+    margin-bottom: 0;
+  }
   .header-footer {
     position: absolute;
-    bottom: 0;
+    bottom: 70px;
     width: 100%;
     text-align: center;
+    @include media-query ($medium-up){
+      bottom: 0;
+    }
 
     p {
       font-size: 17px;
@@ -4083,12 +4098,16 @@ span.handwritten {
 }
 
 .header-right-after-search {
-  top: 51%;
-  bottom: 100px;
-  left: 50%;
   position: absolute;
   transform: translateX(-50%);
   width: 70px;
+  top: 51%;
+  bottom: 100px;
+  left: 50%;
+
+  top: 31%;
+  bottom: 190px;
+  left: 50%;
 
   @include media-query($medium-up) {
     top: 58%;
