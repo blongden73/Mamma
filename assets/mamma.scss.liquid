@@ -2804,10 +2804,15 @@ span.handwritten {
   flex-wrap: wrap;
 
   li {
-    width: 48vw;
-    height: 48vw;
+    width: calc(48vw - 5px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    // width: 48vw;
+    // height: 48vw;
     overflow: hidden;
-
+    &:nth-child(2n) {
+      margin-right:0;
+    }
     @include media-query ($medium-up) {
       width: 16vw;
       height: 16vw;
@@ -3143,9 +3148,10 @@ span.handwritten {
   .header-right {
     width: 100%;
     position: relative;
-    min-height: 100vh;
+    min-height: 96vh;
 
     @include media-query($medium-up){
+      min-height: 100vh;
       width: 50%;
     }
 
@@ -4708,7 +4714,7 @@ span.handwritten {
   }
 
   .mamma-badge {
-    svg {
+    svg path {
       fill:$m-cream;
       @include media-query ($medium-up){
         fill:$m-blue;
