@@ -13,9 +13,13 @@
     <div class="header-inner">
       <div class="shop-header-container">
         {% for product in collections.all.products %}
-          <h3>{{product.title}}</h3>
-          <h3>{{product.vendor}}</h3>
-          <p>{{product.price}}</p>
+        {% if product.tags contains 'shop' %}
+          <div class="m-product-card">
+            <h3>{{product.title}}</h3>
+            <h3>{{product.vendor}}</h3>
+            <p>{{product.price}}</p>
+          </div>
+        {% endif %}
         {% endfor %}
       </div>
     </div>
