@@ -15,22 +15,30 @@
         <h1>What are you looking for?</h1>
         <form class="search-form search-bar__form" action="{{ routes.search_url }}" method="get" role="search">
           <label>Search here</label>
+
           <div class="search-form__input-wrapper">
             <input
-              type="text"
+              type="search"
               name="q"
-              placeholder="Wellness, Yoga, Mindfullness, Breathwork"
+              value="{{ search.terms | escape }}"
+              placeholder="{{ 'general.search.placeholder' | t }}"
               role="combobox"
               aria-autocomplete="list"
               aria-owns="predictive-search-results"
               aria-expanded="false"
               aria-label="{{ 'general.search.placeholder' | t }}"
               aria-haspopup="listbox"
-              class="search-form__input search-bar__input"
-              data-predictive-search-drawer-input
+              class="search-form__input"
+              data-search-page-predictive-search-input
             />
+
             <input type="hidden" name="options[prefix]" value="last" aria-hidden="true" />
-            <div class="predictive-search-wrapper predictive-search-wrapper--drawer" data-predictive-search-mount="drawer"></div>
+
+            <button type="reset" class="search-form__clear-action" aria-label="{{ 'general.search.clear_search_term' | t }}" data-search-page-predictive-search-clear>
+              {% include 'icon-close' %}
+            </button>
+
+            <div class="predictive-search-wrapper" data-predictive-search-mount="default"></div>
           </div>
           <label>Mamma Offerings</label>
           <select>
