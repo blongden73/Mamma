@@ -53,7 +53,7 @@
           <div class="watch-item blog-item">
             {% assign video = article.metafields.airf.video %}
             <div class="video-placeholder">
-              <img src="{{article | img_url: "medium" }}" >
+              <img src="{{article | img_url: "large" }}" >
               <div class="play-button"><span uk-icon="icon: play"></span></div>
             </div>
             {% if video and video != '&nbsp' %}
