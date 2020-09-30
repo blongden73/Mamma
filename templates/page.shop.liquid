@@ -17,7 +17,7 @@
           <div class="m-product-card">
             <h3>{{product.title}}</h3>
             <h3>{{product.vendor}}</h3>
-            <p>{{product.price}}</p>
+            <p>{{product.price | money }}</p>
             <img src="{{ product | img_url: 'medium' }}">
           </div>
         {% endif %}
