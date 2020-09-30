@@ -2162,19 +2162,33 @@ pre {
 
 .contact .header-right .header-inner {
   border: 1px solid $m-darkorange;
-  width: 73%;
-  height: 78%;
+  width: 90%;
+  height: 70vh;
+  margin: auto;
+  margin-top: 20%;
+  @include media-query ($medium-up) {
+    width: 73%;
+    height: 78%;
+  }
 
   .header-right-after-search {
-    top: 78%;
-    bottom: -70px;
+    top: 73%;
+    bottom: 0px;
+    @include media-query ($medium-up) {
+      top: 78%;
+      bottom: -70px;
+    }
   }
 
   h1 {
+    width: 90%;
     span {
       border-bottom: 1px solid $m-blue;
       margin-bottom: 40px;
       display: inline-block;
+      @include media-query ($medium-up) {
+
+      }
     }
   }
 }
