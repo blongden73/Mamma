@@ -15,10 +15,12 @@
         {% for product in collections.all.products %}
         {% if product.tags contains 'shop' %}
           <div class="m-product-card">
+            <div class="m-product-image-wrapper">
+              <img src="{{ product | img_url: 'medium' }}">
+            </div>
             <h3>{{product.title}}</h3>
             <h3>{{product.vendor}}</h3>
             <p>{{product.price | money }}</p>
-            <img src="{{ product | img_url: 'medium' }}">
           </div>
         {% endif %}
         {% endfor %}
