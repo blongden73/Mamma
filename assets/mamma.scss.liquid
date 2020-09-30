@@ -3229,6 +3229,11 @@ span.handwritten {
     font-weight: 900;
     padding-right: 5px;
     color: $m-blue !important;
+    padding-top: 0 !important;
+
+    @include media-query($medium-up) {
+      padding: 0 30px 5px 0;
+    }
 
     a {
       color: $m-blue !important;
