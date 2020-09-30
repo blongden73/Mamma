@@ -18,6 +18,7 @@
             <h3>{{product.title}}</h3>
             <h3>{{product.vendor}}</h3>
             <p>{{product.price}}</p>
+            <img src="{{ product | img_url: 'medium' }}">
           </div>
         {% endif %}
         {% endfor %}
