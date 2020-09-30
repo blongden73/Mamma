@@ -207,6 +207,7 @@ calFilters();
 
 function videoPlayers(){
   var placeholder = document.querySelectorAll('.video-placeholder');
+  var iframes = document.querySelectorAll('.iframe-placeholder');
   if(placeholder){
     for(i=0; i<placeholder.length; i++) {
       console.log(placeholder[i], 'placeholder');
@@ -214,6 +215,8 @@ function videoPlayers(){
       placeholder[i].addEventListener('click', function(){
         this.classList.add('hide');
         iframe.setAttribute('autoplay');
+        var frame = iframes[i].dataset.frame;
+        console.log(frame);
       });
     }
   }
