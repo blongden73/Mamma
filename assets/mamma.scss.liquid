@@ -1580,7 +1580,7 @@ pre {
         .be, .here, .now {
           font-family:'Noe Display';
           font-weight: bold;
-          font-size:12vw;
+          font-size: 16vw;
           color:$m-darkorange;
           @include media-query ($medium-up){
             font-size:5vw;
@@ -1599,8 +1599,11 @@ pre {
           position:absolute;
           top:20px;
           right:20px;
-          width: 20%;
+          width: 30%;
           height:auto;
+          @include media-query ($medium-up){
+            width: 20%;
+          }
         }
       }
     }
@@ -1715,8 +1718,12 @@ pre {
 
         .header-right-after-search {
           transform: scaleY(-1) translateX(-50%);
-          top: 33%;
-          bottom: -90px;
+          top: 213%;
+          bottom: -120px;
+          @include media-query ($medium-up){
+            top: 33%;
+            bottom: -90px;
+          }
 
           .dot, .line, .horizontal-line {
             background-color: $m-darkorange;
@@ -3436,8 +3443,12 @@ span.handwritten {
     max-height: 668px;
 
     .header-right-after-search {
-      top: 50%;
-      bottom: 40px;
+      top: 90%;
+      bottom: -4px;
+      @include media-query ($medium-up){
+        top: 50%;
+        bottom: 40px;
+      }
     }
 
     p {
