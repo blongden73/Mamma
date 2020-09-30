@@ -2600,9 +2600,14 @@ pre {
 
     li {
       border: 1px solid $m-blue;
-      padding: 10px;
-      margin-right: 10px;
       margin-bottom: 10px;
+      padding: 8px;
+      margin-right: 5px;
+
+      @include media-query($medium-up) {
+        padding: 10px;
+        margin-right: 10px;
+      }
 
       &:hover {
         background-color: $m-blue;
