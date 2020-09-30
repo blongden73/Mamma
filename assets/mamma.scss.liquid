@@ -2401,7 +2401,8 @@ pre {
 
     @include media-query($medium-up) {
       float: right;
-      margin-top: -23px;
+      // margin-top: -23px;
+      margin-top: -43px;
     }
 
     &:hover {
@@ -2547,6 +2548,7 @@ pre {
   .m-filters-calendar {
     display: flex;
     margin-left: auto;
+        flex-wrap: wrap;
 
     li {
       border-top: 0;
@@ -2950,9 +2952,16 @@ span.handwritten {
 }
 
 //general spacing
-.m-practice-list-header, .m-calendar-header {
+.m-practice-list-header {
   margin-top: 40px;
 }
+.m-calendar-header {
+    margin-top: 0px;
+    @include media-query ($medium-up){
+      margin-top:40px;
+    }
+}
+
 
 .m-practice-list-header {
   h1 {
@@ -3127,6 +3136,7 @@ span.handwritten {
     height: 96vh;
     @include media-query($medium-up){
       width: 50%;
+      height: 100vh;
     }
 
     img {
