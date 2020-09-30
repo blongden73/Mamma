@@ -39,6 +39,9 @@
           </span>
           {{ metadata.summary }}
         </span>
+        <span class="product-card__title m-product-price">
+          {% include 'product-price-listing', product: product, show_vendor: false %}
+        </span>
       </div>
       {% if show_vendor %}
         <div class="list-view-item__vendor">{{ product.vendor }}</div>
@@ -46,7 +49,7 @@
     </div>
 
     <div class="list-view-item__price-column">
-      {% include 'product-price-listing', product: product, show_vendor: false %}
+
     </div>
   </div>
 </div>
