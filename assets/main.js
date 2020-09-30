@@ -214,7 +214,6 @@ function videoPlayers(){
       var iframe = this.nextSibling;
       placeholder[i].addEventListener('click', function(){
         this.classList.add('hide');
-        iframe.setAttribute('autoplay');
         var frame = iframes[i].dataset.frame;
         console.log(frame);
       });
