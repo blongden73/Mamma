@@ -59,7 +59,7 @@
 {% if search.performed %}
   <h2 class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}</h2>
   <div class="page-width">
-    <h1>Our Classes</h1>
+    <h1 class="results-header">Our Classes</h1>
     <div class="m-calendar-wrapper search-results">
       <ul class="list-view-items">
         {% for item in search.results %}
@@ -97,7 +97,7 @@
         {% endfor %}
       </ul>
     </div>
-    <h1>Our Products</h1>
+    <h1 class="results-header">Our Products</h1>
     <div class="m-calendar-wrapper search-results">
       <ul class="list-view-items">
         {% for item in search.results %}
@@ -135,7 +135,7 @@
         {% endfor %}
       </ul>
     </div>
-    <h1>Inspiration</h1>
+    <h1 class="results-header">Inspiration</h1>
     <div class="m-calendar-wrapper search-results">
       <ul class="list-view-items">
         {% for item in search.results %}
