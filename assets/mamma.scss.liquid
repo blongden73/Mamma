@@ -3891,7 +3891,7 @@ span.handwritten {
 
   .m-menu-inner {
     position: absolute;
-    width: 90%;
+    width: 87%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -3907,7 +3907,11 @@ span.handwritten {
     width: 50%;
 
     .m-menu-one, .m-menu-two, .m-menu-three, .m-menu-four, .m-menu-five, .m-menu-six {
-      margin-bottom: 40px;
+      margin-bottom: 10px;
+
+      @include media-query($medium-up) {
+        margin-bottom: 40px;
+      }
 
       h1, a {
         color: $m-cream;
@@ -3915,7 +3919,13 @@ span.handwritten {
 
       h1 {
         a {
-          font-size: 3vw !important;
+          font-size: 24px !important;
+          font-weight: 900;
+
+          @include media-query($medium-up) {
+            font-size: 3vw !important;
+            font-weight: 200;
+          }
 
           &:hover {
             font-weight: 400;
