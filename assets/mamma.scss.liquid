@@ -3289,8 +3289,12 @@ span.handwritten {
 
 .site-footer__item-inner--newsletter {
   .newsletter__input {
-    margin-right: 20px;
+    margin-right: 0px;
     font-family:'Noe Text';
+
+    @include media-query($medium-up) {
+      margin-right: 20px;
+    }
   }
 
   h4 {
@@ -3302,8 +3306,12 @@ span.handwritten {
 
   form {
     float: right;
-    width: 80%;
+    width: 100%;
     font-family:'Noe Text';
+
+    @include media-query($medium-up) {
+      width: 80%;
+    }
   }
 }
 
