@@ -1552,7 +1552,10 @@ pre {
 
     &.practioner-opening {
       .header-inner-content {
-        transform: translateY(-50%) translateX(-5%) !important;
+        transform:translateY(-50%) translateX(0%) !important;
+        @include media-query ($medium-up) {
+          transform: translateY(-50%) translateX(-5%) !important;width: 100%;
+        }
       }
     }
 
@@ -1870,12 +1873,18 @@ pre {
     padding-top: 60px !important;
 
     .home-about-line {
-      width: 390px;
+      width: 270px;
       position: absolute;
-      left: auto;
+      left: 47%;
       right: 0;
-      top: 52%;
+      top: 19%;
       transform: translateY(-100%) rotate(215deg);
+
+      @include media-query ($medium-up) {
+        width: 390px;
+        left: auto;
+        top: 52%;
+      }
 
       svg {
         path {
@@ -2005,9 +2014,14 @@ pre {
         margin: 0;
         margin-left: auto;
         margin-right:auto;
-        margin-top: 10px;
-        font-size: 42px;
-        width: 60%;
+        margin-top: 20px;
+        font-size: 30px;
+        width: 100%;
+        @include media-query ($medium-up) {
+          width: 60%;
+          font-size: 42px;
+          margin-top: 10px;
+        }
       }
     }
 
@@ -2647,7 +2661,6 @@ pre {
 
 .m-discover-cta {
   position: relative;
-  height:80vh;
   @include media-query ($medium-up) {
     height:80vh;
   }
