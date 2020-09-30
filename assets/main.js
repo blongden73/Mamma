@@ -207,6 +207,7 @@ function videoPlayers(){
   var placeholder = document.querySelectorAll('.video-placeholder');
   if(placeholder){
     for(i=0; i<placeholder.length; i++) {
+      console.log(placeholder[i], 'placeholder');
       placeholder[i].addEventListener('click', function(){
         this.classList.add('hide');
       });
