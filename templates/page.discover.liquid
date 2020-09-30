@@ -16,35 +16,29 @@
         <form class="search-form search-bar__form" action="{{ routes.search_url }}" method="get" role="search">
           <label>Search here</label>
 
-          <div class="input-group input-group--nowrap">
-            <div class="input-group__field input-group__field--connected search-form__input-wrapper">
-              <input
-                type="search"
-                name="q"
-                value="{{ search.terms | escape }}"
-                placeholder="{{ 'general.search.placeholder' | t }}"
-                role="combobox"
-                aria-autocomplete="list"
-                aria-owns="predictive-search-results"
-                aria-expanded="false"
-                aria-label="{{ 'general.search.placeholder' | t }}"
-                aria-haspopup="listbox"
-                class="search-form__input"
-                data-search-page-predictive-search-input
-              />
+          <div class="search-form__input-wrapper">
+            <input
+              type="search"
+              name="q"
+              value="{{ search.terms | escape }}"
+              placeholder="{{ 'general.search.placeholder' | t }}"
+              role="combobox"
+              aria-autocomplete="list"
+              aria-owns="predictive-search-results"
+              aria-expanded="false"
+              aria-label="{{ 'general.search.placeholder' | t }}"
+              aria-haspopup="listbox"
+              class="search-form__input"
+              data-search-page-predictive-search-input
+            />
 
-              <input type="hidden" name="options[prefix]" value="last" aria-hidden="true" />
+            <input type="hidden" name="options[prefix]" value="last" aria-hidden="true" />
 
-              <button type="reset" class="search-form__clear-action" aria-label="{{ 'general.search.clear_search_term' | t }}" data-search-page-predictive-search-clear>
-                {% include 'icon-close' %}
-              </button>
-
-              <div class="predictive-search-wrapper" data-predictive-search-mount="default"></div>
-            </div>
-
-            <button type="submit" class="search-form__connected-submit" aria-label="{{ 'general.search.submit' | t }}" data-search-page-predictive-search-submit>
-              {% include 'icon-search' %}
+            <button type="reset" class="search-form__clear-action" aria-label="{{ 'general.search.clear_search_term' | t }}" data-search-page-predictive-search-clear>
+              {% include 'icon-close' %}
             </button>
+
+            <div class="predictive-search-wrapper" data-predictive-search-mount="default"></div>
           </div>
           <label>Mamma Offerings</label>
           <select>
