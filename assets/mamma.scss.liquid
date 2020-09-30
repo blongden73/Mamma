@@ -1874,15 +1874,20 @@ pre {
 
   }
   .pract-needed-wrapper {
-    padding-top: 60px !important;
+    padding-top: 0 !important;
+    @include media-query ($medium-up) {
+      padding-top: 60px !important;
+    }
 
     .home-about-line {
-      width: 270px;
       position: absolute;
-      left: 47%;
+      width: 350px;
+      left: 28%;
+      top: 15%;
       right: 0;
-      top: 19%;
       transform: translateY(-100%) rotate(215deg);
+
+
 
       @include media-query ($medium-up) {
         width: 390px;
@@ -1923,6 +1928,9 @@ pre {
       left: 0;
       top: 52%;
       transform: translateY(-100%);
+      @include media-query ($medium-up) {
+        top:0;
+      }
 
       svg {
         path {
@@ -1940,7 +1948,9 @@ pre {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 120px;
     .pract-needed-link {
+      margin-top: 0px;
       font-size: 18px !important;
     }
     h2 {
