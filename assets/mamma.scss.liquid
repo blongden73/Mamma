@@ -2555,6 +2555,12 @@ pre {
       @include media-query ($medium-up){
         padding:10px;
       }
+      &:nth-child(5) {
+        margin-bottom: 10px;
+        @include media-query ($medium-up){
+          margin-bottom:0;
+        }
+      }
       select {
         background-color: transparent;
         border: 0;
@@ -2562,9 +2568,8 @@ pre {
         color: $m-blue;
         font-size: 18px;
 
-
         padding: 6px;
-        padding-left: 4px;
+        padding-left: 10px;
         width: 93vw;
         @include media-query ($medium-up){
           padding-bottom: 8px;
