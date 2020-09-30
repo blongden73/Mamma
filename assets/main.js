@@ -215,7 +215,7 @@ function videoPlayers(){
       placeholder[i].addEventListener('click', function(){
         this.classList.add('hide');
         var frameWrapper = this.nextSibling;
-        console.log(frameWrapper);
+        console.log(frameWrapper.nextSibling);
       });
     }
   }
