@@ -4451,7 +4451,11 @@ span.handwritten {
       width: 100%;
 
       .header-inner-content {
-        padding-top: 50px;
+
+        padding-top: 70px;
+        @include media-query ($medium-up){
+            padding-top: 50px;
+        }
       }
 
       @include media-query ($medium-up){
@@ -4461,7 +4465,7 @@ span.handwritten {
 
       &:before {
         position: absolute;
-        top: 60px;
+        top: 80px;
         bottom: 200px;
         left: 20px;
         right: 20px;
