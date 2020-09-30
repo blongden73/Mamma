@@ -8,6 +8,9 @@
     Usage:
     {% include 'product-card-list', product: product, show_vendor: section.settings.show_vendor %}
 {% endcomment %}
+{%- assign metadata = product.metafields.experiences -%}
+{%- assign durationHours = metadata.duration | divided_by: 60 -%}
+{%- assign durationMinutes = metadata.duration | modulo: 60 -%}
 <div class="product-card product-card--list">
   <a class="full-width-link" href="{{ product.url | within: collection }}">
     <span class="visually-hidden">{{ product.title }}</span>
@@ -25,6 +28,19 @@
     <div class="list-view-item__title-column">
       <div class="list-view-item__title" aria-hidden="true">
         <span class="product-card__title">{{ product.title }}</span>
+        <span class="product-card__title">
+          <span class="product__title-container__tagline" tabindex="0">
+            <span class="product__duration">
+              {% if durationHours != 0 %}
+                {{ durationHours }}h
+              {% endif %}
+              {% if durationMinutes != 0 %}
+                {{ durationMinutes }}min
+              {% endif %}
+            </span>
+            {{ metadata.summary }}
+          </span>
+        </span>
       </div>
       {% if show_vendor %}
         <div class="list-view-item__vendor">{{ product.vendor }}</div>
