@@ -202,3 +202,14 @@ function calFilters() {
 }
 
 calFilters();
+
+function videoPlayers(){
+  var placeholder = document.querySelectorAll('.video-placeholder');
+  if(placeholder){
+    for(i=0; i<placeholder.length; i++) {
+      placeholder[i].addEventListener('click', function(){
+        this.classList.add('hide');
+      });
+    }
+  }
+}videoPlayers();
