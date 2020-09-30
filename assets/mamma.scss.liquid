@@ -1608,15 +1608,15 @@ pre {
           @include media-query ($medium-up){
             width: 20%;
           }
-          path {
-            &:nth-child(1) {
-              animation-name: rotate;
-              animation-duration: 12s;
-              animation-iteration-count: infinite;
-              animation-timing-function: linear;
-              transform-origin: center;
-            }
-          }
+          // path {
+          //   &:nth-child(1) {
+          //     animation-name: rotate;
+          //     animation-duration: 12s;
+          //     animation-iteration-count: infinite;
+          //     animation-timing-function: linear;
+          //     transform-origin: center;
+          //   }
+          // }
         }
       }
     }
@@ -2065,8 +2065,12 @@ pre {
 .video-section {
   margin-top: 60px;
   margin-bottom: 60px;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+  @include media-query ($medium-up){
+    padding-left: 10%;
+    padding-right: 10%;
+  }
   video-wrapper {
     iframe {
       height:43vw;
@@ -2884,6 +2888,8 @@ span.handwritten {
     @include media-query ($medium-up) {
       width: 16vw;
       height: 16vw;
+      margin-right: 0px;
+      margin-bottom: 0px;
       background-color: $m-blue;
     }
   }
