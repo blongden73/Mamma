@@ -2401,8 +2401,7 @@ pre {
 
     @include media-query($medium-up) {
       float: right;
-      // margin-top: -23px;
-      margin-top: -43px;
+      margin-top: -23px;
     }
 
     &:hover {
@@ -2552,14 +2551,27 @@ pre {
 
     li {
       border-top: 0;
-
+      padding:0;
+      @include media-query ($medium-up){
+        padding:10px;
+      }
       select {
         background-color: transparent;
         border: 0;
         font-family:'Noe Display';
         color: $m-blue;
         font-size: 18px;
+
+
+        padding: 6px;
         padding-left: 4px;
+        width: 93vw;
+        @include media-query ($medium-up){
+          padding-bottom: 8px;
+          padding-top: 8px;
+          padding-right: 28px;
+          width:100%;
+        }
       }
     }
   }
@@ -2567,6 +2579,7 @@ pre {
 
 .m-discover-cta {
   position: relative;
+  height:80vh;
   @include media-query ($medium-up) {
     height:80vh;
   }
@@ -2642,7 +2655,10 @@ span.handwritten {
     top: 0;
     z-index: 0;
     content: '';
-    display: block;
+    display: none;
+    @include media-query ($medium-up){
+      display: block;
+    }
   }
 
   .flex {
@@ -2938,7 +2954,10 @@ span.handwritten {
   .m-practice-list-header {
     text-align: center;
     margin-top: 0 !important;
-    padding-top: 40px;
+    padding-top: 0;
+    @include media-query ($medium-up){
+      padding-top: 40px;
+    }
 
     &.less-padding {
       margin: 0 !important;
