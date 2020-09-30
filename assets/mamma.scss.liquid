@@ -1867,7 +1867,11 @@ pre {
 
 .practitioner-page {
   .intro {
-    padding-top: 0 !important;
+    padding-top: 60px !important;
+    @include media-query ($medium-up) {
+      padding-top: 0 !important;
+    }
+
   }
   .pract-needed-wrapper {
     padding-top: 60px !important;
