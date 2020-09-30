@@ -5047,10 +5047,10 @@ span.handwritten {
   &.featured {
     .m-product-card {
       width: 50%;
-      min-height: 45vh;
+      min-height: calc(45vh - 10px);
       border-right: 1px solid $m-blue;
-      border-bottom: 1px solid $m-blue;
       display: none;
+      margin-bottom: 10px;
 
       p {
         margin-left: 10px;
@@ -5070,10 +5070,10 @@ span.handwritten {
       }
 
       img {
-        height: 183px;
+        height: 205px;
         width: max-content;
         object-fit: contain;
-        margin-top: 50px;
+        border-bottom: 1px solid $m-blue;
       }
 
       &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
