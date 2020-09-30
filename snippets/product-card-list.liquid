@@ -29,17 +29,15 @@
       <div class="list-view-item__title" aria-hidden="true">
         <span class="product-card__title">{{ product.title }}</span>
         <span class="product-card__title">
-          <span class="product__title-container__tagline" tabindex="0">
-            <span class="product__duration">
-              {% if durationHours != 0 %}
-                {{ durationHours }}h
-              {% endif %}
-              {% if durationMinutes != 0 %}
-                {{ durationMinutes }}min
-              {% endif %}
-            </span>
-            {{ metadata.summary }}
+          <span class="product__duration">
+            {% if durationHours != 0 %}
+              {{ durationHours }}h
+            {% endif %}
+            {% if durationMinutes != 0 %}
+              {{ durationMinutes }}min
+            {% endif %}
           </span>
+          {{ metadata.summary }}
         </span>
       </div>
       {% if show_vendor %}
