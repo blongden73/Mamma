@@ -2073,8 +2073,18 @@ pre {
       width:100%;
     }
   }
+  h1 {
+    text-align: center;
+    @include media-query ($medium-up){
+      text-align:left;
+    }
+  }
   h1.centered-text {
     text-align: center;
+    font-size:28px;
+    @include media-query ($medium-up){
+      font-size:36px;
+    }
   }
 }
 .blog-content-wrapper {
@@ -2190,8 +2200,10 @@ pre {
     line-height: 1.35;
     color:$m-blue;
     margin-top: 20px;
+    margin-bottom: 120px;
     @include media-query ($medium-up){
       width: 35%;
+      margin-bottom: 0;
     }
   }
   .para {
@@ -2364,6 +2376,16 @@ pre {
       width: 100%;
       position: relative;
       padding-right: 10px;
+      svg {
+        top: -120px;
+        right: 10px;
+        z-index: 200;
+        width: 65%;
+        @include media-query ($medium-up){
+          width:20%;
+          top:-50px;
+        }
+      }
       .btn {
         position: absolute;
         bottom: 10px;
