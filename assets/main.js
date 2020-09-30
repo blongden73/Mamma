@@ -210,8 +210,10 @@ function videoPlayers(){
   if(placeholder){
     for(i=0; i<placeholder.length; i++) {
       console.log(placeholder[i], 'placeholder');
+      var iframe = this.nextSibling;
       placeholder[i].addEventListener('click', function(){
         this.classList.add('hide');
+        iframe.setAttribute('autoplay');
       });
     }
   }
