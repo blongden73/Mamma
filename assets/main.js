@@ -217,6 +217,7 @@ function videoPlayers(){
         var frameWrapper = this.nextSibling;
         var data = frameWrapper.nextSibling.dataset.frame;
         console.log(data);
+        frameWrapper.nextSibling.innerHTML = data;
       });
     }
   }
