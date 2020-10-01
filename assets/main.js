@@ -233,5 +233,6 @@ function tagsearch(){
     var search = document.querySelector('.search-form__input');
     console.log(search);
     console.log(offering.value, how.value, wellbeing.value, search.value);
+    console.log(search.value);
   });
 }tagsearch();
