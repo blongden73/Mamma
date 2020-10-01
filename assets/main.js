@@ -231,8 +231,10 @@ function tagsearch(){
     var how = document.querySelector('.how-select');
     var wellbeing = document.querySelector('.wellbeing-select');
     var search = document.querySelector('.custom-m-search');
-    console.log(search);
     console.log(offering.value, how.value, wellbeing.value, search.value);
-    console.log(search.value);
+    if(search.value) {
+      var url = '?q=' + search + '+tag%3A' + offering + '+tag%3A' + how;
+      console.log(url);
+    }
   });
 }tagsearch();
