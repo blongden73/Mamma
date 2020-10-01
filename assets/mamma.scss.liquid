@@ -1393,10 +1393,7 @@ pre {
     .buttons {
       text-align: center;
       margin: auto;
-      margin-top: 58px;
-      @include media-query ($medium-up){
-        margin-top: 220px;
-      }
+
       button {
         margin-bottom: 14px;
       }
@@ -1406,6 +1403,11 @@ pre {
       top: 91%;
       bottom: -12px;
       max-height: 160px;
+      height: 160px;
+      margin-left: auto;
+      margin-right: auto;
+      transform: none;
+      
       @include media-query ($medium-up){
         top: 60%;
         bottom: 168px;
