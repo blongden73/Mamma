@@ -1756,10 +1756,13 @@ pre {
           margin-top: 20vh;
           height: 100%;
           @include media-query ($medium-up){
-            width: 80%;
+            width: 100%;
             padding: 60px;
             margin-top: 15vh;
             height: 85vh;
+          }
+          @include media-query ($widescreen) {
+            width: 80%;
           }
           p {
             font-family:"Noe Text";
