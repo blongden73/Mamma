@@ -2058,6 +2058,9 @@ pre {
           display: flex;
           flex-direction: column;
           height: 100%;
+          @include media-query($medium-up) {
+            transform: translateY(-70%) translateX(0%);
+          }
           h1 {
             margin-bottom: 17.5px;
           }
