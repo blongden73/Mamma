@@ -2474,9 +2474,11 @@ pre {
   .header-left {
     .header-inner {
       h1 {
-        top: 10% !important;
-        left: 75% !important;
-        color: #fff !important;
+        @include media-query($medium-up) {
+          top: 10% !important;
+          left: 75% !important;
+          color: #fff !important;
+        }
       }
     }
   }
