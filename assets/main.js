@@ -222,3 +222,10 @@ function videoPlayers(){
     }
   }
 }videoPlayers();
+
+function tagsearch(){
+  var searchButton = document.querySelector('.m-button__search');
+  searchButton.addEventListener('click', function(e){
+    e.preventDefault();
+  });
+}tagsearch();
