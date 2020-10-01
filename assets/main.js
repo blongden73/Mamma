@@ -233,7 +233,7 @@ function tagsearch(){
     var search = document.querySelector('.custom-m-search');
     console.log(offering.value, how.value, wellbeing.value, search.value);
     if(search.value) {
-      var url = '/search?q=' + search.value + '+tag%3A' + offering.value.replace(' ', '+');
+      var url = '/search?q=' + search.value + '+tag%3A' + offering.value.replace(' ', '+') + '+tag%3A' + wellbeing.value;
       console.log(url);
       window.location.replace(url);
     }
