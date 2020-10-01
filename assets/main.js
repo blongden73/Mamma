@@ -231,6 +231,7 @@ function tagsearch(){
     var how = document.querySelector('.how-select');
     var wellbeing = document.querySelector('.wellbeing-select');
     var search = document.querySelector('.search-form__input');
+    console.log(search);
     console.log(offering.value, how.value, wellbeing.value, search.value);
   });
 }tagsearch();
