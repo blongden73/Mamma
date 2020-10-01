@@ -75,7 +75,7 @@
       <div class="item-wrapper">
         {% assign blog = blogs.Article %}
         {% for article in blog.articles %}
-          <a class="read-item blog-item" href-="{{ article_content }}">
+          <a class="read-item blog-item" href="{{ article.link }}">
             <img src="{{ article.image.src | img_url: 'large' }}">
             <h2><span>{{ article.title }}</span></h2>
             <h2 class="excerpt">{{ article.excerpt }}</h2>
