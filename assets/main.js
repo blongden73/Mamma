@@ -235,6 +235,7 @@ function tagsearch(){
     if(search.value) {
       var url = '/search?q=' + search.value + '+tag%3A' + offering.value + '+tag%3A' + how.value;
       console.log(url);
+      window.location.replace(url);
     }
   });
 }tagsearch();
