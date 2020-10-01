@@ -227,6 +227,10 @@ function tagsearch(){
   var searchButton = document.querySelector('.m-button__search');
   searchButton.addEventListener('click', function(e){
     e.preventDefault();
-    console.log('clicked');
+    var offering = document.querySelector('.offering-select');
+    var how = document.querySelector('.how-select');
+    var wellbeing = document.querySelector('.wellbeing-select');
+    var search = document.querySelector('.search-form__input');
+    console.log(offering.value, how.value, wellbeing.value, search.value);
   });
 }tagsearch();
