@@ -1639,6 +1639,7 @@ pre {
         .header-inner-content {
           @include media-query($medium-up){
             height: 60vh!important;
+            transform: translateY(-70%) translateX(0%);
           }
         }
         .header-inner-content {
@@ -2058,9 +2059,7 @@ pre {
           display: flex;
           flex-direction: column;
           height: 100%;
-          @include media-query($medium-up) {
-            transform: translateY(-70%) translateX(0%);
-          }
+
           h1 {
             margin-bottom: 17.5px;
           }
