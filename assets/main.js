@@ -227,5 +227,6 @@ function tagsearch(){
   var searchButton = document.querySelector('.m-button__search');
   searchButton.addEventListener('click', function(e){
     e.preventDefault();
+    console.log('clicked');
   });
 }tagsearch();
