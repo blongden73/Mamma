@@ -254,7 +254,7 @@ function signup(){
 
   if(!localStorage.getItem(signup)){
     console.log('pop')
-    setTimout(function(){
+    setTimeout(function(){
     newsletterSignupWrapper.classList.add('display');
     localStorage.setItem(signup, true)
     }, 1000)
