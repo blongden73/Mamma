@@ -15,6 +15,7 @@
         {% for product in collections.all.products %}
         {% if product.tags contains 'shop' %}
           <div class="m-product-card">
+            <a href="{{product.url}}"></a>
             <div class="m-product-image-wrapper">
               <img src="{{ product | img_url: 'medium' }}">
             </div>
