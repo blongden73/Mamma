@@ -5257,6 +5257,16 @@ span.handwritten {
       border-right: 1px solid $m-blue;
       display: none;
       margin-bottom: 10px;
+      position: relative;
+
+      a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+      }
 
       p {
         margin-left: 10px;
@@ -5270,7 +5280,7 @@ span.handwritten {
         margin-left: 10px;
         padding-top: 5px;
 
-        &:nth-child(2) {
+        &.product-title {
           font-weight: 900;
         }
       }
