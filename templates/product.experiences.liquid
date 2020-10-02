@@ -31,7 +31,7 @@
                 {{ durationMinutes }}min
               {% endif %}
             </span>
-            <a href="{{ metadata.summary | handle }}">{{ metadata.summary }}</a>
+            <a href="/collections/{{ metadata.summary | handle }}">{{ metadata.summary }}</a>
           </span>
           {% if metadata.location != blank %}
             <div class="product__display-grid__infobox location">
