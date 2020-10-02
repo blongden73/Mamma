@@ -9,7 +9,7 @@
       </div>
       <ul>
         <li class="no-events">There are currently no events, please check back soon. ♥</li>
-        {% for events in collections.all.products %}
+        {% for events in collections.all.products limit:5 %}
           {% assign tags = events.tags %}
           {% assign practition = events.metafields.airf.practition %}
           {% assign level = events.metafields.airf.level %}
