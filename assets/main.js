@@ -161,7 +161,6 @@ function filters(){
       }
     });
   }
-  TO DO WRITE THE SUPRISE
   var suprise = document.querySelector('.suprise');
   if(suprise) {
     suprise.addEventListener('click', function(){
