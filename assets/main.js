@@ -164,6 +164,7 @@ function filters(){
   var suprise = document.querySelector('.suprise');
   if(suprise) {
     suprise.addEventListener('click', function(){
+      var results = document.querySelectorAll('.m-cal-item');
       var random = Math.floor(Math.random() * (results.length + 1));
       console.log(results[random]);
     });
