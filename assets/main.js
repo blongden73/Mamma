@@ -166,7 +166,9 @@ function filters(){
     suprise.addEventListener('click', function(){
       var results = document.querySelectorAll('.m-cal-item');
       var random = Math.floor(Math.random() * (results.length + 1));
+      var supriseMeContent = document.querySelector('.suprise-me-content');
       console.log(results[random]);
+      supriseMeContent.innerHTML = results[random];
     });
   }
  }
