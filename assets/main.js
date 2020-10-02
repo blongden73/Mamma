@@ -169,7 +169,7 @@ function filters(){
       var supriseMeContent = document.querySelector('.suprise-me-content');
       console.log(results[random]);
       var randomInner = results[random].innerHTML;
-      supriseMeContent.innerHTML = '<h1>Suprise me</h1>' + randomInner;
+      supriseMeContent.innerHTML = "<h1>Here's your suprise 🎉</h1>" + randomInner;
     });
   }
  }
