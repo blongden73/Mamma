@@ -249,6 +249,8 @@ function signup(){
     newsletterSignupWrapper.classList.add('close');
   });
 
+  console.log('checking pop')
+
   if(localStorage.getItem(signup, false)){
     console.log('pop')
     setTimout(function(){
