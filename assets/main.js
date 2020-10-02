@@ -239,3 +239,18 @@ function tagsearch(){
     }
   });
 }tagsearch();
+
+function signup(){
+  var newsletterSignupClose = document.querySelector('.newsletter-close');
+  var newsletterSignupWrapper = document.querySelector('.email-sign-up-box');
+  newsletterSignupClose.addEventListener('click', function(){
+    newsletterSignupWrapper.classList.add('close');
+  });
+
+  if(localStorage.getItem(signup, false)){
+    setTimout(function(){
+    newsletterSignupWrapper.classList.add('display');
+    localStorage.setItem(signup, true)
+    }, 1000)
+  }
+}
