@@ -4353,6 +4353,12 @@ span.handwritten {
     }
   }
 
+  .header-inner-content {
+    @include media-query($medium-up) {
+      top: 47%;
+    }
+  }
+
   .header-footer {
     position: absolute;
     bottom: 20px;
@@ -5373,4 +5379,10 @@ span.handwritten {
   .m-button {
     margin-top: 20px;
   }
+}
+
+.prompts {
+  justify-content: center;
+  margin-bottom: 10px;
+  font-weight: 900;
 }
