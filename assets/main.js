@@ -252,11 +252,11 @@ function signup(){
   console.log('checking pop')
   console.log(localStorage.getItem(signup));
 
-  if(!localStorage.getItem(signup)){
+  if(!localStorage.getItem('signup')){
     console.log('pop')
     setTimeout(function(){
     newsletterSignupWrapper.classList.add('display');
-    localStorage.setItem(signup, true)
+    localStorage.setItem('signup', true)
     }, 1000)
   }
 }signup();
