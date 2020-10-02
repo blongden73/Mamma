@@ -3090,13 +3090,14 @@ span.handwritten {
       position: absolute;
       bottom: -1px;
       @include media-query ($medium-up){
-        bottom: 0;
+        bottom: 10px;
+        left: 10px
       }
     }
     .m-people-name, .m-people-practice {
       background-color: $m-blue;
       color: $m-cream;
-      padding: 3px;
+      padding: 4px;
       padding-left: 6px;
       padding-right: 6px;
       z-index: 10;
@@ -3105,7 +3106,8 @@ span.handwritten {
       line-height: 1;
       font-weight: 900;
       width: 100%;
-
+      font-size: 14px;
+      text-transform: capitalize;
     }
     .m-people-practice {
       background-color: $m-cream;
