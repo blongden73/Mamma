@@ -168,7 +168,8 @@ function filters(){
       var random = Math.floor(Math.random() * (results.length + 1));
       var supriseMeContent = document.querySelector('.suprise-me-content');
       console.log(results[random]);
-      supriseMeContent.innerHTML = results[random];
+      var randomInner = results[random].innerHTML;
+      supriseMeContent.innerHTML = randomInner;
     });
   }
  }
