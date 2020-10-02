@@ -253,4 +253,4 @@ function signup(){
     localStorage.setItem(signup, true)
     }, 1000)
   }
-}
+}signup();
