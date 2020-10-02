@@ -225,6 +225,7 @@ function videoPlayers(){
 
 function tagsearch(){
   var searchButton = document.querySelector('.m-button__search');
+  if(searchButton){
   searchButton.addEventListener('click', function(e){
     e.preventDefault();
     var offering = document.querySelector('.offering-select');
@@ -238,6 +239,7 @@ function tagsearch(){
       window.location.replace(url);
     }
   });
+  }
 }tagsearch();
 
 function signup(){
@@ -248,6 +250,7 @@ function signup(){
   });
 
   if(localStorage.getItem(signup, false)){
+    console.log('pop')
     setTimout(function(){
     newsletterSignupWrapper.classList.add('display');
     localStorage.setItem(signup, true)
