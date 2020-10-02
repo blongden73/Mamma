@@ -250,8 +250,9 @@ function signup(){
   });
 
   console.log('checking pop')
+  console.log(localStorage.getItem(signup));
 
-  if(localStorage.getItem(signup, false)){
+  if(localStorage.getItem(signup) == false){
     console.log('pop')
     setTimout(function(){
     newsletterSignupWrapper.classList.add('display');
