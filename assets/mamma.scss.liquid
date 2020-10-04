@@ -3555,6 +3555,11 @@ span.handwritten {
 
     .header-inner-content {
       height: 100%;
+      margin-top: 4%;
+
+      @include media-query ($medium-up){
+        margin-top: 20%;
+      }
 
       h1 {
         text-align: left;
@@ -3715,19 +3720,29 @@ span.handwritten {
   }
 
   .m-people-info-center {
-    width: 15%;
+    width: 99%;
     border-top: 1px solid $m-blue;
     margin-right: 20px;
     padding-top: 6px;
     position: relative;
     max-height: 668px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    @include media-query ($medium-up){
+      width: 15%;
+      margin-top: unset;
+      margin-bottom: unset;
+    }
 
     .header-right-after-search {
       top: 90%;
       bottom: -4px;
+      display: none;
       @include media-query ($medium-up){
         top: 50%;
         bottom: 40px;
+        display: block;
       }
     }
 
@@ -3769,8 +3784,13 @@ span.handwritten {
 
       img {
         width: 100%;
-        height: 100%;
+        height: 50vw;
         object-fit: cover;
+
+        @include media-query ($medium-up) {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }
@@ -3781,15 +3801,24 @@ span.handwritten {
 
   .testimonial-image {
     display: flex;
-    width: 50%;
+    width: 100%;
     padding-top: 40px;
     padding-bottom: 40px;
+
+    @include media-query ($medium-up) {
+      width: 50%;
+    }
   }
 
   .testimonial-image-one, .testimonial-image-two {
-    width: 340px;
-    height: 340px;
+    width: 100%;
+    height: 100vw;
     margin-right: 30px;
+
+    @include media-query ($medium-up) {
+      width: 340px;
+      height: 340px;
+    }
 
     img {
       width: 100%;
@@ -3801,6 +3830,11 @@ span.handwritten {
   .testimonial-image-two {
     height: 180px;
     width: 180px;
+    display: none;
+
+    @include media-query ($medium-up) {
+      display: block;
+    }
 
     img {
       width: 100%;
