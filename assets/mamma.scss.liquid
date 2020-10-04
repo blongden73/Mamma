@@ -2522,10 +2522,13 @@ pre {
     width: 100%;
     margin-top: 60px;
     background-color: $m-cream;
+    flex-direction: column;
+
     @include media-query ($medium-up){
       max-width: 100%;
       margin-left: auto;
       margin-right: auto;
+      flex-direction: row;
     }
     font-size:17px;
     .grid-item {
@@ -2578,10 +2581,10 @@ pre {
       position: relative;
       padding-right: 10px;
       svg {
-        top: -130px;
+        top: -263px;
         right: 10px;
         z-index: 200;
-        width: 65%;
+        width: 30%;
         @include media-query ($medium-up){
           width:22%;
           top:-50px;
