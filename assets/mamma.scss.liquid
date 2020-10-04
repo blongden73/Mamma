@@ -5404,6 +5404,11 @@ span.handwritten {
   justify-content: center;
   margin-bottom: 10px;
   font-weight: 900;
+  display: none;
+
+  @include media-query($medium-up) {
+    display: block;
+  }
 
   a {
     margin-left: 5px;
