@@ -1476,6 +1476,11 @@ pre {
         background-color: #B0C1B3;
         opacity: 0;
         transition: opacity 0.5s ease-in-out;
+        display: none;
+
+        @include media-query ($medium-up){
+          display: block;
+        }
 
         p {
           position: absolute;
