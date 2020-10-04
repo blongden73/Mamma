@@ -5349,8 +5349,9 @@ span.handwritten {
 .email-sign-up-box {
   max-width: 430px;
   position: fixed;
-  right: 20px;
-  bottom: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: $m-cream;
   border: 10px solid #f1c1b0;
   text-align: center;
@@ -5363,6 +5364,14 @@ span.handwritten {
   transform: translateY(-50px);
   pointer-events: none;
   transition: all 0.5s ease-in-out;
+
+  @include media-query($medium-up) {
+    top: auto;
+    left: auto;
+    right: 20px;
+    bottom: 40px;
+    transform: unset;
+  }
 
   &.close {
     display: none;
