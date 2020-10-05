@@ -4280,8 +4280,13 @@ span.handwritten {
     display: flex !important;
 
     & > div {
-      width: 40%;
+      width: 33%;
       margin-right: 10px;
+
+      @include media-query ($medium-up){
+          width: 40% !important;
+      }
+
 
       button {
         border-radius: 0;
@@ -4303,12 +4308,17 @@ span.handwritten {
     }
 
     .exp__book-btn {
-      width: 20%;
+      width: 33%;
       border-radius: 0;
       background-color: $m-blue;
       font-family:'Noe Display';
       font-size: 25px;
       color: #fff;
+
+      @include media-query ($medium-up){
+          width: 20% !important;
+      }
+
     }
 
     .exp__dd-quantity {
