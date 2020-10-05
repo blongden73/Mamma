@@ -53,9 +53,11 @@ if(peopleWrapper || practitionerWrapper) {
 //header menu
 var hamburger = document.querySelector('.m-hamburger');
 var menu = document.querySelector('.m-menu-wrapper');
+var logo = document.querySelector('.site-header__logo');
 hamburger.addEventListener('click', function(){
   this.classList.toggle('active');
   menu.classList.toggle('display');
+  logo.classList.toggle('open');
 });
 
 //carousel

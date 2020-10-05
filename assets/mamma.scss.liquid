@@ -1103,6 +1103,17 @@ pre {
         width: 180px;
       }
     }
+
+    .open {
+      svg {
+        path {
+          fill:$m-cream;
+          @include media-query($medium-up) {
+            fill: inherit;
+          }
+      }
+      }
+    }
   }
 
   .home & {
