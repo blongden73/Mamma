@@ -1091,6 +1091,14 @@ pre {
   left: 0;
   width: 100%;
 
+  &.shop.template-product {
+    .site-header__logo {
+      svg {
+        background-color: $m-blue;
+      }
+    }
+  }
+
   .discover &, .template-collection &, .about &, .experiences &, .practitioner &, .practice &, .home &, .template-cart &, .template-search &, .shop & , .template-article &, .template-captcha &{
     top: 0 !important;
   }
@@ -5296,7 +5304,7 @@ span.handwritten {
 .template-product.shop {
   .header-left {
     margin-top: 50px;
-    
+
     @include media-query ($medium-up) {
       margin-top: unset;
     }
