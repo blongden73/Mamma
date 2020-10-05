@@ -1,3 +1,8 @@
+{%- assign product_image_zoom_size = '1024x1024' -%}
+{%- assign product_image_scale = '2' -%}
+{%- assign enable_image_zoom = section.settings.enable_image_zoom -%}
+{%- assign compare_at_price = current_variant.compare_at_price -%}
+{%- assign price = current_variant.price -%}
 {%- assign current_variant = product.selected_or_first_available_variant -%}
 {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
 {%- assign metadata = product.metafields.experiences -%}
@@ -46,27 +51,12 @@
             </div>
           {% endif %}
           <div class="product__display-grid__col1">
-            <div class="product__display-grid__infobox" tabindex="0">
-              <span class="product__display-grid__text">
-                {% assign price_min = product.price_min | money %}
-                {% if product.price == 0 %}
-                    {% assign price_min = "FREE" %}
-                {% endif %}
-
-                {% if product.price_varies %}
-                    {{ price_min }}-{{ product.price_max | money }} per person
-                {% else %}
-                    {{ price_min }} per person
-                {% endif %}
-              </span>
-            </div>
-
-            <div class="product__dropdown-group" id="exp__booking-embed"></div>
-
-            {%- unless snippet_content contains "Liquid error" -%}
-              {{ snippet_content }}
-            {%- endunless -%}
-
+            {% capture "form_classes" -%}
+              product-form product-form-{{ section.id }}
+              {%- unless section.settings.show_variant_labels %} product-form--hide-variant-labels {% endunless %}
+              {%- if section.settings.enable_payment_button and product.has_only_default_variant %} product-form--payment-button-no-variants {%- endif -%}
+              {%- if current_variant.available == false %} product-form--variant-sold-out {%- endif -%}
+            {%- endcapture %}
           </div>
           {% comment %}
             NOTE: metadata.description is deprecated; please use product.description instead.
