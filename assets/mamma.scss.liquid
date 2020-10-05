@@ -5319,7 +5319,11 @@ span.handwritten {
       left: 0;
       transform: none;
       height: auto;
-      margin-left: 4%;
+      margin-left: 2%;
+
+        @include media-query ($medium-up) {
+          margin-left: 4%;
+        }
 
       .m-practioner-info {
         position: relative;
