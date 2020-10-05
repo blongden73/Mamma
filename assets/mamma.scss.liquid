@@ -4339,7 +4339,11 @@ span.handwritten {
     font-size: 16px !important;
     font-family:'Noe Text' !important;
     line-height: 1.4 !important;
-    max-width: 65%;
+    max-width: 90%;
+
+    @include media-query ($medium-up){
+      max-width: 65%;
+    }
   }
 }
 
@@ -5300,9 +5304,10 @@ span.handwritten {
   overflow: unset;
 
   .header-left {
-    height: 100vh;
+    height: 52vh;
 
     @include media-query ($medium-up) {
+      height: 100vh;
       position: sticky;
       position: -webkit-sticky; /* for Safari */
       position: sticky;
