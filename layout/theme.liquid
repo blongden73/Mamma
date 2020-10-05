@@ -126,7 +126,7 @@
   {% section 'header' %}
 
   <div class="page-container drawer-page-content" id="PageContainer">
-    {% if template.suffix == 'experiences' or if template.suffix == 'shop' %}
+    {% if template.suffix == 'experiences' or template.suffix == 'shop' %}
       {{ content_for_layout }}
       {% section 'footer' %}
     {% elsif template == 'index' %}
