@@ -5293,6 +5293,16 @@ span.handwritten {
   // }
 }
 
+.template-product.shop {
+  .header-left {
+    margin-top: 50px;
+    
+    @include media-query ($medium-up) {
+      margin-top: unset;
+    }
+  }
+}
+
 .uk-animation-fade {
   animation-name: uk-fade;
   animation-duration: 0.8s;
