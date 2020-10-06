@@ -233,6 +233,7 @@ function videoPlayers(){
 
 function tagsearch(){
   var searchButton = document.querySelector('.m-button__search');
+  if(searchButton) {
   searchButton.addEventListener('click', function(e){
     e.preventDefault();
     var offering = document.querySelector('.offering-select');
@@ -240,12 +241,11 @@ function tagsearch(){
     var wellbeing = document.querySelector('.wellbeing-select');
     var search = document.querySelector('.custom-m-search');
     console.log(offering.value, how.value, wellbeing.value, search.value);
-    if(search.value) {
-      var url = '/search?q=' + search.value + '+tag%3A' + offering.value.replace(' ', '+') + '+tag%3A' + wellbeing.value;
-      console.log(url);
-      window.location.replace(url);
-    }
+    var url = '/search?q=' + search.value + '+tag%3A' + offering.value.replace(' ', '+') + '+tag%3A' + wellbeing.value;
+    console.log(url);
+    window.location.replace(url);
   });
+  }
 }tagsearch();
 
 function signup(){
