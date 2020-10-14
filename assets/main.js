@@ -241,13 +241,13 @@ function tagsearch(){
     var wellbeing = document.querySelector('.wellbeing-select');
     var search = document.querySelector('.custom-m-search');
     console.log(offering.value, how.value, wellbeing.value, search.value);
-    if(url && !how && !wellbeing && !offering) {
+    if(search && !how && !wellbeing && !offering) {
       var url = '/search?q=' + search.value;
     }
-    if(url && !how && !wellbeing && offering) {
+    if(search && !how && !wellbeing && offering) {
       var url = '/search?q=' + search.value + '+tag%3A' + offering.value.replace(' ', '+');
     }
-    if(url && !how && wellbeing && offering) {
+    if(search && !how && wellbeing && offering) {
       var url = '/search?q=' + search.value + '+tag%3A' + offering.value.replace(' ', '+') + '+tag%3A' + wellbeing.value;
     }
 
