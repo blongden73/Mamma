@@ -2183,7 +2183,9 @@ pre {
     height: 188px;
 
     &:hover {
-
+      .play-button {
+        transform: translate(-50%, -50%) scale(1.2);
+      }
     }
 
     img {
@@ -2203,6 +2205,13 @@ pre {
   background-color: $m-blue;
   z-index: 1;
 
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
   .play-button {
     width: 80px;
     height: 80px;
@@ -2212,6 +2221,7 @@ pre {
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
+    transition: all 0.2s ease-in-out;
 
     span {
       top: 50%;
