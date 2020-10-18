@@ -322,10 +322,10 @@
   </div>
   <h1>Subscribe to <span class="handwritten">get good news</span></h1>
   <p>Be the first to hear about upcoming classes, workshops and events</p>
-  {%- assign formId = 'ContactFooter' -%}
+  {%- assign formId = 'ContactFooterSignUp' -%}
   {% form 'customer', id: formId, novalidate: 'novalidate' %}
     {%- if form.posted_successfully? -%}
-      <p class="form-message form-message--success" tabindex="-1" data-form-status>
+      <p class="form-message form-message--success form-message--success__sign-up" tabindex="-1" data-form-status>
         {{ 'general.newsletter_form.confirmation' | t }}
       </p>
     {%- endif -%}

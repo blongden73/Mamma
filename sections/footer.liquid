@@ -157,7 +157,7 @@
                   {%- assign formId = 'ContactFooter' -%}
                   {% form 'customer', id: formId, novalidate: 'novalidate' %}
                     {%- if form.posted_successfully? -%}
-                      <p class="form-message form-message--success" tabindex="-1" data-form-status>
+                      <p class="form-message form-message--success form-message--success__footer" tabindex="-1" data-form-status>
                         {{ 'general.newsletter_form.confirmation' | t }}
                         <span>You will now recieve our newsletters</span>
                         <span class="close-message">Close</span>

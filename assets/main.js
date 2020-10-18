@@ -304,7 +304,7 @@ function signup(){
 }signup();
 
 function formMessage(){
-  var formMessageSuccess = document.querySelector('.form-message--success');
+  var formMessageSuccess = document.querySelector('.form-message--success__footer');
   var closeMessage = document.querySelector('.close-message');
   if(formMessageSuccess) {
     console.log('success');
