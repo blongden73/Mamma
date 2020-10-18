@@ -52,6 +52,7 @@ if(peopleWrapper || practitionerWrapper) {
     var block = value.split('\r\n');
     console.log(block.length, 'split');
     block[0] = "<p><strong>" + block[0] + "</strong>";
+    var newBlock;
     for(i=0; i < block.length; i++) {
       if(block[i] === "") {
         if(i <= (block.length - 2)) {
@@ -60,8 +61,9 @@ if(peopleWrapper || practitionerWrapper) {
         block[i] = "</p>";
       }
       }
-      console.log(block);
+      newBlock = block.join('');
     }
+    return newBlock;
   })
   app.log();
 }
