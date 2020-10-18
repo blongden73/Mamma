@@ -3482,6 +3482,20 @@ span.handwritten {
 
 .m-page-header {
 
+  &.shop-header {
+    .header-left img {
+      @include media-query ($medium-up){
+        width: 80%;
+        height: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-top: 50%;
+        transform: translateY(-45%);
+      }
+    }
+  }
+
   width: 100%;
   @include media-query ($medium-up){
       height: 100vh;
