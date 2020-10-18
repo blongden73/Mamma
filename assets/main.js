@@ -58,16 +58,18 @@ if(peopleWrapper || practitionerWrapper) {
       if(block[i] === "") {
         if(i <= (block.length - 2)) {
         block[i] = "</p><p>";
+        } else {
+          block[i] = "</p>";
+        }
+      } else if(block[i].indexOf('What does a') !== -1){
+          block[i] = "<strong>" + block[i] + "</strong>";
+      } else if(block[i].indexOf('This is for you') !== -1) {
+          block[i] = "<strong>" + block[i] + "</strong>";
+      } else if(block[i].indexOf('3 things about') !== -1) {
+        block[i] = "<strong>" + block[i] + "</strong>";
       } else {
-        block[i] = "</p>";
+        block[i] = block[i] + "</br>";
       }
-    }else if(block[i].indexOf('What does a') !== -1){
-        block[i] = "<strong>" + block[i] + "</strong>";
-    } else if(block[i].indexOf('This is for you') !== -1) {
-        block[i] = "<strong>" + block[i] + "</strong>";
-    } else if(block[i].indexOf('3 things about') !== -1) {
-      block[i] = "<strong>" + block[i] + "</strong>";
-    }
       newBlock = block.join('');
     }
     return newBlock;
