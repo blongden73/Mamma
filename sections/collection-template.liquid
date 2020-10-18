@@ -51,6 +51,7 @@
             <p v-if="practioner.social_ig"><span uk-icon="icon: instagram"></span>${practioner.social_ig}</p>
             <p v-if="practioner.social_tw"><span uk-icon="icon: twitter"></span>${practioner.social_tw}</p>
             <p v-if="practioner.social_fb"><span uk-icon="icon: facebook"></span>${practioner.social_fb}</p>
+            {% capture emailPraction %}${practioner.email}{% endcapture %}
 
             <div class="header-right-after-search">
               <div class="dot"></div>
@@ -160,6 +161,7 @@
 </div>
 
 <div class="contact">
+  {{emailPraction}}
   {% assign practionerNameSplit = collection.handle | split: '-' %}
   {% assign practionerName = practionerNameSplit[0] %}
   {% include 'contact-form-practice' %}
