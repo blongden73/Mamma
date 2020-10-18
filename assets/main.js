@@ -307,7 +307,9 @@ function formMessage(){
   var formMessageSuccess = document.querySelector('.form-message--success');
   var closeMessage = document.querySelector('.close-message');
   if(formMessageSuccess) {
+    console.log('success');
     closeMessage.addEventListener('click', function(){
+      console.log('clcike');
       formMessageSuccess.classList.add('close');
     });
   }
