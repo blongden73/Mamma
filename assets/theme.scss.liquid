@@ -2452,7 +2452,7 @@ textarea {
 .form-message--success {
   border: 3px solid #ED4D1C;
   background-color: #EAC3B3;
-  color: #272D7A;
+  color: #272D7A !important;
   display: block;
   width: 30%;
   position: fixed;
@@ -2470,6 +2470,9 @@ textarea {
     display: block;
 
     &.close {
+      font-size: 16px;
+      font-weight: 900;
+      margin-top: 10px;
       font-family: 'Noe Text';
     }
   }
