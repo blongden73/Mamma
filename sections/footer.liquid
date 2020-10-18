@@ -159,6 +159,8 @@
                     {%- if form.posted_successfully? -%}
                       <p class="form-message form-message--success" tabindex="-1" data-form-status>
                         {{ 'general.newsletter_form.confirmation' | t }}
+                        <span>You will now recieve our newsletters</span>
+                        <span class="close">Close</span>
                       </p>
                     {%- endif -%}
                     <input type="hidden" name="contact[tags]" value="newsletter">
