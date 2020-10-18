@@ -54,7 +54,7 @@ if(peopleWrapper || practitionerWrapper) {
     block[0] = "<p><strong>" + block[0] + "</strong>";
     for(i=0; i < block.length; i++) {
       if(block[i] === "") {
-        if(i <= block.length) {
+        if(i <= (block.length - 2)) {
         block[i] = "</p><p>";
       } else {
         block[i] = "</p>";
