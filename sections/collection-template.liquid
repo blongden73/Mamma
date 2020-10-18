@@ -42,9 +42,7 @@
       <div class="page-width">
         <div class="flex">
           <div class="m-people-info-left">
-            <pre>
-              <p>${practioner.description | replacePractice}</p>
-            </pre>
+              <div class="m-people-container" v-html="practioner.description | replacePractice"></div>
               <a href="#collection-template"><div class="m-button">Book Now</div></a>
           </div>
           <div class="m-people-info-center">
