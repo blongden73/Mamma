@@ -47,12 +47,21 @@ if(peopleWrapper || practitionerWrapper) {
       }
     }
   })
-  Vue.filter('replacePractice', function (value) {
+  Vue.filter('cleaner', function (value) {
     console.log('running function')
     var block = value.split('\r\n');
     console.log(block.length, 'split');
-    block[0] = "<p>" + block[0] + "</p>";
-    console.log(block);
+    block[0] = "<p><strong>" + block[0] + "</strong>";
+    for(i=0; i < block.length; i++) {
+      if(block[i] === "") {
+        if(i <= block.length) {
+        block[i] = "</p><p>";
+      } else {
+        block[i] = "</p>";
+      }
+      }
+      console.log(block);
+    }
   })
   app.log();
 }
