@@ -51,6 +51,7 @@ if(peopleWrapper || practitionerWrapper) {
     console.log('running function')
     var block = value.split('\r\n');
     console.log(block.length, 'split');
+    block[0] = "<p>" block[0] "</p>";
     console.log(block);
   })
   app.log();
