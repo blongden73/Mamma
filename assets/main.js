@@ -47,6 +47,11 @@ if(peopleWrapper || practitionerWrapper) {
       }
     }
   })
+  Vue.filter('replacePractice', function (value) {
+    var block = value.split('\r\n');
+    console.log(block.length);
+    
+  })
   app.log();
 }
 
