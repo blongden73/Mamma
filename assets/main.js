@@ -47,7 +47,7 @@ if(peopleWrapper || practitionerWrapper) {
       }
     }
   })
-  Vue.filter('cleaner', function (value) {
+  Vue.filter('cleaning', function (value) {
     console.log('running function')
     var block = value.split('\r\n');
     console.log(block.length, 'split');
