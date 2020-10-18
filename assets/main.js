@@ -60,7 +60,13 @@ if(peopleWrapper || practitionerWrapper) {
       } else {
         block[i] = "</p>";
       }
-      }
+    }else if(block[i].indexOf('What does a') !== -1){
+        block[i] = "<strong>" + block[i] + "</strong>";
+    } else if(block[i].indexOf('This is for you') !== -1) {
+        block[i] = "<strong>" + block[i] + "</strong>";
+    } else if(block[i].indexOf('3 things about') !== -1) {
+      block[i] = "<strong>" + block[i] + "</strong>";
+    }
       newBlock = block.join('');
     }
     return newBlock;
