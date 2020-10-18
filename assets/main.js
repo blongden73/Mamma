@@ -305,7 +305,7 @@ function signup(){
 
 function formMessage(){
   var formMessageSuccess = document.querySelector('.form-message--success');
-  var closeMessage = formMessageSuccess.querySelector('.close');
+  var closeMessage = document.querySelector('.close-message');
   if(formMessageSuccess) {
     closeMessage.addEventListener('click', function(){
       formMessageSuccess.classList.add('close');
