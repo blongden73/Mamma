@@ -3854,7 +3854,11 @@ span.handwritten {
         h1 {
           font-size: 60px;
           line-height: 1;
-          margin-bottom: 0;
+          margin-bottom: 30px;
+
+          @include media-query ($medium-up){
+            margin-bottom: 0;
+          }
 
           &:nth-child(2) {
             margin-top: -10px;
