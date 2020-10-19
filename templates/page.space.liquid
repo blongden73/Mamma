@@ -52,6 +52,7 @@
         {% assign blog = blogs.Video %}
         {% for article in blog.articles %}
           <div class="watch-item blog-item">
+            <a class="read-item blog-item" href="{{ article.url }}"></a>
             {% assign video = article.metafields.airf.video %}
             <div class="video-placeholder">
               <img src="{{article | img_url: "large" }}" >
@@ -92,7 +93,7 @@
       <div class="item-wrapper">
         {% assign blog = blogs.Audio %}
         {% for article in blog.articles %}
-          <a class="listen-item blog-item" href-="{{ article_content }}">
+          <a class="listen-item blog-item" href-="{{ article.url }}">
             <img src="{{ article.image.src | img_url: 'large' }}">
             <h2><span>{{ article.title }}</span></h2>
             <h2 class="excerpt">{{ article.excerpt }}</h2>
