@@ -93,7 +93,7 @@
       <div class="item-wrapper">
         {% assign blog = blogs.Audio %}
         {% for article in blog.articles %}
-          <a class="listen-item blog-item" href-="{{ article.url }}">
+          <a class="listen-item blog-item" href="{{ article.url }}">
             <img src="{{ article.image.src | img_url: 'large' }}">
             <h2><span>{{ article.title }}</span></h2>
             <h2 class="excerpt">{{ article.excerpt }}</h2>
