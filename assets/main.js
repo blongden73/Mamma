@@ -261,6 +261,10 @@ function videoPlayers(){
 function tagsearch(){
   var searchButton = document.querySelector('.m-button__search');
   if(searchButton) {
+  var offering = document.querySelector('.offering-select');
+  var how = document.querySelector('.how-select');
+  var wellbeing = document.querySelector('.wellbeing-select');
+  var search = document.querySelector('.custom-m-search');
   console.log(offering.value, how.value, wellbeing.value, search.value);
   searchButton.addEventListener('click', function(e){
     e.preventDefault();
