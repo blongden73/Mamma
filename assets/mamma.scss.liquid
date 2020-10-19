@@ -3471,6 +3471,14 @@ span.handwritten {
 .site-footer {
   background-color: $m-cream !important;
 
+  .site-footer__linklist {
+    margin-bottom: 60px;
+
+    @include media-query($medium-up) {
+      margin-bottom: unset;
+    }
+  }
+
   .site-footer__linklist-item {
     font-family:'Noe Display';
     font-size: 20px;
