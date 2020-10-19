@@ -412,11 +412,17 @@ function formMessage(){
   var formMessageSuccess = document.querySelector('.form-message--success__footer');
   var formMessageSuccessContact = document.querySelector('.form-message--success__contact');
   var closeMessage = document.querySelector('.close-message');
-  if(formMessageSuccess || formMessageSuccessContact) {
+  if(formMessageSuccess) {
     console.log('success');
     closeMessage.addEventListener('click', function(){
       console.log('clcike');
       formMessageSuccess.classList.add('close');
+    });
+  }else if(formMessageSuccessContact) {
+    console.log('success');
+    closeMessage.addEventListener('click', function(){
+      console.log('clcike');
+      formMessageSuccessContact.classList.add('close');
     });
   }
 }formMessage();
