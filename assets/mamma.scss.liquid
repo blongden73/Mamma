@@ -4616,8 +4616,16 @@ span.handwritten {
     bottom: 70px;
     width: 100%;
     text-align: center;
+
+    .space &{
+      width: 78%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     @include media-query ($medium-up){
       bottom: 0;
+      width: 100%;
     }
 
     p {
