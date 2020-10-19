@@ -261,6 +261,7 @@ function videoPlayers(){
 function tagsearch(){
   var searchButton = document.querySelector('.m-button__search');
   if(searchButton) {
+  console.log(offering.value, how.value, wellbeing.value, search.value);
   searchButton.addEventListener('click', function(e){
     e.preventDefault();
     var offering = document.querySelector('.offering-select');
