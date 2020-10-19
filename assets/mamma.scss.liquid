@@ -3568,15 +3568,20 @@ span.handwritten {
 .m-page-header {
 
   &.shop-header {
+    .header-left {
+      border-right: 1px solid $m-blue;
+    }
     .header-left img {
       @include media-query ($medium-up){
-        width: 80%;
-        height: 80%;
+        width: 50%;
+        height: 50%;
         margin-left: auto;
         margin-right: auto;
         display: block;
         margin-top: 50%;
-        transform: translateY(-45%);
+        transform: translate(-50%, -50%);
+        position: absolute;
+        left: 50%;
       }
     }
   }
