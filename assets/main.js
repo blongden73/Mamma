@@ -284,6 +284,8 @@ function tagsearch(){
     // }
     if(search.value && offering.value == 'All' && how.value == 'All' && wellbeing.value == 'All') {
       var url = '/search?q=' + search.value;
+    } else if (search.value && !offering.value == 'All' && how.value == 'All' && wellbeing.value == 'All') {
+      var url = '/search?q=' + search.value + '+tag%3A' + offering.value;
     }
 
     console.log(url);
