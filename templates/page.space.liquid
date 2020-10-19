@@ -43,7 +43,7 @@
 <div class="white-bg blog-content-wrapper">
   <div class="page-width">
 
-    <div class="watch">
+    <div class="watch" id="watch">
       <div class="top-bar">
         <h1>Watch</h1>
         <h1 class="hide-mob"><span>Your Wellness Journey</span></h1>
@@ -68,7 +68,7 @@
       </div>
     </div>
 
-    <div class="read">
+    <div class="read" id="read">
       <div class="top-bar">
         <h1>Read</h1>
         <h1 class="hide-mob"><span>Your Wellness Journey</span></h1>
@@ -79,13 +79,12 @@
           <a class="read-item blog-item" href="{{ article.url }}">
             <img src="{{ article.image.src | img_url: 'large' }}">
             <h2><span>{{ article.title }}</span></h2>
-            <h2 class="excerpt">{{ article.excerpt }}</h2>
           </a>
         {% endfor %}
       </div>
     </div>
 
-    <div class="listen">
+    <div class="listen" id="listen">
       <div class="top-bar">
         <h1>Listen</h1>
         <h1 class="hide-mob"><span>Your Wellness Journey</span></h1>
