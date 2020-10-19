@@ -3144,7 +3144,11 @@ span.handwritten {
     a {
       color: $m-cream;
       display: block;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
+
+      @include media-query($medium-up){
+        margin-bottom: 5px;
+      }
 
       &:before {
         width: 5px;
