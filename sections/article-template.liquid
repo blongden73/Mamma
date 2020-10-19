@@ -12,7 +12,12 @@
 </div>
 
 <div class="article_image">
-  <img src="{{article | img_url: '1240x' }}">
+  {% if video and video != '&nbsp' %}
+    <div class="iframe-placeholder" data-frame='{{ video }}'></div>
+  {% else %}
+    <img src="{{article | img_url: '1240x' }}">
+  {% endif %}
+
 </div>
 
 <div class="rte">
