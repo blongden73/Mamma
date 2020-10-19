@@ -286,6 +286,10 @@ function tagsearch(){
       var url = '/search?q=' + search.value;
     } else if (search.value && offering.value != 'All' && how.value == 'All' && wellbeing.value == 'All') {
       var url = '/search?q=' + search.value + '+tag%3A' + offering.value;
+    } else if (search.value && offering.value == 'All' && how.value != 'All' && wellbeing.value == 'All') {
+      var url = '/search?q=' + search.value + '+tag%3A' + how.value;
+    }else if (search.value && offering.value == 'All' && how.value == 'All' && wellbeing.value != 'All') {
+      var url = '/search?q=' + search.value + '+tag%3A' + wellbeing.value;
     } else if (search.value && offering.value != 'All' && how.value != 'All' && wellbeing.value == 'All') {
       var url = '/search?q=' + search.value + '+tag%3A' + offering.value + '+tag%3A' + how.value;
     } else if (search.value && offering.value != 'All' && how.value != 'All' && wellbeing.value != 'All') {
