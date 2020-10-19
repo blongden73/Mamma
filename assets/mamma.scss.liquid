@@ -3675,7 +3675,7 @@ span.handwritten {
 
       h1 {
         text-align: center;
-        
+
         .discover & {
           width: 80%;
           margin-left: auto;
@@ -4086,11 +4086,17 @@ span.handwritten {
   .m-page-header {
     .header-right {
       .header-inner-content {
-        top: 55px;
+        top: 0;
         left: 0;
         bottom: auto;
         transform: translate(0,0);
         border-top: 1px solid $m-blue;
+        margin-top: 0;
+
+        @include media-query ($medium-up) {
+          top: 55px;
+          margin-top: 4%;
+        }
       }
     }
   }
