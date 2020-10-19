@@ -3652,6 +3652,10 @@ span.handwritten {
     position: relative;
     min-height: 96vh;
 
+    .space & {
+      min-height: 80vh;
+    }
+
     @include media-query($medium-up){
       min-height: 100vh;
       width: 50%;
@@ -3664,6 +3668,11 @@ span.handwritten {
       // margin-bottom: 60%;
       margin-top: 4%;
       margin-bottom: 20%;
+
+      .space & {
+        margin-bottom: 20%;
+      }
+
       @include media-query ($medium-up){
         position: absolute;
         top: 50%;
