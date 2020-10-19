@@ -13,6 +13,7 @@
 
 <div class="article_image">
   {% assign video = article.metafields.airf.video %}
+  {% assign audio = article.metafields.airf.audio %}
   {% if video and video != '&nbsp' %}
     {{ video }}
   {% elsif audio and audio != '&nbsp' %}
