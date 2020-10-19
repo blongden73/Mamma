@@ -3267,6 +3267,11 @@ span.handwritten {
         overflow: hidden;
         text-overflow: ellipsis;
         margin: 20px 10px 0 20px;
+        display: none;
+
+        @include media-query($widescreen){
+          display: block;
+        }
       }
     }
 
