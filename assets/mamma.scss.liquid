@@ -3226,7 +3226,7 @@ span.handwritten {
       z-index: 10;
       display: block;
       width: max-content;
-      line-height: 1;
+      line-height: 1.2;
       font-weight: 900;
       width: 100%;
       font-size: 14px;
@@ -3504,6 +3504,10 @@ span.handwritten {
     flex-direction: row;
     margin-top: 60px;
     margin-bottom: 30px;
+
+    @include media-query($medium-up) {
+      margin-top: 0px;
+    }
   }
 }
 
