@@ -61,8 +61,8 @@
               {% endfor %}
             </select>
           </li>
-          <li>
-            <select name="location" id="location" class="location-filter">
+          <!-- <li>
+            <select name="location" id="location" class="difficulty-filter">
               <option value="all">Filter by <span>Difficulty</span></option>
               <option value="all">All</option>
               {% capture optionsListDifficulty %}
@@ -77,9 +77,9 @@
                 <option value="{{difficulty | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{{difficulty | strip | strip_html | strip_newlines }}</option>
               {% endfor %}
             </select>
-          </li>
+          </li> -->
           <li>
-            <select name="location" id="location" class="location-filter">
+            <select name="location" id="location" class="type-filter">
               <option value="all">Filter by Type</option>
               <option value="all">All</option>
               {% capture optionsListType %}
