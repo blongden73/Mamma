@@ -32,7 +32,9 @@
               </svg>
               {% assign quote_one = page.metafields.airf.quote_one %}
               {% if quote_one and quote_one != '&nbsp' %}
-                  <h2>{{ quote_one }}</h2>
+                  <pre>
+                    <h2>{{ quote_one }}</h2>
+                  </pre>
               {% endif %}
             </div>
             <div class="quote cr-border">
@@ -41,7 +43,9 @@
               </svg>
               {% assign quote_two = page.metafields.airf.quote_two %}
               {% if quote_two and quote_two != '&nbsp' %}
-                  <h2>{{ quote_two }}</h2>
+                  <pre>
+                    <h2>{{ quote_two }}</h2>
+                  </pre>
               {% endif %}
             </div>
           </div>
