@@ -268,14 +268,17 @@ function tagsearch(){
     var wellbeing = document.querySelector('.wellbeing-select');
     var search = document.querySelector('.custom-m-search');
     console.log(offering.value, how.value, wellbeing.value, search.value);
-    if(search.value && !how.value && !wellbeing.value && !offering.value) {
+    // if(search.value && !how.value && !wellbeing.value && !offering.value) {
+    //   var url = '/search?q=' + search.value;
+    // }
+    // if(search.value  && !how.value  && !wellbeing.value  && offering.value ) {
+    //   var url = '/search?q=' + search.value + '+tag%3A' + offering.value.replace(' ', '+');
+    // }
+    // if(search.value  && !how.value  && wellbeing.value  && offering.value ) {
+    //   var url = '/search?q=' + search.value + '+tag%3A' + offering.value.replace(' ', '+') + '+tag%3A' + wellbeing.value;
+    // }
+    if(search.value) {
       var url = '/search?q=' + search.value;
-    }
-    if(search.value  && !how.value  && !wellbeing.value  && offering.value ) {
-      var url = '/search?q=' + search.value + '+tag%3A' + offering.value.replace(' ', '+');
-    }
-    if(search.value  && !how.value  && wellbeing.value  && offering.value ) {
-      var url = '/search?q=' + search.value + '+tag%3A' + offering.value.replace(' ', '+') + '+tag%3A' + wellbeing.value;
     }
 
     console.log(url);
