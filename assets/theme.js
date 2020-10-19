@@ -4536,6 +4536,7 @@ window.theme = window.theme || {};
   }
 
   function isPredictiveSearchSupported() {
+    console.log('ispredictive??');
     var shopifyFeatures = JSON.parse($('#shopify-features').text());
 
     return shopifyFeatures.predictiveSearch;
@@ -4546,6 +4547,7 @@ window.theme = window.theme || {};
   }
 
   function canInitializePredictiveSearch() {
+    console.log(isPredictiveSearchSupported(), isPredictiveSearchEnabled());
     return isPredictiveSearchSupported() && isPredictiveSearchEnabled();
   }
 
