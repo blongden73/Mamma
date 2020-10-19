@@ -208,6 +208,7 @@ filters();
 function calFilters() {
   var filter = document.querySelector('.practices-filter');
   var locationfilter = document.querySelector('.location-filter');
+  var practitionerfilter = document.querySelector('.practitioner-filter');
   if(filter){
   var options = filter.querySelectorAll('option');
   var results = document.querySelectorAll('.m-cal-item');
@@ -240,6 +241,34 @@ function calFilters() {
   var options = locationfilter.querySelectorAll('option');
   var results = document.querySelectorAll('.m-cal-item');
     locationfilter.addEventListener('change', function(){
+      console.log(this.value);
+      var selectedFilter = this.value;
+      var selectedResults = document.querySelectorAll('.m-cal-item.'+selectedFilter);
+      console.log(selectedResults);
+
+      if(this.value != 'all'){
+        for(i = 0; i < results.length; i++) {
+          console.log('loop');
+          results[i].classList.remove('found');
+          results[i].classList.add('hide');
+        }
+        for(j = 0; j < selectedResults.length; j++){
+          selectedResults[j].classList.remove('hide');
+          selectedResults[j].classList.add('found');
+        }
+      }else {
+        for(i = 0; i < results.length; i++) {
+          console.log('loop');
+          results[i].classList.remove('hide');
+          results[i].classList.add('found');
+        }
+      }
+    });
+  }
+  if(practitionerfilter){
+  var options = locationfilter.querySelectorAll('option');
+  var results = document.querySelectorAll('.m-cal-item');
+    practitionerfilter.addEventListener('change', function(){
       console.log(this.value);
       var selectedFilter = this.value;
       var selectedResults = document.querySelectorAll('.m-cal-item.'+selectedFilter);
