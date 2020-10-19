@@ -410,8 +410,9 @@ function signup(){
 
 function formMessage(){
   var formMessageSuccess = document.querySelector('.form-message--success__footer');
+  var formMessageSuccessContact = document.querySelector('.form-message--success__contact');
   var closeMessage = document.querySelector('.close-message');
-  if(formMessageSuccess) {
+  if(formMessageSuccess || formMessageSuccessContact) {
     console.log('success');
     closeMessage.addEventListener('click', function(){
       console.log('clcike');

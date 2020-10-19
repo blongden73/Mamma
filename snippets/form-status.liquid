@@ -9,7 +9,7 @@
     {% include 'form-status', form: form, form_id: formId, success_message: post_message %}
 {% endcomment %}
 {%- if form.posted_successfully? -%}
-  <p class="form-message form-message--success" tabindex="-1" data-form-status>
+  <p class="form-message form-message--success form-message--success__contact" tabindex="-1" data-form-status>
     {{ success_message | default: 'contact.form.post_success' | t }}
     <span class="close-message">Close</span>
   </p>
