@@ -12,6 +12,7 @@
 </div>
 
 <div class="article_image">
+  {% assign video = article.metafields.airf.video %}
   {% if video and video != '&nbsp' %}
     <div class="iframe-placeholder" data-frame='{{ video }}'></div>
   {% else %}
