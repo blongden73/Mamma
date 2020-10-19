@@ -2150,7 +2150,7 @@ pre {
 }
 
 .video-section {
-  margin-top: 60px;
+  margin-top: 30px;
   margin-bottom: 60px;
   padding-left: 5%;
   padding-right: 5%;
@@ -2159,6 +2159,11 @@ pre {
     padding-right: 10%;
   }
   .video-wrapper {
+    margin-top: 40px;
+    @include media-query ($medium-up){
+        margin-top: unset;
+    }
+
     iframe {
       height:43vw;
       width:100%;
@@ -2266,7 +2271,11 @@ pre {
 }
 
 .blog-content-wrapper {
-  padding:60px 20px;
+  padding:0px 20px;
+
+  @include media-query ($medium-up){
+    padding:60px 20px;
+  }
 }
 .watch, .read, .listen {
   padding-top:20px;
