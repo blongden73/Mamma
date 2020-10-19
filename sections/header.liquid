@@ -304,6 +304,15 @@
               {% endfor %}
             </div>
           </div>
+          <div class="m-menu-seven">
+            {% assign joinus = linklists.joinus %}
+            <h1><a href="/pages/contact">{{joinus.title}}</a></h1>
+            <div class="contact-menu">
+              {% for link in joinus.links %}
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              {% endfor %}
+            </div>
+          </div>
         </div>
       </div>
     </div>
