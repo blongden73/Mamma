@@ -11,6 +11,7 @@
 {%- if form.posted_successfully? -%}
   <p class="form-message form-message--success" tabindex="-1" data-form-status>
     {{ success_message | default: 'contact.form.post_success' | t }}
+    <span class="close-message">Close</span>
   </p>
 {%- endif -%}
 
