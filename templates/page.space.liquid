@@ -52,7 +52,7 @@
         {% assign blog = blogs.Video %}
         {% for article in blog.articles %}
           <div class="watch-item blog-item">
-            <a class="read-item blog-item" href="{{ article.url }}"></a>
+            <a href="{{ article.url }}"></a>
             {% assign video = article.metafields.airf.video %}
             <div class="video-placeholder">
               <img src="{{article | img_url: "large" }}" >
