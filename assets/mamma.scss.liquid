@@ -2595,7 +2595,7 @@ pre {
     .grid-item {
       border-bottom: 1px solid $m-blue;
     }
-    svg {
+    svg:not(.icon-error) {
       position: absolute;
       top: -50px;
       right: 10px;
@@ -5699,4 +5699,18 @@ span.handwritten {
   a {
     margin-left: 5px;
   }
+}
+
+//cart
+.cart__product-title {
+  font-family:'Noe Display' !important;
+
+  &:hover {
+    border-bottom: 0;
+  }
+}
+
+.product-details__item {
+  font-size: 16px;
+  line-height: 1.2;
 }
