@@ -2708,6 +2708,7 @@ pre {
     float: none;
     width: max-content;
     margin-top: 10px;
+    margin-bottom: 10px;
 
     @include media-query($medium-up) {
       float: right;
@@ -2949,9 +2950,11 @@ pre {
       color: $m-cream !important;
       max-width: 460px;
       font-size: 40px;
+      margin-bottom: 60%;
       @include media-query($medium-up){
         font-size: 4vw;
         margin-top: -90px;
+        margin-bottom: unset;
       }
     }
 
