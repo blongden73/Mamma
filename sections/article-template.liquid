@@ -12,12 +12,14 @@
 </div>
 
 <div class="article_image">
+
   {% assign video = article.metafields.airf.video %}
   {% assign audio = article.metafields.airf.audio %}
+  {% assign audioReplace = audio | replace: 'https://open.spotify.com/episode/' , 'https://open.spotify.com/embed-podcast/episode/' %}
   {% if video and video != '&nbsp' %}
     {{ video }}
   {% elsif audio and audio != '&nbsp' %}
-    {{ audio }}
+    <iframe src="{{ audioReplace }}" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
   {% else %}
     <img src="{{article | img_url: '1240x' }}">
   {% endif %}
