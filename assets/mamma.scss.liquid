@@ -2692,8 +2692,11 @@ pre {
       }
       textarea, input {
         border:none;
-        border-left:1px solid $m-blue;
         font-family:'Noe Text';
+
+        @include media-query($medium-up){
+          border-left:1px solid $m-blue;
+        }
       }
     }
   }
