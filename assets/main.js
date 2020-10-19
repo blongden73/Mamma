@@ -282,7 +282,7 @@ function tagsearch(){
     // if(search.value  && !how.value  && wellbeing.value  && offering.value ) {
     //   var url = '/search?q=' + search.value + '+tag%3A' + offering.value.replace(' ', '+') + '+tag%3A' + wellbeing.value;
     // }
-    if(search.value and offering.value == 'All' and how.value == 'All' and wellbeing.value == 'All') {
+    if(search.value == true and offering.value == 'All' and how.value == 'All' and wellbeing.value == 'All') {
       var url = '/search?q=' + search.value;
     }
 
