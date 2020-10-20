@@ -63,14 +63,6 @@
     <div class="m-calendar-wrapper search-results">
       <ul class="list-view-items">
         {% for item in search.results %}
-          {% assign practition = item.metafields.airf.practition %}
-          {% assign level = item.metafields.airf.level %}
-          {% assign pregnancy_ = item.metafields.airf.pregnancy_ %}
-          {% assign speed = item.metafields.airf.speed %}
-          {% assign space = item.metafields.airf.space %}
-          {% assign type = item.metafields.airf.type %}
-          {% assign practice = item.metafields.airf.practice %}
-          {% assign location = item.metafields.airf.location %}
           {% if item.object_type == 'product' %}
             <li class="list-view-item">
               {% if item.object_type == 'product' %}
@@ -97,7 +89,6 @@
                         {{ item.content | strip_html | truncate: 200 }}
                       </div>
                     </div>
-                    <span class="m-event-meta">{% if practition and practition != '&nbsp' %}{{practition}} • {% endif %}{% if speed and speed != '&nbsp' %}{{speed}} • {% endif %}{% if space and space != '&nbsp' %}{{space}} • {% endif %}{% if type and type != '&nbsp' %}{{type}} • {% endif %}{% if practice and practice != '&nbsp' %}{{practice}}{% endif %}{% if pregnancy_ == "true" %} • Pregnancy{% endif %} • {% if location and location != '&nbsp' %}{{location}}{% endif %} <a href="{{events.url}}">Read More</a></span>
                   </div>
                 </div>
               {% endif %}
