@@ -896,7 +896,9 @@ h1, h2, h3, h4 {
   }
 
   &.blue {
-    border-bottom: 2px solid $m-blue;
+    @include media-query ($medium-up){
+      border-bottom: 2px solid $m-blue;
+    }
   }
 }
 
