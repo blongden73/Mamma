@@ -131,14 +131,15 @@
           {%- assign durationMinutes = metadata.duration | modulo: 60 -%}
             <div class="collections-product">
               <h1>
-                <span class="practice">Practice</span>
-                <span>
-                  {% if durationHours != 0 %}
-                    {{ durationHours }}h
-                  {% endif %}
-                  {% if durationMinutes != 0 %}
-                    {{ durationMinutes }}min
-                  {% endif %}
+                <span class="practice">
+                  <span>
+                    {% if durationHours != 0 %}
+                      {{ durationHours }}h
+                    {% endif %}
+                    {% if durationMinutes != 0 %}
+                      {{ durationMinutes }}min
+                    {% endif %}
+                  </span>
                 </span>
                 {{product.title}}
               </h1>
