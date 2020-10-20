@@ -3710,7 +3710,11 @@ span.handwritten {
       // margin-top: 60%;
       // margin-bottom: 60%;
       margin-top: 4%;
-      margin-bottom: 20%;
+      margin-bottom: 10%;
+
+      @include media-query($medium-up){
+        margin-bottom: 20%;
+      }
 
       .template-collection & {
         margin-bottom: 0;
