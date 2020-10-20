@@ -3431,11 +3431,29 @@ span.handwritten {
   }
 
   &.home {
+
+    .m-event-meta {
+      @include media-query ($medium-up) {
+        width: 59%;
+        display: block;
+      }
+      @include media-query ($widescreen) {
+        width: unset;
+      }
+    }
+
     .m-button {
       border: 1px solid $m-blue;
       background-color: transparent;
       color: $m-blue;
 
+      @include media-query ($medium-up) {
+        margin-top: -63px;
+      }
+
+      @include media-query ($widescreen) {
+        margin-top: -23px;
+      }
 
       &:hover {
         background-color: $m-blue !important;
@@ -3494,6 +3512,7 @@ span.handwritten {
       .m-event-meta {
         @include media-query ($medium-up) {
           width: 59%;
+          display: block;
         }
         @include media-query ($widescreen) {
           width: unset;
