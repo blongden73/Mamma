@@ -13,9 +13,7 @@
             <div class="m-practioner-info">
               <h1>${practioner.full_name}</h1>
               <h2>${practioner.practice}</h2>
-              <pre>
-                <p>${practioner.short_bio}</p>
-              </pre>
+              <span v-html="$options.filters.replacePractice(practioner.short_bio)"></span>
               <a href="#collection-template"><div class="m-button">Book Now</div></a>
             </div>
           </div>
