@@ -3473,6 +3473,14 @@ span.handwritten {
         background-color: transparent;
         color: $m-cream;
 
+        @include media-query ($medium-up) {
+          margin-top: -63px;
+        }
+
+        @include media-query ($widescreen) {
+          margin-top: -23px;
+        }
+
         &:hover {
           background-color: $m-cream !important;
           color: $m-blue !important;
@@ -3481,6 +3489,15 @@ span.handwritten {
 
       li {
         border-color: $m-cream;
+      }
+
+      .m-event-meta {
+        @include media-query ($medium-up) {
+          width: 59%;
+        }
+        @include media-query ($widescreen) {
+          width: unset;
+        }
       }
 
       h1, .m-event-title, .m-event-meta {
