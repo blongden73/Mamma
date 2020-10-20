@@ -109,7 +109,7 @@ if(carouselImages.length >= 1){
       carouselImages[0].classList.add('display');
       blobList[0].classList.add('display');
     }
-  }, 1500);
+  }, 1800);
 }
 
 function elementInViewport(el) {
