@@ -889,8 +889,11 @@ h1, h2, h3, h4 {
 }
 
 .underline {
-  border-bottom: 2px solid $m-cream;
-  padding-bottom: 4px;
+
+  @include media-query ($medium-up){
+    border-bottom: 2px solid $m-cream;
+    padding-bottom: 4px;
+  }
 
   &.blue {
     border-bottom: 2px solid $m-blue;
@@ -1858,11 +1861,15 @@ pre {
         }
 
         h2 {
-          font-size: 26px;
+          font-size: 23px;
           line-height: 1.2;
           margin-bottom:0;
           max-width: 620px;
           margin-top: 10px;
+
+          @include media-query ($medium-up){
+            font-size: 26px;
+          }
         }
       }
     }
