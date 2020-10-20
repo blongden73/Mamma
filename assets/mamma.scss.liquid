@@ -3700,6 +3700,10 @@ span.handwritten {
       margin-top: 4%;
       margin-bottom: 20%;
 
+      .template-collection & {
+        margin-bottom: 0;
+      }
+
       .space & {
         margin-bottom: 20%;
       }
@@ -3801,10 +3805,15 @@ span.handwritten {
       }
 
       .m-practioner-info {
-
         bottom: 10px;
         left: 0%;
         margin-bottom: 60px;
+
+        span {
+          p {
+            margin-bottom: 10px;
+          }
+        }
         @include media-query ($medium-up){
             position: absolute;
             margin-bottom: 0;
@@ -3854,6 +3863,7 @@ span.handwritten {
           background-color: #fff;
           border: 1px solid $m-blue;
           color: $m-blue;
+          margin-top: 40px;
 
           &:hover {
             background-color: $m-blue;
