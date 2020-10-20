@@ -3644,6 +3644,14 @@ span.handwritten {
     width: 100%;
     position: relative;
     height: 96vh;
+
+    .template-collection & {
+      height: 80vh;
+
+      @include media-query($medium-up){
+        height: 100vh;
+      }
+    }
     @include media-query($medium-up){
       width: 50%;
       height: 100vh;
