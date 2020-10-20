@@ -10,7 +10,6 @@
       <h1>Message <span>{{ practionerName }}</span></h1>
       <div class="grid__item">
         <label for="{{ formId }}-name">Your {{ 'contact.form.name' | t }}</label>
-        <input type="hidden" name="contact[email]" value="{{emailPraction}}" />
         <input type="text" id="{{ formId }}-name" name="contact[{{ 'contact.form.name' | t }}]" value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
       </div>
       <div class="grid__item">
