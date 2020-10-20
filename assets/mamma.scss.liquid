@@ -3693,7 +3693,11 @@ span.handwritten {
   .header-right {
     width: 100%;
     position: relative;
-    min-height: 96vh;
+    min-height: auto;
+
+    .home & {
+      min-height: 96vh;
+    }
 
     .space & {
       min-height: 80vh;
@@ -3710,7 +3714,7 @@ span.handwritten {
       // margin-top: 60%;
       // margin-bottom: 60%;
       margin-top: 4%;
-      margin-bottom: 20%;
+      margin-bottom: 10%;
 
       .template-collection & {
         margin-bottom: 0;
