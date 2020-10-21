@@ -19,7 +19,7 @@
           {% assign type = events.metafields.airf.type %}
           {% assign practice = events.metafields.airf.practice %}
 
-          {% if tags contains 'Events' %}
+          {% if tags contains 'Events' or if tags contains 'Events' %}
             <li>
               <span class="m-event-title">{{events.title}}</span>
               <span class="m-event-meta">{% if practition %}{{practition}} • {% endif %}{% if speed %}{{speed}} • {% endif %}{% if space %}{{space}} • {% endif %}{% if type %}{{type}} • {% endif %}{% if practice %}{{practice}}{% endif %}{% if pregnancy_  == "true" %} • Pregnancy{% endif %} <a href="{{events.url}}">Read More</a></span>
