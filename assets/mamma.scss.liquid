@@ -3470,7 +3470,7 @@ span.handwritten {
 
     &.hasEvents {
       .no-events {
-        display: none;
+        display: none !important;
       }
     }
 
@@ -3513,7 +3513,11 @@ span.handwritten {
         border-color: $m-cream;
         display: none;
 
-        &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+        &.no-events {
+          display: block;
+        }
+
+        &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6) {
           display: block;
         }
       }
