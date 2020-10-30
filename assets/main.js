@@ -426,3 +426,14 @@ function formMessage(){
     });
   }
 }formMessage();
+
+function contactMessage(){
+  var isContact = document.querySelector('.template-page.contact');
+  if(isContact) {
+    var contactUrl = window.location.href;
+    if(contactUrl.includes('?')) {
+        var urlSplit = contactUrl.split('?');
+        console.log(urlSplit, 'booking form url');
+    }
+  }
+}contactMessage();
