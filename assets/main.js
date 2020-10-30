@@ -429,10 +429,11 @@ function formMessage(){
 
 function contactMessage(){
   var isContact = document.querySelector('.template-page.contact');
+  var emailSubject = document.querySelector('.email-subject');
   if(isContact) {
     var contactUrl = window.location.href;
     if(contactUrl.includes('?')) {
-        var urlSplit = contactUrl.split('?');
+        var urlSplit = contactUrl.split('?').replaceAll('-', ' ');
         console.log(urlSplit[1], 'booking form url');
     }
   }

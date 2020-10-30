@@ -64,6 +64,10 @@
             </span>
           {%- endif -%}
         </div>
+        <div class="grid__item">
+          <label for="{{ formId }}-subject">Subject</label>
+          <input class="email-subject" type="text" id="{{ formId }}-subject" value="{% if form[subject] %}{{ form[subject] }}{% endif %}" placeholder="">
+        </div>
       </div>
 
       <div class="contact-form-right">
