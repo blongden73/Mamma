@@ -434,8 +434,9 @@ function contactMessage(){
     var contactUrl = window.location.href;
     if(contactUrl.includes('?')) {
         var urlSplit = contactUrl.split('?');
-        var replaceSplit = urlSplit[0].replace(/-/g, ' ');
+        var replaceSplit = urlSplit[1].replace(/-/g, ' ');
         console.log(replaceSplit, 'booking form url');
+        emailSubject.value = replaceSplit;
     }
   }
 }contactMessage();
