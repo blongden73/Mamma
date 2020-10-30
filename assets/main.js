@@ -434,7 +434,7 @@ function contactMessage(){
     var contactUrl = window.location.href;
     if(contactUrl.includes('?')) {
         var urlSplit = contactUrl.split('?');
-        var replaceSplit = urlSplit.replaceAll('-', ' ');
+        var replaceSplit = urlSplit.replace(/-/g, ' ');
         console.log(replaceSplit, 'booking form url');
     }
   }
