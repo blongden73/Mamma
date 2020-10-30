@@ -433,7 +433,7 @@ function contactMessage(){
     var contactUrl = window.location.href;
     if(contactUrl.includes('?')) {
         var urlSplit = contactUrl.split('?');
-        console.log(urlSplit, 'booking form url');
+        console.log(urlSplit[1], 'booking form url');
     }
   }
 }contactMessage();
