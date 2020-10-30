@@ -1,4 +1,4 @@
-<div class="m-calendar events {% for events in collections.all.products %}{% if events.tags contains 'Events' %} hasEvents {% endif %}{% endfor %}">
+<div class="m-calendar events {% for events in collections.all.products %}{% if events.tags contains 'Events' or events.tags contains 'Retreats' %} hasEvents {% endif %}{% endfor %}">
   <div class="page-width">
     <div class="m-calendar-wrapper">
       <div class="flex">
