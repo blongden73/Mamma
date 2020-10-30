@@ -433,8 +433,9 @@ function contactMessage(){
   if(isContact) {
     var contactUrl = window.location.href;
     if(contactUrl.includes('?')) {
-        var urlSplit = contactUrl.split('?').replaceAll('-', ' ');
-        console.log(urlSplit[1], 'booking form url');
+        var urlSplit = contactUrl.split('?');
+        var replaceSplit = urlSplit.replaceAll('-', ' ');
+        console.log(replaceSplit, 'booking form url');
     }
   }
 }contactMessage();
