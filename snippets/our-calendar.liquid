@@ -37,10 +37,12 @@
               <option value="all">All</option>
               {% capture optionsListLocation %}
               {% for events in collections.all.products %}
-                {% assign location = events.metafields.airf.location %}
-                {% if location and location != '&nbsp' %}
-                  {{location}},
+                {% if events.metafields.airf.practice and events.metafields.airf.practice != '&nbsp' %}
+                  {% assign location = events.metafields.airf.location %}
+                {% else %}
+                  {% assign practice = 'blank' %}
                 {% endif %}
+                  {{location}},
               {% endfor %}
               {% endcapture %}
               {% assign uniqlocationOptions = optionsListLocation | split: ',' | uniq | join: ',' %}
@@ -56,10 +58,12 @@
               <option value="all">All</option>
               {% capture optionsListPractitioner %}
               {% for events in collections.all.products %}
-                {% assign practition = events.metafields.airf.practition %}
-                {% if practition and practition != '&nbsp' %}
-                  {{practition}},
+                {% if events.metafields.airf.practice and events.metafields.airf.practice != '&nbsp' %}
+                  {% assign practition = events.metafields.airf.practition %}
+                {% else %}
+                  {% assign practice = 'blank' %}
                 {% endif %}
+                  {{practition}},
               {% endfor %}
               {% endcapture %}
               {% assign uniqpractiotionerOptions = optionsListPractitioner | split: ',' | uniq | join: ',' %}
@@ -92,10 +96,12 @@
               <option value="all">All</option>
               {% capture optionsListType %}
               {% for events in collections.all.products %}
-                {% assign type = events.metafields.airf.type %}
-                {% if type and type != '&nbsp' %}
-                  {{type}},
+                {% if events.metafields.airf.practice and events.metafields.airf.practice != '&nbsp' %}
+                  {% assign type = events.metafields.airf.type %}
+                {% else %}
+                  {% assign practice = 'blank' %}
                 {% endif %}
+                  {{type}},
               {% endfor %}
               {% endcapture %}
               {% assign uniqtypeOptions = optionsListType | split: ',' | uniq | join: ',' %}
