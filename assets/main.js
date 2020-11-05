@@ -301,7 +301,8 @@ function calFilters() {
     typefilter.addEventListener('change', function(){
       console.log(this.value);
       var selectedFilter = this.value;
-      var selectedResults = document.querySelectorAll("[class='m-cal-item "+selectedFilter+"']");
+      var selectedResults = document.querySelectorAll("[data-type='"+selectedFilter+"']");
+      console.log("[data-type='"+selectedFilter+"']");
       console.log(selectedResults);
 
       if(this.value != 'all'){
