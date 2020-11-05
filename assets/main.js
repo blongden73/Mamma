@@ -300,8 +300,14 @@ function calFilters() {
   var results = document.querySelectorAll('.m-cal-item');
     typefilter.addEventListener('change', function(){
       console.log(this.value);
-      var selectedFilter = this.value;
-      var selectedResults = document.querySelectorAll('[class=m-cal-item '+selectedFilter+']');
+      //hate to add such a specific thing but HOT FIX
+      if(this.value != '1-1-session') {
+        var selectedFilter = this.value;
+      }
+      else {
+        var selectedFilter = 'one-one-session';
+      }
+      var selectedResults = document.querySelectorAll('.m-cal-item.'+selectedFilter);
       console.log(selectedResults);
 
       if(this.value != 'all'){
