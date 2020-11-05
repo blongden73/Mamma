@@ -37,7 +37,9 @@
               {% capture optionsListLocation %}
               {% for events in collections.all.products %}
                 {% assign location = events.metafields.airf.location %}
-                {{location}},
+                {% if location and location != '&nbsp' %}
+                  {{location}},
+                {% endif %}
               {% endfor %}
               {% endcapture %}
               {% assign uniqlocationOptions = optionsListLocation | split: ',' | uniq | join: ',' %}
@@ -54,7 +56,9 @@
               {% capture optionsListPractitioner %}
               {% for events in collections.all.products %}
                 {% assign practition = events.metafields.airf.practition %}
-                {{practition}},
+                {% if practition and practition != '&nbsp' %}
+                  {{practition}},
+                {% endif %}
               {% endfor %}
               {% endcapture %}
               {% assign uniqpractiotionerOptions = optionsListPractitioner | split: ',' | uniq | join: ',' %}
@@ -88,7 +92,9 @@
               {% capture optionsListType %}
               {% for events in collections.all.products %}
                 {% assign type = events.metafields.airf.type %}
-                {{type}},
+                {% if type and type != '&nbsp' %}
+                  {{type}},
+                {% endif %}
               {% endfor %}
               {% endcapture %}
               {% assign uniqtypeOptions = optionsListType | split: ',' | uniq | join: ',' %}
