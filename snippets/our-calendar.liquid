@@ -91,6 +91,7 @@
               {% assign uniqtypeOptions = optionsListType | split: ',' | uniq | join: ',' %}
               {% assign typeOptions = uniqtypeOptions | split: ',' %}
               {% for type in typeOptions %}
+                <span>{{type | strip | strip_html | strip_newlines }}</span>
                 <option value="{{type | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{% if type and type != '&nbsp' and type != '' %}{{type | strip | strip_html | strip_newlines }}{% endif %}</option>
               {% endfor %}
             </select>
