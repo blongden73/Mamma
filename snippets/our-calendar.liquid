@@ -22,6 +22,7 @@
                 {% endif %}
               {% endfor %}
               {% endcapture %}
+              {{optionsList}}
               {% assign uniqpracticeOptions = optionsList | split: ',' | uniq | join: ',' %}
               {% assign practiceOptions = uniqpracticeOptions | split: ',' %}
               {% for practices in practiceOptions %}
