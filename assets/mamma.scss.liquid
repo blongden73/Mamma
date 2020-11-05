@@ -5952,6 +5952,16 @@ span.handwritten {
   box-shadow: none !important;
   border: none !important;
 
+  .content[data-step="2"] {
+    width: 100% !important;
+    transform: unset !important;
+  }
+
+  .content[data-step="3"] {
+    width: 100% !important;
+    transform: unset !important;
+  }
+
   .tpb-box {
     background: transparent !important;
     border-radius: 0 !important;
@@ -5960,16 +5970,22 @@ span.handwritten {
   [class="step1"] {
     padding: 0 !important;
     background: transparent !important;
-    
+
     h5 {
       display: none;
     }
   }
+
+  [class="step1"] {
+    width: 100% !important;
+  }
+
   .copyright {
     opacity: 0;
   }
   .tpb-form-control {
     label {
+      color: $blue !important;
       margin-top: 5px !important;
     }
   }
