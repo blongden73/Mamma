@@ -1163,8 +1163,10 @@ pre {
   .mm-header__nav {
     float: left;
     width: max-content;
+    display: none;
 
     @include media-query($medium-up) {
+      display: block;
       margin-left: 14%;
     }
     @include media-query($widescreen) {

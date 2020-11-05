@@ -366,15 +366,6 @@ function tagsearch(){
     var wellbeing = document.querySelector('.wellbeing-select');
     var search = document.querySelector('.custom-m-search');
     console.log(offering.value, how.value, wellbeing.value, search.value);
-    // if(search.value && !how.value && !wellbeing.value && !offering.value) {
-    //   var url = '/search?q=' + search.value;
-    // }
-    // if(search.value  && !how.value  && !wellbeing.value  && offering.value ) {
-    //   var url = '/search?q=' + search.value + '+tag%3A' + offering.value.replace(' ', '+');
-    // }
-    // if(search.value  && !how.value  && wellbeing.value  && offering.value ) {
-    //   var url = '/search?q=' + search.value + '+tag%3A' + offering.value.replace(' ', '+') + '+tag%3A' + wellbeing.value;
-    // }
     if(search.value && offering.value == 'All' && how.value == 'All' && wellbeing.value == 'All') {
       var url = '/search?q=' + search.value;
     } else if (search.value && offering.value != 'All' && how.value == 'All' && wellbeing.value == 'All') {
@@ -388,6 +379,19 @@ function tagsearch(){
     } else if (search.value && offering.value != 'All' && how.value != 'All' && wellbeing.value != 'All') {
       var url = '/search?q=' + search.value + '+tag%3A' + offering.value + '+tag%3A' + how.value + '+tag%3A' + wellbeing.value;
     }
+    //if search is offerings only
+    else if (search.value == '' && offering.value != 'All' && how.value == 'All' && wellbeing.value == 'All') {
+      var url = '/search?q='  + '+tag%3A' + offering.value;
+    }
+    //if search is how only
+    else if (search.value == '' && offering.value == 'All' && how.value != 'All' && wellbeing.value == 'All') {
+      var url = '/search?q='  + '+tag%3A' + how.value;
+    }
+    //if search is how wellbeing only
+    else if (search.value == '' && offering.value == 'All' && how.value == 'All' && wellbeing.value != 'All') {
+      var url = '/search?q='  + '+tag%3A' + wellbeing.value;
+    }
+
 
     console.log(url);
     window.location.replace(url);
