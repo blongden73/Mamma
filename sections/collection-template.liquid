@@ -1,11 +1,11 @@
 <!-- Vue -->
 <!-- This is to temporarily fix the mismatch of some slugs -->
-{% if collection.handle != 'magda-weglowska-oliveira' or collection.handle != 'francisco-javier-amoscótegui-calles' %}
-  {% assign slug = collection.handle %}
-{% elsif collection.handle == 'magda-weglowska-oliveira' %}
+{% if collection.handle == 'magda-weglowska-oliveira' %}
   {% assign slug = 'magda-weglowskaoliveira' %}
 {% elsif collection.handle == 'francisco-javier-amoscótegui-calles' %}
   {% assign slug = 'Francisco-JavierAmoscoteguiCalles' %}
+{% else %}
+    {% assign slug = collection.handle %}
 {% endif %}
 <div id="app" class="m-people-placeholder {{slug}}">
   <div class="m-page-header flex practitioner practioner-bio" v-for="practioner in practioners" v-if="practioner.slug === '{{slug}}'">
