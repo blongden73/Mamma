@@ -2,9 +2,9 @@
 <!-- This is to temporarily fix the mismatch of some slugs -->
 {% if collection.handle != 'magda-weglowska-oliveira' or collection.handle != 'francisco-javier-amoscótegui-calles' %}
   {% assign slug = collection.handle %}
-{% elsif collection.handle = 'magda-weglowska-oliveira' %}
+{% elsif collection.handle == 'magda-weglowska-oliveira' %}
   {% assign slug = 'magda-weglowskaoliveira' %}
-{% elsif collection.handle = 'francisco-javier-amoscótegui-calles' %}
+{% elsif collection.handle == 'francisco-javier-amoscótegui-calles' %}
   {% assign slug = 'Francisco-JavierAmoscoteguiCalles' %}
 {% endif %}
 <div id="app" class="m-people-placeholder {{slug}}">
