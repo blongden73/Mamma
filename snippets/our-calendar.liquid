@@ -17,14 +17,16 @@
               {% capture optionsList %}
               {% for events in collections.all.products %}
                 {% assign practice = events.metafields.airf.practice %}
-                {{practice}},
+                {% if practice != '&nbsp' %}
+                  {{practice}},
+                {% endif %}
               {% endfor %}
               {% endcapture %}
               {% assign uniqpracticeOptions = optionsList | split: ',' | uniq | join: ',' %}
               {% assign practiceOptions = uniqpracticeOptions | split: ',' %}
               {% assign practiceArr = practiceOptions | compact %}
               {% for practices in practiceArr %}
-                <option value="{{practices | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{% if practices and practices != '&nbsp' %}{{practices | strip | strip_html | strip_newlines }}{% endif %}</option>
+                <option value="{{practices | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{{practices | strip | strip_html | strip_newlines }}</option>
               {% endfor %}
             </select>
           </li>
