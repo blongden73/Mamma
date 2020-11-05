@@ -24,7 +24,7 @@
               {% assign practiceOptions = uniqpracticeOptions | split: ',' %}
               {% assign practiceArr = practiceOptions | compact %}
               {% for practices in practiceArr %}
-                <option value="{{practices | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{% if practices and practices != '&nbsp' and practices != '' %}{{practices | strip | strip_html | strip_newlines }}{% endif %}</option>
+                <option value="{{practices | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{% if practices and practices != '&nbsp' %}{{practices | strip | strip_html | strip_newlines }}{% endif %}</option>
               {% endfor %}
             </select>
           </li>
