@@ -70,6 +70,8 @@
       <img src="{{ product | img_url: '1300x' }}" />
     </div>
     <div class="header-right">
+      <div class="header-inner">
+      <div class="header-inner-content">
       <div class="product-single__meta">
         <h1 class="product-single__title">{{ product.title }}</h1>
 
@@ -202,6 +204,8 @@
         {% if section.settings.show_share_buttons %}
           {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product.featured_media %}
         {% endif %}
+        </div>
+      </div>
     </div>
   </div>
 </div>
