@@ -99,7 +99,7 @@
               {% assign uniqtypeOptions = optionsListType | strip | strip_html | strip_newlines | split: ',' | uniq | join: ',' %}
               {% assign typeOptions = uniqtypeOptions | split: ',' %}
               {% for type in typeOptions %}
-                <option value="{{type | downcase | strip | strip_html | strip_newlines | replace: '1', 'one' | replace: ' ', '-' }}">{% if type and type != '&nbsp' and type != '' %}{{type | strip | strip_html | strip_newlines }}{% endif %}</option>
+                <option value="{{type | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{% if type and type != '&nbsp' and type != '' %}{{type | strip | strip_html | strip_newlines }}{% endif %}</option>
               {% endfor %}
             </select>
           </li>
@@ -119,7 +119,7 @@
             {% assign location = events.metafields.airf.location %}
             {% assign locationSplit = location | split: ',' %}
             {% assign date = events.metafields.airf.date %}
-            <li class="m-cal-item All {{type}} {% for local in locationSplit %} {{local | strip | downcase | replace: ' ', '-' }} {% endfor %} {{practice | strip | downcase | replace: ' ', '-'}} {{practition | strip | downcase | replace: ' ', '-'}} {{type | strip | downcase | replace: ' ', '-'}}" data-type="{{type}}">
+            <li class="m-cal-item All {{type | replace: '1', 'one'}} {% for local in locationSplit %} {{local | strip | downcase | replace: ' ', '-' }} {% endfor %} {{practice | strip | downcase | replace: ' ', '-'}} {{practition | strip | downcase | replace: ' ', '-'}} {{type | strip | downcase | replace: ' ', '-'}}" data-type="{{type}}">
               <span class="m-event-title">{{events.title}}</span>
               <span class="m-event-meta">{% if date and date != '&nbsp' %}{{date}} • {% endif %}{% if practition and practition != '&nbsp' %}{{practition}} • {% endif %}{% if speed and speed != '&nbsp' %}{{speed}} • {% endif %}{% if space and space != '&nbsp' %}{{space}} • {% endif %}{% if type and type != '&nbsp' %}{{type}} • {% endif %}{% if practice and practice != '&nbsp' %}{{practice}}{% endif %}{% if pregnancy_ == "true" %} • Pregnancy{% endif %} • {% if location and location != '&nbsp' %}{{location}}{% endif %} <a href="{{events.url}}">Read More</a></span>
               <a href="{{events.url}}"><div class="m-button">Book now</div></a>
