@@ -20,8 +20,8 @@
                 {{practice}},
               {% endfor %}
               {% endcapture %}
-              {% assign uniqpracticeOptions = optionsList | compact | split: ',' | uniq | join: ',' %}
-              {% assign practiceOptions = uniqpracticeOptions | split: ',' %}
+              {% assign uniqpracticeOptions = optionsList | split: ',' | uniq | join: ',' %}
+              {% assign practiceOptions = uniqpracticeOptions | compact | split: ',' %}
               {% for practices in practiceOptions %}
                 <option value="{{practices | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{% if practices and practices != '&nbsp' and practices != '' %}{{practices | strip | strip_html | strip_newlines }}{% endif %}</option>
               {% endfor %}
