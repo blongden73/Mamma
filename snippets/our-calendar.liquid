@@ -16,10 +16,12 @@
               <option value="all">All</option>
               {% capture optionsList %}
               {% for events in collections.all.products %}
+              {% if practice and practice != '&nbsp' %}
                 {% assign practice = events.metafields.airf.practice %}
-                {% if practice and practice != '&nbsp' %}
+              {% else %}
+                {% assign practice = 'blank' %}
+              {% endif %}
                   {{practice}},
-                {% endif %}
               {% endfor %}
               {% endcapture %}
               {% assign uniqpracticeOptions = optionsList | strip | strip_html | strip_newlines | split: ',' | uniq | join: ',' %}
