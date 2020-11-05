@@ -16,7 +16,7 @@
               <option value="all">All</option>
               {% capture optionsList %}
               {% for events in collections.all.products %}
-              {% if practice and practice != '&nbsp' %}
+              {% if events.metafields.airf.practice and events.metafields.airf.practice != '&nbsp' %}
                 {% assign practice = events.metafields.airf.practice %}
               {% else %}
                 {% assign practice = 'blank' %}
