@@ -24,8 +24,7 @@
               {% endcapture %}
               {% assign uniqpracticeOptions = optionsList | split: ',' | uniq | join: ',' %}
               {% assign practiceOptions = uniqpracticeOptions | split: ',' %}
-              {% assign practiceArr = practiceOptions | compact %}
-              {% for practices in practiceArr %}
+              {% for practices in practiceOptions %}
                 <option value="{{practices | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{{practices | strip | strip_html | strip_newlines }}</option>
               {% endfor %}
             </select>
@@ -43,7 +42,7 @@
               {% endfor %}
               {% endcapture %}
               {% assign uniqlocationOptions = optionsListLocation | split: ',' | uniq | join: ',' %}
-              {% assign locationOptions = uniqlocationOptions | split: ',' | compact %}
+              {% assign locationOptions = uniqlocationOptions | split: ',' %}
               {% for locations in locationOptions %}
                 <option value="{{locations | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{% if locations and locations != '&nbsp' and locations != '' %}{{locations | strip | strip_html | strip_newlines }}{% endif %}</option>
               {% endfor %}
@@ -62,7 +61,7 @@
               {% endfor %}
               {% endcapture %}
               {% assign uniqpractiotionerOptions = optionsListPractitioner | split: ',' | uniq | join: ',' %}
-              {% assign practitionerOptions = uniqpractiotionerOptions | split: ',' | compact %}
+              {% assign practitionerOptions = uniqpractiotionerOptions | split: ',' %}
               {% for practitioner in practitionerOptions %}
                 <option value="{{practitioner | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{% if practitioner and practitioner != '&nbsp' and practitioner != '' %}{{practitioner | strip | strip_html | strip_newlines }}{% endif %}</option>
               {% endfor %}
@@ -98,7 +97,7 @@
               {% endfor %}
               {% endcapture %}
               {% assign uniqtypeOptions = optionsListType | split: ',' | uniq | join: ',' %}
-              {% assign typeOptions = uniqtypeOptions | split: ',' | compact %}
+              {% assign typeOptions = uniqtypeOptions | split: ',' %}
               {% for type in typeOptions %}
                 <option value="{{type | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{% if type and type != '&nbsp' and type != '' %}{{type | strip | strip_html | strip_newlines }}{% endif %}</option>
               {% endfor %}
