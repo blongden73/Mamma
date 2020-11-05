@@ -391,6 +391,22 @@ function tagsearch(){
     else if (search.value == '' && offering.value == 'All' && how.value == 'All' && wellbeing.value != 'All') {
       var url = '/search?q='  + '+tag%3A' + wellbeing.value;
     }
+    //if search is offerings + how only
+    else if (search.value == '' && offering.value != 'All' && how.value != 'All' && wellbeing.value == 'All') {
+      var url = '/search?q='  + '+tag%3A' + offering.value + '+tag%3A' + how.value;
+    }
+    //if search is offerings + wellbeing only
+    else if (search.value == '' && offering.value != 'All' && how.value == 'All' && wellbeing.value != 'All') {
+      var url = '/search?q='  + '+tag%3A' + offering.value + '+tag%3A' + wellbeing.value;
+    }
+    //if search is how + wellbeing only
+    else if (search.value == '' && offering.value == 'All' && how.value != 'All' && wellbeing.value != 'All') {
+      var url = '/search?q='  + '+tag%3A' + how.value + '+tag%3A' + wellbeing.value;
+    }
+    //if search is how + wellbeing + how only
+    else if (search.value == '' && offering.value != 'All' && how.value != 'All' && wellbeing.value != 'All') {
+      var url = '/search?q='  + '+tag%3A' + how.value + '+tag%3A' + how.value + '+tag%3A' + wellbeing.value;
+    }
 
 
     console.log(url);
