@@ -23,7 +23,7 @@
               {% endfor %}
               {% endcapture %}
               {% assign uniqpracticeOptions = optionsList | strip | strip_html | strip_newlines | split: ',' | uniq | join: ',' %}
-              {% assign practiceOptions = uniqpracticeOptions | uniq | split: ',' %}
+              {% assign practiceOptions = uniqpracticeOptions | split: ',' %}
               {% for practices in practiceOptions %}
                 <option value="{{practices | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{{practices | strip | strip_html | strip_newlines }}</option>
               {% endfor %}
