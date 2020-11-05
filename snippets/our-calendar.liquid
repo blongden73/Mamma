@@ -16,12 +16,10 @@
               <option value="all">All</option>
               {% capture optionsList %}
               {% for events in collections.all.products %}
-              {% if events.metafields.airf.practice and events.metafields.airf.practice != '&nbsp' %}
                 {% assign practice = events.metafields.airf.practice %}
-              {% else %}
-                {% assign practice = 'blank' %}
-              {% endif %}
+                {% if practice and practice != '&nbsp' %}
                   {{practice}},
+                {% endif %}
               {% endfor %}
               {% endcapture %}
               {% assign uniqpracticeOptions = optionsList | strip | strip_html | strip_newlines | split: ',' | uniq | join: ',' %}
@@ -37,12 +35,10 @@
               <option value="all">All</option>
               {% capture optionsListLocation %}
               {% for events in collections.all.products %}
-                {% if events.metafields.airf.practice and events.metafields.airf.practice != '&nbsp' %}
-                  {% assign location = events.metafields.airf.location %}
-                {% else %}
-                  {% assign practice = 'blank' %}
-                {% endif %}
+                {% assign location = events.metafields.airf.location %}
+                {% if location and location != '&nbsp' %}
                   {{location}},
+                {% endif %}
               {% endfor %}
               {% endcapture %}
               {% assign uniqlocationOptions = optionsListLocation | split: ',' | uniq | join: ',' %}
@@ -58,12 +54,10 @@
               <option value="all">All</option>
               {% capture optionsListPractitioner %}
               {% for events in collections.all.products %}
-                {% if events.metafields.airf.practice and events.metafields.airf.practice != '&nbsp' %}
-                  {% assign practition = events.metafields.airf.practition %}
-                {% else %}
-                  {% assign practice = 'blank' %}
-                {% endif %}
+                {% assign practition = events.metafields.airf.practition %}
+                {% if practition and practition != '&nbsp' %}
                   {{practition}},
+                {% endif %}
               {% endfor %}
               {% endcapture %}
               {% assign uniqpractiotionerOptions = optionsListPractitioner | split: ',' | uniq | join: ',' %}
@@ -96,12 +90,10 @@
               <option value="all">All</option>
               {% capture optionsListType %}
               {% for events in collections.all.products %}
-                {% if events.metafields.airf.practice and events.metafields.airf.practice != '&nbsp' %}
-                  {% assign type = events.metafields.airf.type %}
-                {% else %}
-                  {% assign practice = 'blank' %}
-                {% endif %}
+                {% assign type = events.metafields.airf.type %}
+                {% if type and type != '&nbsp' %}
                   {{type}},
+                {% endif %}
               {% endfor %}
               {% endcapture %}
               {% assign uniqtypeOptions = optionsListType | split: ',' | uniq | join: ',' %}
