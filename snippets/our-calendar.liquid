@@ -17,7 +17,7 @@
               {% capture optionsList %}
               {% for events in collections.all.products %}
                 {% assign practice = events.metafields.airf.practice %}
-                {% if practice != '&nbsp' %}
+                {% if practice and practice != '&nbsp' %}
                   {{practice}},
                 {% endif %}
               {% endfor %}
