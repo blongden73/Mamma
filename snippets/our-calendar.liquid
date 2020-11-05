@@ -99,7 +99,7 @@
               {% assign uniqtypeOptions = optionsListType | strip | strip_html | strip_newlines | split: ',' | uniq | join: ',' %}
               {% assign typeOptions = uniqtypeOptions | split: ',' %}
               {% for type in typeOptions %}
-                <option value="{{type | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{% if type and type != '&nbsp' and type != '' %}{{type | strip | strip_html | strip_newlines }}{% endif %}</option>
+                <option value="{{type | downcase | strip | strip_html | strip_newlines | replace: '1', 'one' | replace: ' ', '-' }}">{% if type and type != '&nbsp' and type != '' %}{{type | strip | strip_html | strip_newlines }}{% endif %}</option>
               {% endfor %}
             </select>
           </li>
