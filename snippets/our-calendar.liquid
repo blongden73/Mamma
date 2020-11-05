@@ -22,10 +22,8 @@
                 {% endif %}
               {% endfor %}
               {% endcapture %}
-              {{optionsList}}
-              {% assign uniqpracticeOptions = optionsList | split: ',' | uniq | join: ',' %}
-              {{uniqpracticeOptions}}
-              {% assign practiceOptions = uniqpracticeOptions | split: ',' %}
+              {% assign uniqpracticeOptions = optionsList | strip | strip_html | strip_newlines | split: ',' | uniq | join: ',' %}
+              {% assign practiceOptions = uniqpracticeOptions | uniq | split: ',' %}
               {% for practices in practiceOptions %}
                 <option value="{{practices | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' }}">{{practices | strip | strip_html | strip_newlines }}</option>
               {% endfor %}
