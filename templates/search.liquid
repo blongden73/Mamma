@@ -64,6 +64,7 @@
       <ul class="list-view-items">
         {% for item in search.results %}
           {% if item.object_type == 'product' %}
+            {% unless item.tags contains 'shop' %}
             <li class="list-view-item">
               {% if item.object_type == 'product' %}
                 {% include 'product-card-list', product: item %}
@@ -93,6 +94,7 @@
                 </div>
               {% endif %}
             </li>
+            {% endunless %}
           {% endif %}
         {% endfor %}
       </ul>
