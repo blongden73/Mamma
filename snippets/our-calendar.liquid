@@ -107,7 +107,8 @@
       </div>
       <ul>
         <li class="no-results"><span class="m-event-title"><span uk-icon="icon: warning"></span> Sorry there are no <span class="js-type"></span> at the moment</span></li>
-        {% for events in collections.all.products %}
+        {% assign reverseList = collections.all.products | reverse %}
+        {% for events in reverseList %}
           {% unless events.tags contains 'shop' %}
             {% assign practition = events.metafields.airf.practition %}
             {% assign level = events.metafields.airf.level %}
