@@ -60,7 +60,7 @@
   <h2 class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}</h2>
   <div class="page-width">
     <h1 class="results-header">Sessions</h1>
-    <div class="m-calendar-wrapper search-results">
+    <div class="m-calendar-wrapper search-results {% for item in search.results %}{% if item.object_type == 'product' %}has-results{% else %}no-results{% endif %}{% endfor %}">
       <ul class="list-view-items">
         {% for item in search.results %}
           {% if item.object_type == 'product' %}
