@@ -131,7 +131,9 @@
     <div class="header-right">
       <div class="header-inner">
         <div class="header-inner-content">
+          <h1 class="collection-title">{{collection.title}}</h1>
           <h1 class="section-title"><span class="underline blue">Session <span class="handwritten">Details</span></span></h1>
+          <p class="collection-description">{{collection.description}}</p>
           {% for product in collection.products %}
           {%- assign metadata = product.metafields.experiences -%}
           {%- assign durationHours = metadata.duration | divided_by: 60 -%}
