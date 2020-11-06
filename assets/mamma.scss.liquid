@@ -1107,7 +1107,7 @@ pre {
     }
   }
 
-  .discover &, .template-collection &, .about &, .experiences &, .practitioner &, .practice &, .home &, .template-cart &, .template-search &, .shop & , .template-article &, .template-captcha &, .template-customers-register &, .template-customers-login &{
+  .discover &, .template-collection &, .about &, .experiences &, .practitioner &, .practice &, .home &, .template-cart &, .template-search &, .shop & , .template-article &, .template-captcha &, .template-customers-register &, .template-customers-login &, .template-page &{
     top: 0 !important;
   }
 
@@ -6130,5 +6130,13 @@ span.handwritten {
     margin-right: auto;
     background-color: transparent;
     border: 1px solid $m-blue;
+  }
+}
+
+.template-page {
+  .main-content {
+    @include media-query($medium-up) {
+      padding-top: 100px !important;
+    }
   }
 }
