@@ -466,3 +466,15 @@ function contactMessage(){
     }
   }
 }contactMessage();
+
+function closeMenu(){
+  var menuInner = document.querySelector('.m-menu-inner');
+  var links = menuInner.querySelectorAll('a');
+  var menuWrapper = document.querySelector('.m-menu-wrapper');
+  console.log(links);
+  for(i=0; i<links.length; i++) {
+    links[i].addEventListener('click', function(){
+      menuWrapper.classList.remove('display');
+    });
+  }
+}closeMenu();
