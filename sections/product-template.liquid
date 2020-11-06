@@ -75,21 +75,6 @@
       <div class="product-single__meta">
         <h1 class="product-single__title">{{ product.title }}</h1>
 
-          <div class="product__price">
-            {% include 'product-price', variant: current_variant, show_vendor: section.settings.show_vendor %}
-          </div>
-
-          {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
-            <div class="product__policies rte" data-product-policies>
-              {%- if shop.taxes_included -%}
-                {{ 'products.product.include_taxes' | t }}
-              {%- endif -%}
-              {%- if shop.shipping_policy.body != blank -%}
-                {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-              {%- endif -%}
-            </div>
-          {%- endif -%}
-
           {% capture "form_classes" -%}
             product-form product-form-{{ section.id }}
             {%- unless section.settings.show_variant_labels %} product-form--hide-variant-labels {% endunless %}
