@@ -8,7 +8,7 @@
     <div class="text-center">
       <h1 class="h2">
         <span class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}:</span>
-        {{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
+        {{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count | replace: ' tag:', ''  }}
       </h1>
   {% endif %}
       <div class="grid">
@@ -143,7 +143,7 @@
         {% for item in search.results %}
           {% if item.object_type == 'page'%}
             <li class="list-view-item">
-              {% if item.object_type == 'product' %}
+              {% if item.object_type == 'product' and item.template_suffix != 'legal' %}
                 {% include 'product-card-list', product: item %}
               {% else %}
                 <div class="product-card product-card--list">
