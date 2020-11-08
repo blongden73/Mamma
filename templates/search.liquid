@@ -24,7 +24,7 @@
                 <input
                   type="search"
                   name="q"
-                  value="{{ search.terms | escape }}"
+                  value="{{ search.terms | escape | replace: ' tag:', '' }}"
                   placeholder="{{ 'general.search.placeholder' | t }}"
                   role="combobox"
                   aria-autocomplete="list"
