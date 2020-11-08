@@ -141,11 +141,8 @@
     <div class="m-calendar-wrapper search-results">
       <ul class="list-view-items">
         {% for item in search.results %}
-          {% if item.object_type == 'page'%}
+          {% if item.object_type == 'page' and item.template_suffix != 'legal' %}
             <li class="list-view-item">
-              {% if item.object_type == 'product' and item.template_suffix != 'legal' %}
-                {% include 'product-card-list', product: item %}
-              {% else %}
                 <div class="product-card product-card--list">
                   <a href="{{ item.url }}" class="full-width-link">
                     <span class="visually-hidden">{{ item.title }}</span>
