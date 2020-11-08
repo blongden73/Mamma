@@ -482,11 +482,13 @@ function closeMenu(){
 }closeMenu();
 
 function addTermsandConditions() {
-  var extraFields = document.querySelector('.step3');
-  if(extraFields) {
-    console.log('found extras');
-    var extras = extraFields.querySelector('.extra-fields');
-    var label = extras.querySelectorAll('.element');
-    label[1].querySelector('label').innerHTML = "I agree to terms and conditions <a href='https://mammawellbeing.com/pages/user-terms-conditions'></a>";
-  }
+  setTimeout(function(){
+    var extraFields = document.querySelector('.step3');
+    if(extraFields) {
+      console.log('found extras');
+      var extras = extraFields.querySelector('.extra-fields');
+      var label = extras.querySelectorAll('.element');
+      label[1].querySelector('label').innerHTML = "I agree to terms and conditions <a href='https://mammawellbeing.com/pages/user-terms-conditions'></a>";
+    }
+  }, 1000)
 }addTermsandConditions();
