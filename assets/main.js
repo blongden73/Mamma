@@ -483,6 +483,7 @@ function closeMenu(){
 
 function addTermsandConditions() {
   setTimeout(function(){
+    console.log('tc&S');
     var extraFields = document.querySelector('.step3');
     if(extraFields) {
       console.log('found extras');
