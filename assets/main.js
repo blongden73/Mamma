@@ -486,8 +486,9 @@ function addTermsandConditions() {
     console.log('tc&S');
     var extraFields = document.querySelector('.step3');
     if(extraFields) {
-      console.log('found extras');
+      console.log('found extras', extraFields);
       var extras = extraFields.querySelector('.extra-fields');
+      console.log(extras);
       var label = extras.querySelectorAll('.element');
       label[1].querySelector('label').innerHTML = "I agree to terms and conditions <a href='https://mammawellbeing.com/pages/user-terms-conditions'></a>";
     }
