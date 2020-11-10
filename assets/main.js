@@ -74,6 +74,10 @@ if(peopleWrapper || practitionerWrapper) {
     }
     return newBlock;
   })
+  Vue.filter('lowercase', function(value){
+    var lowerCase = value.toLowerCase();
+    return lowerCase;
+  })
   app.log();
 }
 
