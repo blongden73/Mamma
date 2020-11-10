@@ -6,7 +6,7 @@
     {% assign slug = collection.handle %}
 {% endif %}
 <div id="app" class="m-people-placeholder {{slug}}">
-  <div class="m-page-header flex practitioner practioner-bio practice-sticky" v-for="practioner in practioners" v-if="practioner.slug === '$options.filters.lowercase(slug)'">
+  <div class="m-page-header flex practitioner practioner-bio practice-sticky" v-for="practioner in practioners" v-if="practioner.slug === '{{slug | lowercase}}'">
     <template>
       <div class="header-left">
         <div class="header-inner"></div>
