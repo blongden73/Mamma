@@ -76,6 +76,7 @@ if(peopleWrapper || practitionerWrapper) {
   })
   Vue.filter('lowercase', function(value){
     var lowerCase = value.toLowerCase();
+    console.log('lowercase slug', lowerCase);
     return lowerCase;
   })
   app.log();

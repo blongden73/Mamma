@@ -7,7 +7,6 @@
 {% endif %}
 <div id="app" class="m-people-placeholder {{slug}}">
   <div class="m-page-header flex practitioner practioner-bio practice-sticky" v-for="practioner in practioners" v-if="practioner.slug === '{{slug | lowercase}}'">
-    ${practioner.slug}
     <template>
       <div class="header-left">
         <div class="header-inner"></div>
