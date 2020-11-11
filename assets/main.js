@@ -498,7 +498,7 @@ function addTermsandConditions() {
         setTimeout(function(){
           var extras = document.querySelector('.extra-fields > .element');
           console.log(extras);
-          label[1].querySelector('label').innerHTML = "I agree to terms and conditions <a href='https://mammawellbeing.com/pages/user-terms-conditions'></a>";
+          extras.querySelector('label').innerHTML = "I agree to terms and conditions <a href='https://mammawellbeing.com/pages/user-terms-conditions'></a>";
         }, 1000)
       })
     }
