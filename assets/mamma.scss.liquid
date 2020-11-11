@@ -3375,7 +3375,7 @@ span.handwritten {
         }
 
         @include media-query($widescreen){
-          -webkit-line-clamp: 4;
+          -webkit-line-clamp: 3;
         }
       }
     }
@@ -5114,7 +5114,7 @@ span.handwritten {
   }
 
   .home-text-wrapper {
-    max-width: 450px;
+    max-width: 570px;
     color: $m-cream;
     margin-left: auto;
     margin-right: auto;
@@ -5322,6 +5322,13 @@ span.handwritten {
         border: 1px solid #fff;
         padding: 40px;
         padding-bottom: 10px;
+
+        @include media-query ($medium-up){
+          padding: 20px;
+        }
+        @include media-query ($widescreen){
+          padding: 40px;
+        }
       }
 
       h1, h2, ul, li, p {
