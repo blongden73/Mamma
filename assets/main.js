@@ -499,7 +499,10 @@ function addTermsandConditions() {
           var extras = document.querySelector('.extra-fields > .element');
           var label = extras.querySelector('label');
           console.log(label);
-          label.after("<a href='https://mammawellbeing.com/pages/user-terms-conditions'>Read our T&C's here</a>");
+          var link = document.createElement("a");
+          link.setAttribute('href', 'https://mammawellbeing.com/pages/user-terms-conditions');
+          link.innerHTML = "Read our T&C's here";
+          label.after(link);
         }, 1000)
       })
     }
