@@ -4,8 +4,11 @@
     <div class="intro white-bg" id="find-out-more">
         <div class="page-width">
           <h2>
-              We are here to support you in your journey to becoming the best version of yourself, by providing carefully
-              selected alternative therapists, events, retreats & resources.</h2>
+          {% assign about_intr = shop.metafields.airf.about_intr %}
+          {% if about_intr and about_intr != '&nbsp' %}
+            {{ about_intr }}
+          {% endif %}
+          </h2>
           <p>We’re with you.
               <a href="/pages/contact">Speak to us</a> for tailored wellness</p>
           <div class="header-right-after-search">
@@ -29,48 +32,108 @@
       <div class="team-wrapper page-width">
 
         <div class="team-item">
-            <img
-                src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/1V8A0770.jpg?v=1601287847">
-            <h2>Carmella Sternberg</h2>
+          {% assign carmella_i = shop.metafields.airf.carmella_i %}
+          {% if carmella_i and carmella_i != '&nbsp' %}
+            <img src="{{ carmella_i }}" />
+          {% endif %}
+            <h2>
+            {% assign carmella_n = shop.metafields.airf.carmella_n %}
+            {% if carmella_n and carmella_n != '&nbsp' %}
+                {{ carmella_n }}
+            {% endif %}
+            </h2>
             <p>Founder Director</p>
             <div class="team-description">
-              <p>Carmella is our fierce, fab Founder and dreamer. After creating an award-winning events company, exhausted and with the added stress of a breakup, Carmella left for Asia in search of peace and healing. Four months later, she found herself transformed by the wealth of experiences and wisdom from her meanderings. Respecting her own boundaries, she learnt how to get the best out of life through inner peace and renewed wellbeing. Carmella resolved to make it her life’s work to help people find the healing therapies that she found to be so beneficial on her journey toward health and happiness.</p>
+              <p>
+            {% assign carmella_b = shop.metafields.airf.carmella_b %}
+            {% if carmella_b and carmella_b != '&nbsp' %}
+                {{ carmella_b }}
+            {% endif %}
+            </p>
             </div>
         </div>
         <div class="team-item">
-            <img
-                src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/1V8A0903.jpg?v=1601287846">
-            <h2>Annabel James</h2>
+            {% assign annabel_im = shop.metafields.airf.annabel_im %}
+            {% if annabel_im and annabel_im != '&nbsp' %}
+              <img src="{{ annabel_im }}" />
+            {% endif %}
+            <h2>
+            {% assign annabelle_ = shop.metafields.airf.annabelle_ %}
+            {% if annabelle_ and annabelle_ != '&nbsp' %}
+                {{ annabelle_ }}
+            {% endif %}
+            </h2>
             <p>Co-Founder / Director</p>
             <div class="team-description">
-              <p>Annabel is our warm and radiant Co-Founder and the inspiration behind Carmella’s dream. She exudes light and has an energy and peace that are magnetic. Annabel is a trained Breath of Bliss Breathwork practitioner and has a background in counselling. She has always been passionate about supporting people through times of transformation and bringing together people walking these similar journeys. By walking her own journey of healing first, she has found a passion for breathwork and healing that allows her to best support others in their journeys of transformation.</p>
+              <p>
+              {% assign annabel_bi = shop.metafields.airf.annabel_bi %}
+              {% if annabel_bi and annabel_bi != '&nbsp' %}
+                  {{ annabel_bi }}
+              {% endif %}
+              </p>
             </div>
         </div>
         <div class="team-item">
-            <img
-                src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/1V8A0724.jpg?v=1601287845">
-            <h2>Jessica Girvan</h2>
+            {% assign jess_img = shop.metafields.airf.jess_img %}
+            {% if jess_img and jess_img != '&nbsp' %}
+              <img src="{{ jess_img }}" />
+            {% endif %}
+            <h2>
+            {% assign jess_name = shop.metafields.airf.jess_name %}
+            {% if jess_name and jess_name != '&nbsp' %}
+                {{ jess_name }}
+            {% endif %}
+            </h2>
             <p>Process & Workflow manager</p>
             <div class="team-description">
-              <p>Jessica is our resident busy-bee. As our Operations Manager, she loves spreadsheets and all things organized. After 15 years of stress and anxiety working in Dentistry, Jessica lept into 6 months of soul-searching, where holistic wellness transformed her life. Her wellness journey eventually led her here, to Mamma, and she has loved seeing it grow. Jessica learned the importance of putting time back into yourself. Her favorite practices are sound-healing, yoga, and CBT therapy.</p>
+              <p>
+              {% assign jess_bio = shop.metafields.airf.jess_bio %}
+              {% if jess_bio and jess_bio != '&nbsp' %}
+                  {{ jess_bio }}
+              {% endif %}
+              </p>
             </div>
         </div>
         <div class="team-item">
-          <img
-              src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/1V8A2093.jpg?v=1601287847">
-          <h2>Hudas Duwas</h2>
+          {% assign huda__img = shop.metafields.airf.huda__img %}
+          {% if huda__img and huda__img != '&nbsp' %}
+              <img src="{{ huda__img }}" />
+          {% endif %}
+          <h2>
+          {% assign huda_name = shop.metafields.airf.huda_name %}
+          {% if huda_name and huda_name != '&nbsp' %}
+              {{ huda_name }}
+          {% endif %}
+          </h2>
           <p>Operations & Content Manager</p>
           <div class="team-description">
-            <p>Huda is the walking encyclopedia of our Mamma tribe, as our *Title*. She is no stranger to wellness, with a corporate background in the fitness, health, and hospitality industries. After facing phases of burnout, Huda sought a business that valued and promoted balance, so she leapt on board with the early stages of Mamma to help out and hasn’t looked back! With a background in sports and fitness, movement is really important in Huda’s holistic wellness journey. Her favorite practices are breathwork, meditation, and flotation tanks.</p>
+            <p>
+            {% assign huda_bio = shop.metafields.airf.huda_bio %}
+            {% if huda_bio and huda_bio != '&nbsp' %}
+                {{ huda_bio }}
+            {% endif %}
+            </p>
           </div>
         </div>
         <div class="team-item">
-          <img
-              src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/Kristel_Bio_picture.jpeg?v=1603147060">
-          <h2>Kristel</h2>
+          {% assign kristal_im = shop.metafields.airf.kristal_im %}
+          {% if kristal_im and kristal_im != '&nbsp' %}
+              <img src="{{ kristal_im }}" />
+          {% endif %}
+          <h2>
+          {% assign kristal_na = shop.metafields.airf.kristal_na %}
+          {% if kristal_na and kristal_na != '&nbsp' %}
+              {{ kristal_na }}
+          {% endif %}
+          </h2>
           <p>Customer Service Operations Manager</p>
           <div class="team-description">
-            <p>Kristel is our welcoming go-to girl for all things related to client experience. After facing burnout from the hustle and bustle of the hospitality industry, she left for 6 months in search of healing and transformation. She returned with a desire to move into the wellness space and found her way to the Mamma tribe. As our Customer Service Operations Manager, she knows the ins and outs of service and experience. Kristel onboards our newest practitioners and welcomes them into the Mamma community, and she will be building our customers services to better support you, our clients! Kristel’s favorite practices are yoga and meditation.</p>
+            <p>
+            {% assign kristel_bi = shop.metafields.airf.kristel_bi %}
+            {% if kristel_bi and kristel_bi != '&nbsp' %}
+                {{ kristel_bi }}
+            {% endif %}
+            </p>
           </div>
         </div>
         <div class="team-item">
@@ -133,8 +196,12 @@
         <div class="header-inner">
           <div class="header-inner-content">
             <h1>We are currently looking for</h1>
-            <p class="join-para">Join our family of wellness worldwide practitioners. Be part of a community that helps you thrive and
-                supports you in your work.</p>
+            <p class="join-para">
+            {% assign we_are_loo = shop.metafields.airf.we_are_loo %}
+            {% if we_are_loo and we_are_loo != '&nbsp' %}
+                {{ we_are_loo }}
+            {% endif %}
+            </p>
             <p class="send-cv"><a href="/pages/contact">Send us your cv/application!</a></p>
           </div>
         </div>
@@ -144,7 +211,8 @@
 
 
     <div id="our-story" class="flex about-mamma">
-      <div class="header-left image">
+      {% assign our_stoimg = shop.metafields.airf.our_stoimg %}
+      <div class="header-left image" style="background-image: url({% if our_stoimg and our_stoimg != '&nbsp' %}{{ our_stoimg }}{% endif %})">
       </div>
       <div class="header-right">
         <h2>
@@ -157,11 +225,11 @@
         </h2>
         <div class="header-inner">
           <div class="header-inner-content">
-            <p><span>Mamma was founded by Carmella Sternberg and Annabel James in 2018.</span></p>
             <p>
-              There has always been an invisible string connecting Carmella and Annabel. The two met in Thailand and kept crossing paths in their own journeys of healing. Inspired by Annabel’s personal journey of transformation, Carmella dreamed of a business built on friendship, support, and community. The two of them together embody all that Mamma is and has become. Mamma Wellbeing seeks to connect people on personal journeys of healing, revival, or transformation with experienced practitioners in a vast array of holistic healings and therapies to support them along the way.
-
-              In recent months, Mamma has evolved as an idea and a community, experiencing a journey of its own in alignment with the journeys walked by Annabel and Carmella. Rooted in their own experience, Mamma began as a sisterhood, designed to support women in their wellness journeys, but as their journeys continue, so does Mamma’s as it has grown to be a platform of support for everyone. They are excited to see it continue to grow and evolve, guiding others toward a life of greater wellbeing, self-love, and balance amidst the busyness of day-to-day life.
+            {% assign our_story_ = shop.metafields.airf.our_story_ %}
+            {% if our_story_ and our_story_ != '&nbsp' %}
+                {{ our_story_ }}
+            {% endif %}
             </p>
           </div>
         </div>
