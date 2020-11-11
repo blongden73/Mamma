@@ -495,10 +495,12 @@ function addTermsandConditions() {
       console.log('found extras', extraFields);
       continueButton.addEventListener('click', function(){
         console.log('click');
-        var extras = document.querySelector('.extra-fields > .element');
-        console.log(extras);
+        setTimeout(function(){
+          var extras = document.querySelector('.extra-fields > .element');
+          console.log(extras);
+          label[1].querySelector('label').innerHTML = "I agree to terms and conditions <a href='https://mammawellbeing.com/pages/user-terms-conditions'></a>";
+        }, 1000)
       })
-      label[1].querySelector('label').innerHTML = "I agree to terms and conditions <a href='https://mammawellbeing.com/pages/user-terms-conditions'></a>";
     }
   }, 1000)
 }addTermsandConditions();
