@@ -14,7 +14,7 @@
             </div>
             <a v-bind:href="'/collections/' + practioner.slug">
               <div class="m-people-details">
-                <span class="m-people-practice">${practioner.practice}</span>
+                <span class="m-people-practice" v-html="$options.filters.split(practioner.practice)"></span>
               </div>
               <img v-bind:src="practioner.profile_picture">
             </a>

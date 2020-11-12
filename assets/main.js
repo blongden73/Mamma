@@ -79,6 +79,17 @@ if(peopleWrapper || practitionerWrapper) {
     console.log('lowercase slug', lowerCase);
     return lowerCase;
   })
+  Vue.filter('split', function(value){
+    var arr = [];
+    var splitter = value.split('|');
+    for(i=0; i<splitter.length; i++) {
+      var div = '<div class="practices-split">'+ splitter[i] +'</div>'
+      arr.push(div);
+    }
+    var practicelist = arr.join('');
+    console.log(practicelist);
+    return practicelist;
+  })
   app.log();
 }
 
