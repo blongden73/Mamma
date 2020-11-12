@@ -37,7 +37,7 @@ if(peopleWrapper || practitionerWrapper) {
         practioners: []
     },
     mounted: function() {
-      $.get('https://joinmamma.com/wp-json/mamma/v1/get-members/', function(data) {
+      $.get('https://cdn.shopify.com/s/files/1/0459/1697/9349/t/1/assets/Mamma.json', function(data) {
           app.practioners = data;
       })
     },
