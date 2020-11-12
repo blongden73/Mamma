@@ -5360,7 +5360,14 @@ span.handwritten {
       }
 
       h1, h2 {
-        font-size: 40px;
+        font-size: 30px;
+
+        @include media-query ($medium-up){
+          font-size: 30px;
+        }
+        @include media-query ($widescreen){
+          font-size: 40px;
+        }
       }
 
       p {
