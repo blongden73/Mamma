@@ -31,10 +31,21 @@
     <h1 class="centered-text">Watch here</h1>
     <div class="video-wrapper ">
       <div class="video-placeholder">
-        <img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/1V8A2746.jpg?v=1601504514">
+        {% assign sp_f_img = shop.metafields.airf.sp_f_img %}
+        {% if sp_f_img and sp_f_img != '&nbsp' %}
+            <img src="{{ sp_f_img }}" />
+        {% endif %}
         <div class="play-button"><span uk-icon="icon: play"></span></div>
       </div>
       <div class="iframe-placeholder" data-frame='{% assign the_space_ = shop.metafields.airf.the_space_ %}{% if the_space_ and the_space_ != '&nbsp' %}{{ the_space_ }}{% endif %}'>
+      </div>
+      <div class="the_space_featured-title">
+        <h2>
+          {% assign the_sp_fea = shop.metafields.airf.the_sp_fea %}
+          {% if the_sp_fea and the_sp_fea != '&nbsp' %}
+              {{ the_sp_fea }}
+          {% endif %}
+        </h2>
       </div>
     </div>
   </div>
