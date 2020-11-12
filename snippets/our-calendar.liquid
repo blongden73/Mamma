@@ -48,12 +48,9 @@
                   {% if locations and locations != '&nbsp' and locations != '' %}
                     {% if locations == 'NottingHill' %}
                       Notting Hill
-                    {% else %}
-                    {% if locations == 'Homevisits' %}
+                    {% elsif locations == 'Homevisits' %}
                       Home visits
-                    {% else %}
-                    {{locations}}
-                    {% if locations == 'TulumMexico' %}
+                    {% elsif locations == 'TulumMexico' %}
                       Tulum Mexico
                     {% else %}
                     {{locations}}
