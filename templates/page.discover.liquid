@@ -2,7 +2,12 @@
 <div class="m-page-header flex">
   <div class="header-left">
     <div class="header-inner">
-      <h1>Explore Mamma</h1>
+      <h1>
+        {% assign page_intro = page.metafields.airf.page_intro %}
+        {% if page_intro and page_intro != '&nbsp' %}
+            {{ page_intro }}
+        {% endif %}
+      </h1>
     </div>
     {% assign page_image = page.metafields.airf.page_image %}
     {% if page_image and page_image != '&nbsp' %}

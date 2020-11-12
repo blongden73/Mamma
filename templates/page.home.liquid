@@ -2,7 +2,12 @@
   <div class="m-page-header flex">
     <div class="header-left">
       <div class="header-inner">
-        <h1>Your one stop platform for wellbeing</h1>
+        <h1>
+          {% assign page_intro = page.metafields.airf.page_intro %}
+          {% if page_intro and page_intro != '&nbsp' %}
+              {{ page_intro }}
+          {% endif %}
+        </h1>
       </div>
       <div class="img-wrapper">
         {% assign page_image = page.metafields.airf.page_image %}
@@ -76,8 +81,12 @@
 <div class="home-about">
   <div class="home-text-wrapper" uk-scrollspy="target: > h2; cls: uk-animation-fade; delay: 700">
     <h1 class="two-line" ><span data-content="Why" class='typeOut handwritten'></span> Mamma?</h1>
-    <h2>Mamma curates the top wellbeing online and offline. We are here to support you in your wellbeing journey by offering carefully selected holistic practitioners, events, retreats and resources.
-Book practitioners, find events & retreats, free resources and visit our natural shop</h2>
+    <h2>
+      {% assign page_text = page.metafields.airf.page_text %}
+      {% if page_text and page_text != '&nbsp' %}
+          {{ page_text }}
+      {% endif %}
+    </h2>
   </div>
   <div class="home-about-footer">
     <a href="/pages/discover#our-calendar"><button>Book a Practice</button></a> <a href="/pages/discover#our-people"><button>Find a Practioner</button></a> <a href="/pages/about"><button href="/pages/about">About us</button></a>
