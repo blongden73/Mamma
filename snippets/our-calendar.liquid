@@ -7,12 +7,6 @@
 <div id="our-calendar" class="m-calendar">
   <div class="page-width">
     <div class="m-calendar-wrapper">
-      {%- for events in collections.all.products -%}
-        {%- assign practice = events.metafields.airf.practice -%}
-        {%- if practice and practice != '&nbsp' -%}
-          {{practice}},
-        {%- endif -%}
-      {%- endfor -%}
       <div class="flex">
         <h1>All Practices</h1>
         <ul class="m-filters-calendar">
@@ -39,14 +33,14 @@
             <select name="location" id="location" class="location-filter">
               <option value="all">Filter by Location</option>
               <option value="all">All</option>
-              {% capture optionsListLocation %}
-              {% for events in collections.all.products %}
-                {% assign location = events.metafields.airf.location %}
-                {% if location and location != '&nbsp' %}
+              {%- capture optionsListLocation -%}
+              {%- for events in collections.all.products -%}
+                {%- assign location = events.metafields.airf.location -%}
+                {%- if location and location != '&nbsp' -%}
                   {{location}},
-                {% endif %}
-              {% endfor %}
-              {% endcapture %}
+                {%- endif -%}
+              {%- endfor -%}
+              {%- endcapture -%}
               {% assign uniqlocationOptions = optionsListLocation | strip | strip_html | strip_newlines | split: ',' | uniq | join: ',' %}
               {% assign locationOptions = uniqlocationOptions | split: ',' %}
               {% for locations in locationOptions %}
@@ -58,14 +52,14 @@
             <select name="location" id="location" class="practitioner-filter">
               <option value="all">Filter by Practitioner</option>
               <option value="all">All</option>
-              {% capture optionsListPractitioner %}
-              {% for events in collections.all.products %}
-                {% assign practition = events.metafields.airf.practition %}
-                {% if practition and practition != '&nbsp' %}
+              {%- capture optionsListPractitioner -%}
+              {%- for events in collections.all.products -%}
+                {%- assign practition = events.metafields.airf.practition -%}
+                {%- if practition and practition != '&nbsp' -%}
                   {{practition}},
-                {% endif %}
-              {% endfor %}
-              {% endcapture %}
+                {%- endif -%}
+              {%- endfor -%}
+              {%- endcapture -%}
               {% assign uniqpractiotionerOptions = optionsListPractitioner | strip | strip_html | strip_newlines | split: ',' | uniq | join: ',' %}
               {% assign practitionerOptions = uniqpractiotionerOptions | split: ',' %}
               {% for practitioner in practitionerOptions %}
@@ -94,14 +88,14 @@
             <select name="location" id="location" class="type-filter">
               <option value="all">Filter by Type</option>
               <option value="all">All</option>
-              {% capture optionsListType %}
-              {% for events in collections.all.products %}
-                {% assign type = events.metafields.airf.type %}
-                {% if type and type != '&nbsp' %}
+              {%- capture optionsListType -%}
+              {%- for events in collections.all.products -%}
+                {%- assign type = events.metafields.airf.type -%}
+                {%- if type and type != '&nbsp' -%}
                   {{type}},
-                {% endif %}
-              {% endfor %}
-              {% endcapture %}
+                {%- endif -%}
+              {%- endfor -%}
+              {%- endcapture -%}
               {% assign uniqtypeOptions = optionsListType | strip | strip_html | strip_newlines | split: ',' | uniq | join: ',' %}
               {% assign typeOptions = uniqtypeOptions | split: ',' %}
               {% for type in typeOptions %}
