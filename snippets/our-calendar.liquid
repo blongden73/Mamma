@@ -20,14 +20,14 @@
             <select name="practices" id="practices" class="practices-filter">
               <option value="all">Filter by Practices</option>
               <option value="all">All</option>
-              {% capture optionsList %}
-              {% for events in collections.all.products %}
-                {% assign practice = events.metafields.airf.practice %}
-                {% if practice and practice != '&nbsp' %}
+              {%- capture optionsList -%}
+              {%- for events in collections.all.products -%}
+                {%- assign practice = events.metafields.airf.practice -%}
+                {%- if practice and practice != '&nbsp' -%}
                   {{practice}},
-                {% endif %}
-              {% endfor %}
-              {% endcapture %}
+                {%- endif -%}
+              {%- endfor -%}
+              {%- endcapture -%}
               {% assign uniqpracticeOptions = optionsList | strip | strip_html | strip_newlines | split: ',' | uniq | join: ',' %}
               {% assign practiceOptions = uniqpracticeOptions | split: ',' %}
               {% for practices in practiceOptions %}
