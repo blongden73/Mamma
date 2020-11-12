@@ -156,7 +156,10 @@
     <div class="header-inner">
       <h1>Dive in</h1>
     </div>
-    <img src="https://cdn.shopify.com/s/files/1/0459/1697/9349/files/DTS_Caldo_0121.jpg?v=1600848579">
+      {% assign page_img_4 = page.metafields.airf.page_img_4 %}
+      {% if page_img_4 and page_img_4 != '&nbsp' %}
+          <img src="{{ page_img_4 }}" />
+      {% endif %}
   </div>
   <div class="header-right" uk-scrollspy="cls:uk-animation-fade; delay: 600">
     {% include 'mamma-badge' %}
