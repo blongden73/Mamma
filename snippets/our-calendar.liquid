@@ -18,7 +18,7 @@
               {% for events in collections.all.products %}
                 {% assign practice = events.metafields.airf.practice %}
                 {% if practice and practice != '&nbsp' %}
-                  {{practice}},
+                  {{practice | strip | strip_html | strip_newlines}},
                 {% endif %}
               {% endfor %}
               {% endcapture %}
