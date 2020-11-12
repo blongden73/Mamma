@@ -51,9 +51,9 @@
           <div class="m-people-info-center">
             <p class="bold"><span uk-icon="icon: location"></span>${practioner.location}</p>
             <p class="bold"><span uk-icon="icon: home"></span>${practioner.how}</p>
-            <p v-if="practioner.social_ig"><span uk-icon="icon: instagram"></span><a v-bind:href="practioner.social_ig">Instagram</a></p>
-            <p v-if="practioner.social_tw"><span uk-icon="icon: twitter"></span><a v-bind:href="practioner.social_tw">Twitter</a></p>
-            <p v-if="practioner.social_fb"><span uk-icon="icon: facebook"></span><a v-bind:href="practioner.social_fb">Facebook</a></p>
+            <p v-if="practioner.social_ig"><span uk-icon="icon: instagram"></span><a v-bind:href="'https://www.instagram.com/' + practioner.social_ig">Instagram</a></p>
+            <p v-if="practioner.social_tw"><span uk-icon="icon: twitter"></span><a v-bind:href="'https://www.twitter.com/' + practioner.social_tw">Twitter</a></p>
+            <p v-if="practioner.social_fb"><span uk-icon="icon: facebook"></span><a v-bind:href="'https://www.facebook.com/' + practioner.social_fb">Facebook</a></p>
 
             <div class="header-right-after-search">
               <div class="dot"></div>
