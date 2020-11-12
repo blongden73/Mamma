@@ -42,9 +42,9 @@
               {%- endfor -%}
               {%- endcapture -%}
               {% assign uniqlocationOptions = optionsListLocation | strip | strip_html | strip_newlines | split: ',' | uniq | join: ',' %}
-              {% assign locationOptions = uniqlocationOptions | split: ',' %}
+              {% assign locationOptions = uniqlocationOptions | replace 'Homevisits', 'Home visits' | replace 'NottingHill', 'Notting Hill' | replace 'TulumMexico', 'Tulum Mexico' | split: ',' %}
               {% for locations in locationOptions %}
-                <option value="{{locations | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' | replace 'homevisits', 'home-visits' | replace 'nottinghill', 'notting-hill' | replace 'tulummexico', 'tulum-mexico' }}">{% if locations and locations != '&nbsp' and locations != '' %}{{locations | replace 'Homevisits', 'Home visits' | replace 'NottingHill', 'Notting Hill' | replace 'TulumMexico', 'Tulum Mexico' }}{% endif %}</option>
+                <option value="{{locations | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' | replace 'homevisits', 'home-visits' | replace 'nottinghill', 'notting-hill' | replace 'tulummexico', 'tulum-mexico' }}">{% if locations and locations != '&nbsp' and locations != '' %}{{locations}}{% endif %}</option>
               {% endfor %}
             </select>
           </li>
