@@ -11,7 +11,7 @@
         {%- for events in collections.all.products -%}
           {%- assign location = events.metafields.airf.location -%}
           {%- if location and location != '&nbsp' -%}
-            {{location | strip }},
+            {{location | strip | remove: ' ' }},
           {%- endif -%}
         {%- endfor -%}
         <h1>All Practices</h1>
