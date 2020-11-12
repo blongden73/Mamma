@@ -3298,6 +3298,17 @@ span.handwritten {
       background-color: $m-cream;
       color: $m-blue;
       display: inline-block;
+
+      .practices-split {
+        display: none;
+
+        &:nth-child(1) {
+          display: inline-block;
+        }
+        &:nth-child(2) {
+          display: inline-block;
+        }
+      }
     }
 
     .m-person__description {
