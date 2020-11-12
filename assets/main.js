@@ -83,7 +83,7 @@ if(peopleWrapper || practitionerWrapper) {
     var arr = [];
     var splitter = value.split('|');
     for(i=0; i<splitter.length; i++) {
-      var div = '<div class="practices-split">'+ splitter[i] +'</div>'
+      var div = '<div class="practices-split">'+ splitter[i] +' • </div>'
       arr.push(div);
     }
     var practicelist = arr.join('');

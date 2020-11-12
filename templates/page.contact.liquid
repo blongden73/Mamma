@@ -146,9 +146,10 @@
       <h1>Want to learn more about our corporate & concierge services?</h1>
       <h1 class="hide-mob"><span>Your Wellness Journey</span></h1>
     </div>
-    <p class="para">At Mamma are committed to making your journey to wellness simple and effortless. Our concierge services are open to anyone looking for advice or support in finding a wellness practitioner, workshop, or personalised retreat.</p>
-    <p class="para">We also assist with group bookings, private gatherings, personal retreats, and weddings. This service is free for individual bookings. However, a small fee may be added for group bookings, extended services, and therapies under £70.</p>
-    <p class="para">Our corporate and group offerings provide your company with our top wellness practitioners who will meticulously plan events to fit your needs. We will carefully select the best alternative therapists and practitioners highly skilled in mind, body, and soul. Afterward, you will find higher morale, reduced stress levels, and greater open-mindedness in the workplace. </p>
-  </div>
+    {% assign contact_co = shop.metafields.airf.contact_co %}
+    {% if contact_co and contact_co != '&nbsp' %}
+        {{ contact_co }}
+    {% endif %}
+    </div>
 
 </div>
