@@ -7,12 +7,12 @@
 <div id="our-calendar" class="m-calendar">
   <div class="page-width">
     <div class="m-calendar-wrapper">
-      {% for events in collections.all.products %}
-        {% assign practice = events.metafields.airf.practice %}
-        {% if practice and practice != '&nbsp' %}
-          {{practice | remove: " "}},
-        {% endif %}
-      {% endfor %}
+      {%- for events in collections.all.products -%}
+        {%- assign practice = events.metafields.airf.practice -%}
+        {%- if practice and practice != '&nbsp' -%}
+          {{practice}},
+        {%- endif -%}
+      {%- endfor -%}
       <div class="flex">
         <h1>All Practices</h1>
         <ul class="m-filters-calendar">
