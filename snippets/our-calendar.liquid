@@ -10,7 +10,7 @@
       {% for events in collections.all.products %}
         {% assign practice = events.metafields.airf.practice %}
         {% if practice and practice != '&nbsp' %}
-          {{practice}},
+          {{practice | strip}},
         {% endif %}
       {% endfor %}
       <div class="flex">
