@@ -115,7 +115,7 @@
   {%- assign limit = 50 -%}
 {% endif %}
 
-{% paginate collection.products by limit %}
+{% paginate collection.products by 50 %}
 
 <div id="{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="collection-template">
   <div class="m-page-header flex practice-sticky">
