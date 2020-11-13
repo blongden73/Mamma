@@ -126,18 +126,12 @@
 
   {% section 'header' %}
 
-  {% unless template != 'index' %}
-    <script>
-      window.location.replace( '/pages/home' );
-    </script>
-  {% endunless %}
-
   <div class="page-container drawer-page-content" id="PageContainer">
     {% if template.suffix == 'experiences' or template.suffix == 'shop' %}
       {{ content_for_layout }}
       {% section 'footer' %}
     {% elsif template == 'index' %}
-    {%include 'homepage-content' %}
+      {% include 'homepage-content' %}
     {% else %}
     <main class="main-content js-focus-hidden" id="MainContent" role="main" tabindex="-1">
       {{ content_for_layout }}
