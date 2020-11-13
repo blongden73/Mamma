@@ -512,6 +512,7 @@ function addTermsandConditions() {
           console.log(label);
           var link = document.createElement("a");
           link.setAttribute('href', 'https://mammawellbeing.com/pages/user-terms-conditions');
+          link.setAttribute('target', '_blank');
           link.innerHTML = "Read our T&C's here";
           label.after(link);
         }, 1000)

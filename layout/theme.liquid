@@ -126,6 +126,12 @@
 
   {% section 'header' %}
 
+  {% unless template != 'index' %}
+    <script>
+    window.location.replace( '/pages/home' );
+    </script>
+  {% endunless %}
+
   <div class="page-container drawer-page-content" id="PageContainer">
     {% if template.suffix == 'experiences' or template.suffix == 'shop' %}
       {{ content_for_layout }}
