@@ -137,9 +137,7 @@
       {{ content_for_layout }}
       {% section 'footer' %}
     {% elsif template == 'index' %}
-    <main class="main-content js-focus-hidden" id="MainContent" role="main" tabindex="-1">
-      {{ content_for_layout }}
-    </main>
+    {%include 'homepage-content' %}
     {% else %}
     <main class="main-content js-focus-hidden" id="MainContent" role="main" tabindex="-1">
       {{ content_for_layout }}
