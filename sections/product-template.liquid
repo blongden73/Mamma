@@ -73,7 +73,15 @@
       <div class="header-inner">
       <div class="header-inner-content">
       <div class="product-single__meta">
-        <h1 class="product-single__title">{{ product.title }}</h1>
+        <h1 class="product-single__title">
+          {{ product.title }}
+          <span>
+          {% assign practition = product.metafields.airf.practition %}
+          {% if practition and practition != '&nbsp' %}
+            with <a href="/collections/{{practition | downcase | handle }}">{{ practition }}</a>
+          {% endif %}
+          </span>
+        </h1>
 
           {% capture "form_classes" -%}
             product-form product-form-{{ section.id }}
