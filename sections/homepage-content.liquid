@@ -1,27 +1,27 @@
 {% assign va = 'home' %}
-{{ pages[va].content }}
+
 
 <div class="m-page-carousel">
   <div class="m-page-header flex">
     <div class="header-left">
       <div class="header-inner">
         <h1>
-          {% assign page_intro = pages[va]metafields.airf.page_intro %}
+          {% assign page_intro = pages[va].metafields.airf.page_intro %}
           {% if page_intro and page_intro != '&nbsp' %}
               {{ page_intro }}
           {% endif %}
         </h1>
       </div>
       <div class="img-wrapper">
-        {% assign page_image = pages[va]metafields.airf.page_image %}
+        {% assign page_image = pages[va].metafields.airf.page_image %}
         {% if page_image and page_image != '&nbsp' %}
             <img class="car_img display" src="{{ page_image }}" />
         {% endif %}
-        {% assign page_ima_2 = pages[va]metafields.airf.page_ima_2 %}
+        {% assign page_ima_2 = pages[va].metafields.airf.page_ima_2 %}
         {% if page_ima_2 and page_ima_2 != '&nbsp' %}
             <img class="car_img" src="{{ page_ima_2 }}" />
         {% endif %}
-        {% assign page_im_th = pages[va]metafields.airf.page_im_th %}
+        {% assign page_im_th = pages[va].metafields.airf.page_im_th %}
         {% if page_im_th and page_im_th != '&nbsp' %}
             <img class="car_img" src="{{ page_im_th }}" />
         {% endif %}
@@ -85,7 +85,7 @@
   <div class="home-text-wrapper" uk-scrollspy="target: > h2; cls: uk-animation-fade; delay: 700">
     <h1 class="two-line" ><span data-content="Why" class='typeOut handwritten'></span> Mamma?</h1>
     <h2>
-      {% assign page_text = pages[va]metafields.airf.page_text %}
+      {% assign page_text = pages[va].metafields.airf.page_text %}
       {% if page_text and page_text != '&nbsp' %}
           {{ page_text }}
       {% endif %}
@@ -159,7 +159,7 @@
     <div class="header-inner">
       <h1>Dive in</h1>
     </div>
-      {% assign page_img_4 = pages[va]metafields.airf.page_img_4 %}
+      {% assign page_img_4 = pages[va].metafields.airf.page_img_4 %}
       {% if page_img_4 and page_img_4 != '&nbsp' %}
           <img src="{{ page_img_4 }}" />
       {% endif %}
