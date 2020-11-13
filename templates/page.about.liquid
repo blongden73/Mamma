@@ -42,7 +42,12 @@
                 {{ carmella_n }}
             {% endif %}
             </h2>
-            <p>Founder Director</p>
+            <p>
+              {% assign c_role = shop.metafields.airf.c_role %}
+              {% if c_role and c_role != '&nbsp' %}
+                  {{ c_role }}
+              {% endif %}
+            </p>
             <div class="team-description">
               <p>
             {% assign carmella_b = shop.metafields.airf.carmella_b %}
@@ -63,7 +68,12 @@
                 {{ annabelle_ }}
             {% endif %}
             </h2>
-            <p>Co-Founder / Director</p>
+            <p>
+              {% assign a_role = shop.metafields.airf.a_role %}
+              {% if a_role and a_role != '&nbsp' %}
+                  {{ a_role }}
+              {% endif %}
+            </p>
             <div class="team-description">
               <p>
               {% assign annabel_bi = shop.metafields.airf.annabel_bi %}
@@ -84,7 +94,12 @@
                 {{ jess_name }}
             {% endif %}
             </h2>
-            <p>Process & Workflow manager</p>
+            <p>
+              {% assign j_role = shop.metafields.airf.j_role %}
+              {% if j_role and j_role != '&nbsp' %}
+                  {{ j_role }}
+              {% endif %}
+            </p>
             <div class="team-description">
               <p>
               {% assign jess_bio = shop.metafields.airf.jess_bio %}
@@ -105,7 +120,12 @@
               {{ huda_name }}
           {% endif %}
           </h2>
-          <p>Operations & Content Manager</p>
+          <p>
+            {% assign h_role = shop.metafields.airf.h_role %}
+            {% if h_role and h_role != '&nbsp' %}
+                {{ h_role }}
+            {% endif %}
+          </p>
           <div class="team-description">
             <p>
             {% assign huda_bio = shop.metafields.airf.huda_bio %}
@@ -126,7 +146,12 @@
               {{ kristal_na }}
           {% endif %}
           </h2>
-          <p>Customer Service Operations Manager</p>
+          <p>
+            {% assign k_role = shop.metafields.airf.k_role %}
+            {% if k_role and k_role != '&nbsp' %}
+                {{ k_role }}
+            {% endif %}
+          </p>
           <div class="team-description">
             <p>
             {% assign kristel_bi = shop.metafields.airf.kristel_bi %}
