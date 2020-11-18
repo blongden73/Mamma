@@ -523,12 +523,12 @@ function addTermsandConditions() {
 
 function duration(){
   console.log(tpbConfigs);
-  var practice = document.querySelector('.product-single__title').innerHTML;
+  var practice = document.querySelector('.product-single__title').innerHTML.split('<span>');
   var practiceCheck = document.querySelector('.product-single__title');
   console.log(practice);
   if(practiceCheck) {
     for(i=0; i<tpbConfigs.products.length; i++) {
-      if(practice == tpbConfigs.products[i].title){
+      if(practice[0] == tpbConfigs.products[i].title){
         console.log(tpbConfigs.products[i].duration.rule[0]);
       }
     }
