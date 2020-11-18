@@ -537,8 +537,8 @@ function duration(){
     }
   }else if(collectionsProduct) {
     for(i=0; i<collectionsProduct.length; i++) {
-      var practiceTitle = collectionsProduct[i].querySelector('h1').innerHTML.trim();
-      console.log(practiceTitle);
+      var practiceTitle = collectionsProduct[i].querySelector('h1').innerHTML.trim().split('<span');
+      console.log(practiceTitle[0]);
     }
   }
 }duration();
