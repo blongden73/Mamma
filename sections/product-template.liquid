@@ -84,7 +84,13 @@
         </h1>
         <span class="js-duration">
 
-        </div>
+        </span>
+        {% assign type = product.metafields.airf.type %}
+        {% assign location = product.metafields.airf.location %}
+        <span class="js-meta">
+          {{type}} • {{location}}
+        </span>
+
 
           {% capture "form_classes" -%}
             product-form product-form-{{ section.id }}
