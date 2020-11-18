@@ -520,3 +520,7 @@ function addTermsandConditions() {
     }
   }, 1000)
 }addTermsandConditions();
+
+function duration(){
+  console.log(tpbConfigs);
+}duration();
