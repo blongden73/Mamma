@@ -145,7 +145,7 @@
                   {% assign time = product.metafields.airf.time %}
                   {% assign days = product.metafields.airf.days %}
                   <span>{% if time and time != '&nbsp' %}{{time}} • {% endif %}</span>
-                  <span>{% if days and days != '&nbsp' %}{{days}} • {% endif %}</span>
+                  <span>{% if days and days != '&nbsp' %}• {{days}}{% endif %}</span>
                   <!-- <span>
                     {% if durationHours != 0 %}
                       {{ durationHours }}h

@@ -31,12 +31,12 @@
           <li class="m-person" v-for="practioner in practioners" v-if="practioner.practice.indexOf('{{page.title}}') > -1">
             <div class="m-person__description">
               <h1>${practioner.full_name}</h1>
-              <h2 class="handwritten">${practioner.practice}</h2>
+              <h2 class="handwritten" v-html="$options.filters.split(practioner.practice)"></h2>
               <p>${practioner.short_bio}</p>
             </div>
             <a v-bind:href="'/collections/' + practioner.slug">
               <div class="m-people-details">
-                <span class="m-people-practice">${practioner.practice}</span>
+                <span class="m-people-practice" v-html="$options.filters.split(practioner.practice)"></span>
               </div>
               <img v-bind:src="practioner.profile_picture">
             </a>
