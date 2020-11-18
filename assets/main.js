@@ -538,9 +538,9 @@ function duration(){
   }else if(collectionsProduct) {
     for(i=0; i<collectionsProduct.length; i++) {
       var practiceTitle = collectionsProduct[i].querySelector('h1').innerHTML.trim().split('<span');
-      console.log(practiceTitle[0]);
       for(j=0; j<tpbConfjgs.products.length; j++) {
-        if(tpbConfigs.products[j].title.includes(practice[0].trim())){
+        console.log(practiceTitle[0]);
+        if(tpbConfigs.products[j].title.includes(practiceTitle[0])){
           duration.innerHTML = 'From ' + tpbConfigs.products[j].duration.rule[0].duration + ' Mins';
         }
       }
