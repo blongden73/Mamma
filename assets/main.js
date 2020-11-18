@@ -528,7 +528,9 @@ function duration(){
   console.log(practice);
   if(practiceCheck) {
     for(i=0; i<tpbConfigs.products.length; i++) {
-      console.log(tpbConfigs.products[i].title);
+      if(practice == tpbConfigs.products[i].title){
+        console.log(tpbConfigs.products[i].duration.rule[0]);
+      }
     }
   }
 }duration();
