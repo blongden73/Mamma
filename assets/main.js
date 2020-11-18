@@ -526,9 +526,9 @@ function duration(){
   var practiceCheck = document.querySelector('.product-single__title');
   var duration = document.querySelector('.js-duration');
   var collectionsProduct = document.querySelectorAll('.collections-product');
-  console.log(practice);
   if(practiceCheck) {
     var practice = document.querySelector('.product-single__title').innerHTML.split('<span>');
+    console.log(practice);
     for(i=0; i<tpbConfigs.products.length; i++) {
       if(tpbConfigs.products[i].title.includes(practice[0].trim())){
         console.log(tpbConfigs.products[i].duration.rule[0]);
@@ -539,6 +539,9 @@ function duration(){
     for(i=0; i<collectionsProduct.length; i++) {
       var practiceTitle = collectionsProduct[i].querySelector('h1').innerHTML.trim().split('<span');
       console.log(practiceTitle[0]);
+      if(tpbConfigs.products[i].title.includes(practiceTitle[0])){
+        duration.innerHTML = 'From ' + tpbConfigs.products[i].duration.rule[0].duration + ' Mins';
+      }
     }
   }
 }duration();
