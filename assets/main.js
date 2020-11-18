@@ -527,8 +527,8 @@ function duration(){
   var practiceCheck = document.querySelector('.product-single__title');
   console.log(practice);
   if(practiceCheck) {
-    for(i=0; i<tpbConfigs.length; i++) {
-      console.log(tpbConfigs[i].title);
+    for(i=0; i<tpbConfigs.products.length; i++) {
+      console.log(tpbConfigs.products[i].title);
     }
   }
 }duration();
