@@ -528,7 +528,7 @@ function duration(){
   console.log(practice);
   if(practiceCheck) {
     for(i=0; i<tpbConfigs.products.length; i++) {
-      if(practice[0] == tpbConfigs.products[i].title){
+      if(tpbConfigs.products[i].title.includes(practice[0])){
         console.log(tpbConfigs.products[i].duration.rule[0]);
       }
     }
