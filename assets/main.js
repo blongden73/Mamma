@@ -531,7 +531,7 @@ function duration(){
     for(i=0; i<tpbConfigs.products.length; i++) {
       if(tpbConfigs.products[i].title.includes(practice[0].trim())){
         console.log(tpbConfigs.products[i].duration.rule[0]);
-        duration.innerHTML = tpbConfigs.products[i].duration.rule[0].duration + 'Mins';
+        duration.innerHTML = 'From' + tpbConfigs.products[i].duration.rule[0].duration + 'Mins';
       }
     }
   }
