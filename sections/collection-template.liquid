@@ -140,14 +140,15 @@
               <h1>
                 {{product.title}}
                 <span class="practice">
-                  <span>
+                  {{product.tpbText.duration}}
+                  <!-- <span>
                     {% if durationHours != 0 %}
                       {{ durationHours }}h
                     {% endif %}
                     {% if durationMinutes != 0 %}
                       {{ durationMinutes }}min
                     {% endif %}
-                  </span>
+                  </span> -->
                 </span>
               </h1>
               <h2>{{product.price | money }}</h2>
