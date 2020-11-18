@@ -538,11 +538,8 @@ function duration(){
   }else if(collectionsProduct) {
     for(i=0; i<collectionsProduct.length; i++) {
       var practiceTitle = collectionsProduct[i].querySelector('h1').innerHTML.trim().split('<span');
-      for(j=0; j<tpbConfigs.products.length; j++) {
-        if(tpbConfigs.products[j].title.includes(practiceTitle[0])){
-          duration.innerHTML = 'From ' + tpbConfigs.products[j].duration.rule[0].duration + ' Mins';
-        }
-      }
+      var found = tpbConfigs.products.find(element => element > practiceTitle);
+      console.log(found);
     }
   }
 }duration();
