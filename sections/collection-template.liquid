@@ -142,6 +142,10 @@
                 <span class="practice">
                   {{product.tpbText.duration}}
                   <span class="js-duration"></span>
+                  {% assign time = events.metafields.airf.time %}
+                  {% assign days = events.metafields.airf.days %}
+                  <span>{% if time and time != '&nbsp' %}{{time}} • {% endif %}</span>
+                  <span>{% if days and days != '&nbsp' %}{{days}} • {% endif %}</span>
                   <!-- <span>
                     {% if durationHours != 0 %}
                       {{ durationHours }}h
