@@ -75,7 +75,7 @@
               {% assign uniqpractiotionerOptions = optionsListPractitioner | strip | strip_html | strip_newlines | split: ',' | uniq | join: ',' %}
               {% assign practitionerOptions = uniqpractiotionerOptions | split: ',' %}
               {% for practitioner in practitionerOptions %}
-              {% assign cleanPractitioner = practitioner | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' | replace: "''", "-" %}
+              {% assign cleanPractitioner = practitioner | downcase | strip | strip_html | strip_newlines | replace: ' ', '-' | replace: "'", "-" %}
                 <option value="{{cleanPractitioner}}">{% if practitioner and practitioner != '&nbsp' and practitioner != '' %}{{practitioner | strip | strip_html | strip_newlines }}{% endif %}</option>
               {% endfor %}
             </select>
