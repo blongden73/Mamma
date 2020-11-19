@@ -142,7 +142,7 @@
                 <span class="practice">
                   {{product.tpbText.duration}}
                   <span class="js-duration"></span>
-                  {% assign time = product.metafields.airf.time %}
+                  {% assign time = product.metafields.airf.timing %}
                   {% assign days = product.metafields.airf.days %}
                   <span>{% if time and time != '&nbsp' %}{{time}} • {% endif %}</span>
                   <span>{% if days and days != '&nbsp' %}• {{days}}{% endif %}</span>

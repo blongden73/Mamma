@@ -87,8 +87,10 @@
         </span>
         {% assign type = product.metafields.airf.type %}
         {% assign location = product.metafields.airf.location %}
+        {% assign time = product.metafields.airf.timing %}
+        {% assign days = product.metafields.airf.days %}
         <span class="js-meta">
-           • {{type}} • {{location}}
+           • {{time}} • {{days}} • {{type}} • {{location}}
         </span>
 
 
