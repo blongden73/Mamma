@@ -542,4 +542,4 @@ function duration(){
       console.log(found);
     }
   }
-}duration();
+}
