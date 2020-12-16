@@ -40,6 +40,7 @@
         <div class="header-inner-content">
           <h1 class="v1">
             {% assign home_extra = page.metafields.airf.home_extra %}
+            {{home_extra}}
             {% if home_extra and home_extra != blank %}
                 {% assign separator = "###" %}
                 {% assign home_extra_namespaces = home_extra | split: separator %}
