@@ -39,7 +39,10 @@
       <div class="header-inner">
         <div class="header-inner-content">
           <h1 class="v1">
-            {{page.metafields.airf}}
+          {% assign hp_top = page.metafields.airf.hp_top %}
+          {% if hp_top and hp_top != '&nbsp' %}
+              {{ hp_top }}
+          {% endif %}
           </h1>
           <div class="prompts flex">
             <a href="/pages/discover#our-people">• Practitioner</a> <a href="/collections/events">• Events</a> <a href="/collections/retreats">• Retreats</a> <a href="/collections/classes">• Classes</a>
