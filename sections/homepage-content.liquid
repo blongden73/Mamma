@@ -38,7 +38,22 @@
     <div class="header-right">
       <div class="header-inner">
         <div class="header-inner-content">
-          <h1>What are you looking for?</h1>
+          <h1>
+            {% assign home_extra = page.metafields.airf.home_extra %}
+            {% if home_extra and home_extra != blank %}
+                {% assign separator = "###" %}
+                {% assign home_extra_namespaces = home_extra | split: separator %}
+                {% for namespace in home_extra_namespaces %}
+                    {% assign custom_object = shop.metafields[namespace] %}
+
+                    {% assign home_page_ = custom_object['home_page_'] %}
+                    {% if home_page_ and home_page_ != '&nbsp' %}
+                        {{ home_page_ }}
+                    {% endif %}
+
+                {% endfor %}
+            {% endif %}
+          </h1>
           <div class="prompts flex">
             <a href="/pages/discover#our-people">• Practioners</a> <a href="/collections/events">• Events</a> <a href="/collections/retreats">• Retreats</a> <a href="/collections/classes">• Classes</a>
           </div>
